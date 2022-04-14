@@ -1,0 +1,16 @@
+// Environment variables.
+ext {
+    // Target & Compile SDK.
+    target_sdk = 31
+
+    // Library version.
+    lib_version = "1.0.0"
+
+    // Sample App version.
+    sample_version_code = 11
+    sample_version_name = "3.0.0"
+
+    // Dependencies versions.
+    sesl_appcompat_version = "1.0.0-beta01"
+    sesl_material_version = "1.0.0-beta01"
+}

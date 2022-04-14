@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.library'
+    id 'com.vanniktech.maven.publish'
+}
+
+android {
+    compileSdk target_sdk
+
+    defaultConfig {
+        minSdk 23
+        targetSdk target_sdk
+        versionCode 1
+        versionName lib_version
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation("io.github.oneuiproject.sesl:appcompat:$sesl_appcompat_version")
+    implementation("io.github.oneuiproject.sesl:material:$sesl_material_version")
+}
+
+ext {
+    POM_NAME = "One UI Design"
+    POM_DESCRIPTION = "One UI Design Library."
+}
