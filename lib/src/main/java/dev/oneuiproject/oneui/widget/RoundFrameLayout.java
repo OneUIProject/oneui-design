@@ -1,0 +1,66 @@
+package dev.oneuiproject.oneui.widget;
+
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.util.AttributeSet;
+import android.widget.FrameLayout;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.util.SeslRoundedCorner;
+
+import dev.oneuiproject.oneui.R;
+
+/**
+ * FrameLayout with rounded corners.
+ */
+public class RoundFrameLayout extends FrameLayout {
+    private Context mContext;
+    SeslRoundedCorner mSeslRoundedCorner;
+
+    public RoundFrameLayout(@NonNull Context context) {
+        super(context);
+    }
+
+    public RoundFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public RoundFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs,
+                            int defStyleAttr) {
+        this(context, attrs, defStyleAttr, 0);
+    }
+
+    public RoundFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs,
+                            int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+
+        mContext = context;
+
+        TypedArray a = mContext.obtainStyledAttributes(attrs, R.styleable.RoundFrameLayout);
+        final int roundedCorners = a.getInt(R.styleable.RoundFrameLayout_roundedCorners,
+                SeslRoundedCorner.ROUNDED_CORNER_ALL);
+        a.recycle();
+
+        mSeslRoundedCorner = new SeslRoundedCorner(mContext);
+        mSeslRoundedCorner.setRoundedCorners(roundedCorners);
+    }
+
+    @Override
+    protected void dispatchDraw(Canvas canvas) {
+        super.dispatchDraw(canvas);
+        mSeslRoundedCorner.drawRoundedCorner(canvas);
+    }
+
+    public void setRoundedCorners(int roundedCorners) {
+        mSeslRoundedCorner.setRoundedCorners(roundedCorners);
+        invalidate();
+    }
+
+    public void setRoundedCornerColor(int roundedCorners, @ColorInt int color) {
+        mSeslRoundedCorner.setRoundedCornerColor(roundedCorners, color);
+        invalidate();
+    }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="roundedCorners" format="integer">
+        <flag name="none" value="0x00000000" />
+        <flag name="all" value="0x0000000f" />
+        <flag name="top_left" value="0x00000001" />
+        <flag name="top_right" value="0x00000002" />
+        <flag name="bottom_left" value="0x00000004" />
+        <flag name="bottom_right" value="0x00000008" />
+    </attr>
+
+    <!-- Custom Views -->
+    <declare-styleable name="RoundFrameLayout">
+        <attr name="roundedCorners" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundLinearLayout">
+        <attr name="roundedCorners" />
+    </declare-styleable>
+
+</resources>
