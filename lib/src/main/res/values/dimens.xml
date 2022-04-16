@@ -13,4 +13,13 @@
     <dimen name="oui_relative_link_text_padding_top">6.0dip</dimen>
     <dimen name="oui_relative_link_text_size">16.0sp</dimen>
 
+    <!-- UnclickablePreference -->
+    <dimen name="oui_unclickablepref_text_padding_start_end">24.0dip</dimen>
+    <dimen name="oui_unclickablepref_margin_bottom">20.0dip</dimen>
+    <dimen name="oui_unclickablepref_margin_top">20.0dip</dimen>
+    <dimen name="oui_unclickablepref_first_margin_bottom">20.0dip</dimen>
+    <dimen name="oui_unclickablepref_first_margin_top">0.0dip</dimen>
+    <dimen name="oui_unclickablepref_subheader_margin_bottom">20.0dip</dimen>
+    <dimen name="oui_unclickablepref_subheader_margin_top">6.0dip</dimen>
+
 </resources>

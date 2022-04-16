@@ -2,8 +2,13 @@
 <resources>
 
     <color name="oui_round_and_bgcolor">@color/sesl_round_and_bgcolor_dark</color>
+    <color name="oui_background_color">@color/sesl_background_color_dark</color>
 
     <!-- RelatedCard -->
     <color name="oui_relative_link_title_text_color">#fffafafa</color>
+
+    <!-- UnclickablePreference -->
+    <color name="oui_unclickablepref_text_color">#ffe5e5e5</color>
+    <color name="oui_unclickablepref_link_text_color">#fffafafa</color>
 
 </resources>

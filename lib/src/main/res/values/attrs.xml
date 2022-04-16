@@ -23,4 +23,14 @@
         <attr name="title" />
     </declare-styleable>
 
+    <declare-styleable name="UnclickablePreference">
+        <attr name="android:layout" />
+        <attr name="roundedCorners" />
+        <attr name="positionMode" format="integer">
+            <flag name="first_item" value="1" />
+            <flag name="normal" value="0" />
+            <flag name="subheader_item" value="2" />
+        </attr>
+    </declare-styleable>
+
 </resources>
