@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="oui_round_and_bgcolor">@color/sesl_round_and_bgcolor_light</color>
+
+    <!-- RelatedCard -->
+    <color name="oui_relative_link_title_text_color">#ff252525</color>
+
+</resources>

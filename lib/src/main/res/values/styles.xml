@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="OneUI" />
+
+    <!-- RelatedCard -->
+    <style name="OneUI.RelativeLinkTitleTextStyle">
+        <item name="android:textSize">@dimen/oui_relative_link_title_text_size</item>
+        <item name="android:textColor">@color/oui_relative_link_title_text_color</item>
+        <item name="android:fontFamily">@string/sesl_font_family_regular</item>
+    </style>
+
+    <style name="OneUI.RelativeLinkTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/oui_relative_link_item_background</item>
+        <item name="android:textAppearance">@style/OneUI.RelativeLinkTextViewTextStyle</item>
+    </style>
+
+    <style name="OneUI.RelativeLinkTextViewTextStyle">
+        <item name="android:textSize">@dimen/oui_relative_link_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:fontFamily">@string/sesl_font_family_regular</item>
+    </style>
+
+</resources>
