@@ -33,4 +33,9 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="InsetPreferenceCategory">
+        <attr name="height" />
+        <attr name="roundedCorners" />
+    </declare-styleable>
+
 </resources>
