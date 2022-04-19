@@ -24,7 +24,7 @@ public class RelatedCard extends FrameLayout {
     private String mTitle;
 
     public RelatedCard(@NonNull Context context) {
-        super(context);
+        this(context, null);
     }
 
     public RelatedCard(@NonNull Context context, @Nullable AttributeSet attrs) {

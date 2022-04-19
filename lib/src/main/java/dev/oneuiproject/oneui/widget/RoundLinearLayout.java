@@ -18,10 +18,10 @@ import dev.oneuiproject.oneui.R;
  */
 public class RoundLinearLayout extends LinearLayout {
     private Context mContext;
-    SeslRoundedCorner mSeslRoundedCorner;
+    private SeslRoundedCorner mRoundedCorner;
 
     public RoundLinearLayout(@NonNull Context context) {
-        super(context);
+        this(context, null);
     }
 
     public RoundLinearLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
@@ -44,23 +44,23 @@ public class RoundLinearLayout extends LinearLayout {
                 SeslRoundedCorner.ROUNDED_CORNER_ALL);
         a.recycle();
 
-        mSeslRoundedCorner = new SeslRoundedCorner(mContext);
-        mSeslRoundedCorner.setRoundedCorners(roundedCorners);
+        mRoundedCorner = new SeslRoundedCorner(mContext);
+        mRoundedCorner.setRoundedCorners(roundedCorners);
     }
 
     @Override
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
-        mSeslRoundedCorner.drawRoundedCorner(canvas);
+        mRoundedCorner.drawRoundedCorner(canvas);
     }
 
     public void setRoundedCorners(int roundedCorners) {
-        mSeslRoundedCorner.setRoundedCorners(roundedCorners);
+        mRoundedCorner.setRoundedCorners(roundedCorners);
         invalidate();
     }
 
     public void setRoundedCornerColor(int roundedCorners, @ColorInt int color) {
-        mSeslRoundedCorner.setRoundedCornerColor(roundedCorners, color);
+        mRoundedCorner.setRoundedCornerColor(roundedCorners, color);
         invalidate();
     }
 }
