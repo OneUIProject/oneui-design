@@ -23,7 +23,7 @@
         <attr name="title" />
     </declare-styleable>
 
-    <declare-styleable name="UnclickablePreference">
+    <declare-styleable name="DescriptionPreference">
         <attr name="android:layout" />
         <attr name="roundedCorners" />
         <attr name="positionMode" format="integer">

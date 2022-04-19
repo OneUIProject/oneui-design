@@ -15,7 +15,7 @@ import androidx.preference.PreferenceViewHolder;
 
 import dev.oneuiproject.oneui.R;
 
-public class UnclickablePreference extends Preference {
+public class DescriptionPreference extends Preference {
     private static final int POSITION_NORMAL = 0;
     private static final int POSITION_FIRST_ITEM = 1;
     private static final int POSITION_SUBHEADER = 2;
@@ -23,7 +23,7 @@ public class UnclickablePreference extends Preference {
     private Context mContext;
     private int mPositionMode = POSITION_NORMAL;
 
-    public UnclickablePreference(@NonNull Context context, @Nullable AttributeSet attrs,
+    public DescriptionPreference(@NonNull Context context, @Nullable AttributeSet attrs,
                                  int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         mContext = context;
@@ -35,10 +35,10 @@ public class UnclickablePreference extends Preference {
                     R.layout.oui_preference_unclickable_layout));
             a.recycle();
 
-            a = context.obtainStyledAttributes(attrs, R.styleable.UnclickablePreference);
-            seslSetSubheaderRoundedBackground(a.getInt(R.styleable.UnclickablePreference_roundedCorners,
+            a = context.obtainStyledAttributes(attrs, R.styleable.DescriptionPreference);
+            seslSetSubheaderRoundedBackground(a.getInt(R.styleable.DescriptionPreference_roundedCorners,
                     SeslRoundedCorner.ROUNDED_CORNER_ALL));
-            mPositionMode = a.getInt(R.styleable.UnclickablePreference_positionMode,
+            mPositionMode = a.getInt(R.styleable.DescriptionPreference_positionMode,
                     POSITION_NORMAL);
             a.recycle();
         } else {
@@ -47,24 +47,24 @@ public class UnclickablePreference extends Preference {
         }
     }
 
-    public UnclickablePreference(@NonNull Context context, @Nullable AttributeSet attrs,
+    public DescriptionPreference(@NonNull Context context, @Nullable AttributeSet attrs,
                                  int defStyleAttr) {
         this(context, attrs, defStyleAttr, 0);
     }
 
-    public UnclickablePreference(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public DescriptionPreference(@NonNull Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public UnclickablePreference(@NonNull Context context) {
+    public DescriptionPreference(@NonNull Context context) {
         this(context, null);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PreferenceViewHolder viewHolder) {
-        super.onBindViewHolder(viewHolder);
+    public void onBindViewHolder(@NonNull PreferenceViewHolder holder) {
+        super.onBindViewHolder(holder);
 
-        TextView titleTextView = (TextView) viewHolder.findViewById(R.id.title);
+        TextView titleTextView = (TextView) holder.findViewById(R.id.title);
         titleTextView.setText(getTitle());
         titleTextView.setVisibility(View.VISIBLE);
 
@@ -103,8 +103,8 @@ public class UnclickablePreference extends Preference {
             titleTextView.setLayoutParams(lp);
         }
 
-        viewHolder.setDividerAllowedAbove(false);
-        viewHolder.setDividerAllowedBelow(false);
+        holder.setDividerAllowedAbove(false);
+        holder.setDividerAllowedBelow(false);
     }
 
     public void setPositionMode(int mode) {
