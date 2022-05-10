@@ -22,4 +22,7 @@
     <dimen name="oui_unclickablepref_subheader_margin_bottom">20.0dip</dimen>
     <dimen name="oui_unclickablepref_subheader_margin_top">6.0dip</dimen>
 
+    <!-- MarginsTabLayout -->
+    <dimen name="oui_tab_layout_default_padding">24.0dip</dimen>
+
 </resources>
