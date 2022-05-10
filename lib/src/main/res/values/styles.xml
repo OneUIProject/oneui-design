@@ -21,7 +21,7 @@
     <style name="OneUI.RelativeLinkTextViewTextStyle">
         <item name="android:textSize">@dimen/oui_relative_link_text_size</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textColor">?attr/colorPrimaryDark</item>
         <item name="android:fontFamily">@string/sesl_font_family_regular</item>
     </style>
 
