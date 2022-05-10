@@ -2,12 +2,15 @@ package dev.oneuiproject.oneui.utils;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.ColorStateList;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -19,6 +22,36 @@ public class DialogUtils {
 
     public interface DialogProgressCallback {
         void onClick(View v);
+    }
+
+    public static void setDialogProgressButtonTextColor(@NonNull AlertDialog dialog, int whichButton,
+                                                  @ColorInt int textColor) {
+        if (dialog != null) {
+            Button dialogBtn = dialog.getButton(whichButton);
+            if (dialogBtn == null) {
+                Log.e(TAG, "setDialogProgressButtonTextColor: dialog button is null, " +
+                        "Ensure you're calling this after dialog.show()");
+                return;
+            }
+            dialogBtn.setTextColor(textColor);
+        } else {
+            Log.e(TAG, "setDialogProgressButtonTextColor: dialog is null");
+        }
+    }
+
+    public static void setDialogProgressButtonTextColor(@NonNull AlertDialog dialog, int whichButton,
+                                                        @Nullable ColorStateList textColor) {
+        if (dialog != null) {
+            Button dialogBtn = dialog.getButton(whichButton);
+            if (dialogBtn == null) {
+                Log.e(TAG, "setDialogProgressButtonTextColor: dialog button is null, " +
+                        "Ensure you're calling this after dialog.show()");
+                return;
+            }
+            dialogBtn.setTextColor(textColor);
+        } else {
+            Log.e(TAG, "setDialogProgressButtonTextColor: dialog is null");
+        }
     }
 
     public static void setDialogProgressForButton(@NonNull AlertDialog dialog, int whichButton,
