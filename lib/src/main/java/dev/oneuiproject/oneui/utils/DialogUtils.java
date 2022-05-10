@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.annotation.ColorInt;
-import androidx.annotation.ColorRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -24,33 +23,33 @@ public class DialogUtils {
         void onClick(View v);
     }
 
-    public static void setDialogProgressButtonTextColor(@NonNull AlertDialog dialog, int whichButton,
+    public static void setDialogButtonTextColor(@NonNull AlertDialog dialog, int whichButton,
                                                   @ColorInt int textColor) {
         if (dialog != null) {
             Button dialogBtn = dialog.getButton(whichButton);
             if (dialogBtn == null) {
-                Log.e(TAG, "setDialogProgressButtonTextColor: dialog button is null, " +
+                Log.e(TAG, "setDialogButtonTextColor: dialog button is null, " +
                         "Ensure you're calling this after dialog.show()");
                 return;
             }
             dialogBtn.setTextColor(textColor);
         } else {
-            Log.e(TAG, "setDialogProgressButtonTextColor: dialog is null");
+            Log.e(TAG, "setDialogButtonTextColor: dialog is null");
         }
     }
 
-    public static void setDialogProgressButtonTextColor(@NonNull AlertDialog dialog, int whichButton,
+    public static void setDialogButtonTextColor(@NonNull AlertDialog dialog, int whichButton,
                                                         @Nullable ColorStateList textColor) {
         if (dialog != null) {
             Button dialogBtn = dialog.getButton(whichButton);
             if (dialogBtn == null) {
-                Log.e(TAG, "setDialogProgressButtonTextColor: dialog button is null, " +
+                Log.e(TAG, "setDialogButtonTextColor: dialog button is null, " +
                         "Ensure you're calling this after dialog.show()");
                 return;
             }
             dialogBtn.setTextColor(textColor);
         } else {
-            Log.e(TAG, "setDialogProgressButtonTextColor: dialog is null");
+            Log.e(TAG, "setDialogButtonTextColor: dialog is null");
         }
     }
 
