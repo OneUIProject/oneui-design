@@ -1,5 +1,7 @@
 package dev.oneuiproject.oneui.preference;
 
+import static androidx.annotation.RestrictTo.Scope.LIBRARY;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
@@ -8,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import androidx.annotation.RestrictTo;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
@@ -16,8 +19,6 @@ import dev.oneuiproject.oneui.R;
 
 public class LayoutPreference extends Preference {
     private View mRootView;
-
-    private int mDescendantFocusability = -1;
 
     private boolean mAllowDividerAbove;
     private boolean mAllowDividerBelow;
@@ -44,16 +45,14 @@ public class LayoutPreference extends Preference {
         setView(view);
     }
 
+    /**
+     * @hide
+     */
+    @RestrictTo(LIBRARY)
     public LayoutPreference(Context context, View view, boolean isRelativeLinkView) {
         super(context);
         setView(view);
         mIsRelativeLinkView = isRelativeLinkView;
-    }
-
-    public LayoutPreference(Context context, View view, int descendantFocusability) {
-        super(context);
-        setView(view);
-        mDescendantFocusability = descendantFocusability;
     }
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -117,10 +116,18 @@ public class LayoutPreference extends Preference {
         return mRootView.findViewById(id);
     }
 
+    public void setAllowDividerAbove(boolean allowed) {
+        mAllowDividerAbove = allowed;
+    }
+
     public void setAllowDividerBelow(boolean allowed) {
         mAllowDividerBelow = allowed;
     }
 
+    /**
+     * @hide
+     */
+    @RestrictTo(LIBRARY)
     public boolean isRelativeLinkView() {
         return mIsRelativeLinkView;
     }
