@@ -4,6 +4,10 @@
     <color name="oui_round_and_bgcolor">@color/sesl_round_and_bgcolor_light</color>
     <color name="oui_background_color">@color/sesl_background_color_light</color>
 
+    <color name="oui_functional_green_color">@color/sesl_functional_green_light</color>
+    <color name="oui_functional_orange_color">@color/sesl_functional_orange_light</color>
+    <color name="oui_functional_red_color">@color/sesl_functional_red_light</color>
+
     <!-- RelatedCard -->
     <color name="oui_relative_link_title_text_color">#ff252525</color>
 
