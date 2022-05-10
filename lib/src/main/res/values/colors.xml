@@ -11,4 +11,10 @@
     <color name="oui_unclickablepref_text_color">#ff252525</color>
     <color name="oui_unclickablepref_link_text_color">#ff3b3b3b</color>
 
+    <!-- SeekBar -->
+    <color name="oui_seekbar_overlap_color_default">@color/sesl_seekbar_overlap_color_default_light</color>
+    <color name="oui_seekbar_legacy_overlap_color_default">#fffcb69b</color>
+    <color name="oui_seekbar_overlap_color_activated">@color/sesl_seekbar_overlap_color_activated_light</color>
+    <color name="oui_seekbar_circle_marker_color">#ff9c9c9c</color>
+
 </resources>

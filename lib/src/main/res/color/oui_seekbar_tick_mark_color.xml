@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:alpha="@dimen/sesl_disabled_color_alpha"
+        android:color="@color/oui_seekbar_circle_marker_color"
+        android:state_enabled="false" />
+    <item
+        android:color="@color/oui_seekbar_circle_marker_color" />
+</selector>
