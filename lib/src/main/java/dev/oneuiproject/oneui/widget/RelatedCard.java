@@ -81,15 +81,15 @@ public class RelatedCard extends FrameLayout {
         }
     }
 
-    public String getTitle() {
+    public String getTitleText() {
         return mTitle;
     }
 
-    public void setTitle(@StringRes int resid) {
-        setTitle(getContext().getResources().getString(resid));
+    public void setTitleText(@StringRes int resid) {
+        setTitleText(getContext().getResources().getString(resid));
     }
 
-    public void setTitle(String title) {
+    public void setTitleText(String title) {
         mTitle = title;
         mCardTitle.setText(mTitle);
     }
