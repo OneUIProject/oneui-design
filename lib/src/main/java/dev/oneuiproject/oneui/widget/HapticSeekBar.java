@@ -34,9 +34,6 @@ public class HapticSeekBar extends SeslSeekBar {
         if (mHasTickMark != validDrawable) {
             mHasTickMark = validDrawable;
             if (validDrawable) {
-                setProgressTintList(
-                        getContext().getColorStateList(android.R.color.transparent));
-
                 super.setOnSeekBarChangeListener(
                         new SeslSeekBar.OnSeekBarChangeListener() {
                             final int HAPTIC_CONSTANT_CURSOR_MOVE
