@@ -74,6 +74,7 @@ public class TabLayoutUtils {
         }
     }
 
+    @Nullable
     private static ViewGroup getTabViewGroup(@NonNull TabLayout tabLayout) {
         if (tabLayout.getChildCount() <= 0) {
             return null;
@@ -86,6 +87,7 @@ public class TabLayoutUtils {
         return null;
     }
 
+    @Nullable
     private static View getTabView(@NonNull TabLayout tabLayout, int position) {
         ViewGroup viewGroup = getTabViewGroup(tabLayout);
         if (viewGroup != null && viewGroup.getChildCount() > position) {
