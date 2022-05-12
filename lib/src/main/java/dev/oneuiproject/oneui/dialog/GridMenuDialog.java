@@ -297,6 +297,24 @@ public class GridMenuDialog extends AlertDialog {
         return gridItem;
     }
 
+    public void updateItem(int index) {
+        if (mAdapter != null) {
+            mAdapter.notifyItemChanged(index);
+        } else {
+            Log.e(TAG, "updateItem: list adapter " +
+                    "has not been initiated yet");
+        }
+    }
+
+    public void updateAllItems() {
+        if (mAdapter != null) {
+            mAdapter.notifyItemRangeChanged(0, mMenuList.size());
+        } else {
+            Log.e(TAG, "updateAllItems: list adapter " +
+                    "has not been initiated yet");
+        }
+    }
+
     public void setOnItemClickListener(@Nullable OnItemClickListener listener) {
         mOnItemClickListener = listener;
     }
