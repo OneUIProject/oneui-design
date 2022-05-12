@@ -13,6 +13,6 @@ ext {
     // Dependencies versions.
     androidx_annotation_version = "1.3.0"
     sesl_appcompat_version = "1.0.0-beta01"
-    sesl_material_version = "1.0.0-beta01"
+    sesl_material_version = "1.0.0-beta02"
     sesl_preference_version = "1.0.0-beta01"
 }
