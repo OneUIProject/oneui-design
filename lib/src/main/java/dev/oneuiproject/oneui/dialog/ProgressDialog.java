@@ -214,7 +214,7 @@ public class ProgressDialog extends AlertDialog {
                     }
                 }
             };
-            mContentView = inflater.inflate(R.layout.oui_layout_progress_dialog_horizontal, null);
+            mContentView = inflater.inflate(R.layout.oui_dialog_progress_dialog_horizontal, null);
             mProgress = (SeslProgressBar) mContentView.findViewById(R.id.progress);
             mProgressNumber = (TextView) mContentView.findViewById(R.id.progress_number);
             mProgressPercent = (TextView) mContentView.findViewById(R.id.progress_percent);
@@ -223,12 +223,12 @@ public class ProgressDialog extends AlertDialog {
         } else if (mProgressStyle == STYLE_CIRCLE) {
             setTitle(null);
             getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-            View view = inflater.inflate(R.layout.oui_layout_progress_dialog_circle, null);
+            View view = inflater.inflate(R.layout.oui_dialog_progress_dialog_circle, null);
             mProgress = (SeslProgressBar) view.findViewById(R.id.progress);
             mMessageView = (TextView) view.findViewById(R.id.message);
             setView(view);
         } else {
-            View view = inflater.inflate(R.layout.oui_layout_progress_dialog_spinner, null);
+            View view = inflater.inflate(R.layout.oui_dialog_progress_dialog_spinner, null);
             mProgress = (SeslProgressBar) view.findViewById(R.id.progress);
             mMessageView = (TextView) view.findViewById(R.id.message);
             setView(view);
