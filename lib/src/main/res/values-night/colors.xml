@@ -21,4 +21,8 @@
     <color name="oui_seekbar_overlap_color_activated">@color/sesl_seekbar_overlap_color_activated_dark</color>
     <color name="oui_seekbar_circle_marker_color">#ff808080</color>
 
+    <!-- ProgressDialog -->
+    <color name="oui_progress_dialog_text_color">#ffe5e5e5</color>
+    <color name="oui_progress_dialog_horizontal_text_color">#ffb0b0b0</color>
+
 </resources>

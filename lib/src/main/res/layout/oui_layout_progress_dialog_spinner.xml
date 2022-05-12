@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/sesl_progress_dialog_padding_horizontal"
+        android:paddingTop="@dimen/sesl_progress_dialog_padding_vertical"
+        android:paddingEnd="@dimen/sesl_progress_dialog_padding_horizontal"
+        android:paddingBottom="@dimen/sesl_progress_dialog_padding_vertical"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <androidx.appcompat.widget.SeslProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:max="10000" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sesl_dialog_body_text_size"
+            android:textColor="@color/oui_progress_dialog_text_color"
+            android:lineSpacingExtra="@dimen/sesl_dialog_body_text_line_spacing_extra"
+            android:fontFamily="@string/sesl_font_family_regular" />
+
+    </LinearLayout>
+
+</FrameLayout>

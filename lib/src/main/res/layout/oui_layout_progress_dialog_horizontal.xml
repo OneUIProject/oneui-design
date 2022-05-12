@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/sesl_dialog_padding_horizontal"
+    android:paddingTop="@dimen/sesl_dialog_padding_vertical"
+    android:paddingEnd="@dimen/sesl_dialog_padding_horizontal"
+    android:paddingBottom="@dimen/sesl_dialog_padding_vertical">
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sesl_progress_dialog_text_size"
+        android:textColor="@color/oui_progress_dialog_horizontal_text_color"
+        android:fontFamily="@string/sesl_font_family_regular"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.SeslProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/progress_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/sesl_progress_dialog_text_size"
+        android:textColor="@color/oui_progress_dialog_horizontal_text_color"
+        android:fontFamily="@string/sesl_font_family_regular" />
+
+    <TextView
+        android:id="@+id/progress_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress"
+        android:layout_alignParentEnd="true"
+        android:textSize="@dimen/sesl_progress_dialog_text_size"
+        android:textColor="@color/oui_progress_dialog_horizontal_text_color"
+        android:fontFamily="@string/sesl_font_family_regular" />
+
+</RelativeLayout>
