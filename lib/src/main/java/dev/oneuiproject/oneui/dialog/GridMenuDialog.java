@@ -264,7 +264,8 @@ public class GridMenuDialog extends AlertDialog {
             }
         }
 
-        Log.e(TAG, "findItem: couldn't find item with id " + id);
+        Log.e(TAG, "findItem: couldn't find item with id 0x"
+                + Integer.toHexString(id));
         return null;
     }
 
@@ -286,7 +287,8 @@ public class GridMenuDialog extends AlertDialog {
         if (gridItem != null) {
             mMenuList.remove(gridItem);
         } else {
-            Log.e(TAG, "removeItemWithId: couldn't find item with id " + id);
+            Log.e(TAG, "removeItemWithId: couldn't find item with id 0x"
+                    + Integer.toHexString(id));
         }
     }
 
