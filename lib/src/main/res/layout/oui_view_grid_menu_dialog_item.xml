@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/oui_grid_menu_dialog_item_bg"
+    android:clipChildren="false"
+    android:focusable="true">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/grid_menu_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="4dp"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:tint="@color/oui_grid_menu_dialog_item_icon_text_color" />
+
+        <TextView
+            android:id="@+id/grid_menu_item_badge"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="-7dp"
+            android:padding="1dp"
+            android:layout_gravity="end|center|top"
+            android:gravity="center"
+            android:background="@drawable/tw_noti_badge_mtrl"
+            android:text="@string/oui_new_badge_text"
+            android:textSize="11dp"
+            android:textColor="#FFFAFAFA"
+            android:fontFamily="@string/sesl_font_family_regular"
+            android:textStyle="bold"
+            android:importantForAccessibility="no"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/grid_menu_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:textColor="@color/oui_grid_menu_dialog_item_icon_text_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

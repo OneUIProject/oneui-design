@@ -25,4 +25,9 @@
     <!-- MarginsTabLayout -->
     <dimen name="oui_tab_layout_default_padding">24.0dip</dimen>
 
+    <!-- GridMenuDialog -->
+    <dimen name="oui_grid_menu_dialog_horizontal_padding">16.0dip</dimen>
+    <dimen name="oui_grid_menu_dialog_vertical_padding">20.0dip</dimen>
+    <dimen name="oui_grid_menu_dialog_item_gap">8.0dip</dimen>
+
 </resources>

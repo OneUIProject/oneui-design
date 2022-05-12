@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/oui_grid_menu_dialog_horizontal_padding"
+    android:paddingVertical="@dimen/oui_grid_menu_dialog_vertical_padding"
+    android:focusable="false">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/grid_menu_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:focusable="false" />
+
+</LinearLayout>

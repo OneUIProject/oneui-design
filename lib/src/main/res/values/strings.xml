@@ -4,4 +4,7 @@
     <!-- RelatedCard -->
     <string name="oui_relative_description">Looking for something else?</string>
 
+    <!-- GridMenuDialog -->
+    <string name="oui_new_badge_text">N</string>
+
 </resources>

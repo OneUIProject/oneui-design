@@ -25,4 +25,8 @@
     <color name="oui_progress_dialog_text_color">#ffe5e5e5</color>
     <color name="oui_progress_dialog_horizontal_text_color">#ffb0b0b0</color>
 
+    <!-- GridMenuDialog -->
+    <color name="oui_grid_menu_dialog_item_ripple_color">#33ffffff</color>
+    <color name="oui_grid_menu_dialog_item_icon_text_color">#fffafafa</color>
+
 </resources>

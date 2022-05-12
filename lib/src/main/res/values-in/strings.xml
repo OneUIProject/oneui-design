@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_new_badge_text">B</string>
     <string name="oui_relative_description">Mencari sesuatu yang lain?</string>
 </resources>
