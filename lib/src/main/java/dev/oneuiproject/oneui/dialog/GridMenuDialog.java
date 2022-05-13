@@ -345,7 +345,7 @@ public class GridMenuDialog extends AlertDialog {
                         "has not been initiated yet");
             }
         } else {
-            Log.e(TAG, "removeItem: gridItem is either null " +
+            Log.e(TAG, "updateItem: gridItem is either null " +
                     "or not in this GridMenu");
         }
     }
