@@ -1,6 +1,5 @@
 package dev.oneuiproject.oneui.dialog;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
@@ -22,11 +21,13 @@ import androidx.annotation.MenuRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StyleRes;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.widget.TooltipCompat;
 import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SimpleItemAnimator;
 
 import java.util.ArrayList;
 
@@ -157,6 +158,11 @@ public class GridMenuDialog extends AlertDialog {
         mGridListView.setAdapter(mAdapter);
         mGridListView.addItemDecoration(new GridListItemDecoration());
 
+        RecyclerView.ItemAnimator animator = mGridListView.getItemAnimator();
+        if (animator instanceof SimpleItemAnimator) {
+            ((SimpleItemAnimator) animator).setSupportsChangeAnimations(false);
+        }
+
         setView(mContentView);
         super.onCreate(savedInstanceState);
     }
@@ -185,6 +191,12 @@ public class GridMenuDialog extends AlertDialog {
 
     @Override
     public void setButton(int whichButton, CharSequence text, OnClickListener listener) {
+        Log.e(TAG, "setButton: GridMenuDialog doesn't supports buttons");
+    }
+
+    @Override
+    public void setButton(int whichButton, CharSequence text, Drawable icon,
+                          OnClickListener listener) {
         Log.e(TAG, "setButton: GridMenuDialog doesn't supports buttons");
     }
 
@@ -305,6 +317,22 @@ public class GridMenuDialog extends AlertDialog {
         } else {
             Log.e(TAG, "updateItem: list adapter " +
                     "has not been initiated yet");
+        }
+    }
+
+    public void updateItem(@NonNull GridMenuItem gridItem) {
+        if (mAdapter != null && mMenuList.contains(gridItem)) {
+            final int index = mMenuList.indexOf(gridItem);
+
+            if (mAdapter != null) {
+                mAdapter.notifyItemChanged(index);
+            } else {
+                Log.e(TAG, "updateItem: list adapter " +
+                        "has not been initiated yet");
+            }
+        } else {
+            Log.e(TAG, "removeItem: gridItem is either null " +
+                    "or not in this GridMenu");
         }
     }
 
