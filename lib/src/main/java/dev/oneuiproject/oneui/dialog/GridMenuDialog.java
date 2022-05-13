@@ -35,10 +35,11 @@ import dev.oneuiproject.oneui.R;
 
 public class GridMenuDialog extends AlertDialog {
     private static final String TAG = "GridMenuDialog";
-    private static final int SPAN_COUNT = 4;
+    private static final int DEFAULT_SPAN_COUNT = 4;
 
     private Context mContext;
     private CharSequence mMessage;
+    private int mSpanCount = DEFAULT_SPAN_COUNT;
     private ArrayList<GridMenuItem> mMenuList = new ArrayList<>();
     private OnItemClickListener mOnItemClickListener;
 
@@ -154,7 +155,7 @@ public class GridMenuDialog extends AlertDialog {
 
         mGridListView = mContentView.findViewById(R.id.grid_menu_view);
         mAdapter = new GridListAdapter();
-        mGridListView.setLayoutManager(new GridLayoutManager(mContext, SPAN_COUNT));
+        mGridListView.setLayoutManager(new GridLayoutManager(mContext, mSpanCount));
         mGridListView.setAdapter(mAdapter);
         mGridListView.addItemDecoration(new GridListItemDecoration());
 
@@ -237,6 +238,19 @@ public class GridMenuDialog extends AlertDialog {
             }
         } else {
             Log.e(TAG, "inflateMenu: menu is null");
+        }
+    }
+
+    public void setSpanCount(int spanCount) {
+        mSpanCount = spanCount;
+
+        if (mGridListView != null) {
+            GridLayoutManager layoutManager
+                    = (GridLayoutManager) mGridListView.getLayoutManager();
+            if (layoutManager != null) {
+                layoutManager.setSpanCount(mSpanCount);
+            }
+            updateAllItems();
         }
     }
 
@@ -417,14 +431,14 @@ public class GridMenuDialog extends AlertDialog {
         public void getItemOffsets(@NonNull Rect outRect, @NonNull View view,
                                    @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
             final int position = parent.getChildAdapterPosition(view);
-            final int column = position % SPAN_COUNT;
+            final int column = position % mSpanCount;
 
             final int itemGap = view.getResources()
                     .getDimensionPixelSize(R.dimen.oui_grid_menu_dialog_item_gap);
 
-            outRect.left = (column * itemGap) / SPAN_COUNT;
-            outRect.right = itemGap - (((column + 1) * itemGap) / SPAN_COUNT);
-            if (position >= SPAN_COUNT) {
+            outRect.left = (column * itemGap) / mSpanCount;
+            outRect.right = itemGap - (((column + 1) * itemGap) / mSpanCount);
+            if (position >= mSpanCount) {
                 outRect.top = itemGap;
             }
         }
