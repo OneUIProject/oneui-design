@@ -29,4 +29,7 @@
     <color name="oui_grid_menu_dialog_item_ripple_color">#33ffffff</color>
     <color name="oui_grid_menu_dialog_item_icon_text_color">#fffafafa</color>
 
+    <!--DrawerLayout-->
+    <color name="drawer_dim_color">#cc000000</color>
+
 </resources>

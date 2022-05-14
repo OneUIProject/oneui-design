@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">N</string>
     <string name="oui_relative_description">Leder du efter noget andet?</string>
+    <string name="oui_new_badge_text">N</string>
+    <string name="oui_navigation_drawer">Navigationsskuffe</string>
+    <string name="oui_action_mode_all_checkbox">Alt</string>
+    <string name="oui_action_mode_select_items">Vælg elementer</string>
+    <string name="oui_action_mode_n_selected">%d valgt</string>
 </resources>

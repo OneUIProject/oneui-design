@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">Н</string>
     <string name="oui_relative_description">Чизи дигар меҷӯед?</string>
+    <string name="oui_new_badge_text">Н</string>
+    <string name="oui_navigation_drawer">Панели паймоиш</string>
+    <string name="oui_action_mode_all_checkbox">Ҳама</string>
+    <string name="oui_action_mode_select_items">Интихоби ҷузъҳо</string>
+    <string name="oui_action_mode_n_selected">%d интихоб шудаанд</string>
 </resources>

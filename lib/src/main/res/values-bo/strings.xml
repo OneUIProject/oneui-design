@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_relative_description">བྱེད་ནུས་གཞན་པ་འཚོལ་བ་ཡིན་ནམ།</string>
     <string name="oui_new_badge_text">གསར་པ།</string>
+    <string name="oui_navigation_drawer">འདྲེན་སྒམ་མཛུབ་སྟོན།</string>
+    <string name="oui_action_mode_all_checkbox">ཚང་མ།</string>
+    <string name="oui_action_mode_select_items">རྣམ་གྲངས་འདེམས་པ།</string>
+    <string name="oui_action_mode_n_selected">གྲངས་%dའདེམས་ཟིན།</string>
 </resources>

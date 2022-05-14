@@ -38,4 +38,28 @@
         <attr name="roundedCorners" />
     </declare-styleable>
 
+    <!--<declare-styleable name="DrawerLayout">
+        <attr name="android:layout" />
+        <attr name="drawerIcon" format="reference" />
+    </declare-styleable>-->
+
+    <declare-styleable name="ToolBarLayout">
+        <attr name="android:layout" />
+        <attr name="expandable" format="boolean" />
+        <attr name="expanded" format="boolean" />
+        <attr name="backButton" format="boolean" />
+        <attr name="title" format="string" />
+        <attr name="subtitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ToolbarLayoutParams">
+        <attr name="layout_location">
+            <enum name="main_content" value="0" />
+            <enum name="appbar_header" value="1" />
+            <enum name="footer" value="2" />
+            <enum name="root" value="3" />
+            <enum name="drawer_panel" value="4" />
+        </attr>
+    </declare-styleable>
+
 </resources>

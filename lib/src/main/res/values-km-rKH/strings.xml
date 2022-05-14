@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">ថ្មី</string>
     <string name="oui_relative_description">កំពុង​ស្វែងរក​អ្វី​ផ្សេង?</string>
+    <string name="oui_new_badge_text">ថ្មី</string>
+    <string name="oui_navigation_drawer">កេក​ការប្រាប់​ទិសដៅ</string>
+    <string name="oui_action_mode_all_checkbox">ទាំងអស់</string>
+    <string name="oui_action_mode_select_items">ជ្រើស​ធាតុ</string>
+    <string name="oui_action_mode_n_selected">បាន​ជ្រើស %d</string>
 </resources>

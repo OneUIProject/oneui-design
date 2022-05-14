@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">Ж</string>
     <string name="oui_relative_description">Башка бир нерсени издеп жатасызбы?</string>
+    <string name="oui_new_badge_text">Ж</string>
+    <string name="oui_navigation_drawer">Навигация тарткычы</string>
+    <string name="oui_action_mode_all_checkbox">Баары</string>
+    <string name="oui_action_mode_select_items">Нерсени тандоо</string>
+    <string name="oui_action_mode_n_selected">%d тандалды</string>
 </resources>

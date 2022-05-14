@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">U</string>
     <string name="oui_relative_description">Etsitkö jotain muuta?</string>
+    <string name="oui_new_badge_text">U</string>
+    <string name="oui_navigation_drawer">Siirtymisvalikko</string>
+    <string name="oui_action_mode_all_checkbox">Kaikki</string>
+    <string name="oui_action_mode_select_items">Valitse kohteet</string>
+    <string name="oui_action_mode_n_selected">%d valittu</string>
 </resources>

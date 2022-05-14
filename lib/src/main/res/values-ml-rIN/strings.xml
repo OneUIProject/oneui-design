@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">N</string>
     <string name="oui_relative_description">എന്തെങ്കിലും തിരയുകയാണോ?</string>
+    <string name="oui_new_badge_text">N</string>
+    <string name="oui_navigation_drawer">നാവിഗേഷൻ ഡ്രോയർ</string>
+    <string name="oui_action_mode_all_checkbox">എല്ലാം</string>
+    <string name="oui_action_mode_select_items">ഇനങ്ങള്‍ തിരഞ്ഞെടുക്കുക</string>
+    <string name="oui_action_mode_n_selected">%d തിരഞ്ഞെടുത്തു</string>
 </resources>

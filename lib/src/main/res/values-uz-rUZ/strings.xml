@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">Y</string>
     <string name="oui_relative_description">Yana boshqa narsa qidiryapsizmi?</string>
+    <string name="oui_new_badge_text">Y</string>
+    <string name="oui_navigation_drawer">Navigatsiya chizish vositasi</string>
+    <string name="oui_action_mode_all_checkbox">Barchasi</string>
+    <string name="oui_action_mode_select_items">Elementlar tanlash</string>
+    <string name="oui_action_mode_n_selected">%d tanlandi</string>
 </resources>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">Н</string>
     <string name="oui_relative_description">Ищете что-то другое?</string>
+    <string name="oui_new_badge_text">Н</string>
+    <string name="oui_navigation_drawer">Панель навигации</string>
+    <string name="oui_action_mode_all_checkbox">Все</string>
+    <string name="oui_action_mode_select_items">Выберите элементы</string>
+    <string name="oui_action_mode_n_selected">Выбрано: %d</string>
 </resources>

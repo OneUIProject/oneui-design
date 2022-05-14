@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">新</string>
     <string name="oui_relative_description">他の機能をお探しですか？</string>
+    <string name="oui_new_badge_text">新</string>
+    <string name="oui_navigation_drawer">ナビゲーションドロワー</string>
+    <string name="oui_action_mode_all_checkbox">全て</string>
+    <string name="oui_action_mode_select_items">アイテムを選択</string>
+    <string name="oui_action_mode_n_selected">%d件選択</string>
 </resources>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">ಹೊ</string>
     <string name="oui_relative_description">ಬೇರೆ ಸಂಗತಿಗಳಿಗಾಗಿ ಹುಡುಕುತ್ತಿರುವಿರೇ?</string>
+    <string name="oui_new_badge_text">ಹೊ</string>
+    <string name="oui_navigation_drawer">ನ್ಯಾವಿಗೇಶನ್ ಡ್ರಾಯರ್</string>
+    <string name="oui_action_mode_all_checkbox">ಎಲ್ಲ</string>
+    <string name="oui_action_mode_select_items">ಅಂಶಗಳನ್ನು ಆರಿಸಿ</string>
+    <string name="oui_action_mode_n_selected">%d ಆಯ್ಕೆಮಾಡಿದೆ</string>
 </resources>

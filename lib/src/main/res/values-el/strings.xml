@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">Ν</string>
     <string name="oui_relative_description">Ψάχνετε κάτι άλλο;</string>
+    <string name="oui_new_badge_text">Ν</string>
+    <string name="oui_navigation_drawer">Συρτάρι πλοήγησης</string>
+    <string name="oui_action_mode_all_checkbox">Όλα</string>
+    <string name="oui_action_mode_select_items">Επιλογή στοιχείων</string>
+    <string name="oui_action_mode_n_selected">Επιλέχθηκαν %d</string>
 </resources>

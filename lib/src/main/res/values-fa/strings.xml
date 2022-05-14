@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">ج</string>
     <string name="oui_relative_description">به دنبال چیز دیگری هستید؟</string>
+    <string name="oui_new_badge_text">ج</string>
+    <string name="oui_navigation_drawer">کشوی پیمایش</string>
+    <string name="oui_action_mode_all_checkbox">همه</string>
+    <string name="oui_action_mode_select_items">انتخاب موارد</string>
+    <string name="oui_action_mode_n_selected">‎%d انتخاب شد</string>
 </resources>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">Új</string>
     <string name="oui_relative_description">Valami mást keres?</string>
+    <string name="oui_new_badge_text">Új</string>
+    <string name="oui_navigation_drawer">Navigációs tálca</string>
+    <string name="oui_action_mode_all_checkbox">Mind</string>
+    <string name="oui_action_mode_select_items">Tételek kijelölése</string>
+    <string name="oui_action_mode_n_selected">%d kijelölve</string>
 </resources>

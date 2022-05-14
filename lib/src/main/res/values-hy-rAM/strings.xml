@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">Ն</string>
     <string name="oui_relative_description">Էլի ինչ-որ բա՞ն եք փնտրում:</string>
+    <string name="oui_new_badge_text">Ն</string>
+    <string name="oui_navigation_drawer">Նավարկման դարակ</string>
+    <string name="oui_action_mode_all_checkbox">Բոլոր</string>
+    <string name="oui_action_mode_select_items">Ընտրել տարրեր</string>
+    <string name="oui_action_mode_n_selected">%d ընտրված</string>
 </resources>

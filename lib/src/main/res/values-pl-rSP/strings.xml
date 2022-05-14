@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">N</string>
     <string name="oui_relative_description">Sznupiesz cosik inkszego?</string>
+    <string name="oui_new_badge_text">N</string>
+    <string name="oui_navigation_drawer">Sfijane menu nawigacyji</string>
+    <string name="oui_action_mode_all_checkbox">Wszyjske</string>
+    <string name="oui_action_mode_select_items">Ôbier elymynty</string>
+    <string name="oui_action_mode_n_selected">%d ôbrane</string>
 </resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_layout_coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar_layout_app_bar"
+        style="?appBarLayoutStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:expanded="false">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout_collapsing_toolbar"
+            style="?collapsingToolbarLayoutStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll">
+
+            <include layout="@layout/oui_toolbar_main" />
+
+            <include
+                layout="@layout/oui_toolbar_search"
+                android:visibility="gone" />
+
+            <include
+                layout="@layout/oui_toolbar_action_mode"
+                android:visibility="gone" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <dev.oneuiproject.oneui.widget.RoundFrameLayout
+        android:id="@+id/toolbar_layout_main_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:roundedCorners="top_left|top_right" />
+
+    <dev.oneuiproject.oneui.widget.RoundLinearLayout
+        android:id="@+id/toolbar_layout_bottom_corners"
+        android:layout_width="fill_parent"
+        android:layout_height="26dp"
+        android:layout_gravity="bottom"
+        app:roundedCorners="bottom_left|bottom_right" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">ন</string>
     <string name="oui_relative_description">অন্য কিবা চাই আছে নেকি?</string>
+    <string name="oui_new_badge_text">ন</string>
+    <string name="oui_navigation_drawer">নেভিগেশ্বন ড্ৰৱাৰ</string>
+    <string name="oui_action_mode_all_checkbox">সকলো</string>
+    <string name="oui_action_mode_select_items">আইটেমসমূহ চয়ন কৰক</string>
+    <string name="oui_action_mode_n_selected">%d টা চয়নিত</string>
 </resources>

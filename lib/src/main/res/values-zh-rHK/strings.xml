@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">新</string>
     <string name="oui_relative_description">在尋找不一樣的功能嗎？</string>
+    <string name="oui_new_badge_text">新</string>
+    <string name="oui_navigation_drawer">導覽滑動選單</string>
+    <string name="oui_action_mode_all_checkbox">全部</string>
+    <string name="oui_action_mode_select_items">選擇項目</string>
+    <string name="oui_action_mode_n_selected">已選擇 %d 個</string>
 </resources>

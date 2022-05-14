@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">Ш</string>
     <string name="oui_relative_description">Өөрийг хайж байна уу?</string>
+    <string name="oui_new_badge_text">Ш</string>
+    <string name="oui_navigation_drawer">Залуурдалтын зурагч</string>
+    <string name="oui_action_mode_all_checkbox">Бүгд</string>
+    <string name="oui_action_mode_select_items">Зүйлс сонгох</string>
+    <string name="oui_action_mode_n_selected">%d сонгосон</string>
 </resources>

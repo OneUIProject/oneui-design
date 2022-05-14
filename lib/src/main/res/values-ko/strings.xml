@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">N</string>
     <string name="oui_relative_description">다른 기능을 찾고 있나요?</string>
+    <string name="oui_new_badge_text">N</string>
+    <string name="oui_navigation_drawer">내비게이션 메뉴</string>
+    <string name="oui_action_mode_all_checkbox">전체</string>
+    <string name="oui_action_mode_select_items">항목 선택</string>
+    <string name="oui_action_mode_n_selected">%d개 선택됨</string>
 </resources>

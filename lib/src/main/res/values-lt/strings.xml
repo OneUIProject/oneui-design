@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">N</string>
     <string name="oui_relative_description">Ieškote dar ko nors?</string>
+    <string name="oui_new_badge_text">N</string>
+    <string name="oui_navigation_drawer">Naršymo stalčius</string>
+    <string name="oui_action_mode_all_checkbox">Visi</string>
+    <string name="oui_action_mode_select_items">Rinktis elementus</string>
+    <string name="oui_action_mode_n_selected">Pasirinkta: %d</string>
 </resources>

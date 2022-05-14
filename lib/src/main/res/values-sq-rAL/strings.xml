@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">R</string>
     <string name="oui_relative_description">Po kërkon për ndonjë gjë tjetër?</string>
+    <string name="oui_new_badge_text">R</string>
+    <string name="oui_navigation_drawer">Sirtari i navigimit</string>
+    <string name="oui_action_mode_all_checkbox">Të gjitha</string>
+    <string name="oui_action_mode_select_items">Përzgjidh artikuj</string>
+    <string name="oui_action_mode_n_selected">%d përzgjedhur</string>
 </resources>

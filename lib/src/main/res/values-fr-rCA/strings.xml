@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">N</string>
     <string name="oui_relative_description">Vous recherchez autre chose ?</string>
+    <string name="oui_new_badge_text">N</string>
+    <string name="oui_navigation_drawer">Tiroir de navigation</string>
+    <string name="oui_action_mode_all_checkbox">Tout</string>
+    <string name="oui_action_mode_select_items">Sélectionner éléments</string>
+    <string name="oui_action_mode_n_selected">Sélection : %d</string>
 </resources>

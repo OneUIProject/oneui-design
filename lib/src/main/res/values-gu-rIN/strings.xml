@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">N</string>
     <string name="oui_relative_description">કંઈક અન્ય શોધી રહ્યાં છો?</string>
+    <string name="oui_new_badge_text">N</string>
+    <string name="oui_navigation_drawer">નૅવિગેશન ડ્રૉઅર</string>
+    <string name="oui_action_mode_all_checkbox">બધા</string>
+    <string name="oui_action_mode_select_items">વસ્તુઓ પસંદ કરો</string>
+    <string name="oui_action_mode_n_selected">%d પસંદ કર્યુ</string>
 </resources>

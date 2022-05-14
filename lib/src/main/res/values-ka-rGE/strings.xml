@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_new_badge_text">N</string>
     <string name="oui_relative_description">კიდევ სხვა რამეს ეძებთ?</string>
+    <string name="oui_new_badge_text">N</string>
+    <string name="oui_navigation_drawer">ნავიგაციის მხაზავი</string>
+    <string name="oui_action_mode_all_checkbox">ყველა</string>
+    <string name="oui_action_mode_select_items">ელემენტების არჩევა</string>
+    <string name="oui_action_mode_n_selected">%d არჩეულია</string>
 </resources>
