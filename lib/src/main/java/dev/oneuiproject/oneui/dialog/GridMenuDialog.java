@@ -8,7 +8,6 @@ import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +21,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StyleRes;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.view.SupportMenuInflater;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.widget.TooltipCompat;
 import androidx.core.view.MenuItemCompat;
@@ -220,7 +220,7 @@ public class GridMenuDialog extends AlertDialog {
 
     public void inflateMenu(@MenuRes int menuRes) {
         Menu menu = new MenuBuilder(mContext);
-        new MenuInflater(mContext).inflate(menuRes, menu);
+        new SupportMenuInflater(mContext).inflate(menuRes, menu);
         inflateMenu(menu);
     }
 
@@ -236,6 +236,8 @@ public class GridMenuDialog extends AlertDialog {
                     mMenuList.add(gridItem);
                 }
             }
+
+            updateAllItems();
         } else {
             Log.e(TAG, "inflateMenu: menu is null");
         }
@@ -257,6 +259,7 @@ public class GridMenuDialog extends AlertDialog {
     public void addItem(@NonNull GridMenuItem gridItem) {
         if (gridItem != null) {
             mMenuList.add(gridItem);
+            updateAllItems();
         } else {
             Log.e(TAG, "addItem: gridItem is null");
         }
@@ -265,6 +268,7 @@ public class GridMenuDialog extends AlertDialog {
     public void addItem(int index, @NonNull GridMenuItem gridItem) {
         if (gridItem != null) {
             mMenuList.add(index, gridItem);
+            updateAllItems();
         } else {
             Log.e(TAG, "addItem: gridItem is null");
         }
@@ -297,11 +301,13 @@ public class GridMenuDialog extends AlertDialog {
 
     public void removeItem(int index) {
         mMenuList.remove(index);
+        updateAllItems();
     }
 
     public void removeItem(@NonNull GridMenuItem gridItem) {
         if (gridItem != null && mMenuList.contains(gridItem)) {
             mMenuList.remove(gridItem);
+            updateAllItems();
         } else {
             Log.e(TAG, "removeItem: gridItem is either null " +
                     "or not in this GridMenu");
@@ -312,6 +318,7 @@ public class GridMenuDialog extends AlertDialog {
         GridMenuItem gridItem = findItem(id);
         if (gridItem != null) {
             mMenuList.remove(gridItem);
+            updateAllItems();
         } else {
             Log.e(TAG, "removeItemWithId: couldn't find item with id 0x"
                     + Integer.toHexString(id));
@@ -335,7 +342,7 @@ public class GridMenuDialog extends AlertDialog {
     }
 
     public void updateItem(@NonNull GridMenuItem gridItem) {
-        if (mAdapter != null && mMenuList.contains(gridItem)) {
+        if (gridItem != null && mMenuList.contains(gridItem)) {
             final int index = mMenuList.indexOf(gridItem);
 
             if (mAdapter != null) {
@@ -350,7 +357,24 @@ public class GridMenuDialog extends AlertDialog {
         }
     }
 
-    public void updateAllItems() {
+    public void updateItemWithId(@IdRes int id) {
+        GridMenuItem gridItem = findItem(id);
+        if (gridItem != null) {
+            final int index = mMenuList.indexOf(gridItem);
+
+            if (mAdapter != null) {
+                mAdapter.notifyItemChanged(index);
+            } else {
+                Log.e(TAG, "updateItemWithId: list adapter " +
+                        "has not been initiated yet");
+            }
+        } else {
+            Log.e(TAG, "updateItemWithId: couldn't find item with id 0x"
+                    + Integer.toHexString(id));
+        }
+    }
+
+    private void updateAllItems() {
         if (mAdapter != null) {
             mAdapter.notifyItemRangeChanged(0, mMenuList.size());
         } else {
@@ -418,7 +442,7 @@ public class GridMenuDialog extends AlertDialog {
 
         public void setEnabled(boolean enabled) {
             itemView.setEnabled(enabled);
-            itemView.setAlpha(enabled ? 1f : 0.4f);
+            itemView.setAlpha(enabled ? 1.0f : 0.4f);
         }
 
         public void setTooltipText(CharSequence tooltipText) {
