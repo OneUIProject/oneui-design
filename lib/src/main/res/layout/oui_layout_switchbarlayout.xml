@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <androidx.appcompat.widget.SeslSwitchBar
-        android:id="@+id/switchbar_switchbarlayout"
+        android:id="@+id/switchbarlayout_switchbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/sesl_switchbar_height"
         android:layout_marginBottom="20.0dip" />

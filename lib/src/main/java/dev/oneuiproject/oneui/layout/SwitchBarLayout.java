@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SeslSwitchBar;
 
@@ -14,43 +15,36 @@ import dev.oneuiproject.oneui.R;
 
 public class SwitchBarLayout extends ToolbarLayout {
     private static final String TAG = "SwitchBarLayout";
-    private SeslSwitchBar switchBar;
-    private FrameLayout content;
 
-    public SwitchBarLayout(Context context, @Nullable AttributeSet attrs) {
+    private static final int MAIN_CONTENT = 0;
+
+    private SeslSwitchBar mSwitchBar;
+    private FrameLayout mSBLContainer;
+
+    public SwitchBarLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
-        LayoutInflater.from(mContext).inflate(R.layout.oui_layout_switchbarlayout, main_layout, true);
-        switchBar = findViewById(R.id.switchbar_switchbarlayout);
-        content = findViewById(R.id.switchbarlayout_container);
+        LayoutInflater.from(mContext)
+                .inflate(R.layout.oui_layout_switchbarlayout, mMainContainer, true);
+        mSwitchBar = findViewById(R.id.switchbarlayout_switchbar);
+        mSBLContainer = findViewById(R.id.switchbarlayout_container);
     }
 
     @Override
     public void addView(View child, int index, ViewGroup.LayoutParams params) {
-        if (content == null) {
+        if (mSBLContainer == null) {
             super.addView(child, index, params);
         } else {
-            if (((ToolbarLayoutParams) params).layout_location == 0) {
-                content.addView(child, params);
+            if (((ToolbarLayoutParams) params).layout_location == MAIN_CONTENT) {
+                mSBLContainer.addView(child, params);
             } else {
                 super.addView(child, index, params);
             }
         }
     }
 
+    @NonNull
     public SeslSwitchBar getSwitchBar() {
-        return switchBar;
-    }
-
-    public void setChecked(boolean checked) {
-        switchBar.setChecked(checked);
-    }
-
-    public boolean isChecked() {
-        return switchBar.isChecked();
-    }
-
-    public void addOnSwitchChangeListener(SeslSwitchBar.OnSwitchChangeListener onSwitchChangeListener) {
-        switchBar.addOnSwitchChangeListener(onSwitchChangeListener);
+        return mSwitchBar;
     }
 }
