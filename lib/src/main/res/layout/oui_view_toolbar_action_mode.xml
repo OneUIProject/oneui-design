@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbarlayout_action_mode_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_gravity="bottom"
+    app:contentInsetStart="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/toolbarlayout_selectall"
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:clickable="true">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/toolbarlayout_selectall_checkbox"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:focusable="false"
+                android:clickable="false"
+                android:duplicateParentState="true" />
+
+            <TextView
+                android:id="@+id/toolbarlayout_selectall_text"
+                style="@style/OneUI.MultiSelectionCheckboxTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:text="@string/oui_action_mode_all_checkbox"
+                android:duplicateParentState="true" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/toolbar_layout_action_mode_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:maxLines="1"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:textColor="?attr/actionMenuTextColor" />
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

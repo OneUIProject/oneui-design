@@ -3,6 +3,7 @@
 
     <color name="oui_round_and_bgcolor">@color/sesl_round_and_bgcolor_light</color>
     <color name="oui_background_color">@color/sesl_background_color_light</color>
+    <color name="oui_primary_text_color">#ff010101</color>
 
     <color name="oui_functional_green_color">@color/sesl_functional_green_light</color>
     <color name="oui_functional_orange_color">@color/sesl_functional_orange_light</color>
@@ -29,8 +30,12 @@
     <color name="oui_grid_menu_dialog_item_ripple_color">#1a000000</color>
     <color name="oui_grid_menu_dialog_item_icon_text_color">#ff252525</color>
 
-    <!--DrawerLayout-->
-    <color name="drawer_dim_color">#33000000</color>
-    <color name="drawer_icon_color">#ff676768</color>
+    <!-- ToolbarLayout -->
+    <color name="oui_navigation_button_badge_background_color">#ffef5e16</color>
+    <color name="oui_navigation_button_badge_text_color">@color/sesl_white</color>
+
+    <!-- DrawerLayout -->
+    <color name="oui_drawerlayout_drawer_dim_color">#33000000</color>
+    <color name="oui_drawerlayout_drawer_icon_color">#ff676768</color>
 
 </resources>

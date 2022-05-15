@@ -30,4 +30,7 @@
     <dimen name="oui_grid_menu_dialog_vertical_padding">20.0dip</dimen>
     <dimen name="oui_grid_menu_dialog_item_gap">8.0dip</dimen>
 
+    <!-- ToolbarLayout -->
+    <dimen name="oui_navigation_button_badge_text_size">11.0dip</dimen>
+
 </resources>

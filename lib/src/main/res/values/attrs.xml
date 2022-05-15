@@ -38,16 +38,17 @@
         <attr name="roundedCorners" />
     </declare-styleable>
 
+    <!-- Custom Layouts -->
     <!--<declare-styleable name="DrawerLayout">
         <attr name="android:layout" />
         <attr name="drawerIcon" format="reference" />
     </declare-styleable>-->
 
-    <declare-styleable name="ToolBarLayout">
+    <declare-styleable name="ToolbarLayout">
         <attr name="android:layout" />
         <attr name="expandable" format="boolean" />
         <attr name="expanded" format="boolean" />
-        <attr name="backButton" format="boolean" />
+        <attr name="navigationIcon" format="reference" />
         <attr name="title" format="string" />
         <attr name="subtitle" format="string" />
     </declare-styleable>

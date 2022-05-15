@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/toolbar_layout_footer_container"
+    android:id="@+id/toolbarlayout_footer_content"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:animateLayoutChanges="true"
     android:orientation="vertical">
 
     <FrameLayout
-        android:id="@+id/toolbar_layout_footer"
+        android:id="@+id/toolbarlayout_footer_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/toolbar_layout_bottom_nav_view"
+        android:id="@+id/toolbarlayout_bottom_nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:animateLayoutChanges="true"
-        android:background="?android:windowBackground"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingHorizontal="4dp"
         android:visibility="gone" />
 
 </LinearLayout>
