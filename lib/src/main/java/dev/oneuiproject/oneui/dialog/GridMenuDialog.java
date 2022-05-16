@@ -1,5 +1,6 @@
 package dev.oneuiproject.oneui.dialog;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
@@ -65,8 +66,8 @@ public class GridMenuDialog extends AlertDialog {
             mTooltipText = MenuItemCompat.getTooltipText(menuItem);
         }
 
-        GridMenuItem(@IdRes int id, @NonNull Drawable icon,
-                     @NonNull CharSequence title) {
+        GridMenuItem(@IdRes int id, @Nullable Drawable icon,
+                     @Nullable CharSequence title) {
             mId = id;
             mIcon = icon;
             mTitle = title;
@@ -132,7 +133,7 @@ public class GridMenuDialog extends AlertDialog {
     }
 
     public interface OnItemClickListener {
-        void onClick(GridMenuItem item);
+        boolean onClick(GridMenuItem item);
     }
 
     public GridMenuDialog(@NonNull Context context) {
@@ -218,6 +219,7 @@ public class GridMenuDialog extends AlertDialog {
         }
     }
 
+    @SuppressLint("RestrictedApi")
     public void inflateMenu(@MenuRes int menuRes) {
         Menu menu = new MenuBuilder(mContext);
         new SupportMenuInflater(mContext).inflate(menuRes, menu);
@@ -326,8 +328,8 @@ public class GridMenuDialog extends AlertDialog {
     }
 
     @NonNull
-    public GridMenuItem newItem(@IdRes int id, @NonNull Drawable icon,
-                                @NonNull CharSequence title) {
+    public GridMenuItem newItem(@IdRes int id, @Nullable Drawable icon,
+                                @Nullable CharSequence title) {
         GridMenuItem gridItem = new GridMenuItem(id, icon, title);
         return gridItem;
     }
@@ -401,8 +403,12 @@ public class GridMenuDialog extends AlertDialog {
         public void onBindViewHolder(@NonNull GridListViewHolder holder, int position) {
             GridMenuItem gridItem = mMenuList.get(position);
             holder.itemView.setOnClickListener(v -> {
+                boolean result = false;
                 if (mOnItemClickListener != null) {
-                    mOnItemClickListener.onClick(gridItem);
+                    result = mOnItemClickListener.onClick(gridItem);
+                }
+                if (result) {
+                    dismiss();
                 }
             });
             holder.icon.setImageDrawable(gridItem.getIcon());
