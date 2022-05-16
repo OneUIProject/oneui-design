@@ -49,14 +49,6 @@ public class TabLayoutUtils {
                             break;
                         case MotionEvent.ACTION_UP:
                             v.setPressed(false);
-
-                            final int layoutDirection = tabLayout.getResources()
-                                    .getConfiguration().getLayoutDirection();
-                            final int focus = layoutDirection == View.LAYOUT_DIRECTION_RTL
-                                    ? View.FOCUS_LEFT
-                                    : View.FOCUS_RIGHT;
-                            tabLayout.fullScroll(focus);
-
                             if (listener != null) {
                                 listener.onClick(v);
                             }
