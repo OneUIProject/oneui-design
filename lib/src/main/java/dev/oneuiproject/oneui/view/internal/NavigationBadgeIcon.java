@@ -39,17 +39,17 @@ public class NavigationBadgeIcon extends Drawable {
 
         mTextPaint = new Paint();
         mTextPaint.setColor(mContext
-                .getColor(R.color.oui_navigation_button_badge_text_color));
+                .getColor(R.color.oui_n_badge_text_color));
         mTextPaint.setTextAlign(Paint.Align.CENTER);
         mTextPaint.setTypeface(Typeface
                 .create("sec-roboto-light", Typeface.NORMAL));
         mTextPaint.setTextSize(mContext.getResources()
-                .getDimensionPixelSize(R.dimen.oui_navigation_button_badge_text_size));
+                .getDimensionPixelSize(R.dimen.oui_n_badge_text_size));
         mTextPaint.setAntiAlias(true);
 
         mCirclePaint = new Paint();
         mCirclePaint.setColor(mContext
-                .getColor(R.color.oui_navigation_button_badge_background_color));
+                .getColor(R.color.oui_n_badge_background_color));
         mCirclePaint.setAntiAlias(true);
     }
 

@@ -31,6 +31,12 @@
     <dimen name="oui_grid_menu_dialog_item_gap">8.0dip</dimen>
 
     <!-- ToolbarLayout -->
-    <dimen name="oui_navigation_button_badge_text_size">11.0dip</dimen>
+    <dimen name="oui_n_badge_view_size">17.0dip</dimen>
+    <dimen name="oui_n_badge_default_width">13.0dip</dimen>
+    <dimen name="oui_n_badge_additional_width">4.0dip</dimen>
+    <dimen name="oui_n_badge_text_size">11.0dip</dimen>
+
+    <!-- DrawerLayout -->
+    <dimen name="oui_drawerlayout_drawer_top_margin">16.0dip</dimen>
 
 </resources>

@@ -59,7 +59,8 @@
             <enum name="appbar_header" value="1" />
             <enum name="footer" value="2" />
             <enum name="root" value="3" />
-            <enum name="drawer_panel" value="4" />
+            <enum name="drawer_header" value="4" />
+            <enum name="drawer_panel" value="5" />
         </attr>
     </declare-styleable>
 

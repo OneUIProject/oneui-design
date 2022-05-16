@@ -417,34 +417,38 @@ public class ToolbarLayout extends LinearLayout {
     }
 
     public void setNavigationButtonBadge(int count) {
-        if (count != 0) {
-            NavigationBadgeIcon badgeIcon;
-            if (mNavigationBadgeIcon == null) {
-                badgeIcon = new NavigationBadgeIcon(mContext);
-                mNavigationBadgeIcon = new LayerDrawable(
-                        new Drawable[]{mNavigationIcon, badgeIcon});
+        if (mNavigationIcon != null)  {
+            if (count != 0) {
+                NavigationBadgeIcon badgeIcon;
+                if (mNavigationBadgeIcon == null) {
+                    badgeIcon = new NavigationBadgeIcon(mContext);
+                    mNavigationBadgeIcon = new LayerDrawable(
+                            new Drawable[]{mNavigationIcon, badgeIcon});
+                } else {
+                    badgeIcon = (NavigationBadgeIcon) mNavigationBadgeIcon
+                            .getDrawable(1);
+                }
+
+                badgeIcon.setOrientation(getResources().getConfiguration()
+                        .orientation == Configuration.ORIENTATION_LANDSCAPE);
+
+                if (count == N_BADGE) {
+                    badgeIcon.setText(mContext.getResources()
+                            .getString(R.string.oui_new_badge_text));
+                } else {
+                    badgeIcon.setText(count > 99
+                            ? "99" : String.valueOf(count));
+                }
+
+                mNavigationBadgeIcon.invalidateSelf();
+                mMainToolbar.setNavigationIcon(mNavigationBadgeIcon);
             } else {
-                badgeIcon = (NavigationBadgeIcon) mNavigationBadgeIcon
-                        .getDrawable(1);
+                mNavigationBadgeIcon = null;
+                mMainToolbar.setNavigationIcon(mNavigationIcon);
             }
-
-            badgeIcon.setOrientation(getResources().getConfiguration()
-                    .orientation == Configuration.ORIENTATION_LANDSCAPE);
-
-            if (count == N_BADGE) {
-                badgeIcon.setText(mContext.getResources()
-                        .getString(R.string.oui_new_badge_text));
-            } else {
-                badgeIcon.setText(count > 99
-                        ? "99" : String.valueOf(count));
-            }
-
-            mNavigationBadgeIcon.invalidateSelf();
-            mMainToolbar.setNavigationIcon(mNavigationBadgeIcon);
-        } else {
-            mNavigationBadgeIcon = null;
-            mMainToolbar.setNavigationIcon(mNavigationIcon);
-        }
+        } else
+            Log.d(TAG, "setNavigationButtonBadge: no navigation icon" +
+                    " has been set");
     }
 
     public void setNavigationButtonTooltip(@Nullable CharSequence tooltipText) {
