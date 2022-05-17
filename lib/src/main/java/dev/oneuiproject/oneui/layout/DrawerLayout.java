@@ -116,7 +116,7 @@ public class DrawerLayout extends ToolbarLayout {
                 .getLayoutDirection() == View.LAYOUT_DIRECTION_RTL;
 
         setNavigationButtonIcon(
-                ContextCompat.getDrawable(mContext, R.drawable.ic_oui_drawer));
+                ContextCompat.getDrawable(mContext, R.drawable.ic_oui_ab_drawer));
         setNavigationButtonTooltip(
                 getResources().getText(R.string.oui_navigation_drawer));
 

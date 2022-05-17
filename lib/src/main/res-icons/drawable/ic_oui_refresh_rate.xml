@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="36.0"
+    android:viewportHeight="36.0">
+
+    <path
+        android:fillColor="?attr/actionMenuTextColor"
+        android:fillType="evenOdd"
+        android:pathData="M18.3505,14.2454L18.3575,21.4404L16.8745,21.4414L16.8715,18.3574L13.9805,18.3604L13.9835,21.4444L12.4965,21.4454L12.4895,14.2514L13.9765,14.2494L13.9795,17.1654L16.8705,17.1624L16.8675,14.2464L18.3505,14.2454ZM23.7329,16.0881L23.7339,16.9281L21.1969,20.2861L23.8119,20.2831L23.8129,21.4341L19.3749,21.4391L19.3739,20.5691L21.8959,17.2411L19.4499,17.2431L19.4489,16.0921L23.7329,16.0881Z" />
+
+    <path
+        android:pathData="M23.513,26L12.513,26.011C11.132,26.012 10.012,24.894 10.011,23.513L10,12.513C9.999,11.133 11.117,10.012 12.497,10.011L23.497,10C24.878,9.999 25.999,11.117 26,12.498L26.011,23.498C26.012,24.878 24.894,25.999 23.513,26Z"
+        android:strokeWidth="1.5"
+        android:strokeColor="?attr/actionMenuTextColor"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+</vector>
