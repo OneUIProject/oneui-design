@@ -5,6 +5,8 @@
     <color name="oui_background_color">@color/sesl_background_color_light</color>
     <color name="oui_primary_text_color">#ff010101</color>
 
+    <color name="oui_list_divider_color">@color/sesl_list_divider_color_light</color>
+
     <color name="oui_functional_green_color">@color/sesl_functional_green_light</color>
     <color name="oui_functional_orange_color">@color/sesl_functional_orange_light</color>
     <color name="oui_functional_red_color">@color/sesl_functional_red_light</color>

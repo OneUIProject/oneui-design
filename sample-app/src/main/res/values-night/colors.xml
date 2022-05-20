@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="about_page_secondary_text_color">#ff747474</color>
+
+    <color name="home_page_icon_squircle_layer">#19000000</color>
+
+</resources>

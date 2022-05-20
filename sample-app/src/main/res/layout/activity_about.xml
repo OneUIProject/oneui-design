@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/about_app_bar"
+        style="?attr/appBarLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:seslUseCustomHeight="true"
+        app:seslHeightProportion="0.5">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/about_ctl"
+            style="?attr/collapsingToolbarLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sesl_action_bar_height_with_padding"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:isCustomTitle="true">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/about_header_app_icon"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:antialias="true" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textSize="30sp"
+                    android:textColor="@color/oui_primary_text_color"
+                    app:fontFamily="@font/samsungsharpsans_bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/about_header_app_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/about_page_secondary_text_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/about_header_github"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="?attr/actionBarItemBackground"
+                        app:srcCompat="@drawable/about_page_github" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/about_header_telegram"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?attr/actionBarItemBackground"
+                        app:srcCompat="@drawable/about_page_telegram" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/about_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:background="@android:color/transparent"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/about_bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp">
+
+            <ImageView
+                android:id="@+id/about_bottom_app_icon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:layout_toEndOf="@id/about_bottom_app_icon"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="18sp"
+                    android:textAppearance="?android:attr/textAppearanceListItem" />
+
+                <TextView
+                    android:id="@+id/about_bottom_app_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+                    android:textColor="?android:attr/textColorSecondary" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <include android:id="@+id/about_bottom_content"
+            layout="@layout/sample3_activity_about_content" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/about_swipe_up_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:focusable="false">
+
+        <!--
+            Kang from:
+            https://lottiefiles.com/24773-swipe-up-white-text
+        -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="100dp"
+            android:paddingHorizontal="70dp"
+            app:lottie_rawRes="@raw/lottie_swipe_up_anim"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_colorFilter="?android:attr/textColorPrimary" />
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="32.0dip"
+    android:height="32.0dip"
+    android:viewportWidth="80.0"
+    android:viewportHeight="80.0">
+
+    <group
+        android:name="s2"
+        android:pivotX="0.0"
+        android:pivotY="0.0"
+        android:rotation="0.0"
+        android:scaleX="1.0"
+        android:scaleY="1.0"
+        android:translateX="30.0"
+        android:translateY="31.25"
+        aapt:layer_name="BlueCircle">
+
+        <group
+            android:name="s2pg1"
+            android:pivotX="0.0"
+            android:pivotY="0.0"
+            android:rotation="0.0"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
+            android:translateX="10.0"
+            android:translateY="8.5"
+            aapt:layer_name="Ellipse 1">
+
+            <path
+                android:name="s2pg1p10"
+                android:pathData="M 0 -32 C 17.673 -32 32 -17.673 32 0 C 32 17.673 17.673 32 0 32 C -17.673 32 -32 17.673 -32 0 C -32 -17.673 -17.673 -32 0 -32 Z"
+                android:strokeWidth="7.0"
+                android:strokeAlpha="0.6"
+                android:strokeColor="#ffffffff"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:strokeMiterLimit="4.0"
+                android:trimPathStart="0.0"
+                android:trimPathEnd="0.3"
+                android:trimPathOffset="0.25"
+                aapt:layer_name="Ellipse Path 1" />
+
+        </group>
+
+    </group>
+
+    <group
+        android:name="s1"
+        android:pivotX="0.0"
+        android:pivotY="0.0"
+        android:rotation="0.0"
+        android:scaleX="1.0"
+        android:scaleY="1.0"
+        android:translateX="30.0"
+        android:translateY="31.25"
+        aapt:layer_name="GreenCircle">
+
+        <group
+            android:name="s1pg1"
+            android:pivotX="0.0"
+            android:pivotY="0.0"
+            android:rotation="0.0"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
+            android:translateX="10.0"
+            android:translateY="8.5"
+            aapt:layer_name="Ellipse 1">
+
+            <path
+                android:name="s1pg1p10"
+                android:pathData="M 0 -32 C 17.673 -32 32 -17.673 32 0 C 32 17.673 17.673 32 0 32 C -17.673 32 -32 17.673 -32 0 C -32 -17.673 -17.673 -32 0 -32 Z"
+                android:strokeWidth="7.0"
+                android:strokeAlpha="1.0"
+                android:strokeColor="#ffffffff"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:strokeMiterLimit="4.0"
+                android:trimPathStart="0.0"
+                android:trimPathEnd="0.3"
+                android:trimPathOffset="0.75"
+                aapt:layer_name="Ellipse Path 1" />
+
+        </group>
+
+    </group>
+
+</vector>

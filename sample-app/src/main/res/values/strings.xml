@@ -1,3 +1,4 @@
-<resources>
-    <string name="app_name">My Application</string>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="app_name">OneUI Sample</string>
 </resources>

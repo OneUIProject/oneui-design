@@ -3,21 +3,43 @@
     package="com.sec.sesl.tester">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication">
+        android:theme="@style/OneUITheme">
+
+        <meta-data
+            android:name="SamsungBasicInteraction"
+            android:value="SEP10" />
+
+        <meta-data
+            android:name="com.samsung.android.icon_container.has_icon_container"
+            android:value="true" />
+
         <activity
-            android:name=".MainActivity"
+            android:name="dev.oneuiproject.oneuiexample.activity.MainActivity"
+            android:configChanges="orientation|screenLayout|screenSize"
             android:exported="true">
+
+            <meta-data
+                android:name="com.sec.android.app.launcher.icon_theme"
+                android:value="themeColor" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="dev.oneuiproject.oneuiexample.activity.AboutActivity"
+            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" />
+
+        <activity
+            android:name="dev.oneuiproject.oneuiexample.activity.BaseDrawerActivity"
+            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" />
+
     </application>
 
 </manifest>

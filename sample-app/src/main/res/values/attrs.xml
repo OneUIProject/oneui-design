@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CardView">
+        <attr name="IconDrawable" format="reference" />
+        <attr name="IconColor" format="color" />
+        <attr name="TitleText" format="string" />
+        <attr name="SummaryText" format="string" />
+        <attr name="isDividerViewVisible" format="boolean" />
+    </declare-styleable>
+
+</resources>
