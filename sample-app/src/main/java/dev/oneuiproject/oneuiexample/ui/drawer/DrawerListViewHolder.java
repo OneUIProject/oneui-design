@@ -1,12 +1,11 @@
 package dev.oneuiproject.oneuiexample.ui.drawer;
 
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -37,9 +36,9 @@ public class DrawerListViewHolder extends RecyclerView.ViewHolder {
         return mIsSeparator;
     }
 
-    public void setIcon(@Nullable Drawable icon) {
+    public void setIcon(@DrawableRes int resId) {
         if (!mIsSeparator) {
-            mIconView.setImageDrawable(icon);
+            mIconView.setImageResource(resId);
         }
     }
 

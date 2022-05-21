@@ -19,7 +19,7 @@
 
         <activity
             android:name="dev.oneuiproject.oneuiexample.activity.MainActivity"
-            android:configChanges="orientation|screenLayout|screenSize"
+            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
             android:exported="true">
 
             <meta-data
@@ -34,10 +34,6 @@
 
         <activity
             android:name="dev.oneuiproject.oneuiexample.activity.AboutActivity"
-            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" />
-
-        <activity
-            android:name="dev.oneuiproject.oneuiexample.activity.BaseDrawerActivity"
             android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" />
 
     </application>

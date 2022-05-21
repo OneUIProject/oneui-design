@@ -3,6 +3,4 @@
 
     <color name="about_page_secondary_text_color">#ff8c8c8c</color>
 
-    <color name="home_page_icon_squircle_layer">@android:color/transparent</color>
-
 </resources>

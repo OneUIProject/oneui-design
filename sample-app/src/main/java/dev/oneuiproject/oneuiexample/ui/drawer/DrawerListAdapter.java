@@ -1,42 +1,34 @@
 package dev.oneuiproject.oneuiexample.ui.drawer;
 
 import android.content.Context;
-import android.content.Intent;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sec.sesl.tester.R;
 
+import java.util.List;
+
+import dev.oneuiproject.oneuiexample.fragment.BaseFragment;
+
 public class DrawerListAdapter extends RecyclerView.Adapter<DrawerListViewHolder> {
-    private static final String TAG = "DrawerListAdapter";
-    private static final int TYPE_ITEM = 0;
-    private static final int TYPE_SEPARATOR = 1;
     private Context mContext;
+    private List<BaseFragment> mFragments;
     private DrawerListener mListener;
     private int mSelectedPos;
 
-    private int[] mViewTypes;
-    private TypedArray mIcons;
-    private TypedArray mTitles;
+    public interface DrawerListener {
+        boolean onDrawerItemSelected(int position);
+    }
 
-    public DrawerListAdapter(@NonNull Context context, @Nullable DrawerListener listener) {
+    public DrawerListAdapter(@NonNull Context context, List<BaseFragment> fragments, @Nullable DrawerListener listener) {
         mContext = context;
+        mFragments = fragments;
         mListener = listener;
-
-        final Resources res = mContext.getResources();
-        mViewTypes = res.getIntArray(R.array.sample3_drawer_list_items_view_type);
-        mIcons = res.obtainTypedArray(R.array.sample3_drawer_list_items_icon);
-        mTitles = res.obtainTypedArray(R.array.sample3_drawer_list_items_title);
     }
 
     @NonNull
@@ -44,7 +36,7 @@ public class DrawerListAdapter extends RecyclerView.Adapter<DrawerListViewHolder
     public DrawerListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
 
-        final boolean isSeparator = viewType == TYPE_SEPARATOR;
+        final boolean isSeparator = viewType == 0;
         View view;
         if (isSeparator) {
             view = inflater.inflate(R.layout.sample3_view_drawer_list_separator, parent, false);
@@ -58,8 +50,8 @@ public class DrawerListAdapter extends RecyclerView.Adapter<DrawerListViewHolder
     @Override
     public void onBindViewHolder(@NonNull DrawerListViewHolder holder, int position) {
         if (!holder.isSeparator()) {
-            holder.setIcon(mIcons.getDrawable(position));
-            holder.setTitle(mTitles.getString(position));
+            holder.setIcon(mFragments.get(position).getIconResId());
+            holder.setTitle(mFragments.get(position).getTitle());
             holder.setSelected(position == mSelectedPos);
             holder.itemView.setOnClickListener(v -> {
                 final int itemPos = holder.getBindingAdapterPosition();
@@ -76,13 +68,12 @@ public class DrawerListAdapter extends RecyclerView.Adapter<DrawerListViewHolder
 
     @Override
     public int getItemCount() {
-        return mTitles.length();
+        return mFragments.size();
     }
-
 
     @Override
     public int getItemViewType(int position) {
-        return mViewTypes[position];
+        return (mFragments.get(position) == null) ? 0 : 1;
     }
 
     public void setSelectedItem(int position) {

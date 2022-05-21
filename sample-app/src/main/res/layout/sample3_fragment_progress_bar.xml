@@ -14,14 +14,14 @@
         <dev.oneuiproject.oneui.widget.Separator
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ProgressBar (indeterminate)"/>
+            android:text="Indeterminate" />
 
         <dev.oneuiproject.oneui.widget.RoundLinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingVertical="12dp"
+            android:background="@color/oui_background_color"
             android:orientation="vertical"
-            android:background="@color/oui_background_color">
+            android:paddingVertical="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -33,22 +33,22 @@
                     style="@style/Widget.AppCompat.ProgressBar.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:indeterminate="true"
-                    android:layout_marginEnd="24dp"/>
+                    android:layout_marginEnd="24dp"
+                    android:indeterminate="true" />
 
                 <androidx.appcompat.widget.SeslProgressBar
                     style="@style/Widget.AppCompat.ProgressBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:indeterminate="true"
-                    android:layout_marginEnd="24dp"/>
+                    android:layout_marginEnd="24dp"
+                    android:indeterminate="true" />
 
                 <androidx.appcompat.widget.SeslProgressBar
                     style="@style/Widget.AppCompat.ProgressBar.Large"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:indeterminate="true"
-                    android:layout_marginEnd="24dp"/>
+                    android:layout_marginEnd="24dp"
+                    android:indeterminate="true" />
 
                 <androidx.appcompat.widget.SeslProgressBar
                     style="@style/Widget.AppCompat.ProgressBar.Xlarge"
@@ -63,8 +63,67 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
+                android:indeterminate="true"
+                android:paddingHorizontal="24dp" />
+
+        </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+
+
+        <dev.oneuiproject.oneui.widget.Separator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Determinate" />
+
+        <dev.oneuiproject.oneui.widget.RoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/oui_background_color"
+            android:orientation="vertical"
+            android:paddingVertical="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.SeslProgressBar
+                    android:id="@+id/fragment_progressbar_1"
+                    style="@style/Widget.AppCompat.ProgressBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp" />
+
+                <androidx.appcompat.widget.SeslProgressBar
+                    android:id="@+id/fragment_progressbar_2"
+                    style="@style/Widget.AppCompat.ProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp" />
+
+                <androidx.appcompat.widget.SeslProgressBar
+                    android:id="@+id/fragment_progressbar_3"
+                    style="@style/Widget.AppCompat.ProgressBar.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp" />
+
+                <androidx.appcompat.widget.SeslProgressBar
+                    android:id="@+id/fragment_progressbar_4"
+                    style="@style/Widget.AppCompat.ProgressBar.Xlarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SeslProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:indeterminate="false"
                 android:paddingHorizontal="24dp"
-                android:indeterminate="true" />
+                android:progress="40" />
 
         </dev.oneuiproject.oneui.widget.RoundLinearLayout>
 
