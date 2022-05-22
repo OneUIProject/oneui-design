@@ -1,20 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24dp"
-    android:height="24dp"
-    android:viewportWidth="36.0"
-    android:viewportHeight="36.0">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="24dp" android:viewportHeight="24" android:viewportWidth="24" android:width="24dp">
 
-    <path
-        android:fillColor="?attr/actionMenuTextColor"
-        android:fillType="nonZero"
-        android:pathData="M22.4636,24.8848C22.4636,24.4018 22.0716,24.0098 21.5886,24.0098C21.1056,24.0098 20.7136,24.4018 20.7136,24.8848C20.7136,25.3678 21.1056,25.7598 21.5886,25.7598C22.0716,25.7598 22.4636,25.3678 22.4636,24.8848" />
+    <path android:fillColor="@color/oui_primary_icon_color" android:fillType="nonZero" android:pathData="M 16.4636 18.8848 C 16.4636 18.4018 16.0716 18.0098 15.5886 18.0098 C 15.105599999999999 18.0098 14.7136 18.4018 14.7136 18.8848 C 14.7136 19.3678 15.105599999999999 19.7598 15.5886 19.7598 C 16.0716 19.7598 16.4636 19.3678 16.4636 18.8848 "/>
 
-    <path
-        android:pathData="M18.707,26.5L12,26.5C10.619,26.5 9.5,25.381 9.5,24L9.5,12C9.5,10.619 10.619,9.5 12,9.5L19.5,9.5C20.881,9.5 22,10.619 22,12L22,15.032M13.2238,13.1875L14.0288,13.1875M16.9738,13.1875L17.7788,13.1875M26.5,20.0586C23.788,17.3566 19.39,17.3566 16.678,20.0586M24.1572,22.4277C22.7382,21.0047 20.4392,21.0047 19.0202,22.4277"
-        android:strokeWidth="1.5"
-        android:strokeColor="?attr/actionMenuTextColor"
-        android:strokeLineCap="round"
-        android:strokeLineJoin="round" />
+    <path android:pathData="M 12.707 20.5 L 6.0 20.5 C 4.619 20.5 3.5 19.381 3.5 18.0 L 3.5 6.0 C 3.5 4.619 4.619 3.5 6.0 3.5 L 13.5 3.5 C 14.881 3.5 16.0 4.619 16.0 6.0 L 16.0 9.032 M 7.223800000000001 7.1875 L 8.0288 7.1875 M 10.9738 7.1875 L 11.7788 7.1875 M 20.5 14.058599999999998 C 17.788 11.3566 13.39 11.3566 10.678 14.058599999999998 M 18.1572 16.4277 C 16.7382 15.0047 14.4392 15.0047 13.020199999999999 16.4277 " android:strokeColor="@color/oui_primary_icon_color" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeWidth="1.5"/>
 
 </vector>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="24dp" android:viewportHeight="24" android:viewportWidth="24" android:width="24dp">
+    <path android:fillColor="@color/oui_primary_icon_color" android:fillType="evenOdd" android:pathData="M 8.762 19.519 L 18.011 13.475999999999999 C 19.148 12.82 19.148 11.18 18.011 10.524000000000001 L 8.762 4.481 C 7.6259999999999994 3.8249999999999993 6.205 4.645 6.205 5.957000000000001 L 6.205 18.042 C 6.205 19.355 7.6259999999999994 20.175 8.762 19.519 " android:strokeColor="#00000000" android:strokeWidth="1.0"/>
+</vector>
