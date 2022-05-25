@@ -1,10 +1,15 @@
 package dev.oneuiproject.oneuiexample.fragment;
 
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.SectionIndexer;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,19 +19,32 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.sec.sesl.tester.R;
 
-public class IconsFragment extends BaseFragment {
+import java.util.ArrayList;
+import java.util.List;
 
-    /*todo search & indexScroller*/
+public class IconsFragment extends BaseFragment {
+    private Context mContext;
+
+    /*todo search*/
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        mContext = context;
+    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         RecyclerView iconListView = view.findViewById(R.id.icon_recyclerview);
 
-        iconListView.setLayoutManager(new LinearLayoutManager(getContext()));
+        iconListView.setLayoutManager(new LinearLayoutManager(mContext));
         iconListView.setAdapter(new ImageAdapter());
+        iconListView.addItemDecoration(new ItemDecoration(mContext));
         iconListView.setItemAnimator(null);
-        iconListView.seslSetLastRoundedCorner(false);
+        iconListView.seslSetFillBottomEnabled(true);
+        iconListView.seslSetLastRoundedCorner(true);
         iconListView.seslSetFastScrollerEnabled(true);
+        iconListView.seslSetGoToTopEnabled(true);
     }
 
     @Override
@@ -45,7 +63,24 @@ public class IconsFragment extends BaseFragment {
     }
 
 
-    public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
+    public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder>
+            implements SectionIndexer {
+        List<String> mSections = new ArrayList<>();
+        List<Integer> mPositionForSection = new ArrayList<>();
+        List<Integer> mSectionForPosition = new ArrayList<>();
+
+        ImageAdapter() {
+            for (int i = 0; i < iconIds.length; i++) {
+                String letter = getResources().getResourceEntryName(iconIds[i])
+                        .replace("ic_oui_", "").substring(0, 1).toUpperCase();
+
+                if (i == 0 || !mSections.get(mSections.size() - 1).equals(letter)) {
+                    mSections.add(letter);
+                    mPositionForSection.add(i);
+                }
+                mSectionForPosition.add(mSections.size() - 1);
+            }
+        }
 
         @Override
         public int getItemCount() {
@@ -60,7 +95,9 @@ public class IconsFragment extends BaseFragment {
         @NonNull
         @Override
         public ImageAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new ImageAdapter.ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.sample3_view_icon_listview_item, parent, false), viewType);
+            LayoutInflater inflater = LayoutInflater.from(mContext);
+            View view = inflater.inflate(R.layout.sample3_view_icon_listview_item, parent, false);
+            return new ImageAdapter.ViewHolder(view);
         }
 
         @Override
@@ -69,14 +106,57 @@ public class IconsFragment extends BaseFragment {
             holder.textView.setText(getResources().getResourceEntryName(iconIds[position]));
         }
 
+        @Override
+        public Object[] getSections() {
+            return mSections.toArray();
+        }
+
+        @Override
+        public int getPositionForSection(int sectionIndex) {
+            return mPositionForSection.get(sectionIndex);
+        }
+
+        @Override
+        public int getSectionForPosition(int position) {
+            return mSectionForPosition.get(position);
+        }
+
         public class ViewHolder extends RecyclerView.ViewHolder {
             ImageView imageView;
             TextView textView;
 
-            ViewHolder(View itemView, int viewType) {
+            ViewHolder(View itemView) {
                 super(itemView);
                 imageView = itemView.findViewById(R.id.icon_list_item_icon);
                 textView = itemView.findViewById(R.id.icon_list_item_text);
+            }
+        }
+    }
+
+    public class ItemDecoration extends RecyclerView.ItemDecoration {
+        private Drawable mDivider;
+
+        public ItemDecoration(@NonNull Context context) {
+            TypedValue outValue = new TypedValue();
+            context.getTheme().resolveAttribute(R.attr.isLightTheme, outValue, true);
+
+            mDivider = context.getDrawable(outValue.data == 0
+                    ? R.drawable.sesl_list_divider_dark
+                    : R.drawable.sesl_list_divider_light);
+        }
+
+        public void onDraw(@NonNull Canvas c, @NonNull RecyclerView parent,
+                           @NonNull RecyclerView.State state) {
+            super.onDraw(c, parent, state);
+
+            for (int i = 0; i < parent.getChildCount(); i++) {
+                View child = parent.getChildAt(i);
+                final int top = child.getBottom()
+                        + ((ViewGroup.MarginLayoutParams) child.getLayoutParams()).bottomMargin;
+                final int bottom = mDivider.getIntrinsicHeight() + top;
+
+                mDivider.setBounds(parent.getLeft(), top, parent.getRight(), bottom);
+                mDivider.draw(c);
             }
         }
     }
