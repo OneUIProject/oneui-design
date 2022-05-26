@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="24dp" android:viewportHeight="24" android:viewportWidth="24" android:width="24dp">
+	<path android:fillColor="#00000000" android:fillType="evenOdd" android:pathData="M5.5,13.6925L11.279,19.7125C11.672,20.1225 12.328,20.1225 12.722,19.7125L18.5,13.6925M12,3.9816L12,19.2136" android:strokeColor="@color/oui_primary_icon_color" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeWidth="1.5"/>
+</vector>

@@ -64,4 +64,13 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="SplashLayout">
+        <attr name="animated" format="boolean" />
+        <attr name="title" />
+        <attr name="image" format="reference|color" />
+        <attr name="foreground_image" format="reference|color" />
+        <attr name="background_image" format="reference|color" />
+        <attr name="animation" format="reference" />
+    </declare-styleable>
+
 </resources>

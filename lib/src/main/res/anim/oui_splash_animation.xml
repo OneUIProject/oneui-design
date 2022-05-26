@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:interpolator="@android:anim/linear_interpolator">
+
+    <rotate
+        android:duration="70"
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="40%"
+        android:toDegrees="25" /> <!--go left-->
+
+    <rotate
+        android:duration="140"
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="40%"
+        android:startOffset="70"
+        android:toDegrees="-45" /> <!--go right-->
+
+    <rotate
+        android:duration="140"
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="40%"
+        android:startOffset="210"
+        android:toDegrees="35" /> <!--go left-->
+
+    <rotate
+        android:duration="140"
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="40%"
+        android:startOffset="350"
+        android:toDegrees="-25" /> <!--go right-->
+
+    <rotate
+        android:duration="70"
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="40%"
+        android:startOffset="490"
+        android:toDegrees="10" /> <!--go middle-->
+
+</set>
