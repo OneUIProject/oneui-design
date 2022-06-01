@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">Tražite nešto drugo?</string>
     <string name="oui_new_badge_text">N</string>
-    <string name="oui_navigation_drawer">Crtač za navigaciju</string>
-    <string name="oui_action_mode_all_checkbox">Sve</string>
+    <string name="new_version_is_available">Nova verzija je dostupna.</string>
     <string name="oui_action_mode_select_items">Izaberi stavke</string>
+    <string name="oui_relative_description">Tražite nešto drugo?</string>
+    <string name="oui_navigation_drawer">Crtač za navigaciju</string>
+    <string name="update">Ažuriraj</string>
+    <string name="version_info">Verzija %s</string>
     <string name="oui_action_mode_n_selected">Izabrano: %d</string>
+    <string name="cant_check_for_updates_phone">Ne možete da proverite ima li ažuriranja. Mrežna veza telefona nije stabilna.</string>
+    <string name="latest_version">Najnovija verzija je već instalirana.</string>
+    <string name="cant_check_for_updates_tablet">Ne možete da proverite ima li ažuriranja. Mrežna veza tablet računara nije stabilna.</string>
+    <string name="app_info">Informacije o aplikaciji</string>
+    <string name="oui_action_mode_all_checkbox">Sve</string>
+    <string name="retry">Ponovi</string>
 </resources>

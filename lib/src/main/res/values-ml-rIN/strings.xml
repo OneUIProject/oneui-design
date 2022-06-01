@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">എന്തെങ്കിലും തിരയുകയാണോ?</string>
     <string name="oui_new_badge_text">N</string>
-    <string name="oui_navigation_drawer">നാവിഗേഷൻ ഡ്രോയർ</string>
-    <string name="oui_action_mode_all_checkbox">എല്ലാം</string>
+    <string name="new_version_is_available">ഒരു പുതിയ പതിപ്പ് ലഭ്യമാണ്.</string>
     <string name="oui_action_mode_select_items">ഇനങ്ങള്‍ തിരഞ്ഞെടുക്കുക</string>
+    <string name="oui_relative_description">എന്തെങ്കിലും തിരയുകയാണോ?</string>
+    <string name="oui_navigation_drawer">നാവിഗേഷൻ ഡ്രോയർ</string>
+    <string name="update">അപ്‌ഡേറ്റ് ചെയ്യുക</string>
+    <string name="version_info">പതിപ്പ് %s</string>
     <string name="oui_action_mode_n_selected">%d തിരഞ്ഞെടുത്തു</string>
+    <string name="cant_check_for_updates_phone">‌അപ്ഡേറ്റുകൾക്കായി പരിശോധിക്കാനാവില്ല. നിങ്ങളുടെ ഫോണിന്‍റെ നെറ്റ്‌വർക്ക് കണക്ഷൻ സുസ്ഥിരമല്ല.</string>
+    <string name="latest_version">ഏറ്റവും പുതിയ പതിപ്പ് നേരത്തേതന്നെ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ട്.</string>
+    <string name="cant_check_for_updates_tablet">‌അപ്ഡേറ്റുകൾക്കായി പരിശോധിക്കാനാവില്ല. നിങ്ങളുടെ ടാബ്‌ലറ്റിന്‍റെ നെറ്റ്‌വർക്ക് കണക്ഷൻ സുസ്ഥിരമല്ല.</string>
+    <string name="app_info">ആപ്ലിക്കേഷൻ വിവരം</string>
+    <string name="oui_action_mode_all_checkbox">എല്ലാം</string>
+    <string name="retry">വീണ്ടും ശ്രമിക്കുക</string>
 </resources>

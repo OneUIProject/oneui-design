@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">在尋找不一樣的功能嗎？</string>
     <string name="oui_new_badge_text">新</string>
-    <string name="oui_navigation_drawer">導覽滑動選單</string>
-    <string name="oui_action_mode_all_checkbox">全部</string>
+    <string name="new_version_is_available">已有新版本可用。</string>
     <string name="oui_action_mode_select_items">選擇項目</string>
+    <string name="oui_relative_description">在尋找不一樣的功能嗎？</string>
+    <string name="oui_navigation_drawer">導覽滑動選單</string>
+    <string name="update">更新</string>
+    <string name="version_info">版本%s</string>
     <string name="oui_action_mode_n_selected">已選擇 %d 個</string>
+    <string name="cant_check_for_updates_phone">無法檢查更新。您的手機的網絡連接不穩定。</string>
+    <string name="latest_version">已安裝最新版本。</string>
+    <string name="cant_check_for_updates_tablet">無法檢查更新。您的平板電腦的網絡連接不穩定。</string>
+    <string name="app_info">應用程式資訊</string>
+    <string name="oui_action_mode_all_checkbox">全部</string>
+    <string name="retry">重試</string>
 </resources>

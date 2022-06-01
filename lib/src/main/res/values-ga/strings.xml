@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">Sa tóir ar rud éigin eile?</string>
     <string name="oui_new_badge_text">N</string>
-    <string name="oui_navigation_drawer">Tarraiceán nascleanúna</string>
-    <string name="oui_action_mode_all_checkbox">Gach</string>
+    <string name="new_version_is_available">Tá leagan nua ar fáil</string>
     <string name="oui_action_mode_select_items">Roghnaigh míreanna</string>
+    <string name="oui_relative_description">Sa tóir ar rud éigin eile?</string>
+    <string name="oui_navigation_drawer">Tarraiceán nascleanúna</string>
+    <string name="update">Nuashonraigh</string>
+    <string name="version_info">Leagan %s</string>
     <string name="oui_action_mode_n_selected">%d roghnaithe</string>
+    <string name="cant_check_for_updates_phone">"Seiceáil le haghaidh nuashonruithe dodhéanta. Níl nasc líonra d'fhóin cobhsaí."</string>
+    <string name="latest_version">Tá an leagan is déanaí suiteáilte cheana féin.</string>
+    <string name="cant_check_for_updates_tablet">Seiceáil le haghaidh nuashonruithe dodhéanta. Níl nasc líonra do tháibléid cobhsaí.</string>
+    <string name="app_info">Faisnéis feidhmchláir</string>
+    <string name="oui_action_mode_all_checkbox">Gach</string>
+    <string name="retry">Atriail</string>
 </resources>

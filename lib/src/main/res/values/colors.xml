@@ -20,9 +20,13 @@
     <color name="oui_unclickablepref_link_text_color">#ff3b3b3b</color>
 
     <!-- SeekBar -->
-    <color name="oui_seekbar_overlap_color_default">@color/sesl_seekbar_overlap_color_default_light</color>
+    <color name="oui_seekbar_overlap_color_default">
+        @color/sesl_seekbar_overlap_color_default_light
+    </color>
     <color name="oui_seekbar_legacy_overlap_color_default">#fffcb69b</color>
-    <color name="oui_seekbar_overlap_color_activated">@color/sesl_seekbar_overlap_color_activated_light</color>
+    <color name="oui_seekbar_overlap_color_activated">
+        @color/sesl_seekbar_overlap_color_activated_light
+    </color>
     <color name="oui_seekbar_circle_marker_color">#ff9c9c9c</color>
 
     <!-- ProgressDialog -->
@@ -40,5 +44,10 @@
     <!-- DrawerLayout -->
     <color name="oui_drawerlayout_drawer_dim_color">#33000000</color>
     <color name="oui_drawerlayout_header_icon_color">#ff676768</color>
+
+    <!-- AppInfoLayout -->
+    <color name="oui_appinfolayout_info_text_color">#ff8c8c8c</color>
+    <color name="oui_appinfolayout_button_default_text">#ff252525</color>
+    <color name="oui_appinfolayout_button_primary_text">#fffafafa</color>
 
 </resources>

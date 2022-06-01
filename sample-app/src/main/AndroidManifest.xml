@@ -33,8 +33,8 @@
         </activity>
 
         <activity
-            android:name="dev.oneuiproject.oneuiexample.activity.AboutActivity"
-            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" />
+            android:name="dev.oneuiproject.oneuiexample.activity.AboutActivity2"
+            android:configChanges="screenLayout|screenSize|smallestScreenSize" />
 
     </application>
 

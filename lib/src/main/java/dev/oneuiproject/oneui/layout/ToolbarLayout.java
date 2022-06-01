@@ -459,6 +459,11 @@ public class ToolbarLayout extends LinearLayout {
         mMainToolbar.setNavigationOnClickListener(listener);
     }
 
+    public void setNavigationButtonAsBack() {
+        mActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setNavigationButtonOnClickListener(v -> mActivity.onBackPressed());
+    }
+
     //
     // Search Mode methods
     //

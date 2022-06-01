@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">¿Está buscando otra cosa?</string>
     <string name="oui_new_badge_text">N</string>
-    <string name="oui_navigation_drawer">Bandeja de navegación</string>
-    <string name="oui_action_mode_all_checkbox">Todas</string>
+    <string name="new_version_is_available">Hay una nueva versión disponible.</string>
     <string name="oui_action_mode_select_items">Seleccionar elementos</string>
+    <string name="oui_relative_description">¿Está buscando otra cosa?</string>
+    <string name="oui_navigation_drawer">Bandeja de navegación</string>
+    <string name="update">Actualizar</string>
+    <string name="version_info">Versión %s</string>
     <string name="oui_action_mode_n_selected">%d seleccionado(s)</string>
+    <string name="cant_check_for_updates_phone">No es posible buscar actualizaciones. La conexión de red de su teléfono no es estable.</string>
+    <string name="latest_version">La versión más reciente ya está instalada.</string>
+    <string name="cant_check_for_updates_tablet">No es posible buscar actualizaciones. La conexión de red de su tableta no es estable.</string>
+    <string name="app_info">Información de la aplicación</string>
+    <string name="oui_action_mode_all_checkbox">Todas</string>
+    <string name="retry">Reintentar</string>
 </resources>

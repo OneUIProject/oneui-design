@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">מחפש משהו אחר?</string>
     <string name="oui_new_badge_text">ח</string>
-    <string name="oui_navigation_drawer">מגירת הניווט</string>
-    <string name="oui_action_mode_all_checkbox">הכל</string>
+    <string name="new_version_is_available">גרסה חדשה זמינה.</string>
     <string name="oui_action_mode_select_items">בחר פריטים</string>
+    <string name="oui_relative_description">מחפש משהו אחר?</string>
+    <string name="oui_navigation_drawer">מגירת הניווט</string>
+    <string name="update">עדכן</string>
+    <string name="version_info">גרסה %s</string>
     <string name="oui_action_mode_n_selected">%d נבחרו</string>
+    <string name="cant_check_for_updates_phone">לא ניתן לבדוק זמינות עדכונים. החיבור של הטלפון לרשת אינו יציב.</string>
+    <string name="latest_version">הגרסה העדכנית ביותר כבר מותקנת.</string>
+    <string name="cant_check_for_updates_tablet">לא ניתן לבדוק זמינות עדכונים.​ החיבור של הטאבלט לרשת אינו יציב.</string>
+    <string name="app_info">פרטי יישום</string>
+    <string name="oui_action_mode_all_checkbox">הכל</string>
+    <string name="retry">נסה שוב</string>
 </resources>

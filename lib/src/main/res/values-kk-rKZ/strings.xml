@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">Басқа бірдеңені іздеп жатырсыз ба?</string>
     <string name="oui_new_badge_text">Ж</string>
-    <string name="oui_navigation_drawer">Шарлау тартпасы</string>
-    <string name="oui_action_mode_all_checkbox">Барлығы</string>
+    <string name="new_version_is_available">Жаңа нұсқа қол жетімді.</string>
     <string name="oui_action_mode_select_items">Элементтерді таңдау</string>
+    <string name="oui_relative_description">Басқа бірдеңені іздеп жатырсыз ба?</string>
+    <string name="oui_navigation_drawer">Шарлау тартпасы</string>
+    <string name="update">Жаңарту</string>
+    <string name="version_info">%s нұсқасы</string>
     <string name="oui_action_mode_n_selected">%d таңдалды</string>
+    <string name="cant_check_for_updates_phone">Жаңартуларды тексеру мүмкін емес. Телефоныңыздың желілік қосылымы тұрақсыз.</string>
+    <string name="latest_version">Соңғы нұсқасы бұрын орнатылып қойған.</string>
+    <string name="cant_check_for_updates_tablet">Жаңартуларды тексеру мүмкін емес. Планшетіңіздің желілік қосылымы тұрақсыз.</string>
+    <string name="app_info">Қолданба ақпараты</string>
+    <string name="oui_action_mode_all_checkbox">Барлығы</string>
+    <string name="retry">Қайталау</string>
 </resources>

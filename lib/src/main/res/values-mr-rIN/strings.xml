@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">इतर काहीतरी शोधत आहे?</string>
     <string name="oui_new_badge_text">न</string>
-    <string name="oui_navigation_drawer">नेव्हिगेशन ड्रॉवर</string>
-    <string name="oui_action_mode_all_checkbox">सर्व</string>
+    <string name="new_version_is_available">नवी आवृत्ती उपलब्‍ध आहे.</string>
     <string name="oui_action_mode_select_items">आयटेम्‍स निवडा</string>
+    <string name="oui_relative_description">इतर काहीतरी शोधत आहे?</string>
+    <string name="oui_navigation_drawer">नेव्हिगेशन ड्रॉवर</string>
+    <string name="update">अद्ययावत करा</string>
+    <string name="version_info">संस्करण %s</string>
     <string name="oui_action_mode_n_selected">%d निवडलेले</string>
+    <string name="cant_check_for_updates_phone">अद्यवतां साठी तपासू शकत नाही. आपल्या फोनचे नेटवर्क कनेक्शन स्थिर नाही.</string>
+    <string name="latest_version">नवीनतम आवृत्‍ती आधीपासूनच इन्‍स्‍टॉल केली आहे.</string>
+    <string name="cant_check_for_updates_tablet">अद्यवतां साठी तपासू शकत नाही. आपल्या टॅबलेटचे नेटवर्क कनेक्शन स्थिर नाही.</string>
+    <string name="app_info">अनुप्रयोग माहिती</string>
+    <string name="oui_action_mode_all_checkbox">सर्व</string>
+    <string name="retry">पुन:प्रयत्न</string>
 </resources>

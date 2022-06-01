@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">Шукаеце кагосьці іншага?</string>
     <string name="oui_new_badge_text">Н</string>
-    <string name="oui_navigation_drawer">Высоўнае меню навігацыі</string>
-    <string name="oui_action_mode_all_checkbox">Усе</string>
+    <string name="new_version_is_available">Ёсць новая версія.</string>
     <string name="oui_action_mode_select_items">Выберыце элементы</string>
+    <string name="oui_relative_description">Шукаеце кагосьці іншага?</string>
+    <string name="oui_navigation_drawer">Высоўнае меню навігацыі</string>
+    <string name="update">Абнавіць</string>
+    <string name="version_info">Версія %s</string>
     <string name="oui_action_mode_n_selected">Выбрана: %d</string>
+    <string name="cant_check_for_updates_phone">Немагчыма праверыць наяўнасць абнаўленняў. Сеткавае падлучэнне тэлефона нестабільнае.</string>
+    <string name="latest_version">Апошняя версія ўжо ўсталявана.</string>
+    <string name="cant_check_for_updates_tablet">Немагчыма праверыць наяўнасць абнаўленняў. Сеткавае падлучэнне планшэта нестабільнае.</string>
+    <string name="app_info">Інфармацыя аб праграме</string>
+    <string name="oui_action_mode_all_checkbox">Усе</string>
+    <string name="retry">Паўтарыць</string>
 </resources>

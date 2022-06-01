@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">Kimisə axtarırsınız?</string>
     <string name="oui_new_badge_text">Y</string>
-    <string name="oui_navigation_drawer">Naviqasiya rəfi</string>
-    <string name="oui_action_mode_all_checkbox">Hamısı</string>
+    <string name="new_version_is_available">Yeni versiya movcuddur.</string>
     <string name="oui_action_mode_select_items">Elementləri seç</string>
+    <string name="oui_relative_description">Kimisə axtarırsınız?</string>
+    <string name="oui_navigation_drawer">Naviqasiya rəfi</string>
+    <string name="update">Yenilə</string>
+    <string name="version_info">Versiya %s</string>
     <string name="oui_action_mode_n_selected">%d seçilmişdir</string>
+    <string name="cant_check_for_updates_phone">Yeniləmələri yoxlamaq olmur. Telefonun şəbəkə bağlantısı sabit deyil.</string>
+    <string name="latest_version">Ən son versiya artıq quraşdırılmışdır.</string>
+    <string name="cant_check_for_updates_tablet">Yeniləmələri yoxlamaq olmur. Tabletin şəbəkə bağlantısı sabit deyil.</string>
+    <string name="app_info">Proqram məlumatı</string>
+    <string name="oui_action_mode_all_checkbox">Hamısı</string>
+    <string name="retry">Təkrarla</string>
 </resources>

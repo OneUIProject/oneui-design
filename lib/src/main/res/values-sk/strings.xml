@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">Hľadáte niečo iné?</string>
     <string name="oui_new_badge_text">N</string>
-    <string name="oui_navigation_drawer">Navigačný vysúvací panel</string>
-    <string name="oui_action_mode_all_checkbox">Všetky</string>
+    <string name="new_version_is_available">K dispozícii je nová verzia.</string>
     <string name="oui_action_mode_select_items">Vybrať položky</string>
+    <string name="oui_relative_description">Hľadáte niečo iné?</string>
+    <string name="oui_navigation_drawer">Navigačný vysúvací panel</string>
+    <string name="update">Aktualizovať</string>
+    <string name="version_info">Verzia %s</string>
     <string name="oui_action_mode_n_selected">Vybraté: %d</string>
+    <string name="cant_check_for_updates_phone">Nedajú sa vyhľadať aktualizácie. Sieťové pripojenie telefónu je nestabilné.</string>
+    <string name="latest_version">Najnovšia verzia je už nainštalovaná.</string>
+    <string name="cant_check_for_updates_tablet">Nedajú sa vyhľadať aktualizácie. Sieťové pripojenie tabletu je nestabilné.</string>
+    <string name="app_info">Informácie o aplikáciách</string>
+    <string name="oui_action_mode_all_checkbox">Všetky</string>
+    <string name="retry">Znova</string>
 </resources>

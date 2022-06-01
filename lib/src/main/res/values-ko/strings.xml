@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">다른 기능을 찾고 있나요?</string>
     <string name="oui_new_badge_text">N</string>
-    <string name="oui_navigation_drawer">내비게이션 메뉴</string>
-    <string name="oui_action_mode_all_checkbox">전체</string>
+    <string name="new_version_is_available">최신 버전을 확인하세요.</string>
     <string name="oui_action_mode_select_items">항목 선택</string>
+    <string name="oui_relative_description">다른 기능을 찾고 있나요?</string>
+    <string name="oui_navigation_drawer">내비게이션 메뉴</string>
+    <string name="update">업데이트</string>
+    <string name="version_info">버전 %s</string>
     <string name="oui_action_mode_n_selected">%d개 선택됨</string>
+    <string name="cant_check_for_updates_phone">업데이트를 확인할 수 없습니다. 휴대전화의 네트워크 연결이 불안정합니다.</string>
+    <string name="latest_version">최신 버전입니다.</string>
+    <string name="cant_check_for_updates_tablet">업데이트를 확인할 수 없습니다. 태블릿의 네트워크 연결이 불안정합니다.</string>
+    <string name="app_info">애플리케이션 정보</string>
+    <string name="oui_action_mode_all_checkbox">전체</string>
+    <string name="retry">다시 시도</string>
 </resources>

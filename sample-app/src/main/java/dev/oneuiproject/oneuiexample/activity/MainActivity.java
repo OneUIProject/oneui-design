@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements DrawerListAdapter
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.menu_about_app) {
-            startActivity(new Intent(this, AboutActivity.class));
+            startActivity(new Intent(this, AboutActivity2.class));
             return true;
         }
         return false;

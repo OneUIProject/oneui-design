@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">Vai meklējat kaut ko citu?</string>
     <string name="oui_new_badge_text">J</string>
-    <string name="oui_navigation_drawer">Navigācijas izvēlne</string>
-    <string name="oui_action_mode_all_checkbox">Visi</string>
+    <string name="new_version_is_available">Ir pieejama jauna versija.</string>
     <string name="oui_action_mode_select_items">Objektu izvēle</string>
+    <string name="oui_relative_description">Vai meklējat kaut ko citu?</string>
+    <string name="oui_navigation_drawer">Navigācijas izvēlne</string>
+    <string name="update">Atjaunināt</string>
+    <string name="version_info">Versija %s</string>
     <string name="oui_action_mode_n_selected">Izvēlēti %d</string>
+    <string name="cant_check_for_updates_phone">Nevar meklēt atjauninājumus. Jūsu tālruņa tīkla savienojums nav stabils.</string>
+    <string name="latest_version">Jaunākā versija jau ir instalēta.</string>
+    <string name="cant_check_for_updates_tablet">Nevar meklēt atjauninājumus. Jūsu planšetdatora tīkla savienojums nav stabils.</string>
+    <string name="app_info">Programmas dati</string>
+    <string name="oui_action_mode_all_checkbox">Visi</string>
+    <string name="retry">Mēģ. vēlreiz</string>
 </resources>

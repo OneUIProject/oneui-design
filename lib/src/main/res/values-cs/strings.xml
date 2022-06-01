@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">Hledáte něco?</string>
     <string name="oui_new_badge_text">N</string>
-    <string name="oui_navigation_drawer">Navigační panel</string>
-    <string name="oui_action_mode_all_checkbox">Vše</string>
+    <string name="new_version_is_available">K dispozici je nová verze.</string>
     <string name="oui_action_mode_select_items">Vyberte položky</string>
+    <string name="oui_relative_description">Hledáte něco?</string>
+    <string name="oui_navigation_drawer">Navigační panel</string>
+    <string name="update">Aktualizovat</string>
+    <string name="version_info">Verze %s</string>
     <string name="oui_action_mode_n_selected">Vybráno %d</string>
+    <string name="cant_check_for_updates_phone">Nelze zkontrolovat aktualizace. Připojení telefonu k síti není stabilní.</string>
+    <string name="latest_version">Je nainstalována nejnovější verze.</string>
+    <string name="cant_check_for_updates_tablet">Nelze zkontrolovat aktualizace. Připojení tabletu k síti není stabilní.</string>
+    <string name="app_info">Informace o aplikaci</string>
+    <string name="oui_action_mode_all_checkbox">Vše</string>
+    <string name="retry">Opakovat</string>
 </resources>

@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">Etsitkö jotain muuta?</string>
     <string name="oui_new_badge_text">U</string>
-    <string name="oui_navigation_drawer">Siirtymisvalikko</string>
-    <string name="oui_action_mode_all_checkbox">Kaikki</string>
+    <string name="new_version_is_available">Uusi versio saatavilla</string>
     <string name="oui_action_mode_select_items">Valitse kohteet</string>
+    <string name="oui_relative_description">Etsitkö jotain muuta?</string>
+    <string name="oui_navigation_drawer">Siirtymisvalikko</string>
+    <string name="update">Päivitä</string>
+    <string name="version_info">Versio %s</string>
     <string name="oui_action_mode_n_selected">%d valittu</string>
+    <string name="cant_check_for_updates_phone">Päivityksiä ei voi hakea. Puhelimen verkkoyhteys ei ole vakaa.</string>
+    <string name="latest_version">Uusin versio on jo asennettu.</string>
+    <string name="cant_check_for_updates_tablet">Päivityksiä ei voi hakea. Tablet-laitteen verkkoyhteys ei ole vakaa.</string>
+    <string name="app_info">Sovelluksen tiedot</string>
+    <string name="oui_action_mode_all_checkbox">Kaikki</string>
+    <string name="retry">Yritä uud.</string>
 </resources>

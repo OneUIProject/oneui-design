@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">Leder du efter noget andet?</string>
     <string name="oui_new_badge_text">N</string>
-    <string name="oui_navigation_drawer">Navigationsskuffe</string>
-    <string name="oui_action_mode_all_checkbox">Alt</string>
+    <string name="new_version_is_available">En ny version er tilgængelig.</string>
     <string name="oui_action_mode_select_items">Vælg elementer</string>
+    <string name="oui_relative_description">Leder du efter noget andet?</string>
+    <string name="oui_navigation_drawer">Navigationsskuffe</string>
+    <string name="update">Opdater</string>
+    <string name="version_info">Version %s</string>
     <string name="oui_action_mode_n_selected">%d valgt</string>
+    <string name="cant_check_for_updates_phone">Kan ikke søge efter opdateringer. Din telefons netværksforbindelse er ikke stabil.</string>
+    <string name="latest_version">Den nyeste version er allerede installeret.</string>
+    <string name="cant_check_for_updates_tablet">Kan ikke søge efter opdateringer. Din tablets netværksforbindelse er ikke stabil.</string>
+    <string name="app_info">Appoplysninger</string>
+    <string name="oui_action_mode_all_checkbox">Alt</string>
+    <string name="retry">Prøv igen</string>
 </resources>

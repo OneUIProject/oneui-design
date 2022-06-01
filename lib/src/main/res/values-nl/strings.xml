@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">Zoekt u iets anders?</string>
     <string name="oui_new_badge_text">N</string>
-    <string name="oui_navigation_drawer">Navigatielade</string>
-    <string name="oui_action_mode_all_checkbox">Alle</string>
+    <string name="new_version_is_available">Er is een nieuwe versie beschikbaar.</string>
     <string name="oui_action_mode_select_items">Items selecteren</string>
+    <string name="oui_relative_description">Zoekt u iets anders?</string>
+    <string name="oui_navigation_drawer">Navigatielade</string>
+    <string name="update">Bijwerken</string>
+    <string name="version_info">Versie %s</string>
     <string name="oui_action_mode_n_selected">%d geselecteerd</string>
+    <string name="cant_check_for_updates_phone">Kan niet controleren op updates. De netwerkverbinding van uw telefoon is niet stabiel.</string>
+    <string name="latest_version">De laatste versie is al geïnstalleerd.</string>
+    <string name="cant_check_for_updates_tablet">Kan niet controleren op updates. De netwerkverbinding van uw tablet is niet stabiel.</string>
+    <string name="app_info">App-info</string>
+    <string name="oui_action_mode_all_checkbox">Alle</string>
+    <string name="retry">Opnieuw</string>
 </resources>

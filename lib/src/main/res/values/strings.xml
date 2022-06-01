@@ -13,4 +13,16 @@
     <string name="oui_action_mode_n_selected">%d selected</string>
     <string name="oui_action_mode_select_items">Select items</string>
 
+    <!-- AppInfoLayout -->
+    <string name="app_name" />
+    <string name="app_info">App info</string>
+    <string name="version_info">Version %s</string>
+    <string name="update">Update</string>
+    <string name="retry">Retry</string>
+    <string name="new_version_is_available">A new version is available.</string>
+    <string name="latest_version">The latest version is already installed.</string>
+    <string name="cant_check_for_updates_phone">"Can't check for updates. Your phone's network connection isn't stable."</string>
+    <string name="cant_check_for_updates_tablet">"Can't check for updates. Your tablet's network connection isn't stable."</string>
+
+
 </resources>

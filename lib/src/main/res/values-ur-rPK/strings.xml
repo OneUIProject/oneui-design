@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">مزید کچھ تلاش کریں؟</string>
     <string name="oui_new_badge_text">N</string>
-    <string name="oui_navigation_drawer">نیویگیشن ڈراور</string>
-    <string name="oui_action_mode_all_checkbox">تمام</string>
+    <string name="new_version_is_available">نیا ورژن دستیاب ہے</string>
     <string name="oui_action_mode_select_items">اشیاء منتخب کریں</string>
+    <string name="oui_relative_description">مزید کچھ تلاش کریں؟</string>
+    <string name="oui_navigation_drawer">نیویگیشن ڈراور</string>
+    <string name="update">اپ ڈیٹ</string>
+    <string name="version_info">ورژن %s</string>
     <string name="oui_action_mode_n_selected">%d منتخب</string>
+    <string name="cant_check_for_updates_phone">اپ ڈیٹس چیک نہیں کرسکتے ہیں۔ آپ کے فون کا نیٹ ورک کنیکشن مستحکم نہیں ہے۔</string>
+    <string name="latest_version">تازہ ترین ورژن پہلے سے انسٹال ہے۔</string>
+    <string name="cant_check_for_updates_tablet">اپ ڈیٹس چیک نہیں کرسکتے ہیں۔ آپ کے ٹیبلیٹ کا نیٹ ورک کنیکشن مستحکم نہیں ہے۔</string>
+    <string name="app_info">ایپلیکیشن کی معلومات</string>
+    <string name="oui_action_mode_all_checkbox">تمام</string>
+    <string name="retry">دوبارہ کوشش کریں</string>
 </resources>

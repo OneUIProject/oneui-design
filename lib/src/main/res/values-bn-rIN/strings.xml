@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_relative_description">অন্য কিছু খুঁজছেন?</string>
     <string name="oui_new_badge_text">ন</string>
-    <string name="oui_navigation_drawer">নেভিগেশন ড্রয়ার</string>
-    <string name="oui_action_mode_all_checkbox">সমস্ত</string>
+    <string name="new_version_is_available">একটি নতুন সংস্করণ সুলভ।</string>
     <string name="oui_action_mode_select_items">আইটেমগুলি নির্বাচন করুন</string>
+    <string name="oui_relative_description">অন্য কিছু খুঁজছেন?</string>
+    <string name="oui_navigation_drawer">নেভিগেশন ড্রয়ার</string>
+    <string name="update">আপডেট করুন</string>
+    <string name="version_info">সংস্করণ %s</string>
     <string name="oui_action_mode_n_selected">%dটি নির্বাচিত</string>
+    <string name="cant_check_for_updates_phone">আপডেটগুলির জন্য পরীক্ষা করা যাচ্ছে না। আপনার ফোনের নেটওয়ার্কের সংযোগ স্থিতিশীল নয়।</string>
+    <string name="latest_version">সাম্প্রতিকতম সংস্করণটি ইতিমধ্যে ইনস্টল আছে।</string>
+    <string name="cant_check_for_updates_tablet">আপডেটগুলির জন্য পরীক্ষা করা যাচ্ছে না। আপনার ট্যাবেলেটের নেটওয়ার্কের সংযোগ স্থিতিশীল নয়।</string>
+    <string name="app_info">অ্যাপের তথ্য</string>
+    <string name="oui_action_mode_all_checkbox">সমস্ত</string>
+    <string name="retry">পুনঃচেষ্টা</string>
 </resources>
