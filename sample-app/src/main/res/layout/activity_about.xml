@@ -136,7 +136,7 @@
         </RelativeLayout>
 
         <include android:id="@+id/about_bottom_content"
-            layout="@layout/sample3_activity_about_content" />
+            layout="@layout/activity_about_content" />
 
     </LinearLayout>
 

@@ -23,14 +23,14 @@
             android:background="@color/oui_background_color"
             android:orientation="vertical">
 
-            <dev.oneuiproject.oneuiexample.widget.CardView
+            <dev.oneuiproject.oneuiexample.ui.widget.CardView
                 android:id="@+id/about_bottom_dev_yann"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:IconDrawable="@drawable/about_page_avatar_yann"
                 app:TitleText="Yanndroid" />
 
-            <dev.oneuiproject.oneuiexample.widget.CardView
+            <dev.oneuiproject.oneuiexample.ui.widget.CardView
                 android:id="@+id/about_bottom_dev_mesa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,14 +52,14 @@
         android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
-        <dev.oneuiproject.oneuiexample.widget.CardView
+        <dev.oneuiproject.oneuiexample.ui.widget.CardView
             android:id="@+id/about_bottom_oss_apache"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:TitleText="Apache License 2.0"
             app:SummaryText="androidx  •  material-components  •  lottie" />
 
-        <dev.oneuiproject.oneuiexample.widget.CardView
+        <dev.oneuiproject.oneuiexample.ui.widget.CardView
             android:id="@+id/about_bottom_oss_mit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

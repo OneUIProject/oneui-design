@@ -8,21 +8,19 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SeslSeekBar;
 
 import com.sec.sesl.tester.R;
-
 import dev.oneuiproject.oneui.utils.SeekBarUtils;
 import dev.oneuiproject.oneui.widget.HapticSeekBar;
+import dev.oneuiproject.oneuiexample.base.BaseFragment;
 
 public class SeekBarFragment extends BaseFragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         HapticSeekBar seekBar_1 = view.findViewById(R.id.fragment_seekbar_1);
-        SeslSeekBar seekBar_2 = view.findViewById(R.id.fragment_seekbar_2);
-
-        //seekBar_1.setSeamless(true);
         SeekBarUtils.showTickMark(seekBar_1, true);
+
+        SeslSeekBar seekBar_2 = view.findViewById(R.id.fragment_seekbar_2);
         seekBar_2.setOverlapPointForDualColor(70);
-        seekBar_2.setSecondaryProgress(30);
         SeekBarUtils.showOverlapPreview(seekBar_2, true);
     }
 

@@ -1,4 +1,4 @@
-package dev.oneuiproject.oneuiexample.widget;
+package dev.oneuiproject.oneuiexample.ui.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

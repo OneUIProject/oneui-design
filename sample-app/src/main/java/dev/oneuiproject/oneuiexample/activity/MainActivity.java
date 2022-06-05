@@ -9,42 +9,37 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.SeslMenuItem;
 import androidx.core.view.MenuCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.sec.sesl.tester.R;
+import com.sec.sesl.tester.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import dev.oneuiproject.oneui.layout.DrawerLayout;
-import dev.oneuiproject.oneuiexample.fragment.BaseFragment;
+import dev.oneuiproject.oneuiexample.base.BaseFragment;
+import dev.oneuiproject.oneuiexample.fragment.AppPickerFragment;
 import dev.oneuiproject.oneuiexample.fragment.CompoundButtonsFragment;
 import dev.oneuiproject.oneuiexample.fragment.IconsFragment;
+import dev.oneuiproject.oneuiexample.fragment.PickersFragment;
 import dev.oneuiproject.oneuiexample.fragment.ProgressBarFragment;
 import dev.oneuiproject.oneuiexample.fragment.SeekBarFragment;
 import dev.oneuiproject.oneuiexample.ui.drawer.DrawerListAdapter;
 
 public class MainActivity extends AppCompatActivity implements DrawerListAdapter.DrawerListener {
-
+    private ActivityMainBinding mBinding;
     private FragmentManager mFragmentManager;
-
-    private DrawerLayout drawerLayout;
-    private RecyclerView drawerListView;
-
-    private List<BaseFragment> fragments = new ArrayList<>();
+    private final List<BaseFragment> fragments = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        drawerLayout = findViewById(R.id.drawerLayout);
-        drawerListView = findViewById(R.id.drawer_list_view);
+        mBinding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(mBinding.getRoot());
 
         initFragmentList();
         initDrawer();
@@ -52,18 +47,22 @@ public class MainActivity extends AppCompatActivity implements DrawerListAdapter
     }
 
     private void initFragmentList() {
-        fragments.add(new IconsFragment());
-        fragments.add(null);
+        fragments.add(new CompoundButtonsFragment());
         fragments.add(new ProgressBarFragment());
         fragments.add(new SeekBarFragment());
         fragments.add(null);
-        fragments.add(new CompoundButtonsFragment());
+        fragments.add(new AppPickerFragment());
+        fragments.add(new PickersFragment());
+        fragments.add(null);
+        fragments.add(new IconsFragment());
     }
 
     @Override
     public void onBackPressed() {
         // Fix O memory leak
-        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.O && isTaskRoot() && mFragmentManager.getBackStackEntryCount() == 0) {
+        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.O
+                && isTaskRoot()
+                && mFragmentManager.getBackStackEntryCount() == 0) {
             finishAfterTransition();
         } else {
             super.onBackPressed();
@@ -73,37 +72,36 @@ public class MainActivity extends AppCompatActivity implements DrawerListAdapter
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        drawerLayout.setDrawerOpen(false, false);
+        mBinding.drawerLayout.setDrawerOpen(false, false);
     }
 
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
-        getMenuInflater().inflate(R.menu.sample3_menu_drawer, menu);
+        getMenuInflater().inflate(R.menu.sample3_menu_main, menu);
         MenuCompat.setGroupDividerEnabled(menu, true);
-
-        SeslMenuItem item = (SeslMenuItem) menu.findItem(R.id.menu_test_item_1);
-        item.setBadgeText("1");
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.menu_about_app) {
-            startActivity(new Intent(this, AboutActivity2.class));
+            startActivity(new Intent(this, AboutActivity.class));
             return true;
         }
         return false;
     }
 
     private void initDrawer() {
-        drawerLayout.setDrawerButtonIcon(getDrawable(R.drawable.ic_oui_ab_app_info));
-        drawerLayout.setDrawerButtonTooltip("About page");
+        mBinding.drawerLayout.setDrawerButtonIcon(getDrawable(R.drawable.ic_oui_ab_app_info));
+        mBinding.drawerLayout.setDrawerButtonTooltip("About page");
+        mBinding.drawerLayout.setDrawerButtonOnClickListener(view
+                -> startActivity(new Intent(MainActivity.this, SampleAboutActivity.class)));
 
-        drawerListView.setLayoutManager(new LinearLayoutManager(this));
-        drawerListView.setAdapter(new DrawerListAdapter(this, fragments, this));
-        drawerListView.setItemAnimator(null);
-        drawerListView.setHasFixedSize(true);
-        drawerListView.seslSetLastRoundedCorner(false);
+        mBinding.drawerListView.setLayoutManager(new LinearLayoutManager(this));
+        mBinding.drawerListView.setAdapter(new DrawerListAdapter(this, fragments, this));
+        mBinding.drawerListView.setItemAnimator(null);
+        mBinding.drawerListView.setHasFixedSize(true);
+        mBinding.drawerListView.seslSetLastRoundedCorner(false);
     }
 
     private void initFragments() {
@@ -127,9 +125,9 @@ public class MainActivity extends AppCompatActivity implements DrawerListAdapter
         }
         transaction.show(newFragment).commit();
 
-        drawerLayout.setTitle(getString(R.string.app_name), newFragment.getTitle());
-        drawerLayout.setExpandedSubtitle(newFragment.getTitle());
-        drawerLayout.setDrawerOpen(false, true);
+        mBinding.drawerLayout.setTitle(getString(R.string.app_name), newFragment.getTitle());
+        mBinding.drawerLayout.setExpandedSubtitle(newFragment.getTitle());
+        mBinding.drawerLayout.setDrawerOpen(false, true);
         return true;
     }
 }

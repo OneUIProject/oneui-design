@@ -2,7 +2,7 @@
 <resources>
 
     <dimen name="cardview_icon_divider_margin_end">24dp</dimen>
-    <dimen name="cardview_icon_size">46dp</dimen>
+    <dimen name="cardview_icon_size">38dp</dimen>
     <dimen name="cardview_icon_margin_vertical">8dp</dimen>
     <dimen name="cardview_icon_margin_end">16dp</dimen>
 

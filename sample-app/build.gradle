@@ -44,10 +44,13 @@ dependencies {
     //implementation fileTree(include: ['*.aar'], dir: 'libs')
 
     implementation("io.github.oneuiproject.sesl:appcompat:$sesl_appcompat_version")
+    implementation("io.github.oneuiproject.sesl:apppickerview:$sesl_apppickerview_version")
     implementation("io.github.oneuiproject.sesl:material:$sesl_material_version")
+    implementation("io.github.oneuiproject.sesl:picker-basic:$sesl_picker_basic_version")
+    implementation("io.github.oneuiproject.sesl:picker-color:$sesl_picker_color_version")
     implementation("io.github.oneuiproject.sesl:recyclerview:$sesl_recyclerview_version")
 
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     implementation 'com.airbnb.android:lottie:5.0.3'
 

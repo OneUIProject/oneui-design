@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <dev.oneuiproject.oneui.widget.RoundFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:background="@color/oui_background_color">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/apppicker_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </dev.oneuiproject.oneui.widget.RoundFrameLayout>
+
+    <dev.oneuiproject.oneui.widget.Separator
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <dev.oneuiproject.oneui.widget.RoundFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.apppickerview.widget.AppPickerView
+            android:id="@+id/apppicker_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/oui_background_color" />
+
+        <androidx.appcompat.widget.SeslProgressBar
+            android:id="@+id/apppicker_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </dev.oneuiproject.oneui.widget.RoundFrameLayout>
+
+</LinearLayout>

@@ -13,13 +13,13 @@ import com.sec.sesl.tester.R;
 
 import dev.oneuiproject.oneui.layout.AppInfoLayout;
 
-public class AboutActivity2 extends AppCompatActivity {
+public class SampleAboutActivity extends AppCompatActivity {
     private AppInfoLayout appInfoLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about2);
+        setContentView(R.layout.sample3_activity_about);
 
         appInfoLayout = findViewById(R.id.appInfoLayout);
 
@@ -29,12 +29,12 @@ public class AboutActivity2 extends AppCompatActivity {
         appInfoLayout.setMainButtonClickListener(new AppInfoLayout.OnClickListener() {
             @Override
             public void onUpdateClicked(View v) {
-                Toast.makeText(AboutActivity2.this, "update", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SampleAboutActivity.this, "update", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRetryClicked(View v) {
-                Toast.makeText(AboutActivity2.this, "retry", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SampleAboutActivity.this, "retry", Toast.LENGTH_SHORT).show();
             }
         });
     }

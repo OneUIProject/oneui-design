@@ -29,7 +29,7 @@ import com.google.android.material.appbar.AppBarLayout;
 import com.sec.sesl.tester.BuildConfig;
 import com.sec.sesl.tester.R;
 import com.sec.sesl.tester.databinding.ActivityAboutBinding;
-import com.sec.sesl.tester.databinding.Sample3ActivityAboutContentBinding;
+import com.sec.sesl.tester.databinding.ActivityAboutContentBinding;
 
 import dev.oneuiproject.oneui.utils.ViewUtils;
 import dev.oneuiproject.oneui.utils.internal.ToolbarLayoutUtils;
@@ -43,7 +43,7 @@ public class AboutActivity extends AppCompatActivity
     private long mLastClickTime;
 
     private ActivityAboutBinding mBinding;
-    private Sample3ActivityAboutContentBinding mBottomContent;
+    private ActivityAboutContentBinding mBottomContent;
 
     private AboutAppBarListener mAppBarListener = new AboutAppBarListener();
 

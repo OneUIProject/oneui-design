@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <dev.oneuiproject.oneui.widget.RoundFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="4dp"
+            android:background="@color/oui_background_color">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/pickers_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </dev.oneuiproject.oneui.widget.RoundFrameLayout>
+
+        <dev.oneuiproject.oneui.widget.Separator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <dev.oneuiproject.oneui.widget.RoundFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="24dp"
+            android:background="@color/oui_background_color">
+
+            <LinearLayout
+                android:id="@+id/pickers_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.picker.widget.SeslNumberPicker
+                    android:id="@+id/picker_number_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="230dp" />
+
+                <androidx.picker.widget.SeslNumberPicker
+                    android:id="@+id/picker_number_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="230dp" />
+
+                <androidx.picker.widget.SeslNumberPicker
+                    android:id="@+id/picker_number_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="230dp" />
+
+            </LinearLayout>
+
+            <androidx.picker.widget.SeslTimePicker
+                android:id="@+id/picker_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <androidx.picker.widget.SeslDatePicker
+                android:id="@+id/picker_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:theme="@style/DatePickerTheme"
+                android:visibility="gone" />
+
+        </dev.oneuiproject.oneui.widget.RoundFrameLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

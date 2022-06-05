@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SeslProgressBar;
 
 import com.sec.sesl.tester.R;
+import dev.oneuiproject.oneuiexample.base.BaseFragment;
 
 public class ProgressBarFragment extends BaseFragment {
     @Override

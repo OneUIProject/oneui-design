@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="AppCompatResource">
+
+    <item
+        android:id="@+id/menu_apppicker_system"
+        android:title="Show system apps"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <group android:id="@+id/menu_drawer">
+
+        <item
+            android:id="@+id/menu_about_app"
+            android:title="About OneUI Sample"
+            app:showAsAction="never" />
+
+    </group>
+
+</menu>

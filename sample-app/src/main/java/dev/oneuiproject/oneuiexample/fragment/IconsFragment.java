@@ -18,25 +18,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sec.sesl.tester.R;
+import dev.oneuiproject.oneuiexample.base.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class IconsFragment extends BaseFragment {
-    private Context mContext;
-
     /*todo search*/
 
     @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        mContext = context;
-    }
-
-    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        RecyclerView iconListView = view.findViewById(R.id.icon_recyclerview);
-
+        RecyclerView iconListView = (RecyclerView) getView();
         iconListView.setLayoutManager(new LinearLayoutManager(mContext));
         iconListView.setAdapter(new ImageAdapter());
         iconListView.addItemDecoration(new ItemDecoration(mContext));
@@ -133,8 +125,8 @@ public class IconsFragment extends BaseFragment {
         }
     }
 
-    public class ItemDecoration extends RecyclerView.ItemDecoration {
-        private Drawable mDivider;
+    private class ItemDecoration extends RecyclerView.ItemDecoration {
+        private final Drawable mDivider;
 
         public ItemDecoration(@NonNull Context context) {
             TypedValue outValue = new TypedValue();

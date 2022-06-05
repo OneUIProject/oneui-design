@@ -13,7 +13,7 @@ import com.sec.sesl.tester.R;
 
 import java.util.List;
 
-import dev.oneuiproject.oneuiexample.fragment.BaseFragment;
+import dev.oneuiproject.oneuiexample.base.BaseFragment;
 
 public class DrawerListAdapter extends RecyclerView.Adapter<DrawerListViewHolder> {
     private Context mContext;
