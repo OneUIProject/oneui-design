@@ -41,6 +41,9 @@ import java.util.Locale;
 import dev.oneuiproject.oneui.R;
 import dev.oneuiproject.oneui.utils.ViewUtils;
 
+/**
+ * Custom DrawerLayout extending {@link ToolbarLayout}. Looks and behaves the same as the one in Apps from Samsung.
+ */
 public class DrawerLayout extends ToolbarLayout {
     private static final String TAG = "DrawerLayout";
 
@@ -263,6 +266,10 @@ public class DrawerLayout extends ToolbarLayout {
     //
     // Drawer methods
     //
+
+    /**
+     * Show a margin at the top of the drawer panel. Some Apps from Samsung do have this.
+     */
     public void showDrawerTopMargin(boolean show) {
         MarginLayoutParams lp = (MarginLayoutParams) mDrawerContent.getLayoutParams();
         lp.topMargin = show
@@ -271,22 +278,32 @@ public class DrawerLayout extends ToolbarLayout {
         mDrawerContent.setLayoutParams(lp);
     }
 
+    /**
+     * Set a custom radius for the drawer panel's edges.
+     */
     public void setDrawerCornerRadius(@Dimension float dp) {
         int px = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics());
         setDrawerCornerRadius(px);
     }
 
+    /**
+     * Set a custom radius for the drawer panel's edges.
+     */
     public void setDrawerCornerRadius(@Px int px) {
         mDrawerContent.setOutlineProvider(new DrawerOutlineProvider(px));
         mDrawerContent.setClipToOutline(true);
     }
 
+    /**
+     * Set the icon of the drawer button.
+     * The drawer button is the button in the top right corner of the drawer panel.
+     */
     public void setDrawerButtonIcon(@Nullable Drawable icon) {
         if (mHeaderButton != null) {
             mHeaderButton.setImageDrawable(icon);
             mHeaderButton.setImageTintList(ColorStateList.valueOf(
-                            mContext.getColor(R.color.oui_drawerlayout_header_icon_color)));
+                    mContext.getColor(R.color.oui_drawerlayout_header_icon_color)));
             mHeaderView.setVisibility(icon != null ? View.VISIBLE : View.GONE);
         } else {
             Log.e(TAG, "setDrawerButtonIcon: this method can be used " +
@@ -294,6 +311,10 @@ public class DrawerLayout extends ToolbarLayout {
         }
     }
 
+    /**
+     * Set the tooltip of the drawer button.
+     * The drawer button is the button in the top right corner of the drawer panel.
+     */
     public void setDrawerButtonTooltip(@Nullable CharSequence tooltipText) {
         if (mHeaderButton != null) {
             TooltipCompat.setTooltipText(mHeaderButton, tooltipText);
@@ -303,6 +324,10 @@ public class DrawerLayout extends ToolbarLayout {
         }
     }
 
+    /**
+     * Set the click listener of the drawer button.
+     * The drawer button is the button in the top right corner of the drawer panel.
+     */
     public void setDrawerButtonOnClickListener(@Nullable OnClickListener listener) {
         if (mHeaderButton != null) {
             mHeaderButton.setOnClickListener(listener);
@@ -312,11 +337,29 @@ public class DrawerLayout extends ToolbarLayout {
         }
     }
 
+    /**
+     * Set the badges of the navigation button and drawer button.
+     * The drawer button is the button in the top right corner of the drawer panel.
+     * The badge is small orange circle in the top right of the icon which contains text.
+     * It can either be a 'N' or a number up to 99.
+     *
+     * @param navigationIcon {@link #N_BADGE} to show a 'N', 0 to hide the badge or any number up to 99.
+     * @param drawerIcon     {@link #N_BADGE} to show a 'N', 0 to hide the badge or any number up to 99.
+     * @see ToolbarLayout#setNavigationButtonBadge(int)
+     */
     public void setButtonBadges(int navigationIcon, int drawerIcon) {
         setNavigationButtonBadge(navigationIcon);
         setDrawerButtonBadge(drawerIcon);
     }
 
+    /**
+     * Set the badge of the drawer button.
+     * The drawer button is the button in the top right corner of the drawer panel.
+     * The badge is small orange circle in the top right of the icon which contains text.
+     * It can either be a 'N' or a number up to 99.
+     *
+     * @param count {@link #N_BADGE} to show a 'N', 0 to hide the badge or any number up to 99.
+     */
     public void setDrawerButtonBadge(int count) {
         if (mHeaderBadge != null) {
             if (count > 0) {
@@ -346,6 +389,11 @@ public class DrawerLayout extends ToolbarLayout {
         }
     }
 
+    /**
+     * Open or close the drawer panel with an optional animation.
+     *
+     * @param animate whether or not to animate the opening and closing
+     */
     public void setDrawerOpen(boolean open, boolean animate) {
         if (open) {
             mDrawer.openDrawer(mDrawerContent, animate);

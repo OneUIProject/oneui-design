@@ -39,21 +39,23 @@
     </declare-styleable>
 
     <!-- Custom Layouts -->
-    <!--<declare-styleable name="DrawerLayout">
-        <attr name="android:layout" />
-        <attr name="drawerIcon" format="reference" />
-    </declare-styleable>-->
 
     <declare-styleable name="ToolbarLayout">
         <attr name="android:layout" />
+        <!--Enable or disable the expanding toolbar. The default is true.-->
         <attr name="expandable" format="boolean" />
+        <!--The initial state of the toolbar.-->
         <attr name="expanded" format="boolean" />
+        <!--The toolbar's navigation icon. Don't forget to add a tooltip programmatically with setNavigationButtonTooltip(CharSequence).-->
         <attr name="navigationIcon" format="reference" />
+        <!--The toolbar's collapsed and expanded title.-->
         <attr name="title" format="string" />
+        <!--The toolbar's expanded title.-->
         <attr name="subtitle" format="string" />
     </declare-styleable>
 
     <declare-styleable name="ToolbarLayoutParams">
+        <!--The location of the ToolbarLayout children views.-->
         <attr name="layout_location">
             <enum name="main_content" value="0" />
             <enum name="appbar_header" value="1" />
@@ -65,11 +67,17 @@
     </declare-styleable>
 
     <declare-styleable name="SplashLayout">
+        <!--Set the behavior of the splash screen. The default is true.-->
         <attr name="animated" format="boolean" />
+        <!--The splash screen's title. If not specified, your App's name will be used.-->
         <attr name="title" />
+        <!--The image resource for the static splash screen.-->
         <attr name="image" format="reference|color" />
+        <!--The foreground layer resource for the animated splash screen.-->
         <attr name="foreground_image" format="reference|color" />
+        <!--The background layer resource for the animated splash screen.-->
         <attr name="background_image" format="reference|color" />
+        <!--A custom animation for the animated splash screen-->
         <attr name="animation" format="reference" />
     </declare-styleable>
 

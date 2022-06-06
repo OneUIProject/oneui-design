@@ -26,20 +26,48 @@ import java.lang.annotation.RetentionPolicy;
 
 import dev.oneuiproject.oneui.R;
 
+/**
+ * Custom App Info Layout like in any App from Samsung. App name and version are automatically added by default.
+ */
 public class AppInfoLayout extends ToolbarLayout {
     private static final String TAG = "AppInfoLayout";
 
+    /**
+     * Updates aren't possible in this app. Buttons and status text won't be shown.
+     */
     public static final int NOT_UPDATEABLE = -1;
+    /**
+     * The app is checking for updates. A {@link SeslProgressBar} will be shown.
+     */
     public static final int LOADING = 0;
+    /**
+     * There is a update available and the update button will be visible.
+     *
+     * @see #setMainButtonClickListener(OnClickListener)
+     */
     public static final int UPDATE_AVAILABLE = 1;
+    /**
+     * There are now updates available.
+     */
     public static final int NO_UPDATE = 2;
+    /**
+     * The device has no internet connection. Show a retry button.
+     *
+     * @see #setMainButtonClickListener(OnClickListener)
+     */
     public static final int NO_CONNECTION = 3;
 
+    /**
+     * {@link #NOT_UPDATEABLE}, {@link #LOADING}, {@link #UPDATE_AVAILABLE}, {@link #NO_UPDATE}, {@link #NO_CONNECTION}
+     */
     @IntDef({LOADING, UPDATE_AVAILABLE, NO_UPDATE, NOT_UPDATEABLE, NO_CONNECTION})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Status {
     }
 
+    /**
+     * Listener for the update and retry button.
+     */
     public interface OnClickListener {
         void onUpdateClicked(View v);
 
@@ -119,6 +147,9 @@ public class AppInfoLayout extends ToolbarLayout {
         if (mAppName == null) mAppName = mContext.getString(R.string.app_name);
     }
 
+    /**
+     * Set a custom App Info title. The default will be your App's name.
+     */
     @Override
     public void setTitle(@Nullable CharSequence title) {
         mAppNameTextView.setText(mAppName = title);
@@ -138,6 +169,11 @@ public class AppInfoLayout extends ToolbarLayout {
         }
     }
 
+    /**
+     * Set the App Info's update state.
+     *
+     * @param status {@link #NOT_UPDATEABLE}, {@link #LOADING}, {@link #UPDATE_AVAILABLE}, {@link #NO_UPDATE}, {@link #NO_CONNECTION}
+     */
     public void setStatus(@Status int status) {
         switch (mStatus = status) {
             case NOT_UPDATEABLE:
@@ -173,14 +209,27 @@ public class AppInfoLayout extends ToolbarLayout {
         }
     }
 
+    /**
+     * Get the App Info's current update state.
+     *
+     * @see Status
+     */
     public int getStatus() {
         return mStatus;
     }
 
+    /**
+     * Set the listener for the update and retry button.
+     */
     public void setMainButtonClickListener(OnClickListener listener) {
         mButtonListener = listener;
     }
 
+    /**
+     * Add another TextView below the version text. Returns this TextView.
+     *
+     * @param text the text for the TextView
+     */
     public TextView addOptionalText(CharSequence text) {
         LinearLayout parent = findViewById(R.id.app_info_upper_layout);
         TextView optionalText = new TextView(mContext);
@@ -193,12 +242,21 @@ public class AppInfoLayout extends ToolbarLayout {
         return optionalText;
     }
 
+    /**
+     * Open this App' App Info in the system settings. Use this for the Info MenuItem of the Toolbar overflow menu.
+     */
     public void openSettingsAppInfo() {
         Intent intent = new Intent("android.settings.APPLICATION_DETAILS_SETTINGS", Uri.fromParts("package", mContext.getPackageName(), null));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         mContext.startActivity(intent);
     }
 
+    /**
+     * Apply the correct width to buttons. This shouldn't be necessary, as it is done automatically.
+     * Only use it if buttons at the bottom of the AppInfoLayout don't have the correct width.
+     *
+     * @param button Button which should be resized
+     */
     public void initButtonWidth(Button button) {
         int w = getResources().getDisplayMetrics().widthPixels / getResources().getConfiguration().orientation;
         button.setMinWidth((int) (0.61d * w));

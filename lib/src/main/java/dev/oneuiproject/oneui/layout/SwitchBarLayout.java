@@ -13,6 +13,9 @@ import androidx.appcompat.widget.SeslSwitchBar;
 
 import dev.oneuiproject.oneui.R;
 
+/**
+ * {@link ToolbarLayout} with a {@link SeslSwitchBar}.
+ */
 public class SwitchBarLayout extends ToolbarLayout {
     private static final String TAG = "SwitchBarLayout";
 
@@ -42,6 +45,9 @@ public class SwitchBarLayout extends ToolbarLayout {
         }
     }
 
+    /**
+     * Returns the {@link SeslSwitchBar}
+     */
     @NonNull
     public SeslSwitchBar getSwitchBar() {
         return mSwitchBar;

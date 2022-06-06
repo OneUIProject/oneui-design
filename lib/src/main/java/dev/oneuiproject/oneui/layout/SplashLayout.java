@@ -15,6 +15,9 @@ import androidx.appcompat.widget.AppCompatTextView;
 
 import dev.oneuiproject.oneui.R;
 
+/**
+ * A custom splash screen layout, like in some Apps from Samsung. This can either have a static icon or an animation.
+ */
 public class SplashLayout extends LinearLayout {
 
     private boolean animated;
@@ -35,6 +38,7 @@ public class SplashLayout extends LinearLayout {
         try {
             animated = attr.getBoolean(R.styleable.SplashLayout_animated, true);
             mText = attr.getString(R.styleable.SplashLayout_title);
+            if (mText == null) mText = context.getString(R.string.app_name);
 
             if (animated) {
                 mImage_foreground = attr.getDrawable(R.styleable.SplashLayout_foreground_image);
@@ -69,14 +73,23 @@ public class SplashLayout extends LinearLayout {
 
     }
 
+    /**
+     * Set the animation listener.
+     */
     public void setSplashAnimationListener(Animation.AnimationListener listener) {
         if (animated) splash_anim.setAnimationListener(listener);
     }
 
+    /**
+     * Start the animation.
+     */
     public void startSplashAnimation() {
         if (animated) imageview_foreground.startAnimation(splash_anim);
     }
 
+    /**
+     * Stop the animation.
+     */
     public void clearSplashAnimation() {
         if (animated) imageview_foreground.clearAnimation();
     }
@@ -85,11 +98,17 @@ public class SplashLayout extends LinearLayout {
         return mText;
     }
 
+    /**
+     * Set a custom text. The default will be your App's name.
+     */
     public void setText(String mText) {
         this.mText = mText;
         textView.setText(mText);
     }
 
+    /**
+     * Set the foreground and background layers for the animated splash screen.
+     */
     public void setImage(Drawable foreground, Drawable background) {
         if (animated) {
             this.mImage_foreground = foreground;
@@ -99,6 +118,9 @@ public class SplashLayout extends LinearLayout {
         }
     }
 
+    /**
+     * Set the image for the static splash screen.
+     */
     public void setImage(Drawable image) {
         if (!animated) {
             this.mImage = image;
