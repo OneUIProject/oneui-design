@@ -52,6 +52,7 @@ public class AppPickerFragment extends BaseFragment
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         mProgress = view.findViewById(R.id.apppicker_progress);
         mAppPickerView = view.findViewById(R.id.apppicker_list);
         mAppPickerView.setItemAnimator(null);
@@ -93,7 +94,7 @@ public class AppPickerFragment extends BaseFragment
             return true;
         }
 
-        return false;
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

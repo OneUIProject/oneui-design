@@ -23,8 +23,9 @@ import java.util.List;
 
 import dev.oneuiproject.oneuiexample.base.BaseFragment;
 import dev.oneuiproject.oneuiexample.fragment.AppPickerFragment;
-import dev.oneuiproject.oneuiexample.fragment.CompoundButtonsFragment;
+import dev.oneuiproject.oneuiexample.fragment.WidgetsFragment;
 import dev.oneuiproject.oneuiexample.fragment.IconsFragment;
+import dev.oneuiproject.oneuiexample.fragment.IndexScrollFragment;
 import dev.oneuiproject.oneuiexample.fragment.PickersFragment;
 import dev.oneuiproject.oneuiexample.fragment.ProgressBarFragment;
 import dev.oneuiproject.oneuiexample.fragment.SeekBarFragment;
@@ -47,11 +48,12 @@ public class MainActivity extends AppCompatActivity implements DrawerListAdapter
     }
 
     private void initFragmentList() {
-        fragments.add(new CompoundButtonsFragment());
+        fragments.add(new WidgetsFragment());
         fragments.add(new ProgressBarFragment());
         fragments.add(new SeekBarFragment());
         fragments.add(null);
         fragments.add(new AppPickerFragment());
+        fragments.add(new IndexScrollFragment());
         fragments.add(new PickersFragment());
         fragments.add(null);
         fragments.add(new IconsFragment());

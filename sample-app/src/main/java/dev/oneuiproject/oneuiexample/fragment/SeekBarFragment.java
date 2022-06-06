@@ -16,6 +16,8 @@ public class SeekBarFragment extends BaseFragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
         HapticSeekBar seekBar_1 = view.findViewById(R.id.fragment_seekbar_1);
         SeekBarUtils.showTickMark(seekBar_1, true);
 
@@ -38,4 +40,5 @@ public class SeekBarFragment extends BaseFragment {
     public CharSequence getTitle() {
         return "SeekBar";
     }
+
 }

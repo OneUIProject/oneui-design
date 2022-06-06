@@ -28,6 +28,7 @@ public class IconsFragment extends BaseFragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         RecyclerView iconListView = (RecyclerView) getView();
         iconListView.setLayoutManager(new LinearLayoutManager(mContext));
         iconListView.setAdapter(new ImageAdapter());
@@ -65,6 +66,10 @@ public class IconsFragment extends BaseFragment {
             for (int i = 0; i < iconIds.length; i++) {
                 String letter = getResources().getResourceEntryName(iconIds[i])
                         .replace("ic_oui_", "").substring(0, 1).toUpperCase();
+
+                if (Character.isDigit(letter.charAt(0))) {
+                    letter = "#";
+                }
 
                 if (i == 0 || !mSections.get(mSections.size() - 1).equals(letter)) {
                     mSections.add(letter);

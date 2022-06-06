@@ -11,8 +11,10 @@ import com.sec.sesl.tester.R;
 import dev.oneuiproject.oneuiexample.base.BaseFragment;
 
 public class ProgressBarFragment extends BaseFragment {
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         int[] Ids = {R.id.fragment_progressbar_1, R.id.fragment_progressbar_2, R.id.fragment_progressbar_3, R.id.fragment_progressbar_4};
         for (int id : Ids) {
             SeslProgressBar progressBar = view.findViewById(id);
@@ -35,4 +37,5 @@ public class ProgressBarFragment extends BaseFragment {
     public CharSequence getTitle() {
         return "ProgressBar";
     }
+
 }
