@@ -43,6 +43,9 @@ import dev.oneuiproject.oneui.R;
 import dev.oneuiproject.oneui.utils.internal.ToolbarLayoutUtils;
 import dev.oneuiproject.oneui.view.internal.NavigationBadgeIcon;
 
+/**
+ * Custom collapsing Appbar like in any App from Samsung. Includes a {@link SearchView} and Samsung's ActionMode.
+ */
 public class ToolbarLayout extends LinearLayout {
     private static final String TAG = "ToolbarLayout";
 
@@ -96,6 +99,13 @@ public class ToolbarLayout extends LinearLayout {
     private boolean mIsSearchMode = false;
     private boolean mIsActionMode = false;
 
+    /**
+     * Callback for the Toolbar's SearchMode.
+     * Notification that the {@link SearchView}'s text has been edited or it's visibility changed.
+     *
+     * @see #showSearchMode()
+     * @see #dismissSearchMode()
+     */
     public interface SearchModeListener {
         boolean onQueryTextSubmit(String query);
 
@@ -197,7 +207,7 @@ public class ToolbarLayout extends LinearLayout {
         mSearchView.seslSetOnUpButtonClickListener(v -> dismissSearchMode());
         mSearchView.setSearchableInfo(
                 ((SearchManager) mContext.getSystemService(Context.SEARCH_SERVICE))
-                .getSearchableInfo(mActivity.getComponentName()));
+                        .getSearchableInfo(mActivity.getComponentName()));
     }
 
     @Override
@@ -293,7 +303,7 @@ public class ToolbarLayout extends LinearLayout {
             } else {
                 mAppBarLayout.setEnabled(false);
                 mAppBarLayout.seslSetCustomHeight(mContext.getResources()
-                                .getDimensionPixelSize(R.dimen.sesl_action_bar_height_with_padding));
+                        .getDimensionPixelSize(R.dimen.sesl_action_bar_height_with_padding));
             }
         } else
             Log.w(TAG, "resetAppBar: mAppBarLayout is null.");
@@ -302,35 +312,63 @@ public class ToolbarLayout extends LinearLayout {
     //
     // AppBar methods
     //
+
+    /**
+     * Returns the {@link AppBarLayout}.
+     */
     @NonNull
     public AppBarLayout getAppBarLayout() {
         return mAppBarLayout;
     }
 
+    /**
+     * Returns the {@link Toolbar}.
+     */
     @NonNull
     public Toolbar getToolbar() {
         return mMainToolbar;
     }
 
+    /**
+     * Set the title of both the collapsed and expanded Toolbar.
+     * The expanded title might not be visible in landscape or on devices with small dpi.
+     */
     public void setTitle(@Nullable CharSequence title) {
         setTitle(title, title);
     }
 
+    /**
+     * Set the title of the collapsed and expanded Toolbar independently.
+     * The expanded title might not be visible in landscape or on devices with small dpi.
+     */
     public void setTitle(@Nullable CharSequence expandedTitle,
                          @Nullable CharSequence collapsedTitle) {
         mMainToolbar.setTitle(mTitleCollapsed = collapsedTitle);
         mCollapsingToolbarLayout.setTitle(mTitleExpanded = expandedTitle);
     }
 
+    /**
+     * Set the subtitle of the {@link CollapsingToolbarLayout}.
+     * This might not be visible in landscape or on devices with small dpi.
+     */
     public void setExpandedSubtitle(@Nullable CharSequence expandedSubtitle) {
         mCollapsingToolbarLayout.seslSetSubtitle(mSubtitleExpanded = expandedSubtitle);
     }
 
+    /**
+     * Set the subtitle of the collapsed Toolbar.
+     */
     public void setCollapsedSubtitle(@Nullable CharSequence collapsedSubtitle) {
         mMainToolbar.setSubtitle(mSubtitleCollapsed = collapsedSubtitle);
 
     }
 
+    /**
+     * Enable or disable the expanding Toolbar functionality.
+     * If you simply want to programmatically expand or collapse the toolbar.
+     *
+     * @see #setExpanded(boolean)
+     */
     public void setExpandable(boolean expandable) {
         if (mExpandable != expandable) {
             mExpandable = expandable;
@@ -338,14 +376,27 @@ public class ToolbarLayout extends LinearLayout {
         }
     }
 
+    /**
+     * Returns if the expanding Toolbar functionality is enabled or not.
+     *
+     * @see #setExpandable(boolean)
+     */
     public boolean isExpandable() {
         return mExpandable;
     }
 
+    /**
+     * Programmatically expand or collapse the Toolbar.
+     */
     public void setExpanded(boolean expanded) {
         setExpanded(expanded, ViewCompat.isLaidOut(mAppBarLayout));
     }
 
+    /**
+     * Programmatically expand or collapse the Toolbar with an optional animation.
+     *
+     * @param animate whether or not to animate the expanding or collapsing.
+     */
     public void setExpanded(boolean expanded, boolean animate) {
         if (mExpandable) {
             mExpanded = expanded;
@@ -354,15 +405,29 @@ public class ToolbarLayout extends LinearLayout {
             Log.d(TAG, "setExpanded: mExpandable is " + mExpandable);
     }
 
+    /**
+     * Get the current state of the toolbar.
+     *
+     * @see #setExpanded(boolean)
+     * @see #setExpanded(boolean, boolean)
+     */
     public boolean isExpanded() {
         return mExpandable && !mAppBarLayout.seslIsCollapsed();
     }
 
+    /**
+     * Replace the title of the expanded Toolbar with a custom View.
+     * This might not be visible in landscape or on devices with small dpi.
+     */
     public void setCustomTitleView(@NonNull View view) {
         setCustomTitleView(view,
                 new CollapsingToolbarLayout.LayoutParams(view.getLayoutParams()));
     }
 
+    /**
+     * Replace the title of the expanded Toolbar with a custom View including LayoutParams.
+     * This might not be visible in landscape or on devices with small dpi.
+     */
     public void setCustomTitleView(@NonNull View view,
                                    @Nullable CollapsingToolbarLayout.LayoutParams params) {
         if (params == null) {
@@ -373,19 +438,31 @@ public class ToolbarLayout extends LinearLayout {
         mCollapsingToolbarLayout.seslSetCustomTitleView(view, params);
     }
 
+    /**
+     * Replace the subtitle of the expanded Toolbar with a custom View.
+     * This might not be visible in landscape or on devices with small dpi.
+     */
     public void setCustomSubtitle(@NonNull View view) {
         mCollapsingToolbarLayout.seslSetCustomSubtitle(view);
     }
 
+    /**
+     * Enable or disable the immersive scroll of the Toolbar.
+     * When this is enabled the Toolbar will completely hide when scrolling up.
+     */
     public void setImmersiveScroll(boolean activate) {
         if (Build.VERSION.SDK_INT >= 30) {
             mAppBarLayout.seslSetImmersiveScroll(activate);
         } else {
-            Log.e(TAG, "setImmersiveScroll: immersive scroll is " +
-                    "available only on api 30 and above");
+            Log.e(TAG, "setImmersiveScroll: immersive scroll is available only on api 30 and above");
         }
     }
 
+    /**
+     * Returns true if the immersive scroll is enabled.
+     *
+     * @see #setImmersiveScroll(boolean)
+     */
     public boolean isImmersiveScroll() {
         return mAppBarLayout.seslGetImmersiveScroll();
     }
@@ -393,6 +470,11 @@ public class ToolbarLayout extends LinearLayout {
     //
     // Navigation Button methods
     //
+
+    /**
+     * Set the navigation icon of the Toolbar.
+     * Don't forget to also set a Tooltip with {@link #setNavigationButtonTooltip(CharSequence)}.
+     */
     public void setNavigationButtonIcon(@Nullable Drawable icon) {
         mNavigationIcon = icon;
         if (mNavigationBadgeIcon != null) {
@@ -404,6 +486,9 @@ public class ToolbarLayout extends LinearLayout {
         }
     }
 
+    /**
+     * Change the visibility of the navigation button.
+     */
     public void setNavigationButtonVisible(boolean visible) {
         if (mNavigationBadgeIcon != null) {
             mMainToolbar.setNavigationIcon(visible
@@ -416,8 +501,15 @@ public class ToolbarLayout extends LinearLayout {
         }
     }
 
+    /**
+     * Add a badge to the navigation button.
+     * The badge is small orange circle in the top right of the icon which contains text.
+     * It can either be a 'N' or a number up to 99.
+     *
+     * @param count {@link #N_BADGE} to show a 'N', 0 to hide the badge or any number up to 99.
+     */
     public void setNavigationButtonBadge(int count) {
-        if (mNavigationIcon != null)  {
+        if (mNavigationIcon != null) {
             if (count != 0) {
                 NavigationBadgeIcon badgeIcon;
                 if (mNavigationBadgeIcon == null) {
@@ -451,14 +543,27 @@ public class ToolbarLayout extends LinearLayout {
                     " has been set");
     }
 
+    /**
+     * Set the Tooltip of the navigation button.
+     */
     public void setNavigationButtonTooltip(@Nullable CharSequence tooltipText) {
         mMainToolbar.setNavigationContentDescription(tooltipText);
     }
 
+    /**
+     * Callback for the navigation button click event.
+     */
     public void setNavigationButtonOnClickListener(@Nullable OnClickListener listener) {
         mMainToolbar.setNavigationOnClickListener(listener);
     }
 
+    /**
+     * Sets the icon the a back icon, the tooltip to 'Navigate up' and calls {@link AppCompatActivity#onBackPressed()} when clicked.
+     *
+     * @see #setNavigationButtonIcon(Drawable)
+     * @see #setNavigationButtonTooltip(CharSequence)
+     * @see android.app.ActionBar#setDisplayHomeAsUpEnabled(boolean)
+     */
     public void setNavigationButtonAsBack() {
         mActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setNavigationButtonOnClickListener(v -> mActivity.onBackPressed());
@@ -467,6 +572,12 @@ public class ToolbarLayout extends LinearLayout {
     //
     // Search Mode methods
     //
+
+    /**
+     * Show the {@link SearchView} in the Toolbar.
+     * To enable the voice input icon in the SearchView, please refer to the project wiki.
+     * TODO: link to the wiki on how to use the voice input feature.
+     */
     public void showSearchMode() {
         mIsSearchMode = true;
         if (mIsActionMode) dismissActionMode();
@@ -501,6 +612,11 @@ public class ToolbarLayout extends LinearLayout {
             mSearchModeListener.onSearchModeToggle(mSearchView, true);
     }
 
+    /**
+     * Dismiss the {@link SearchView} in the Toolbar.
+     *
+     * @see #showSearchMode()
+     */
     public void dismissSearchMode() {
         if (mSearchModeListener != null)
             mSearchModeListener.onSearchModeToggle(mSearchView, false);
@@ -515,19 +631,32 @@ public class ToolbarLayout extends LinearLayout {
         mCollapsingToolbarLayout.seslSetSubtitle(mSubtitleExpanded);
     }
 
+    /**
+     * Check if SearchMode is enabled(=the {@link SearchView} in the Toolbar is visible).
+     */
     public boolean isSearchMode() {
         return mIsSearchMode;
     }
 
+    /**
+     * Returns the {@link SearchView} of the Toolbar.
+     */
     @NonNull
     public SearchView getSearchView() {
         return mSearchView;
     }
 
+    /**
+     * Set the {@link SearchModeListener} for the Toolbar's SearchMode.
+     */
     public void setSearchModeListener(SearchModeListener listener) {
         mSearchModeListener = listener;
     }
 
+    /**
+     * Forward the voice input result to the Toolbar.
+     * TODO: link to the wiki on how to use the voice input feature.
+     */
     public void onSearchModeVoiceInputResult(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             mSearchView.setQuery(intent.getStringExtra(SearchManager.QUERY), true);
@@ -537,6 +666,18 @@ public class ToolbarLayout extends LinearLayout {
     //
     // Action Mode methods
     //
+
+    /**
+     * Show the Toolbar's ActionMode. This will show a 'All' Checkbox instead of the navigation button,
+     * temporarily replace the Toolbar's title with a counter ('x selected')
+     * and show a {@link BottomNavigationView} in the footer.
+     * The ActionMode is useful when the user can select items in a list.
+     *
+     * @see #setActionModeCount(int, int)
+     * @see #setActionModeCheckboxListener(CompoundButton.OnCheckedChangeListener)
+     * @see #setActionModeBottomMenu(int)
+     * @see #setActionModeBottomMenuListener(NavigationBarView.OnItemSelectedListener)
+     */
     public void showActionMode() {
         mIsActionMode = true;
         if (mIsSearchMode) dismissSearchMode();
@@ -552,6 +693,11 @@ public class ToolbarLayout extends LinearLayout {
         mMainToolbar.setSubtitle(null);
     }
 
+    /**
+     * Dismiss the ActionMode.
+     *
+     * @see #showActionMode()
+     */
     public void dismissActionMode() {
         mIsActionMode = false;
         mOnBackPressedCallback.setEnabled(false);
@@ -566,22 +712,41 @@ public class ToolbarLayout extends LinearLayout {
         mMainToolbar.setSubtitle(mSubtitleCollapsed);
     }
 
+    /**
+     * Checks if the ActionMode is enabled.
+     */
     public boolean isActionMode() {
         return mIsActionMode;
     }
 
+    /**
+     * Set the menu resource for the ActionMode's {@link BottomNavigationView}.
+     */
     public void setActionModeBottomMenu(@MenuRes int menuRes) {
         mBottomActionModeBar.inflateMenu(menuRes);
     }
 
+    /**
+     * Returns the {@link Menu} of the ActionMode's {@link BottomNavigationView}.
+     */
     public Menu getActionModeBottomMenu() {
         return mBottomActionModeBar.getMenu();
     }
 
+    /**
+     * Set the listener for the ActionMode's {@link BottomNavigationView}.
+     */
     public void setActionModeBottomMenuListener(NavigationBarView.OnItemSelectedListener listener) {
         mBottomActionModeBar.setOnItemSelectedListener(listener);
     }
 
+    /**
+     * Set the ActionMode's count. This will change the count in the Toolbar's title
+     * and if count = total, the 'All' Checkbox will be checked.
+     *
+     * @param count number of selected items in the list
+     * @param total number of total items in the list
+     */
     public void setActionModeCount(int count, int total) {
         String title = count > 0
                 ? getResources().getString(R.string.oui_action_mode_n_selected, count)
@@ -594,6 +759,9 @@ public class ToolbarLayout extends LinearLayout {
         mActionModeCheckBox.setChecked(count == total);
     }
 
+    /**
+     * Set the listener for the 'All' Checkbox of the ActionMode.
+     */
     public void setActionModeCheckboxListener(CompoundButton.OnCheckedChangeListener listener) {
         mActionModeCheckBox.setOnCheckedChangeListener(listener);
     }
