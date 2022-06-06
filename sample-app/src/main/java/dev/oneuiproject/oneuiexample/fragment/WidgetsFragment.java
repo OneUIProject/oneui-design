@@ -12,7 +12,7 @@ public class WidgetsFragment extends BaseFragment {
 
     @Override
     public int getIconResId() {
-        return R.drawable.drawer_page_icon_widgets;
+        return R.drawable.ic_oui_game_launcher;
     }
 
     @Override

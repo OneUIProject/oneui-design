@@ -47,7 +47,7 @@ public class IconsFragment extends BaseFragment {
 
     @Override
     public int getIconResId() {
-        return R.drawable.drawer_page_icon_icons;
+        return R.drawable.ic_oui_emoticon;
     }
 
     @Override

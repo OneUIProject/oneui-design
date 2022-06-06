@@ -104,7 +104,7 @@ public class AppPickerFragment extends BaseFragment
 
     @Override
     public int getIconResId() {
-        return R.drawable.drawer_page_icon_apppicker;
+        return R.drawable.ic_oui_all_apps;
     }
 
     @Override

@@ -62,7 +62,7 @@ public class PickersFragment extends BaseFragment
 
     @Override
     public int getIconResId() {
-        return R.drawable.drawer_page_icon_pickers;
+        return R.drawable.ic_oui_calendar_next_shedules;
     }
 
     @Override
