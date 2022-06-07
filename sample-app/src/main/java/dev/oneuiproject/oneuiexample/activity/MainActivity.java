@@ -27,6 +27,7 @@ import dev.oneuiproject.oneuiexample.base.MainActivityWrapper;
 import dev.oneuiproject.oneuiexample.fragment.AppPickerFragment;
 import dev.oneuiproject.oneuiexample.fragment.PreferencesFragment;
 import dev.oneuiproject.oneuiexample.fragment.SwipeRefreshFragment;
+import dev.oneuiproject.oneuiexample.fragment.TabsFragment;
 import dev.oneuiproject.oneuiexample.fragment.WidgetsFragment;
 import dev.oneuiproject.oneuiexample.fragment.IconsFragment;
 import dev.oneuiproject.oneuiexample.fragment.IndexScrollFragment;
@@ -58,6 +59,8 @@ public class MainActivity extends AppCompatActivity
         fragments.add(new SeekBarFragment());
         fragments.add(new SwipeRefreshFragment());
         fragments.add(new PreferencesFragment());
+        fragments.add(null);
+        fragments.add(new TabsFragment());
         fragments.add(null);
         fragments.add(new AppPickerFragment());
         fragments.add(new IndexScrollFragment());

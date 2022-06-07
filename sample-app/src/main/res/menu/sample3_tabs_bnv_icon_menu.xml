@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bvn_1"
+        android:icon="@drawable/ic_oui_pin_outline"
+        android:title="Item 1"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/bvn_2"
+        android:icon="@drawable/ic_oui_share_outline"
+        android:title="Item 2"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/bvn_3"
+        android:icon="@drawable/ic_oui_delete_outline"
+        android:title="Item 3"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/bvn_4"
+        android:title="Item 4"
+        app:showAsAction="never" />
+
+    <group android:id="@+id/menu_bnv">
+
+        <item
+            android:id="@+id/bvn_5"
+            android:title="Item 5"
+            app:showAsAction="never" />
+
+    </group>
+
+</menu>

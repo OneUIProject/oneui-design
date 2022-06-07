@@ -15,8 +15,10 @@
         <entry key="sample-app/src/main/res/drawable/samsung_squircle.xml" value="0.193" />
         <entry key="sample-app/src/main/res/layout/sample3_fragment_apppicker.xml" value="0.3171875" />
         <entry key="sample-app/src/main/res/layout/sample3_fragment_compound_buttons.xml" value="0.15729166666666666" />
+        <entry key="sample-app/src/main/res/layout/sample3_fragment_navigation.xml" value="1.299342105263158" />
         <entry key="sample-app/src/main/res/layout/sample3_fragment_pickers.xml" value="0.13227513227513227" />
         <entry key="sample-app/src/main/res/layout/sample3_fragment_swiperefresh.xml" value="0.3171875" />
+        <entry key="sample-app/src/main/res/layout/sample3_fragment_tabs.xml" value="1.1293900184842884" />
         <entry key="sample-app/src/main/res/layout/sample3_view_drawer_list_separator.xml" value="0.3182291666666667" />
       </map>
     </option>

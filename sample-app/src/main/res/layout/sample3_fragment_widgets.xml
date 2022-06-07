@@ -17,44 +17,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <dev.oneuiproject.oneui.widget.Separator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Compound Buttons" />
+
         <dev.oneuiproject.oneui.widget.RoundLinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:background="@color/oui_background_color"
             android:orientation="vertical"
             android:paddingHorizontal="24dp"
             android:paddingVertical="12dp">
 
-            <androidx.appcompat.widget.SeslToggleSwitch
+            <androidx.appcompat.widget.SwitchCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="6dp"
-                android:text="Switch" />
+                android:text="Switch"
+                android:checked="true" />
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="6dp"
-                android:text="CheckBox" />
+                android:text="CheckBox"
+                android:checked="true" />
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatRadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="RadioButton" />
 
                 <androidx.appcompat.widget.AppCompatRadioButton
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
-
-                <androidx.appcompat.widget.AppCompatRadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="RadioButton" />
 
             </RadioGroup>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:viewBindingIgnore="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <dev.oneuiproject.oneui.widget.MarginsTabLayout
+            android:id="@+id/tabs_subtab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <dev.oneuiproject.oneui.widget.RoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:orientation="vertical"
+            android:background="@color/oui_background_color">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/tabs_subtab_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/listPreferredItemHeightSmall"
+                android:text="Show Sub Tabs"
+                android:textAppearance="?attr/textAppearanceListItem" />
+
+            <RadioGroup
+                android:id="@+id/tabs_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:checkedButton="@id/tabs_radio_tabs">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/tabs_radio_bvnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/listPreferredItemHeightSmall"
+                    android:paddingStart="12dp"
+                    android:text="BottomNavigationView (Text)"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/tabs_radio_bvni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/listPreferredItemHeightSmall"
+                    android:paddingStart="12dp"
+                    android:text="BottomNavigationView (Icon)"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/tabs_radio_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/listPreferredItemHeightSmall"
+                    android:paddingStart="12dp"
+                    android:text="TabLayout"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+
+            </RadioGroup>
+
+        </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/oui_round_and_bgcolor" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/tabs_bottomnav_text"
+            style="@style/BottomNavViewTextMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/sample3_tabs_bnv_text_menu"
+            android:visibility="gone" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/tabs_bottomnav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/sample3_tabs_bnv_icon_menu"
+            android:visibility="gone" />
+
+        <dev.oneuiproject.oneui.widget.MarginsTabLayout
+            style="?attr/tabStyle"
+            android:id="@+id/tabs_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
