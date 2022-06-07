@@ -51,8 +51,9 @@ dependencies {
     implementation("io.github.oneuiproject.sesl:picker-color:$sesl_picker_color_version")
     implementation("io.github.oneuiproject.sesl:preference:$sesl_preference_version")
     implementation("io.github.oneuiproject.sesl:recyclerview:$sesl_recyclerview_version")
+    implementation("io.github.oneuiproject.sesl:swiperefreshlayout:$sesl_swiperefreshlayout_version")
 
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation("androidx.constraintlayout:constraintlayout:$androidx_constraintlayout_version")
 
     implementation 'com.airbnb.android:lottie:5.0.3'
 

@@ -21,9 +21,12 @@ import com.sec.sesl.tester.databinding.ActivityMainBinding;
 import java.util.ArrayList;
 import java.util.List;
 
+import dev.oneuiproject.oneui.layout.ToolbarLayout;
 import dev.oneuiproject.oneuiexample.base.FragmentInfo;
+import dev.oneuiproject.oneuiexample.base.MainActivityWrapper;
 import dev.oneuiproject.oneuiexample.fragment.AppPickerFragment;
 import dev.oneuiproject.oneuiexample.fragment.PreferencesFragment;
+import dev.oneuiproject.oneuiexample.fragment.SwipeRefreshFragment;
 import dev.oneuiproject.oneuiexample.fragment.WidgetsFragment;
 import dev.oneuiproject.oneuiexample.fragment.IconsFragment;
 import dev.oneuiproject.oneuiexample.fragment.IndexScrollFragment;
@@ -32,7 +35,8 @@ import dev.oneuiproject.oneuiexample.fragment.ProgressBarFragment;
 import dev.oneuiproject.oneuiexample.fragment.SeekBarFragment;
 import dev.oneuiproject.oneuiexample.ui.drawer.DrawerListAdapter;
 
-public class MainActivity extends AppCompatActivity implements DrawerListAdapter.DrawerListener {
+public class MainActivity extends AppCompatActivity
+        implements MainActivityWrapper, DrawerListAdapter.DrawerListener {
     private ActivityMainBinding mBinding;
     private FragmentManager mFragmentManager;
     private final List<Fragment> fragments = new ArrayList<>();
@@ -52,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements DrawerListAdapter
         fragments.add(new WidgetsFragment());
         fragments.add(new ProgressBarFragment());
         fragments.add(new SeekBarFragment());
+        fragments.add(new SwipeRefreshFragment());
         fragments.add(new PreferencesFragment());
         fragments.add(null);
         fragments.add(new AppPickerFragment());
@@ -93,6 +98,11 @@ public class MainActivity extends AppCompatActivity implements DrawerListAdapter
             return true;
         }
         return false;
+    }
+
+    @Override
+    public ToolbarLayout getToolbarLayout() {
+        return mBinding.drawerLayout;
     }
 
     private void initDrawer() {
