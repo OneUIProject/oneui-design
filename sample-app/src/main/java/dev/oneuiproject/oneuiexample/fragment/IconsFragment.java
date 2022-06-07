@@ -93,7 +93,8 @@ public class IconsFragment extends BaseFragment {
         @Override
         public ImageAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(mContext);
-            View view = inflater.inflate(R.layout.sample3_view_icon_listview_item, parent, false);
+            View view = inflater.inflate(
+                    R.layout.sample3_view_icon_listview_item, parent, false);
             return new ImageAdapter.ViewHolder(view);
         }
 

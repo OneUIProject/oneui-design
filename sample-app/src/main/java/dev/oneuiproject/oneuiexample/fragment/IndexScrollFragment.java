@@ -99,27 +99,26 @@ public class IndexScrollFragment extends BaseFragment {
 
         cursor.moveToFirst();
 
-        SeslCursorIndexer indexer = new SeslCursorIndexer(cursor, 0, "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z".split(","), 0);
+        SeslCursorIndexer indexer = new SeslCursorIndexer(cursor, 0,
+                "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,Б".split(","), 0);
         indexer.setGroupItemsCount(1);
         indexer.setMiscItemsCount(3);
 
         mIndexScrollView.setIndexer(indexer);
-        mIndexScrollView.setOnIndexBarEventListener(new SeslIndexScrollView.OnIndexBarEventListener() {
-            @Override
-            public void onIndexChanged(int sectionIndex) {
-                ((LinearLayoutManager) mListView.getLayoutManager()).scrollToPositionWithOffset(sectionIndex, 0);
-            }
+        mIndexScrollView.setOnIndexBarEventListener(
+                new SeslIndexScrollView.OnIndexBarEventListener() {
+                    @Override
+                    public void onIndexChanged(int sectionIndex) {
+                        ((LinearLayoutManager) mListView.getLayoutManager())
+                                .scrollToPositionWithOffset(sectionIndex, 0);
+                    }
 
-            @Override
-            public void onPressed(float v) {
+                    @Override
+                    public void onPressed(float v) { }
 
-            }
-
-            @Override
-            public void onReleased(float v) {
-
-            }
-        });
+                    @Override
+                    public void onReleased(float v) { }
+                });
         mIndexScrollView.attachToRecyclerView(mListView);
     }
 
@@ -159,7 +158,8 @@ public class IndexScrollFragment extends BaseFragment {
         public IndexAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             if (viewType == 0) {
                 LayoutInflater inflater = LayoutInflater.from(mContext);
-                View view = inflater.inflate(R.layout.sample3_view_indexscroll_listview_item, parent, false);
+                View view = inflater.inflate(
+                        R.layout.sample3_view_indexscroll_listview_item, parent, false);
                 return new IndexAdapter.ViewHolder(view, false);
             } else {
                 return new IndexAdapter.ViewHolder(new Separator(mContext), true);
@@ -268,8 +268,6 @@ public class IndexScrollFragment extends BaseFragment {
 
     String[] listItems = {
             "Groups",
-            "&",
-            "Блять lol",
             "A",
             "Aaron",
             "Abe",
@@ -597,8 +595,10 @@ public class IndexScrollFragment extends BaseFragment {
             "Zane",
             "Zion",
             "Zoe",
+            "Б",
+            "Блять lol",
             "#",
             "040404",
-            "12100?"
+            "121002"
     };
 }

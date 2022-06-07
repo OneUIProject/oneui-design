@@ -126,10 +126,11 @@ public class AppPickerFragment extends BaseFragment
         categories.add("Grid");
         categories.add("Grid, CheckBox");
 
-        ArrayAdapter<String> testAdapter = new ArrayAdapter<>(mContext, android.R.layout.simple_spinner_item, categories);
-        testAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter
+                = new ArrayAdapter<>(mContext, android.R.layout.simple_spinner_item, categories);
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
 
-        spinner.setAdapter(testAdapter);
+        spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
     }
 
@@ -148,9 +149,11 @@ public class AppPickerFragment extends BaseFragment
         new Thread() {
             @Override
             public void run() {
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ignored) { }
+                if (!mListInitialized) {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException ignored) { }
+                }
                 requireActivity().runOnUiThread(() -> {
                     ArrayList<String> installedAppSet
                             = new ArrayList<>(getInstalledPackageNameUnmodifiableSet());

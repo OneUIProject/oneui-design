@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="preferences_test_entries">
+        <item>Aqua</item>
+        <item>Azure</item>
+        <item>Beige</item>
+    </string-array>
+    <string-array name="preferences_test_values">
+        <item>#00FFFF</item>
+        <item>#F0FFFF</item>
+        <item>#F5F5DC</item>
+    </string-array>
+
+</resources>

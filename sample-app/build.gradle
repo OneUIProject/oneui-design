@@ -49,6 +49,7 @@ dependencies {
     implementation("io.github.oneuiproject.sesl:indexscroll:$sesl_indexscroll_version")
     implementation("io.github.oneuiproject.sesl:picker-basic:$sesl_picker_basic_version")
     implementation("io.github.oneuiproject.sesl:picker-color:$sesl_picker_color_version")
+    implementation("io.github.oneuiproject.sesl:preference:$sesl_preference_version")
     implementation("io.github.oneuiproject.sesl:recyclerview:$sesl_recyclerview_version")
 
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'

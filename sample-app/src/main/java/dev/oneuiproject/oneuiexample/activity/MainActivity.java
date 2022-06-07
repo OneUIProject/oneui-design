@@ -21,8 +21,9 @@ import com.sec.sesl.tester.databinding.ActivityMainBinding;
 import java.util.ArrayList;
 import java.util.List;
 
-import dev.oneuiproject.oneuiexample.base.BaseFragment;
+import dev.oneuiproject.oneuiexample.base.FragmentInfo;
 import dev.oneuiproject.oneuiexample.fragment.AppPickerFragment;
+import dev.oneuiproject.oneuiexample.fragment.PreferencesFragment;
 import dev.oneuiproject.oneuiexample.fragment.WidgetsFragment;
 import dev.oneuiproject.oneuiexample.fragment.IconsFragment;
 import dev.oneuiproject.oneuiexample.fragment.IndexScrollFragment;
@@ -34,7 +35,7 @@ import dev.oneuiproject.oneuiexample.ui.drawer.DrawerListAdapter;
 public class MainActivity extends AppCompatActivity implements DrawerListAdapter.DrawerListener {
     private ActivityMainBinding mBinding;
     private FragmentManager mFragmentManager;
-    private final List<BaseFragment> fragments = new ArrayList<>();
+    private final List<Fragment> fragments = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements DrawerListAdapter
         fragments.add(new WidgetsFragment());
         fragments.add(new ProgressBarFragment());
         fragments.add(new SeekBarFragment());
+        fragments.add(new PreferencesFragment());
         fragments.add(null);
         fragments.add(new AppPickerFragment());
         fragments.add(new IndexScrollFragment());
@@ -109,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements DrawerListAdapter
     private void initFragments() {
         mFragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = mFragmentManager.beginTransaction();
-        for (BaseFragment fragment : fragments) {
+        for (Fragment fragment : fragments) {
             if (fragment != null) transaction.add(R.id.main_content, fragment);
         }
         transaction.commit();
@@ -120,15 +122,17 @@ public class MainActivity extends AppCompatActivity implements DrawerListAdapter
 
     @Override
     public boolean onDrawerItemSelected(int position) {
-        BaseFragment newFragment = fragments.get(position);
+        Fragment newFragment = fragments.get(position);
         FragmentTransaction transaction = mFragmentManager.beginTransaction();
         for (Fragment fragment : mFragmentManager.getFragments()) {
             transaction.hide(fragment);
         }
         transaction.show(newFragment).commit();
 
-        mBinding.drawerLayout.setTitle(getString(R.string.app_name), newFragment.getTitle());
-        mBinding.drawerLayout.setExpandedSubtitle(newFragment.getTitle());
+        if (newFragment instanceof FragmentInfo) {
+            mBinding.drawerLayout.setTitle(getString(R.string.app_name), ((FragmentInfo) newFragment).getTitle());
+            mBinding.drawerLayout.setExpandedSubtitle(((FragmentInfo) newFragment).getTitle());
+        }
         mBinding.drawerLayout.setDrawerOpen(false, true);
         return true;
     }

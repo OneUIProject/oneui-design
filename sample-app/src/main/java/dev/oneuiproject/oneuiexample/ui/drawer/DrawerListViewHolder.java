@@ -27,8 +27,8 @@ public class DrawerListViewHolder extends RecyclerView.ViewHolder {
         if (!mIsSeparator) {
             mIconView = itemView.findViewById(R.id.drawer_item_icon);
             mTitleView = itemView.findViewById(R.id.drawer_item_title);
-            mNormalTypeface = Typeface.create("sans-serif", Typeface.NORMAL);
-            mSelectedTypeface = Typeface.create("sans-serif-medium", Typeface.NORMAL);
+            mNormalTypeface = Typeface.create("sec-roboto-light", Typeface.NORMAL);
+            mSelectedTypeface = Typeface.create("sec-roboto-light", Typeface.BOLD);
         }
     }
 

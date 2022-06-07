@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        android:key="key0"
+        android:title="Preference"
+        android:summary="Summary"/>
+
+    <PreferenceCategory>
+
+        <SwitchPreferenceCompat
+            android:key="key1"
+            android:title="SwitchPreference"
+            android:defaultValue="false" />
+
+        <SeslSwitchPreferenceScreen
+            android:key="key2"
+            android:title="SwitchPreferenceScreen"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="key3"
+            android:title="CheckBoxPreference"
+            android:summary="Someone's still using this one?"
+            android:defaultValue="true" />
+
+        <SeekBarPreference
+            android:title="SeekBarPreference"
+            android:summary="Summary"
+            app:min="0"
+            android:max="50"
+            android:defaultValue="30"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory>
+
+        <EditTextPreference
+            android:key="key4"
+            android:title="EditTextPreference"
+            android:defaultValue="Default text"
+            app:useSimpleSummaryProvider="true" />
+
+        <DropDownPreference
+            android:key="key5"
+            android:title="DropDownPreference"
+            android:entries="@array/preferences_test_entries"
+            android:entryValues="@array/preferences_test_values"
+            android:defaultValue="#00FFFF"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:key="key6"
+            android:title="ListPreference"
+            android:entries="@array/preferences_test_entries"
+            android:entryValues="@array/preferences_test_values"
+            android:defaultValue="#F0FFFF"
+            app:useSimpleSummaryProvider="true" />
+
+        <MultiSelectListPreference
+            android:key="key7"
+            android:title="MultiSelectListPreference"
+            android:summary="Summary"
+            android:entries="@array/preferences_test_entries"
+            android:entryValues="@array/preferences_test_values" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

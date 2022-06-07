@@ -7,17 +7,18 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sec.sesl.tester.R;
 
 import java.util.List;
 
-import dev.oneuiproject.oneuiexample.base.BaseFragment;
+import dev.oneuiproject.oneuiexample.base.FragmentInfo;
 
 public class DrawerListAdapter extends RecyclerView.Adapter<DrawerListViewHolder> {
     private Context mContext;
-    private List<BaseFragment> mFragments;
+    private List<Fragment> mFragments;
     private DrawerListener mListener;
     private int mSelectedPos;
 
@@ -25,7 +26,8 @@ public class DrawerListAdapter extends RecyclerView.Adapter<DrawerListViewHolder
         boolean onDrawerItemSelected(int position);
     }
 
-    public DrawerListAdapter(@NonNull Context context, List<BaseFragment> fragments, @Nullable DrawerListener listener) {
+    public DrawerListAdapter(@NonNull Context context, List<Fragment> fragments,
+                             @Nullable DrawerListener listener) {
         mContext = context;
         mFragments = fragments;
         mListener = listener;
@@ -39,9 +41,11 @@ public class DrawerListAdapter extends RecyclerView.Adapter<DrawerListViewHolder
         final boolean isSeparator = viewType == 0;
         View view;
         if (isSeparator) {
-            view = inflater.inflate(R.layout.sample3_view_drawer_list_separator, parent, false);
+            view = inflater.inflate(
+                    R.layout.sample3_view_drawer_list_separator, parent, false);
         } else {
-            view = inflater.inflate(R.layout.sample3_view_drawer_list_item, parent, false);
+            view = inflater.inflate(
+                    R.layout.sample3_view_drawer_list_item, parent, false);
         }
 
         return new DrawerListViewHolder(view, isSeparator);
@@ -50,8 +54,11 @@ public class DrawerListAdapter extends RecyclerView.Adapter<DrawerListViewHolder
     @Override
     public void onBindViewHolder(@NonNull DrawerListViewHolder holder, int position) {
         if (!holder.isSeparator()) {
-            holder.setIcon(mFragments.get(position).getIconResId());
-            holder.setTitle(mFragments.get(position).getTitle());
+            Fragment fragment = mFragments.get(position);
+            if (fragment instanceof FragmentInfo) {
+                holder.setIcon(((FragmentInfo) fragment).getIconResId());
+                holder.setTitle(((FragmentInfo) fragment).getTitle());
+            }
             holder.setSelected(position == mSelectedPos);
             holder.itemView.setOnClickListener(v -> {
                 final int itemPos = holder.getBindingAdapterPosition();

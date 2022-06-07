@@ -9,7 +9,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment
+        implements FragmentInfo {
     protected Context mContext;
 
     @Override

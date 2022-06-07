@@ -38,14 +38,14 @@ public class CardView extends LinearLayout {
     }
 
     private void setStyleable(AttributeSet attrs) {
-        TypedArray obtainStyledAttributes = mContext.obtainStyledAttributes(attrs, R.styleable.CardView);
-        mIconDrawable = obtainStyledAttributes.getDrawable(R.styleable.CardView_IconDrawable);
-        mIconColor = obtainStyledAttributes.getColor(R.styleable.CardView_IconColor, -1);
-        mTitleText = obtainStyledAttributes.getString(R.styleable.CardView_TitleText);
-        mSummaryText = obtainStyledAttributes.getString(R.styleable.CardView_SummaryText);
+        TypedArray a = mContext.obtainStyledAttributes(attrs, R.styleable.CardView);
+        mIconDrawable = a.getDrawable(R.styleable.CardView_IconDrawable);
+        mIconColor = a.getColor(R.styleable.CardView_IconColor, -1);
+        mTitleText = a.getString(R.styleable.CardView_TitleText);
+        mSummaryText = a.getString(R.styleable.CardView_SummaryText);
         mIsIconView = mIconDrawable != null;
-        mIsDividerViewVisible = obtainStyledAttributes.getBoolean(R.styleable.CardView_isDividerViewVisible, false);
-        obtainStyledAttributes.recycle();
+        mIsDividerViewVisible = a.getBoolean(R.styleable.CardView_isDividerViewVisible, false);
+        a.recycle();
     }
 
     private void init() {

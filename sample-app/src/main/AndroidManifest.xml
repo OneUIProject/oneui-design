@@ -20,6 +20,13 @@
         <meta-data
             android:name="com.samsung.android.icon_container.has_icon_container"
             android:value="true" />
+        <meta-data
+            android:name="com.samsung.android.icon_container.feature_appicon"
+            android:value="ADAPTIVEICON_SHADOW" />
+
+        <meta-data
+            android:name="theming-meta"
+            android:value="meta_998_sesl_app" />
 
         <activity
             android:name="dev.oneuiproject.oneuiexample.activity.MainActivity"

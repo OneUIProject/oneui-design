@@ -170,7 +170,8 @@ public class PickersFragment extends BaseFragment
         categories.add("TimePicker");
         categories.add("DatePicker");
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(mContext, android.R.layout.simple_spinner_item, categories);
+        ArrayAdapter<String> adapter
+                = new ArrayAdapter<>(mContext, android.R.layout.simple_spinner_item, categories);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
 
         spinner.setAdapter(adapter);
