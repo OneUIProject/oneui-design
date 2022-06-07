@@ -11,13 +11,18 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.core.content.res.ResourcesCompat;
+import androidx.picker.app.SeslDatePickerDialog;
+import androidx.picker.app.SeslTimePickerDialog;
 import androidx.picker.widget.SeslDatePicker;
 import androidx.picker.widget.SeslNumberPicker;
+import androidx.picker.widget.SeslSpinningDatePicker;
 import androidx.picker.widget.SeslTimePicker;
 import androidx.picker3.app.SeslColorPickerDialog;
 
@@ -33,11 +38,10 @@ public class PickersFragment extends BaseFragment
     private int mCurrentColor;
     private List<Integer> mRecentColors = new ArrayList<>();
 
-    private int mCurrentPos = 0;
-
     private LinearLayout mNumberPickers;
     private SeslTimePicker mTimePicker;
     private SeslDatePicker mDatePicker;
+    private SeslSpinningDatePicker mSpinningDatePicker;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,8 +55,9 @@ public class PickersFragment extends BaseFragment
         super.onViewCreated(view, savedInstanceState);
         initNumberPicker(view);
         initTimePicker(view);
-        initDatePicker(view);
+        initDatePickers(view);
         initSpinner(view);
+        initDialogBtns(view);
     }
 
     @Override
@@ -77,21 +82,28 @@ public class PickersFragment extends BaseFragment
                 mNumberPickers.setVisibility(View.VISIBLE);
                 mTimePicker.setVisibility(View.GONE);
                 mDatePicker.setVisibility(View.GONE);
+                mSpinningDatePicker.setVisibility(View.GONE);
                 break;
             case 1:
                 mNumberPickers.setVisibility(View.GONE);
                 mTimePicker.setVisibility(View.VISIBLE);
                 mTimePicker.startAnimation(200, null);
                 mDatePicker.setVisibility(View.GONE);
+                mSpinningDatePicker.setVisibility(View.GONE);
                 break;
             case 2:
                 mNumberPickers.setVisibility(View.GONE);
                 mTimePicker.setVisibility(View.GONE);
                 mDatePicker.setVisibility(View.VISIBLE);
+                mSpinningDatePicker.setVisibility(View.GONE);
+                break;
+            case 3:
+                mNumberPickers.setVisibility(View.GONE);
+                mTimePicker.setVisibility(View.GONE);
+                mDatePicker.setVisibility(View.GONE);
+                mSpinningDatePicker.setVisibility(View.VISIBLE);
                 break;
         }
-
-        mCurrentPos = position;
     }
 
     @Override
@@ -153,13 +165,18 @@ public class PickersFragment extends BaseFragment
         mTimePicker.setIs24HourView(DateFormat.is24HourFormat(mContext));
     }
 
-    private void initDatePicker(@NonNull View view) {
+    private void initDatePickers(@NonNull View view) {
         mDatePicker = view.findViewById(R.id.picker_date);
+        mSpinningDatePicker = view.findViewById(R.id.picker_spinning_date);
 
         Calendar calendar = Calendar.getInstance();
         mDatePicker.init(calendar.get(Calendar.YEAR),
                 calendar.get(Calendar.MONTH),
                 calendar.get(Calendar.DAY_OF_MONTH), null);
+        mSpinningDatePicker.init(calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH), null);
+        mSpinningDatePicker.showMarginRight(true);
     }
 
     private void initSpinner(@NonNull View view) {
@@ -169,6 +186,7 @@ public class PickersFragment extends BaseFragment
         categories.add("NumberPicker");
         categories.add("TimePicker");
         categories.add("DatePicker");
+        categories.add("SpinningDatePicker");
 
         ArrayAdapter<String> adapter
                 = new ArrayAdapter<>(mContext, android.R.layout.simple_spinner_item, categories);
@@ -176,6 +194,41 @@ public class PickersFragment extends BaseFragment
 
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+    }
+
+    private void initDialogBtns(@NonNull View view) {
+        AppCompatButton dateBtn = view.findViewById(R.id.pickers_dialog_date);
+        dateBtn.setOnClickListener(v -> openDatePickerDialog());
+        AppCompatButton timeBtn = view.findViewById(R.id.pickers_dialog_time);
+        timeBtn.setOnClickListener(v -> openTimePickerDialog());
+        AppCompatButton colorBtn = view.findViewById(R.id.pickers_dialog_color);
+        colorBtn.setOnClickListener(v -> openColorPickerDialog());
+    }
+
+    private void openDatePickerDialog() {
+        Calendar calendar = Calendar.getInstance();
+
+        SeslDatePickerDialog dialog = new SeslDatePickerDialog(mContext,
+                (view, year, monthOfYear, dayOfMonth) -> Toast.makeText(mContext,
+                        "Year: " + year + "\nMonth: " + monthOfYear + "\nDay: " + dayOfMonth,
+                        Toast.LENGTH_SHORT).show(),
+                calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH));
+        dialog.show();
+    }
+
+    private void openTimePickerDialog() {
+        Calendar calendar = Calendar.getInstance();
+
+        SeslTimePickerDialog dialog = new SeslTimePickerDialog(mContext,
+                (view, hourOfDay, minute) -> Toast.makeText(mContext,
+                        "Hour: " + hourOfDay + "\nMinute: " + minute,
+                        Toast.LENGTH_SHORT).show(),
+                calendar.get(Calendar.HOUR_OF_DAY),
+                calendar.get(Calendar.MINUTE),
+                DateFormat.is24HourFormat(mContext));
+        dialog.show();
     }
 
     private void openColorPickerDialog() {
