@@ -33,8 +33,3 @@ dependencies {
     implementation("io.github.oneuiproject.sesl:preference:$sesl_preference_version")
     implementation("io.github.oneuiproject.sesl:material:$sesl_material_version")
 }
-
-ext {
-    POM_NAME = "One UI Design"
-    POM_DESCRIPTION = "One UI Design Library."
-}
