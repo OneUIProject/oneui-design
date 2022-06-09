@@ -33,6 +33,7 @@ import dev.oneuiproject.oneui.widget.Separator;
 import dev.oneuiproject.oneuiexample.base.BaseFragment;
 
 public class IndexScrollFragment extends BaseFragment {
+    private int mCurrentSectionIndex = 0;
     private RecyclerView mListView;
     private SeslIndexScrollView mIndexScrollView;
 
@@ -109,8 +110,14 @@ public class IndexScrollFragment extends BaseFragment {
                 new SeslIndexScrollView.OnIndexBarEventListener() {
                     @Override
                     public void onIndexChanged(int sectionIndex) {
-                        ((LinearLayoutManager) mListView.getLayoutManager())
-                                .scrollToPositionWithOffset(sectionIndex, 0);
+                        if (mCurrentSectionIndex != sectionIndex) {
+                            mCurrentSectionIndex = sectionIndex;
+                            if (mListView.getScrollState() != RecyclerView.SCROLL_STATE_IDLE) {
+                                mListView.stopScroll();
+                            }
+                            ((LinearLayoutManager) mListView.getLayoutManager())
+                                    .scrollToPositionWithOffset(sectionIndex, 0);
+                        }
                     }
 
                     @Override
