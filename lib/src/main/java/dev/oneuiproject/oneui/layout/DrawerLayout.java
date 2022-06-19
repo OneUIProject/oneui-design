@@ -84,10 +84,8 @@ public class DrawerLayout extends ToolbarLayout {
 
         if (!isInEditMode()) {
             mActivity.getOnBackPressedDispatcher().addCallback(mOnBackPressedCallback);
+            ViewUtils.semSetRoundedCorners(mActivity.getWindow().getDecorView(), ViewUtils.SEM_ROUNDED_CORNER_NONE);
         }
-
-        ViewUtils.semSetRoundedCorners(
-                mActivity.getWindow().getDecorView(), ViewUtils.SEM_ROUNDED_CORNER_NONE);
     }
 
     @Override
@@ -115,13 +113,10 @@ public class DrawerLayout extends ToolbarLayout {
     }
 
     private void initDrawer() {
-        mIsRtl = getResources().getConfiguration()
-                .getLayoutDirection() == View.LAYOUT_DIRECTION_RTL;
+        mIsRtl = getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL;
 
-        setNavigationButtonIcon(
-                ContextCompat.getDrawable(mContext, R.drawable.ic_oui_ab_drawer));
-        setNavigationButtonTooltip(
-                getResources().getText(R.string.oui_navigation_drawer));
+        setNavigationButtonIcon(ContextCompat.getDrawable(mContext, R.drawable.ic_oui_ab_drawer));
+        setNavigationButtonTooltip(getResources().getText(R.string.oui_navigation_drawer));
 
         mDrawer = findViewById(R.id.drawerlayout_drawer);
         mToolbarContent = findViewById(R.id.drawerlayout_toolbar_content);
@@ -137,23 +132,20 @@ public class DrawerLayout extends ToolbarLayout {
         mDrawer.setDrawerElevation(0);
         setDrawerWidth();
         setDrawerCornerRadius(DEFAULT_DRAWER_RADIUS);
+        setNavigationButtonOnClickListener(v -> mDrawer.openDrawer(mDrawerContent));
 
         if (!isInEditMode()) {
             View translationView = findViewById(R.id.drawer_custom_translation);
-            if (translationView == null) translationView = mToolbarContent;
-            View content = translationView;
-
             Window window = mActivity.getWindow();
-            ActionBarDrawerToggle listener
-                    = new ActionBarDrawerToggle(mActivity, mDrawer,
-                    0, 0) {
+            mDrawer.addDrawerListener(new ActionBarDrawerToggle(mActivity, mDrawer, 0, 0) {
                 @Override
                 public void onDrawerSlide(View drawerView, float slideOffset) {
                     super.onDrawerSlide(drawerView, slideOffset);
 
                     float slideX = drawerView.getWidth() * slideOffset;
                     if (mIsRtl) slideX *= -1;
-                    content.setTranslationX(slideX);
+                    if (translationView != null) translationView.setTranslationX(slideX);
+                    else mToolbarContent.setTranslationX(slideX);
 
                     float[] hsv = new float[3];
                     Color.colorToHSV(mContext.getColor(R.color.oui_round_and_bgcolor), hsv);
@@ -161,10 +153,7 @@ public class DrawerLayout extends ToolbarLayout {
                     window.setStatusBarColor(Color.HSVToColor(hsv));
                     window.setNavigationBarColor(Color.HSVToColor(hsv));
                 }
-            };
-            mDrawer.addDrawerListener(listener);
-
-            setNavigationButtonOnClickListener(v -> mDrawer.openDrawer(mDrawerContent));
+            });
         }
     }
 

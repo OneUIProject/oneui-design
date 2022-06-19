@@ -123,11 +123,10 @@ public class AppInfoLayout extends ToolbarLayout {
     }
 
     private void setVersionText() {
-        String version;
-        try {
+        String version = "unknown";
+        if ((!isInEditMode())) try {
             version = mContext.getPackageManager().getPackageInfo(mContext.getApplicationContext().getPackageName(), 0).versionName;
-        } catch (PackageManager.NameNotFoundException e2) {
-            version = "Unknown";
+        } catch (PackageManager.NameNotFoundException ignored) {
         }
         mVersionTextView.setText(mContext.getString(R.string.version_info, version));
     }

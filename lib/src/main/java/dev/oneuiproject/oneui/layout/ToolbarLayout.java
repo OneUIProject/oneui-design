@@ -119,9 +119,6 @@ public class ToolbarLayout extends LinearLayout {
         mActivity = getActivity();
         mContext = context;
 
-        mActivity.getWindow()
-                .setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-
         setOrientation(VERTICAL);
 
         TypedValue bgColor = new TypedValue();
@@ -137,7 +134,10 @@ public class ToolbarLayout extends LinearLayout {
         inflateChildren();
         initAppBar();
 
-        mActivity.getOnBackPressedDispatcher().addCallback(mOnBackPressedCallback);
+        if (!isInEditMode()) {
+            mActivity.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+            mActivity.getOnBackPressedDispatcher().addCallback(mOnBackPressedCallback);
+        }
 
         refreshLayout(getResources().getConfiguration());
     }
@@ -197,17 +197,19 @@ public class ToolbarLayout extends LinearLayout {
                     .setDisplayHomeAsUpEnabled(false);
             mActivity.getSupportActionBar()
                     .setDisplayShowTitleEnabled(false);
+
+            mSearchView.setSearchableInfo(
+                    ((SearchManager) mContext.getSystemService(Context.SEARCH_SERVICE))
+                            .getSearchableInfo(mActivity.getComponentName()));
         }
+
+        mSearchView.seslSetUpButtonVisibility(View.VISIBLE);
+        mSearchView.seslSetOnUpButtonClickListener(v -> dismissSearchMode());
 
         setNavigationButtonIcon(mNavigationIcon);
         setTitle(mTitleExpanded, mTitleCollapsed);
         setExpandedSubtitle(mSubtitleExpanded);
 
-        mSearchView.seslSetUpButtonVisibility(View.VISIBLE);
-        mSearchView.seslSetOnUpButtonClickListener(v -> dismissSearchMode());
-        mSearchView.setSearchableInfo(
-                ((SearchManager) mContext.getSystemService(Context.SEARCH_SERVICE))
-                        .getSearchableInfo(mActivity.getComponentName()));
     }
 
     @Override
@@ -565,8 +567,10 @@ public class ToolbarLayout extends LinearLayout {
      * @see android.app.ActionBar#setDisplayHomeAsUpEnabled(boolean)
      */
     public void setNavigationButtonAsBack() {
-        mActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setNavigationButtonOnClickListener(v -> mActivity.onBackPressed());
+        if (!isInEditMode()) {
+            mActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            setNavigationButtonOnClickListener(v -> mActivity.onBackPressed());
+        }
     }
 
     //
