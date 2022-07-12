@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="24dp" android:viewportHeight="24" android:viewportWidth="24" android:width="24dp">
+	<group>
+		<clip-path android:pathData="M7.6697,3.2609l4.3696,0l0,17.556l-4.3696,0z"/>
+		<path android:fillAlpha="0.6" android:fillColor="@color/oui_primary_icon_color" android:fillType="evenOdd" android:pathData="M7.6697,4.4444L7.6697,19.633C8.9185,20.3819 10.3749,20.8171 12.0393,20.8171L12.0393,3.2608C10.3749,3.2608 8.9185,3.6967 7.6697,4.4444" android:strokeAlpha="0.6" android:strokeColor="#00000000" android:strokeWidth="1"/>
+	</group>
+	<path android:fillColor="@color/oui_primary_icon_color" android:fillType="evenOdd" android:pathData="M16.4086,4.4444L16.4086,19.633C18.9051,18.1142 20.7781,15.2866 20.7781,12.0388C20.7781,8.7923 18.9051,5.9639 16.4086,4.4444" android:strokeColor="#00000000" android:strokeWidth="1"/>
+	<path android:fillAlpha="0.4" android:fillColor="@color/oui_primary_icon_color" android:fillType="evenOdd" android:pathData="M7.6697,4.4444L7.6697,19.633C5.1732,18.1142 3.3001,15.2866 3.3001,12.0388C3.3001,8.7923 5.1732,5.9639 7.6697,4.4444" android:strokeColor="#00000000" android:strokeWidth="1"/>
+	<group>
+		<clip-path android:pathData="M12.0394,3.2609l4.3693,0l0,17.556l-4.3693,0z"/>
+		<path android:fillAlpha="0.8" android:fillColor="@color/oui_primary_icon_color" android:fillType="evenOdd" android:pathData="M12.0394,3.2608L12.0394,20.817C13.4961,20.817 14.9517,20.3819 16.4087,19.6329L16.4087,4.4443C14.9517,3.6967 13.4961,3.2608 12.0394,3.2608" android:strokeColor="#00000000" android:strokeWidth="1"/>
+	</group>
+</vector>
