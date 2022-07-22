@@ -34,15 +34,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="6dp"
-                android:text="Switch"
-                android:checked="true" />
+                android:checked="true"
+                android:text="Switch" />
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="6dp"
-                android:text="CheckBox"
-                android:checked="true" />
+                android:checked="true"
+                android:text="CheckBox" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -62,6 +62,66 @@
                     android:text="RadioButton" />
 
             </RadioGroup>
+
+        </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+
+        <dev.oneuiproject.oneui.widget.Separator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buttons" />
+
+        <dev.oneuiproject.oneui.widget.RoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/oui_background_color"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="12dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="?buttonStyle"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/OneUI.ButtonStyleColored"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/OneUI.ButtonStyleTransparent"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/OneUI.AppInfoButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="?buttonBarNeutralButtonStyle"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Button" />
 
         </dev.oneuiproject.oneui.widget.RoundLinearLayout>
 

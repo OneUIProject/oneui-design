@@ -62,4 +62,13 @@
         <item name="android:textSize">17sp</item>
     </style>
 
+    <!-- Buttons -->
+    <style name="OneUI.ButtonStyleColored" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">?colorPrimary</item>
+    </style>
+
+    <style name="OneUI.ButtonStyleTransparent" parent="Widget.AppCompat.Light.Button">
+        <item name="android:background">@drawable/oui_btn_transparent</item>
+    </style>
+
 </resources>

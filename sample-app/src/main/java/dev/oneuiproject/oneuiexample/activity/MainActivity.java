@@ -21,19 +21,19 @@ import com.sec.sesl.tester.databinding.ActivityMainBinding;
 import java.util.ArrayList;
 import java.util.List;
 
-import dev.oneuiproject.oneui.layout.ToolbarLayout;
+import dev.oneuiproject.oneui.layout.DrawerLayout;
 import dev.oneuiproject.oneuiexample.base.FragmentInfo;
 import dev.oneuiproject.oneuiexample.base.MainActivityWrapper;
 import dev.oneuiproject.oneuiexample.fragment.AppPickerFragment;
-import dev.oneuiproject.oneuiexample.fragment.PreferencesFragment;
-import dev.oneuiproject.oneuiexample.fragment.SwipeRefreshFragment;
-import dev.oneuiproject.oneuiexample.fragment.TabsFragment;
-import dev.oneuiproject.oneuiexample.fragment.WidgetsFragment;
 import dev.oneuiproject.oneuiexample.fragment.IconsFragment;
 import dev.oneuiproject.oneuiexample.fragment.IndexScrollFragment;
 import dev.oneuiproject.oneuiexample.fragment.PickersFragment;
+import dev.oneuiproject.oneuiexample.fragment.PreferencesFragment;
 import dev.oneuiproject.oneuiexample.fragment.ProgressBarFragment;
 import dev.oneuiproject.oneuiexample.fragment.SeekBarFragment;
+import dev.oneuiproject.oneuiexample.fragment.SwipeRefreshFragment;
+import dev.oneuiproject.oneuiexample.fragment.TabsFragment;
+import dev.oneuiproject.oneuiexample.fragment.WidgetsFragment;
 import dev.oneuiproject.oneuiexample.ui.drawer.DrawerListAdapter;
 
 public class MainActivity extends AppCompatActivity
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public ToolbarLayout getToolbarLayout() {
+    public DrawerLayout getDrawerLayout() {
         return mBinding.drawerLayout;
     }
 

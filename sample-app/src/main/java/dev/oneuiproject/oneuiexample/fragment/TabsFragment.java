@@ -28,7 +28,6 @@ public class TabsFragment extends BaseFragment {
         initSubTabs(view);
         initBNV(view);
         initMainTabs(view);
-        initToggles(view);
     }
 
     @Override
@@ -75,29 +74,4 @@ public class TabsFragment extends BaseFragment {
                 v -> gridMenuDialog.show());
     }
 
-    private void initToggles(@NonNull View view) {
-        SwitchCompat subTabSwitch = view.findViewById(R.id.tabs_subtab_switch);
-        subTabSwitch.setOnCheckedChangeListener((buttonView, isChecked)
-                -> mSubTabs.setVisibility(isChecked
-                ? View.VISIBLE
-                : View.GONE));
-        subTabSwitch.setChecked(true);
-
-        RadioGroup tabsRadioGroup = view.findViewById(R.id.tabs_radio_group);
-        tabsRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == R.id.tabs_radio_bvnt) {
-                mBottomNavViewText.setVisibility(View.VISIBLE);
-                mBottomNavView.setVisibility(View.GONE);
-                mTabs.setVisibility(View.GONE);
-            } else if (checkedId == R.id.tabs_radio_bvni) {
-                mBottomNavViewText.setVisibility(View.GONE);
-                mBottomNavView.setVisibility(View.VISIBLE);
-                mTabs.setVisibility(View.GONE);
-            } else if (checkedId == R.id.tabs_radio_tabs) {
-                mBottomNavViewText.setVisibility(View.GONE);
-                mBottomNavView.setVisibility(View.GONE);
-                mTabs.setVisibility(View.VISIBLE);
-            }
-        });
-    }
 }

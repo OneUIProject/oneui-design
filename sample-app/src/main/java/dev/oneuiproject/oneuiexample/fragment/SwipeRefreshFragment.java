@@ -14,7 +14,8 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.sec.sesl.tester.R;
-import dev.oneuiproject.oneui.layout.ToolbarLayout;
+
+import dev.oneuiproject.oneui.layout.DrawerLayout;
 import dev.oneuiproject.oneuiexample.base.BaseFragment;
 import dev.oneuiproject.oneuiexample.base.MainActivityWrapper;
 
@@ -48,15 +49,15 @@ public class SwipeRefreshFragment extends BaseFragment {
         super.onHiddenChanged(hidden);
         FragmentActivity activity = requireActivity();
         if (activity instanceof MainActivityWrapper) {
-            ToolbarLayout tl = ((MainActivityWrapper) activity).getToolbarLayout();
-            if (tl != null) {
+            DrawerLayout dl = ((MainActivityWrapper) activity).getDrawerLayout();
+            if (dl != null) {
                 if (!hidden) {
-                    mPreviousExpandStatus = tl.isExpanded();
-                    tl.setExpanded(false, false);
-                    tl.setExpandable(false);
+                    mPreviousExpandStatus = dl.isExpanded();
+                    dl.setExpanded(false, false);
+                    dl.setExpandable(false);
                 } else {
-                    tl.setExpandable(true);
-                    tl.setExpanded(mPreviousExpandStatus, false);
+                    dl.setExpandable(true);
+                    dl.setExpanded(mPreviousExpandStatus, false);
                 }
             }
         }
@@ -83,11 +84,11 @@ public class SwipeRefreshFragment extends BaseFragment {
         mContext.getTheme().resolveAttribute(
                 R.attr.colorPrimaryDark, colorPrimaryDark, true);
 
-        int[][] states = new int[][] {
-                new int[] {android.R.attr.state_enabled},
-                new int[] {-android.R.attr.state_enabled}
+        int[][] states = new int[][]{
+                new int[]{android.R.attr.state_enabled},
+                new int[]{-android.R.attr.state_enabled}
         };
-        int[] colors = new int[] {
+        int[] colors = new int[]{
                 Color.argb(0xff,
                         Color.red(colorPrimaryDark.data),
                         Color.green(colorPrimaryDark.data),

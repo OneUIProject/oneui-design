@@ -1,7 +1,7 @@
 package dev.oneuiproject.oneuiexample.base;
 
-import dev.oneuiproject.oneui.layout.ToolbarLayout;
+import dev.oneuiproject.oneui.layout.DrawerLayout;
 
 public interface MainActivityWrapper {
-    ToolbarLayout getToolbarLayout();
+    DrawerLayout getDrawerLayout();
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OneUI.ButtonStyleTransparent" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/oui_btn_transparent</item>
+    </style>
+
+</resources>
