@@ -38,6 +38,7 @@ public class IconsFragment extends BaseFragment {
         iconListView.seslSetLastRoundedCorner(true);
         iconListView.seslSetFastScrollerEnabled(true);
         iconListView.seslSetGoToTopEnabled(true);
+        iconListView.seslSetSmoothScrollEnabled(true);
     }
 
     @Override
