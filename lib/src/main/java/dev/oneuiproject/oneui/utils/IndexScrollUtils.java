@@ -24,13 +24,17 @@ public class IndexScrollUtils {
                         : R.anim.oui_index_scroll_hide);
                 anim.setAnimationListener(new Animation.AnimationListener() {
                     @Override
-                    public void onAnimationStart(Animation animation) { }
+                    public void onAnimationStart(Animation animation) {
+                        if (visible) {
+                            indexScroll.setVisibility(View.VISIBLE);
+                        }
+                    }
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
-                        indexScroll.setVisibility(visible
-                                ? View.VISIBLE
-                                : View.GONE);
+                        if (!visible) {
+                            indexScroll.setVisibility(View.GONE);
+                        }
                     }
 
                     @Override
