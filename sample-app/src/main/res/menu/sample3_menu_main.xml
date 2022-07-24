@@ -10,6 +10,12 @@
         android:visible="false"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/menu_indexscroll_text"
+        android:title="Show letters"
+        android:visible="false"
+        app:showAsAction="never" />
+
     <group android:id="@+id/menu_drawer">
 
         <item

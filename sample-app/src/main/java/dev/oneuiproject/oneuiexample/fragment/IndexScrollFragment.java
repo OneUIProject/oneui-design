@@ -8,6 +8,9 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
@@ -19,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.util.SeslRoundedCorner;
 import androidx.appcompat.util.SeslSubheaderRoundedCorner;
+import androidx.appcompat.view.menu.SeslMenuItem;
 import androidx.indexscroll.widget.SeslCursorIndexer;
 import androidx.indexscroll.widget.SeslIndexScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -29,6 +33,7 @@ import com.sec.sesl.tester.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import dev.oneuiproject.oneui.utils.IndexScrollUtils;
 import dev.oneuiproject.oneui.widget.Separator;
 import dev.oneuiproject.oneuiexample.base.BaseFragment;
 
@@ -37,12 +42,63 @@ public class IndexScrollFragment extends BaseFragment {
     private RecyclerView mListView;
     private SeslIndexScrollView mIndexScrollView;
 
+    private boolean mIsTextModeEnabled = false;
+    private boolean mIsIndexBarPressed = false;
+    private final Runnable mHideIndexBar = new Runnable() {
+        @Override
+        public void run() {
+            IndexScrollUtils.animateVisibility(mIndexScrollView, false);
+        }
+    };
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mIndexScrollView = view.findViewById(R.id.indexscroll_view);
         initListView(view);
         initIndexScroll();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+
+        MenuItem textModeItem = menu.findItem(R.id.menu_indexscroll_text);
+        textModeItem.setVisible(true);
+        if (mIsTextModeEnabled) {
+            textModeItem.setTitle("Hide letters");
+        } else {
+            textModeItem.setTitle("Show letters");
+        }
+        ((SeslMenuItem) textModeItem)
+                .setBadgeText(getString(R.string.oui_new_badge_text));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.menu_indexscroll_text) {
+            ((SeslMenuItem) item)
+                    .setBadgeText(null);
+
+            mIsTextModeEnabled = !mIsTextModeEnabled;
+            if (mIsTextModeEnabled) {
+                item.setTitle("Hide letters");
+            } else {
+                item.setTitle("Show letters");
+            }
+
+            mIndexScrollView.setIndexBarTextMode(mIsTextModeEnabled);
+            mIndexScrollView.invalidate();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -83,6 +139,7 @@ public class IndexScrollFragment extends BaseFragment {
         mListView.seslSetLastRoundedCorner(true);
         mListView.seslSetIndexTipEnabled(true);
         mListView.seslSetGoToTopEnabled(true);
+        mListView.seslSetSmoothScrollEnabled(true);
     }
 
     private void initIndexScroll() {
@@ -121,12 +178,33 @@ public class IndexScrollFragment extends BaseFragment {
                     }
 
                     @Override
-                    public void onPressed(float v) { }
+                    public void onPressed(float v) {
+                        mIsIndexBarPressed = true;
+                        mListView.removeCallbacks(mHideIndexBar);
+                    }
 
                     @Override
-                    public void onReleased(float v) { }
+                    public void onReleased(float v) {
+                        mIsIndexBarPressed = false;
+                        if (mListView.getScrollState() == RecyclerView.SCROLL_STATE_IDLE) {
+                            mListView.postDelayed(mHideIndexBar, 1500);
+                        }
+                    }
                 });
         mIndexScrollView.attachToRecyclerView(mListView);
+        mListView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                if (newState == RecyclerView.SCROLL_STATE_IDLE
+                        && !mIsIndexBarPressed) {
+                    recyclerView.postDelayed(mHideIndexBar, 1500);
+                } else {
+                    mListView.removeCallbacks(mHideIndexBar);
+                    IndexScrollUtils.animateVisibility(mIndexScrollView, true);
+                }
+            }
+        });
     }
 
     public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder>
