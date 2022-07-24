@@ -146,8 +146,8 @@ public class AboutActivity extends AppCompatActivity
         mBinding.aboutHeaderAppIcon.setImageDrawable(appIcon);
         mBinding.aboutBottomAppIcon.setImageDrawable(appIcon);
 
-        mBinding.aboutHeaderAppVersion.setText("Version 3.0.0");
-        mBinding.aboutBottomAppVersion.setText("Version 3.0.0");
+        mBinding.aboutHeaderAppVersion.setText("Version " + BuildConfig.VERSION_NAME);
+        mBinding.aboutBottomAppVersion.setText("Version " + BuildConfig.VERSION_NAME);
 
         mBinding.aboutHeaderGithub.setOnClickListener(this);
         TooltipCompat.setTooltipText(mBinding.aboutHeaderGithub, "GitHub");
