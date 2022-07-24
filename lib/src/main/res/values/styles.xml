@@ -64,7 +64,7 @@
 
     <!-- Buttons -->
     <style name="OneUI.ButtonStyleColored" parent="Widget.AppCompat.Button">
-        <item name="android:backgroundTint">?colorPrimary</item>
+        <item name="android:backgroundTint">@color/oui_btn_colored_background</item>
     </style>
 
     <style name="OneUI.ButtonStyleTransparent" parent="Widget.AppCompat.Light.Button">
