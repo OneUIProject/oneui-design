@@ -56,6 +56,7 @@ public class AppPickerFragment extends BaseFragment
         mProgress = view.findViewById(R.id.apppicker_progress);
         mAppPickerView = view.findViewById(R.id.apppicker_list);
         mAppPickerView.setItemAnimator(null);
+        mAppPickerView.seslSetSmoothScrollEnabled(true);
         initSpinner(view);
     }
 
@@ -71,8 +72,14 @@ public class AppPickerFragment extends BaseFragment
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
+
         MenuItem systemAppsItem = menu.findItem(R.id.menu_apppicker_system);
         systemAppsItem.setVisible(true);
+        if (mShowSystemApps) {
+            systemAppsItem.setTitle("Hide system apps");
+        } else {
+            systemAppsItem.setTitle("Show system apps");
+        }
         ((SeslMenuItem) systemAppsItem)
                 .setBadgeText(getString(R.string.oui_new_badge_text));
     }
