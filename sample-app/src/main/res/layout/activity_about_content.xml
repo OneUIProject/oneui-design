@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:TitleText="MIT License"
-            app:SummaryText="sesl  •  oneui-design"
+            app:SummaryText="oneui-core  •  oneui-design"
             app:isDividerViewVisible="true" />
 
     </dev.oneuiproject.oneui.widget.RoundLinearLayout>
@@ -89,7 +89,6 @@
                 android:id="@+id/about_bottom_relative_ouip"
                 style="@style/OneUI.RelativeLinkTextViewStyle"
                 android:text="OneUI Project" />
-
 
         </dev.oneuiproject.oneui.widget.RelatedCard>
 
