@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/listPreferredItemHeight"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.preference.internal.PreferenceImageView
+            android:id="@android:id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/sesl_preference_item_padding_vertical"
+        android:paddingBottom="@dimen/sesl_preference_item_padding_vertical">
+
+        <TextView
+            android:id="@android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal" />
+
+        <TextView
+            android:id="@android:id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_alignStart="@android:id/title"
+            android:layout_below="@android:id/title"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:maxLines="4" />
+
+        <TextView
+            android:id="@+id/seekbar_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/summary"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+            android:textColor="?attr/colorPrimaryDark"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seekbar_value"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/delete_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/oui_preference_seekbar_pro_btn_bg"
+                android:src="@drawable/oui_preference_seekbar_pro_minus"
+                app:tint="@color/oui_functional_red_color"
+                android:scaleType="center"
+                android:visibility="gone" />
+
+            <dev.oneuiproject.oneui.widget.HapticSeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="32dp"
+                android:layout_gravity="center_vertical" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/add_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/oui_preference_seekbar_pro_btn_bg"
+                android:src="@drawable/oui_preference_seekbar_pro_plus"
+                app:tint="@color/oui_functional_green_color"
+                android:scaleType="center"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -43,6 +43,25 @@
         <attr name="roundedCorners" />
     </declare-styleable>
 
+    <declare-styleable name="SeekBarPreferencePro">
+        <attr name="min" />
+        <attr name="android:max" />
+        <attr name="android:layout" />
+        <attr name="seekBarIncrement" />
+        <attr name="adjustable" />
+        <attr name="showSeekBarValue" />
+        <attr name="updatesContinuously" />
+
+        <attr name="seekBarMode">
+            <enum name="standard" value="0" />
+            <enum name="expand" value="5" />
+        </attr>
+        <attr name="seekBarSeamless" format="boolean" />
+        <attr name="showTickMark" format="boolean" />
+        <attr name="overlap" format="integer" />
+        <attr name="units" format="string" />
+    </declare-styleable>
+
     <!-- Custom Layouts -->
     <declare-styleable name="ToolbarLayout">
         <attr name="android:layout" />
