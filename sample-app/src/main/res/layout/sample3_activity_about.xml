@@ -13,6 +13,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         style="@style/OneUI.AppInfoButton"
-        android:text="Github" />
+        android:onClick="openGitHubPage"
+        android:text="GitHub" />
 
 </dev.oneuiproject.oneui.layout.AppInfoLayout>

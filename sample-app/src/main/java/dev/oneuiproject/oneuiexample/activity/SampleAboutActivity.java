@@ -1,11 +1,11 @@
 package dev.oneuiproject.oneuiexample.activity;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.sec.sesl.tester.R;
@@ -29,12 +29,14 @@ public class SampleAboutActivity extends AppCompatActivity {
         appInfoLayout.setMainButtonClickListener(new AppInfoLayout.OnClickListener() {
             @Override
             public void onUpdateClicked(View v) {
-                Toast.makeText(SampleAboutActivity.this, "update", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SampleAboutActivity.this,
+                        "onUpdateClicked", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRetryClicked(View v) {
-                Toast.makeText(SampleAboutActivity.this, "retry", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SampleAboutActivity.this,
+                        "onRetryClicked", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -45,18 +47,14 @@ public class SampleAboutActivity extends AppCompatActivity {
         appInfoLayout.setStatus(s);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
-        getMenuInflater().inflate(R.menu.app_info_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_app_info) {
-            appInfoLayout.openSettingsAppInfo();
-            return true;
+    public void openGitHubPage(View v) {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://github.com/OneUIProject/oneui-design"));
+            startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(
+                    this, "No suitable activity found", Toast.LENGTH_SHORT).show();
         }
-        return false;
     }
 }
