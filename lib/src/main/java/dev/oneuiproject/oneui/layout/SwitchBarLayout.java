@@ -26,10 +26,15 @@ public class SwitchBarLayout extends ToolbarLayout {
 
     public SwitchBarLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-
-        LayoutInflater.from(mContext).inflate(R.layout.oui_layout_switchbarlayout, mMainContainer, true);
         mSwitchBar = findViewById(R.id.switchbarlayout_switchbar);
         mSBLContainer = findViewById(R.id.switchbarlayout_container);
+    }
+
+    @Override
+    protected void inflateChildren() {
+        super.inflateChildren();
+        LayoutInflater.from(mContext)
+                .inflate(R.layout.oui_layout_switchbarlayout, mMainContainer, true);
     }
 
     @Override
@@ -46,7 +51,7 @@ public class SwitchBarLayout extends ToolbarLayout {
     }
 
     /**
-     * Returns the {@link SeslSwitchBar}
+     * Returns the {@link SeslSwitchBar} in this layout.
      */
     @NonNull
     public SeslSwitchBar getSwitchBar() {
