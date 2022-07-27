@@ -67,4 +67,15 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory>
+
+        <dev.oneuiproject.oneui.preference.ColorPickerPreference
+            android:key="key8"
+            android:title="ColorPickerPreference"
+            android:summary="Summary"
+            android:defaultValue="#0381FE"
+            app:showAlphaSlider="true" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
