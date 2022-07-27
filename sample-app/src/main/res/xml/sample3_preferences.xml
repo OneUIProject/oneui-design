@@ -76,6 +76,14 @@
             android:defaultValue="#0381FE"
             app:showAlphaSlider="true" />
 
+        <dev.oneuiproject.oneui.preference.SeekBarPreferencePro
+            android:title="SeekBarPreferencePro"
+            android:summary="Summary"
+            app:min="0"
+            android:max="5"
+            android:defaultValue="2"
+            app:showTickMark="true" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
