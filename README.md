@@ -16,7 +16,7 @@ Any form of contribution, suggestions, bug report or feature request will be wel
 
 # OneUI Design Module
 
-The "oneui-design" library (not to be confused with the old [OneUI Design Library](https://github.com/OneUIProject/OneUI-Design-Library)) consists of custom components made to help you implement the One UI style in your apps with ease, if you're interested on the actual base libraries please take a look at [oneui-core](https://github.com/OneUIProject/oneui-core). Check our [documentation page](https://oneuiproject.github.io/design/) to learn more about this module.
+The "oneui-design" library (not to be confused with the old [OneUI Design Library](https://github.com/OneUIProject/OneUI-Design-Library)) consists of custom components made to help you implement One UI in your apps with ease, if you're actually interested on the base libraries please take a look at [oneui-core](https://github.com/OneUIProject/oneui-core). Check our [documentation page](https://oneuiproject.github.io/design/) to learn more about this module.
 
 ## Usage
 
