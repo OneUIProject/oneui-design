@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical">
+
+    <androidx.preference.internal.PreferenceImageView
+        android:id="@+id/imageview_widget"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+        android:focusable="false"
+        android:clickable="false" />
+
+</LinearLayout>

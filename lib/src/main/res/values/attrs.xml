@@ -23,6 +23,11 @@
         <attr name="title" />
     </declare-styleable>
 
+    <!-- Custom Preferences -->
+    <declare-styleable name="ColorPickerPreference">
+        <attr name="showAlphaSlider" format="boolean" />
+    </declare-styleable>
+
     <declare-styleable name="DescriptionPreference">
         <attr name="android:layout" />
         <attr name="roundedCorners" />
@@ -39,7 +44,6 @@
     </declare-styleable>
 
     <!-- Custom Layouts -->
-
     <declare-styleable name="ToolbarLayout">
         <attr name="android:layout" />
         <!--Enable or disable the expanding toolbar. The default is true.-->
