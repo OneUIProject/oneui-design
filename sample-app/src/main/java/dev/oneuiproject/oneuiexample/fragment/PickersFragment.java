@@ -3,15 +3,12 @@ package dev.oneuiproject.oneuiexample.fragment;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.format.DateFormat;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,6 +24,8 @@ import androidx.picker.widget.SeslTimePicker;
 import androidx.picker3.app.SeslColorPickerDialog;
 
 import com.sec.sesl.tester.R;
+
+import dev.oneuiproject.oneui.widget.Toast;
 import dev.oneuiproject.oneuiexample.base.BaseFragment;
 
 import java.util.ArrayList;

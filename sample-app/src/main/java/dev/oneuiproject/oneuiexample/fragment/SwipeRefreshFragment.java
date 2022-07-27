@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +15,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.sec.sesl.tester.R;
 
 import dev.oneuiproject.oneui.layout.DrawerLayout;
+import dev.oneuiproject.oneui.widget.Toast;
 import dev.oneuiproject.oneuiexample.base.BaseFragment;
 import dev.oneuiproject.oneuiexample.base.MainActivityWrapper;
 

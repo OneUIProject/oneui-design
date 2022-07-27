@@ -6,13 +6,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.preference.DropDownPreference;
 import androidx.preference.EditTextPreference;
 import androidx.preference.ListPreference;
-import androidx.preference.MultiSelectListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SeslSwitchPreferenceScreen;
@@ -21,6 +19,7 @@ import com.sec.sesl.tester.R;
 
 import dev.oneuiproject.oneui.preference.internal.PreferenceRelatedCard;
 import dev.oneuiproject.oneui.utils.PreferenceUtils;
+import dev.oneuiproject.oneui.widget.Toast;
 import dev.oneuiproject.oneuiexample.base.FragmentInfo;
 
 public class PreferencesFragment extends PreferenceFragmentCompat

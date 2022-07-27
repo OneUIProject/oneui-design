@@ -18,7 +18,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
@@ -33,6 +32,7 @@ import com.sec.sesl.tester.databinding.ActivityAboutContentBinding;
 
 import dev.oneuiproject.oneui.utils.ViewUtils;
 import dev.oneuiproject.oneui.utils.internal.ToolbarLayoutUtils;
+import dev.oneuiproject.oneui.widget.Toast;
 
 public class AboutActivity extends AppCompatActivity
         implements View.OnClickListener {
