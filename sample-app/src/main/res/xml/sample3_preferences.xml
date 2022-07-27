@@ -82,7 +82,8 @@
             app:min="0"
             android:max="5"
             android:defaultValue="2"
-            app:showTickMark="true" />
+            app:showTickMark="true"
+            app:adjustable="true" />
 
     </PreferenceCategory>
 
