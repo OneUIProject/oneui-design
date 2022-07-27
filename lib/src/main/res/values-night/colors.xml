@@ -39,7 +39,8 @@
     <color name="oui_drawerlayout_drawer_dim_color">#cc000000</color>
 
     <!-- AppInfoLayout -->
-    <color name="oui_appinfolayout_info_text_color">#747474</color>
+    <color name="oui_appinfolayout_info_text_color">#ff999999</color>
+    <color name="oui_appinfolayout_button_bg_color">#ff1f1f1f</color>
     <color name="oui_appinfolayout_button_default_text">#fffafafa</color>
 
 

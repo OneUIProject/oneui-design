@@ -47,6 +47,7 @@
 
     <!-- AppInfoLayout -->
     <color name="oui_appinfolayout_info_text_color">#ff8c8c8c</color>
+    <color name="oui_appinfolayout_button_bg_color">#ffebebeb</color>
     <color name="oui_appinfolayout_button_default_text">#ff252525</color>
     <color name="oui_appinfolayout_button_primary_text">#fffafafa</color>
 

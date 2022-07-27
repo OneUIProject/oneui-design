@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="?attr/colorControlHighlight">
-
-    <item
-        android:id="@android:id/mask"
-        android:drawable="@drawable/oui_btn_app_info_mask" />
-
-    <item android:drawable="@drawable/oui_btn_app_info_background" />
-
+    android:color="?android:attr/colorControlHighlight">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oui_appinfolayout_button_bg_color" />
+            <corners android:radius="22dp" />
+        </shape>
+    </item>
 </ripple>

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.TypedArray;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -88,8 +87,10 @@ public class AppInfoLayout extends ToolbarLayout {
     public AppInfoLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         setNavigationButtonAsBack();
+        mActivity.setSupportActionBar(null);
 
-        LayoutInflater.from(mContext).inflate(R.layout.oui_layout_app_info, mMainContainer, true);
+        LayoutInflater.from(mContext)
+                .inflate(R.layout.oui_layout_app_info, mMainContainer, true);
         mAILContainer = findViewById(R.id.app_info_lower_layout);
         mAppNameTextView = findViewById(R.id.app_info_name);
         mVersionTextView = findViewById(R.id.app_info_version);
@@ -104,31 +105,21 @@ public class AppInfoLayout extends ToolbarLayout {
         setVersionText();
         setStatus(LOADING);
 
+        getToolbar().inflateMenu(R.menu.app_info_menu);
+        getToolbar().setOnMenuItemClickListener(item -> {
+            if (item.getItemId() == R.id.menu_app_info) {
+                openSettingsAppInfo();
+                return true;
+            }
+            return false;
+        });
+
         mUpdateButton.setOnClickListener(v -> {
             if (mButtonListener != null) {
                 if (mStatus == UPDATE_AVAILABLE) mButtonListener.onUpdateClicked(v);
                 if (mStatus == NO_CONNECTION) mButtonListener.onRetryClicked(v);
             }
         });
-    }
-
-    private void setLayoutMargins() {
-        View mEmptyTop = findViewById(R.id.app_info_empty_view_top);
-        View mEmptyBottom = findViewById(R.id.app_info_empty_view_bottom);
-        if (mEmptyTop != null && mEmptyBottom != null && getResources().getConfiguration().orientation == 1) {
-            int h = getResources().getDisplayMetrics().heightPixels;
-            mEmptyTop.getLayoutParams().height = (int) (h * 0.12d);
-            mEmptyBottom.getLayoutParams().height = (int) (h * 0.10d);
-        }
-    }
-
-    private void setVersionText() {
-        String version = "unknown";
-        if ((!isInEditMode())) try {
-            version = mContext.getPackageManager().getPackageInfo(mContext.getApplicationContext().getPackageName(), 0).versionName;
-        } catch (PackageManager.NameNotFoundException ignored) {
-        }
-        mVersionTextView.setText(mContext.getString(R.string.version_info, version));
     }
 
     @Override
@@ -144,6 +135,27 @@ public class AppInfoLayout extends ToolbarLayout {
             a.recycle();
         }
         if (mAppName == null) mAppName = mContext.getString(R.string.app_name);
+    }
+
+    private void setLayoutMargins() {
+        View mEmptyTop = findViewById(R.id.app_info_empty_view_top);
+        View mEmptyBottom = findViewById(R.id.app_info_empty_view_bottom);
+        if (mEmptyTop != null && mEmptyBottom != null
+                && getResources().getConfiguration().orientation == 1) {
+            int h = getResources().getDisplayMetrics().heightPixels;
+            mEmptyTop.getLayoutParams().height = (int) (h * 0.12d);
+            mEmptyBottom.getLayoutParams().height = (int) (h * 0.10d);
+        }
+    }
+
+    private void setVersionText() {
+        String version = "unknown";
+        if ((!isInEditMode())) try {
+            version = mContext.getPackageManager().getPackageInfo(
+                    mContext.getApplicationContext().getPackageName(), 0).versionName;
+        } catch (PackageManager.NameNotFoundException ignored) {
+        }
+        mVersionTextView.setText(mContext.getString(R.string.version_info, version));
     }
 
     /**
@@ -232,20 +244,21 @@ public class AppInfoLayout extends ToolbarLayout {
     public TextView addOptionalText(CharSequence text) {
         LinearLayout parent = findViewById(R.id.app_info_upper_layout);
         TextView optionalText = new TextView(mContext);
-        optionalText.setLayoutParams(mVersionTextView.getLayoutParams());
-        optionalText.setTextColor(mContext.getColor(R.color.oui_appinfolayout_info_text_color));
-        optionalText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
-        optionalText.setTypeface(Typeface.create("sec-roboto-light", Typeface.NORMAL));
         optionalText.setText(text);
+        optionalText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+        optionalText.setTextColor(mContext.getColor(R.color.oui_appinfolayout_info_text_color));
+        optionalText.setTextAlignment(TEXT_ALIGNMENT_CENTER);
+        optionalText.setLayoutParams(mVersionTextView.getLayoutParams());
         parent.addView(optionalText, parent.indexOfChild(mProgressBar));
         return optionalText;
     }
 
     /**
-     * Open this App' App Info in the system settings. Use this for the Info MenuItem of the Toolbar overflow menu.
+     * Open the App Info page in the system settings.
      */
-    public void openSettingsAppInfo() {
-        Intent intent = new Intent("android.settings.APPLICATION_DETAILS_SETTINGS", Uri.fromParts("package", mContext.getPackageName(), null));
+    private void openSettingsAppInfo() {
+        Intent intent = new Intent("android.settings.APPLICATION_DETAILS_SETTINGS",
+                Uri.fromParts("package", mContext.getPackageName(), null));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         mContext.startActivity(intent);
     }
