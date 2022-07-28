@@ -2,6 +2,13 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <dev.oneuiproject.oneui.preference.TipsCardPreference
+        android:key="tip"
+        android:title="TipsCardPreference"
+        android:summary="This is a test summary."/>
+
+    <dev.oneuiproject.oneui.preference.InsetPreferenceCategory />
+
     <Preference
         android:key="key0"
         android:title="Preference"

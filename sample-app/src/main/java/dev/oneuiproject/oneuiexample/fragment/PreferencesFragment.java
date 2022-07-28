@@ -17,6 +17,7 @@ import androidx.preference.SeslSwitchPreferenceScreen;
 
 import com.sec.sesl.tester.R;
 
+import dev.oneuiproject.oneui.preference.TipsCardPreference;
 import dev.oneuiproject.oneui.preference.internal.PreferenceRelatedCard;
 import dev.oneuiproject.oneui.utils.PreferenceUtils;
 import dev.oneuiproject.oneui.widget.Toast;
@@ -74,6 +75,9 @@ public class PreferencesFragment extends PreferenceFragmentCompat
     }
 
     private void initPreferences() {
+        TipsCardPreference tips = findPreference("tip");
+        tips.addButton("Button", v -> Toast.makeText(mContext, "onClick", Toast.LENGTH_SHORT).show());
+
         SeslSwitchPreferenceScreen key2 = findPreference("key2");
         boolean enabled = key2.isChecked();
         key2.setSummary(enabled ? "Enabled" : "Disabled");
