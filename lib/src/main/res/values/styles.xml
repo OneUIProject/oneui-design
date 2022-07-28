@@ -73,4 +73,22 @@
         <item name="android:background">@drawable/oui_btn_transparent</item>
     </style>
 
+    <!-- TipsCardPreference -->
+    <style name="OneUI.TipsCardTextButtonStyle" parent="@android:style/Widget">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/oui_preference_tipscard_button_bg</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/oui_primary_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@string/sesl_font_family_regular</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
 </resources>

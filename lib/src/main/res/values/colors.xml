@@ -51,4 +51,7 @@
     <color name="oui_appinfolayout_button_default_text">#ff252525</color>
     <color name="oui_appinfolayout_button_primary_text">#fffafafa</color>
 
+    <!-- TipsCardPreference -->
+    <color name="oui_tipscardpref_bg_color">#fffcfcfc</color>
+
 </resources>
