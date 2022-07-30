@@ -130,6 +130,7 @@ public class AboutActivity extends AppCompatActivity
             mBinding.aboutAppBar.seslSetCustomHeightProportion(true, 0);
             mBinding.aboutAppBar.removeOnOffsetChangedListener(mAppBarListener);
             mBinding.aboutBottomContainer.setAlpha(1f);
+            setBottomContentEnabled(true);
             mBinding.aboutSwipeUpContainer.setVisibility(View.GONE);
         }
     }
