@@ -35,14 +35,20 @@
         <activity
             android:name="dev.oneuiproject.oneuiexample.activity.MainActivity"
             android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
+            android:launchMode="singleTop"
             android:exported="true">
 
             <meta-data
                 android:name="com.sec.android.app.launcher.icon_theme"
                 android:value="themeColor" />
 
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SEARCH" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
