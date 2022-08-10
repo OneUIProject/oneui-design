@@ -6,4 +6,6 @@ public interface FragmentInfo {
     int getIconResId();
 
     CharSequence getTitle();
+
+    boolean isAppBarEnabled();
 }

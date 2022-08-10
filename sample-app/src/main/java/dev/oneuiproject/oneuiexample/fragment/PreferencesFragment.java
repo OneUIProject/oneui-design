@@ -79,6 +79,11 @@ public class PreferencesFragment extends PreferenceFragmentCompat
         return "Preferences";
     }
 
+    @Override
+    public boolean isAppBarEnabled() {
+        return true;
+    }
+
     private void initPreferences() {
         TipsCardPreference tips = findPreference("tip");
         tips.addButton("Button", v -> Toast.makeText(mContext, "onClick", Toast.LENGTH_SHORT).show());

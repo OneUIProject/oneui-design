@@ -29,4 +29,9 @@ public abstract class BaseFragment extends Fragment
     public abstract int getIconResId();
 
     public abstract CharSequence getTitle();
+
+    @Override
+    public boolean isAppBarEnabled() {
+        return true;
+    }
 }

@@ -14,10 +14,8 @@ import dev.oneuiproject.oneui.layout.DrawerLayout;
 import dev.oneuiproject.oneui.utils.SeekBarUtils;
 import dev.oneuiproject.oneui.widget.HapticSeekBar;
 import dev.oneuiproject.oneuiexample.base.BaseFragment;
-import dev.oneuiproject.oneuiexample.base.MainActivityWrapper;
 
 public class SeekBarFragment extends BaseFragment {
-    private boolean mPreviousExpandStatus = false;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -29,25 +27,6 @@ public class SeekBarFragment extends BaseFragment {
         SeslSeekBar seekBar_2 = view.findViewById(R.id.fragment_seekbar_2);
         seekBar_2.setOverlapPointForDualColor(70);
         SeekBarUtils.showOverlapPreview(seekBar_2, true);
-    }
-
-    @Override
-    public void onHiddenChanged(boolean hidden) {
-        super.onHiddenChanged(hidden);
-        FragmentActivity activity = requireActivity();
-        if (activity instanceof MainActivityWrapper) {
-            DrawerLayout dl = ((MainActivityWrapper) activity).getDrawerLayout();
-            if (dl != null) {
-                if (!hidden) {
-                    mPreviousExpandStatus = dl.isExpanded();
-                    dl.setExpanded(false, false);
-                    dl.setExpandable(false);
-                } else {
-                    dl.setExpandable(true);
-                    dl.setExpanded(mPreviousExpandStatus, false);
-                }
-            }
-        }
     }
 
     @Override
@@ -63,6 +42,11 @@ public class SeekBarFragment extends BaseFragment {
     @Override
     public CharSequence getTitle() {
         return "SeekBar";
+    }
+
+    @Override
+    public boolean isAppBarEnabled() {
+        return false;
     }
 
 }

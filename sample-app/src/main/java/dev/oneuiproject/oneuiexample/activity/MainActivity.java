@@ -21,9 +21,7 @@ import com.sec.sesl.tester.databinding.ActivityMainBinding;
 import java.util.ArrayList;
 import java.util.List;
 
-import dev.oneuiproject.oneui.layout.DrawerLayout;
 import dev.oneuiproject.oneuiexample.base.FragmentInfo;
-import dev.oneuiproject.oneuiexample.base.MainActivityWrapper;
 import dev.oneuiproject.oneuiexample.fragment.AppPickerFragment;
 import dev.oneuiproject.oneuiexample.fragment.IconsFragment;
 import dev.oneuiproject.oneuiexample.fragment.IndexScrollFragment;
@@ -37,7 +35,7 @@ import dev.oneuiproject.oneuiexample.fragment.WidgetsFragment;
 import dev.oneuiproject.oneuiexample.ui.drawer.DrawerListAdapter;
 
 public class MainActivity extends AppCompatActivity
-        implements MainActivityWrapper, DrawerListAdapter.DrawerListener {
+        implements DrawerListAdapter.DrawerListener {
     private ActivityMainBinding mBinding;
     private FragmentManager mFragmentManager;
     private final List<Fragment> fragments = new ArrayList<>();
@@ -103,11 +101,6 @@ public class MainActivity extends AppCompatActivity
         return false;
     }
 
-    @Override
-    public DrawerLayout getDrawerLayout() {
-        return mBinding.drawerLayout;
-    }
-
     private void initDrawer() {
         mBinding.drawerLayout.setDrawerButtonIcon(getDrawable(R.drawable.ic_oui_ab_app_info));
         mBinding.drawerLayout.setDrawerButtonTooltip("About page");
@@ -143,10 +136,18 @@ public class MainActivity extends AppCompatActivity
         transaction.show(newFragment).commit();
 
         if (newFragment instanceof FragmentInfo) {
+            if (!((FragmentInfo) newFragment).isAppBarEnabled()) {
+                mBinding.drawerLayout.setExpanded(false, false);
+                mBinding.drawerLayout.setExpandable(false);
+            } else {
+                mBinding.drawerLayout.setExpandable(true);
+                mBinding.drawerLayout.setExpanded(false, false);
+            }
             mBinding.drawerLayout.setTitle(getString(R.string.app_name), ((FragmentInfo) newFragment).getTitle());
             mBinding.drawerLayout.setExpandedSubtitle(((FragmentInfo) newFragment).getTitle());
         }
         mBinding.drawerLayout.setDrawerOpen(false, true);
+
         return true;
     }
 }

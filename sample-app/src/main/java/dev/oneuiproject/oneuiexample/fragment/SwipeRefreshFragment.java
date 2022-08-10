@@ -17,10 +17,8 @@ import com.sec.sesl.tester.R;
 import dev.oneuiproject.oneui.layout.DrawerLayout;
 import dev.oneuiproject.oneui.widget.Toast;
 import dev.oneuiproject.oneuiexample.base.BaseFragment;
-import dev.oneuiproject.oneuiexample.base.MainActivityWrapper;
 
 public class SwipeRefreshFragment extends BaseFragment {
-    private boolean mPreviousExpandStatus = false;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -45,25 +43,6 @@ public class SwipeRefreshFragment extends BaseFragment {
     }
 
     @Override
-    public void onHiddenChanged(boolean hidden) {
-        super.onHiddenChanged(hidden);
-        FragmentActivity activity = requireActivity();
-        if (activity instanceof MainActivityWrapper) {
-            DrawerLayout dl = ((MainActivityWrapper) activity).getDrawerLayout();
-            if (dl != null) {
-                if (!hidden) {
-                    mPreviousExpandStatus = dl.isExpanded();
-                    dl.setExpanded(false, false);
-                    dl.setExpandable(false);
-                } else {
-                    dl.setExpandable(true);
-                    dl.setExpanded(mPreviousExpandStatus, false);
-                }
-            }
-        }
-    }
-
-    @Override
     public int getLayoutResId() {
         return R.layout.sample3_fragment_swiperefresh;
     }
@@ -76,6 +55,11 @@ public class SwipeRefreshFragment extends BaseFragment {
     @Override
     public CharSequence getTitle() {
         return "SwipeRefreshLayout";
+    }
+
+    @Override
+    public boolean isAppBarEnabled() {
+        return false;
     }
 
 
@@ -100,4 +84,5 @@ public class SwipeRefreshFragment extends BaseFragment {
         };
         return new ColorStateList(states, colors);
     }
+
 }
