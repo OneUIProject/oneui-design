@@ -1,7 +1,9 @@
 package dev.oneuiproject.oneuiexample.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -33,6 +35,7 @@ import dev.oneuiproject.oneuiexample.fragment.SwipeRefreshFragment;
 import dev.oneuiproject.oneuiexample.fragment.TabsFragment;
 import dev.oneuiproject.oneuiexample.fragment.WidgetsFragment;
 import dev.oneuiproject.oneuiexample.ui.drawer.DrawerListAdapter;
+import dev.oneuiproject.oneuiexample.utils.DarkModeUtils;
 
 public class MainActivity extends AppCompatActivity
         implements DrawerListAdapter.DrawerListener {
@@ -49,6 +52,16 @@ public class MainActivity extends AppCompatActivity
         initFragmentList();
         initDrawer();
         initFragments();
+    }
+
+    @Override
+    public void attachBaseContext(Context context) {
+        // pre-OneUI
+        if (Build.VERSION.SDK_INT <= 28) {
+            super.attachBaseContext(DarkModeUtils.createDarkModeContextWrapper(context));
+        } else {
+            super.attachBaseContext(context);
+        }
     }
 
     private void initFragmentList() {
@@ -82,6 +95,11 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
+        // pre-OneUI
+        if (Build.VERSION.SDK_INT <= 28) {
+            final Resources res = getResources();
+            res.getConfiguration().setTo(DarkModeUtils.createDarkModeConfig(this, newConfig));
+        }
         mBinding.drawerLayout.setDrawerOpen(false, false);
     }
 
