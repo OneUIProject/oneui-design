@@ -62,6 +62,17 @@
         <attr name="units" format="string" />
     </declare-styleable>
 
+    <declare-styleable name="HorizontalRadioPreference">
+        <attr name="entriesImage" format="reference" />
+        <attr name="entries" />
+        <attr name="entriesSubtitle" format="reference" />
+        <attr name="entryValues" />
+        <attr name="viewType" format="integer">
+            <enum name="image" value="0" />
+            <enum name="noImage" value="1" />
+        </attr>
+    </declare-styleable>
+
     <!-- Custom Layouts -->
     <declare-styleable name="ToolbarLayout">
         <attr name="android:layout" />

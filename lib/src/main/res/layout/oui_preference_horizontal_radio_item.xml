@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/oui_horizontalradiopref_padding_start_end"
+    android:paddingTop="@dimen/oui_horizontalradiopref_padding_top"
+    android:paddingEnd="@dimen/oui_horizontalradiopref_padding_start_end"
+    android:paddingBottom="@dimen/oui_horizontalradiopref_padding_bottom"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="?android:attr/selectableItemBackground"
+    android:focusable="true"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/image_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="24dp"
+            android:minHeight="24dp"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/icon_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/oui_horizontalradiopref_text_color"
+            android:focusable="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/text_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/oui_horizontalradiopref_text_color"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/sub_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textColor="@color/oui_horizontalradiopref_text_color"
+            android:fontFamily="sec"
+            android:focusable="false" />
+
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/oui_horizontalradiopref_padding_bottom"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:clickable="false" />
+
+</LinearLayout>

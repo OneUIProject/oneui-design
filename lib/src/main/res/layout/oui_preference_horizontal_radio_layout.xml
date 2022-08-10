@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:focusable="false"
+    android:clickable="false">
+
+    <dev.oneuiproject.oneui.preference.internal.HorizontalRadioViewContainer
+        android:id="@+id/horizontal_radio_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:focusable="false"
+        android:clickable="false">
+
+        <include
+            android:id="@+id/item1"
+            layout="@layout/oui_preference_horizontal_radio_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/item2"
+            layout="@layout/oui_preference_horizontal_radio_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/item3"
+            layout="@layout/oui_preference_horizontal_radio_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+    </dev.oneuiproject.oneui.preference.internal.HorizontalRadioViewContainer>
+
+</LinearLayout>

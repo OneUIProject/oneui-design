@@ -39,4 +39,9 @@
     <!-- DrawerLayout -->
     <dimen name="oui_drawerlayout_drawer_top_margin">16.0dip</dimen>
 
+    <!-- HorizontalRadioPreference -->
+    <dimen name="oui_horizontalradiopref_padding_start_end">8.0dip</dimen>
+    <dimen name="oui_horizontalradiopref_padding_top">18.0dip</dimen>
+    <dimen name="oui_horizontalradiopref_padding_bottom">14.0dip</dimen>
+
 </resources>

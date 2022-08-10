@@ -46,4 +46,7 @@
     <!-- TipsCardPreference -->
     <color name="oui_tipscardpref_bg_color">#ff252525</color>
 
+    <!-- HorizontalRadioPreference -->
+    <color name="oui_horizontalradiopref_text_unselected_color">#ffa8a9a9</color>
+
 </resources>
