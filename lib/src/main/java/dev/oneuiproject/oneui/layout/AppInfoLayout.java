@@ -3,6 +3,7 @@ package dev.oneuiproject.oneui.layout;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.net.Uri;
 import android.util.AttributeSet;
@@ -270,8 +271,10 @@ public class AppInfoLayout extends ToolbarLayout {
      * @param button Button which should be resized
      */
     public void initButtonWidth(Button button) {
-        int w = getResources().getDisplayMetrics().widthPixels / getResources().getConfiguration().orientation;
-        button.setMinWidth((int) (0.61d * w));
-        button.setMaxWidth((int) (0.75d * w));
+        Resources res = getResources();
+        final int w = res.getDisplayMetrics().widthPixels
+                / res.getConfiguration().orientation;
+        ViewGroup.LayoutParams lp = button.getLayoutParams();
+        lp.width = (int) (w * 0.61d);
     }
 }
