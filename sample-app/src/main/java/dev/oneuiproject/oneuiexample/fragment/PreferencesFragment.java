@@ -8,20 +8,25 @@ import android.util.TypedValue;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.util.SeslMisc;
 import androidx.preference.DropDownPreference;
 import androidx.preference.EditTextPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SeslSwitchPreferenceScreen;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.sec.sesl.tester.R;
 
+import dev.oneuiproject.oneui.preference.HorizontalRadioPreference;
 import dev.oneuiproject.oneui.preference.TipsCardPreference;
 import dev.oneuiproject.oneui.preference.internal.PreferenceRelatedCard;
 import dev.oneuiproject.oneui.utils.PreferenceUtils;
 import dev.oneuiproject.oneui.widget.Toast;
 import dev.oneuiproject.oneuiexample.base.FragmentInfo;
+import dev.oneuiproject.oneuiexample.utils.DarkModeUtils;
 
 public class PreferencesFragment extends PreferenceFragmentCompat
         implements FragmentInfo, Preference.OnPreferenceClickListener,
@@ -78,6 +83,19 @@ public class PreferencesFragment extends PreferenceFragmentCompat
         TipsCardPreference tips = findPreference("tip");
         tips.addButton("Button", v -> Toast.makeText(mContext, "onClick", Toast.LENGTH_SHORT).show());
 
+        int darkMode = DarkModeUtils.getDarkMode(mContext);
+
+        HorizontalRadioPreference darkModePref = findPreference("dark_mode");
+        darkModePref.setOnPreferenceChangeListener(this);
+        darkModePref.setDividerEnabled(false);
+        darkModePref.setTouchEffectEnabled(false);
+        darkModePref.setEnabled(darkMode != DarkModeUtils.DARK_MODE_AUTO);
+        darkModePref.setValue(SeslMisc.isLightTheme(mContext) ? "0" : "1");
+
+        SwitchPreferenceCompat autoDarkModePref = findPreference("dark_mode_auto");
+        autoDarkModePref.setOnPreferenceChangeListener(this);
+        autoDarkModePref.setChecked(darkMode == DarkModeUtils.DARK_MODE_AUTO);
+
         SeslSwitchPreferenceScreen key2 = findPreference("key2");
         boolean enabled = key2.isChecked();
         key2.setSummary(enabled ? "Enabled" : "Disabled");
@@ -106,7 +124,26 @@ public class PreferencesFragment extends PreferenceFragmentCompat
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        String currentDarkMode = String.valueOf(DarkModeUtils.getDarkMode(mContext));
+        HorizontalRadioPreference darkModePref = (HorizontalRadioPreference) findPreference("dark_mode");
+
         switch (preference.getKey()) {
+            case "dark_mode":
+                if (currentDarkMode != newValue) {
+                    DarkModeUtils.setDarkMode((AppCompatActivity) requireActivity(), ((String) newValue).equals("0")
+                            ? DarkModeUtils.DARK_MODE_DISABLED
+                            : DarkModeUtils.DARK_MODE_ENABLED);
+                }
+                return true;
+            case "dark_mode_auto":
+                if ((boolean) newValue) {
+                    darkModePref.setEnabled(false);
+                    DarkModeUtils.setDarkMode((AppCompatActivity) requireActivity(),
+                            DarkModeUtils.DARK_MODE_AUTO);
+                } else {
+                    darkModePref.setEnabled(true);
+                }
+                return true;
             case "key2":
                 Boolean enabled = (Boolean) newValue;
                 preference.setSummary(enabled ? "Enabled" : "Disabled");

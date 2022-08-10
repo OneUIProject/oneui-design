@@ -7,12 +7,21 @@
         android:title="TipsCardPreference"
         android:summary="This is a test summary."/>
 
-    <dev.oneuiproject.oneui.preference.InsetPreferenceCategory />
+    <PreferenceCategory>
 
-    <Preference
-        android:key="key0"
-        android:title="Preference"
-        android:summary="Summary"/>
+        <dev.oneuiproject.oneui.preference.HorizontalRadioPreference
+            android:key="dark_mode"
+            android:title="Dark mode settings"
+            app:entries="@array/preferences_darkmode_entries"
+            app:entriesImage="@array/preferences_darkmode_entries_image"
+            app:entryValues="@array/preferences_darkmode_values"
+            app:viewType="image" />
+
+        <SwitchPreferenceCompat
+            android:key="dark_mode_auto"
+            android:title="System default" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory>
 
