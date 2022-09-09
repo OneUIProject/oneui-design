@@ -24,10 +24,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.OnBackPressedCallback;
+import androidx.annotation.IdRes;
 import androidx.annotation.MenuRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.ActionMenuItemView;
+import androidx.appcompat.widget.ActionMenuView;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
@@ -468,6 +471,66 @@ public class ToolbarLayout extends LinearLayout {
     public boolean isImmersiveScroll() {
         return mAppBarLayout.seslGetImmersiveScroll();
     }
+
+
+    /**
+     * Set the badge of a Toolbar MenuItem. Only use this for MenuItems which show as action! It won't work for overflow items.
+     */
+    public void setMenuItemBadgeText(@IdRes int id, String text) {
+        for (int i = 0; i < mMainToolbar.getChildCount(); i++) {
+            View v1 = mMainToolbar.getChildAt(i);
+            if (v1 instanceof ActionMenuView) {
+                ActionMenuView menuView = (ActionMenuView) v1;
+                for (int j = 0; j < menuView.getChildCount(); j++) {
+                    View v2 = menuView.getChildAt(j);
+
+                    if (v2 instanceof ActionMenuItemView) {
+                        ActionMenuItemView menuItemView = (ActionMenuItemView) v2;
+                        if (menuItemView.getItemData().getItemId() == id) {
+
+                            menuView.removeView(menuItemView);
+                            FrameLayout fl = new FrameLayout(mContext);
+                            fl.addView(menuItemView);
+
+                            LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                            ViewGroup mBadgeBackground = (ViewGroup) inflater.inflate(androidx.appcompat.R.layout.sesl_action_menu_item_badge, fl, false);
+                            TextView mBadgeText = (TextView) mBadgeBackground.getChildAt(0);
+                            fl.addView(mBadgeBackground);
+
+                            setMenuItemBadgeText(mBadgeBackground, mBadgeText, text);
+
+                            menuView.addView(fl, j);
+                            return;
+                        }
+                    } else if (v2 instanceof FrameLayout) {
+                        FrameLayout fl = (FrameLayout) v2;
+                        View v3 = fl.getChildAt(0);
+                        if (v3 instanceof ActionMenuItemView && ((ActionMenuItemView) v3).getItemData().getItemId() == id) {
+                            ViewGroup mBadgeBackground = (ViewGroup) fl.getChildAt(1);
+                            TextView mBadgeText = (TextView) mBadgeBackground.getChildAt(0);
+                            setMenuItemBadgeText(mBadgeBackground, mBadgeText, text);
+                            return;
+                        }
+                    }
+                }
+
+                Log.e(TAG, "no MenuItem with id " + id);
+                return;
+            }
+        }
+
+        Log.e(TAG, "no ActionMenuView in Toolbar");
+    }
+
+    private void setMenuItemBadgeText(ViewGroup mBadgeBackground, TextView mBadgeText, String text) {
+        ViewGroup.MarginLayoutParams lp = (MarginLayoutParams) mBadgeBackground.getLayoutParams();
+        lp.setMarginEnd(0);
+        lp.width = (int) (getResources().getDimension(androidx.appcompat.R.dimen.sesl_badge_default_width) + (text.length() * getResources().getDimension(androidx.appcompat.R.dimen.sesl_badge_additional_width)));
+        mBadgeBackground.setLayoutParams(lp);
+        mBadgeBackground.setVisibility(text.isEmpty() ? GONE : VISIBLE);
+        mBadgeText.setText(text);
+    }
+
 
     //
     // Navigation Button methods
