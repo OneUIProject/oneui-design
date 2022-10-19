@@ -17,6 +17,7 @@
         android:id="@+id/drawer_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_location="drawer_panel"/>
+        android:scrollbars="vertical"
+        app:layout_location="drawer_panel" />
 
 </dev.oneuiproject.oneui.layout.DrawerLayout>
