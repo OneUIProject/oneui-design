@@ -21,7 +21,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: upload to sonatype
-        run: ./gradlew publish
+        run: ./gradlew publish --no-daemon --no-parallel
         env:
           MAVEN_USERNAME: ${{ secrets.SONATYPE_USER }}
           MAVEN_PASSWORD: ${{ secrets.SONATYPE_PWD }}
