@@ -9,9 +9,8 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
-        classpath 'com.vanniktech:gradle-maven-publish-plugin:0.19.0'
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20"
     }
 }
 
@@ -28,20 +27,95 @@ allprojects {
         options.addStringOption('encoding', 'UTF-8')
         options.addStringOption('charSet', 'UTF-8')
     }
-
-    plugins.withId("com.vanniktech.maven.publish") {
-        mavenPublish {
-            sonatypeHost = "S01"
-            androidVariantToPublish = "release"
-        }
-    }
 }
 
 subprojects {
+    afterEvaluate { project ->
+        if (!plugins.hasPlugin('maven-publish')) {
+            return
+        }
+
+        group = "io.github.oneuiproject"
+        version = android.defaultConfig.versionName
+
+        publishing {
+            publications {
+                mavenJava(MavenPublication) {
+                    group project.group
+                    artifactId project.name
+                    version android.defaultConfig.versionName
+
+                    afterEvaluate {
+                        from components.release
+                    }
+
+                    pom {
+                        name = POM_NAME
+                        description = POM_DESCRIPTION
+                        packaging = POM_PACKAGING
+                        url = POM_URL
+                        inceptionYear = POM_INCEPTION_YEAR
+
+                        licenses {
+                            license {
+                                name = POM_LICENCE_NAME
+                                url = POM_LICENCE_URL
+                                distribution = POM_LICENCE_DIST
+                            }
+                        }
+
+                        developers {
+                            developer {
+                                id = POM_DEVELOPER_ID
+                                name = POM_DEVELOPER_NAME
+                                url = POM_DEVELOPER_URL
+                            }
+                        }
+
+                        scm {
+                            url = POM_SCM_URL
+                            connection = POM_SCM_CONNECTION
+                            developerConnection = POM_SCM_DEV_CONNECTION
+                        }
+                    }
+                }
+            }
+
+            repositories {
+                maven {
+                    name 'ossrh'
+                    url 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
+
+                    credentials {
+                        username = System.getenv("MAVEN_USERNAME")
+                        password = System.getenv("MAVEN_PASSWORD")
+                    }
+                }
+            }
+        }
+    }
+
     afterEvaluate {
-        if (plugins.hasPlugin('com.vanniktech.maven.publish')) {
-            group = "io.github.oneuiproject"
-            version = android.defaultConfig.versionName
+        if (!plugins.hasPlugin('signing')) {
+            return
+        }
+
+        android {
+            publishing {
+                singleVariant("release") {
+                    withSourcesJar()
+                    withJavadocJar()
+                }
+            }
+        }
+
+        signing {
+            def signingKeyId = System.getenv("SIGNING_KEYID")
+            def signingKey = System.getenv("SIGNING_PRIVATE_KEY")
+            def signingPassword = System.getenv("SIGNING_PASSWORD")
+
+            useInMemoryPgpKeys(signingKeyId, signingKey, signingPassword)
+            sign publishing.publications
         }
     }
 }
