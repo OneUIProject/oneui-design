@@ -3,7 +3,7 @@
   <br><br>
   <a href="https://t.me/oneuiproject"><img src="https://img.shields.io/badge/Telegram-OneUI_Project-blue.svg?style=for-the-badge&logo=Telegram"/></a>
   <a href="https://mvnrepository.com/artifact/io.github.oneuiproject/design"><img src="https://img.shields.io/maven-central/v/io.github.oneuiproject/design?color=%23C71A36&label=Maven&logo=Apache%20Maven&logoColor=%23C11920&style=for-the-badge"/></a>
-  <a href="https://github.com/OneUIProject/oneui-design/raw/main/sample-app/release/sample-app-release.apk"><h3 align="center">Download Sample APK</h3></a>
+  <h3 align="center"><a href="https://github.com/OneUIProject/oneui-design/raw/main/sample-app/release/sample-app-release.apk">Download Sample APK</a></h3>
 </p>
 
 <h1></h1>
