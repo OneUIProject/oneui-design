@@ -183,7 +183,7 @@ public class ToolbarLayoutUtils {
         if (screenHeightDp > 411 && screenWidthDp <= 959) {
             return 0.05f;
         }
-        if (screenHeightDp >= 960 && screenWidthDp <= 1919) {
+        if (screenWidthDp >= 960 && screenHeightDp <= 1919) {
             return 0.125f;
         }
         if (screenWidthDp >= 1920) {
