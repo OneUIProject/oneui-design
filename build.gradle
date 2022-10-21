@@ -42,7 +42,7 @@ subprojects {
             publications {
                 mavenJava(MavenPublication) {
                     group project.group
-                    artifactId project.name
+                    artifactId POM_ARTIFACT_ID
                     version android.defaultConfig.versionName
 
                     afterEvaluate {
