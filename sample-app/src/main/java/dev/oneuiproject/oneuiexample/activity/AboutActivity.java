@@ -36,9 +36,6 @@ import dev.oneuiproject.oneui.widget.Toast;
 
 public class AboutActivity extends AppCompatActivity
         implements View.OnClickListener {
-    @ColorInt
-    private final static int SEM_PRIMARY_COLOR = -16547330; // #0381fe
-
     private boolean mEnableBackToHeader;
     private long mLastClickTime;
 
@@ -143,7 +140,7 @@ public class AboutActivity extends AppCompatActivity
                 ViewUtils.SEM_ROUNDED_CORNER_TOP_LEFT | ViewUtils.SEM_ROUNDED_CORNER_TOP_RIGHT,
                 getColor(R.color.oui_round_and_bgcolor));
 
-        Drawable appIcon = getThemedIcon();
+        Drawable appIcon = getDrawable(R.mipmap.ic_launcher);
         mBinding.aboutHeaderAppIcon.setImageDrawable(appIcon);
         mBinding.aboutBottomAppIcon.setImageDrawable(appIcon);
 
@@ -216,96 +213,6 @@ public class AboutActivity extends AppCompatActivity
         }
         mLastClickTime = uptimeMillis;
     }
-
-    private Drawable getThemedIcon() {
-        if (Build.VERSION.SDK_INT >= 31) {
-            final boolean needApplyColorThemeForIcon = Settings.System
-                    .getInt(getContentResolver(), "colortheme_app_icon", 0) != 0;
-
-            if (needApplyColorThemeForIcon) {
-                LayerDrawable icon = (LayerDrawable) getDrawable(R.drawable.about_page_icon);
-
-                Drawable bg = icon.getDrawable(0);
-                bg.setTint(getColor(android.R.color.system_accent1_400));
-
-                Drawable fg = icon.getDrawable(1);
-                fg.setColorFilter(getIconFgColorFilter(getColor(android.R.color.system_accent1_700)));
-
-                return icon;
-            }
-        }
-
-        LayerDrawable icon = (LayerDrawable) getDrawable(R.drawable.about_page_icon);
-        Drawable bg = icon.getDrawable(0);
-        bg.setTint(SEM_PRIMARY_COLOR);
-        return icon;
-    }
-
-    private ColorMatrixColorFilter getIconFgColorFilter(int primaryColor) {
-        final int[] filterParam = getFilterParam(
-                true, primaryColor, 0, 100, true);
-        return createFilter(
-                filterParam[0], filterParam[2] / 100.0f, filterParam[1]);
-    }
-
-    // kang from com.sec.android.app.launcher
-    private int[] getFilterParam(
-            boolean enable, int iconColor, int iconSaturationVal, int iconBlendVal, boolean style) {
-        int[] iArr = new int[3];
-        if (enable) {
-            int i = (iconColor >> 16) & 255;
-            int i2 = (iconColor >> 8) & 255;
-            int i3 = iconColor & 255;
-            int i4 = 255 - i;
-            int i5 = 255 - i2;
-            int i6 = 255 - i3;
-            float f = iconBlendVal / 100.0f;
-            int i7 = (int) ((1.0f - f) * 255.0f);
-            if (style) {
-                float f2 = i7;
-                iArr[0] = Color
-                        .rgb((int) ((i4 * f) + f2), (int) ((i5 * f) + f2), (int) ((i6 * f) + f2));
-                iArr[1] = Color
-                        .rgb((int) (i * f), (int) (i2 * f), (int) (i3 * f));
-            } else {
-                float f3 = i7;
-                iArr[0] = Color
-                        .rgb((int) ((i * f) + f3), (int) ((i2 * f) + f3), (int) ((i3 * f) + f3));
-                iArr[1] = -16777216;
-            }
-            iArr[2] = iconSaturationVal;
-        } else {
-            iArr[0] = -1;
-            iArr[1] = -16777216;
-            iArr[2] = 100;
-        }
-
-        return iArr;
-    }
-
-    private ColorMatrixColorFilter createFilter(
-            int multipliedColor, float saturationVal, int addedColor) {
-        ColorMatrix colorMatrix = new ColorMatrix();
-        colorMatrix.setSaturation(saturationVal);
-        float[] array = colorMatrix.getArray();
-        float f = ((multipliedColor >> 16) & 255) / 255.0f;
-        float f2 = ((multipliedColor >> 8) & 255) / 255.0f;
-        float f3 = (multipliedColor & 255) / 255.0f;
-        array[0] = array[0] * f;
-        array[1] = array[1] * f;
-        array[2] = array[2] * f;
-        array[5] = array[5] * f2;
-        array[6] = array[6] * f2;
-        array[7] = array[7] * f2;
-        array[10] = array[10] * f3;
-        array[11] = array[11] * f3;
-        array[12] = array[12] * f3;
-        array[4] = (addedColor >> 16) & 255;
-        array[9] = (addedColor >> 8) & 255;
-        array[14] = addedColor & 255;
-        return new ColorMatrixColorFilter(colorMatrix);
-    }
-    // kang from com.sec.android.app.launcher
 
     private class AboutAppBarListener implements AppBarLayout.OnOffsetChangedListener {
         @Override
