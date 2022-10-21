@@ -24,7 +24,7 @@ import androidx.appcompat.widget.SeslProgressBar;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 /**
  * Custom App Info Layout like in any App from Samsung. App name and version are automatically added by default.

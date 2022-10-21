@@ -22,7 +22,7 @@ import androidx.preference.PreferenceViewHolder;
 
 import java.util.HashMap;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 import dev.oneuiproject.oneui.preference.internal.HorizontalRadioViewContainer;
 
 public class HorizontalRadioPreference extends Preference {

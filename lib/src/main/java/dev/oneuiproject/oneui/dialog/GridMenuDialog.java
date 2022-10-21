@@ -32,7 +32,7 @@ import androidx.recyclerview.widget.SimpleItemAnimator;
 
 import java.util.ArrayList;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 public class GridMenuDialog extends AlertDialog {
     private static final String TAG = "GridMenuDialog";

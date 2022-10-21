@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.annotation.StringRes;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 public class Toast extends android.widget.Toast {
     public Toast(Context context) {

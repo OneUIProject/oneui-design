@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 /**
  * @hide

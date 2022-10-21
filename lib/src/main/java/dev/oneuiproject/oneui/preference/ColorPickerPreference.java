@@ -20,7 +20,7 @@ import androidx.preference.internal.PreferenceImageView;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 public class ColorPickerPreference extends Preference implements Preference.OnPreferenceClickListener,
         SeslColorPickerDialog.OnColorSetListener {

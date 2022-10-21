@@ -8,7 +8,7 @@ import android.view.animation.AnimationUtils;
 import androidx.annotation.NonNull;
 import androidx.indexscroll.widget.SeslIndexScrollView;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 public class IndexScrollUtils {
     private static final String TAG = "IndexScrollUtils";

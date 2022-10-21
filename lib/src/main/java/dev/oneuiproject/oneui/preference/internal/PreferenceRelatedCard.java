@@ -15,7 +15,7 @@ import androidx.annotation.StringRes;
 import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.preference.PreferenceFragmentCompat;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 import dev.oneuiproject.oneui.utils.PreferenceUtils;
 
 public class PreferenceRelatedCard extends LinearLayout {

@@ -25,7 +25,7 @@ import androidx.preference.PreferenceViewHolder;
 
 import java.lang.ref.WeakReference;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 import dev.oneuiproject.oneui.utils.SeekBarUtils;
 import dev.oneuiproject.oneui.widget.HapticSeekBar;
 

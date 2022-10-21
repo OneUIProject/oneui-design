@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 
 import com.google.android.material.tabs.TabLayout;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 public class TabLayoutUtils {
     private static final String TAG = "TabLayoutUtils";

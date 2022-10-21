@@ -13,7 +13,7 @@ import androidx.appcompat.util.SeslRoundedCorner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 public class DescriptionPreference extends Preference {
     private static final int POSITION_NORMAL = 0;

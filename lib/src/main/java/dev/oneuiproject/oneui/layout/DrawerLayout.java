@@ -38,7 +38,7 @@ import androidx.core.content.ContextCompat;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 import dev.oneuiproject.oneui.utils.ViewUtils;
 
 /**

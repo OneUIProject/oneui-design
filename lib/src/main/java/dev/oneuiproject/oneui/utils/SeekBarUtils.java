@@ -8,7 +8,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SeslSeekBar;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 public class SeekBarUtils {
     private static final String TAG = "SeekBarUtils";

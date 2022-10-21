@@ -21,7 +21,7 @@ import androidx.appcompat.widget.SeslProgressBar;
 
 import java.text.NumberFormat;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 public class ProgressDialog extends AlertDialog {
     public static final int STYLE_SPINNER = 0;

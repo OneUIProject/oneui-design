@@ -19,7 +19,7 @@ import androidx.preference.PreferenceViewHolder;
 
 import java.util.ArrayList;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 public class TipsCardPreference extends Preference {
     private Context mContext;

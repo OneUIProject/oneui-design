@@ -11,7 +11,7 @@ import androidx.appcompat.util.SeslRoundedCorner;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceViewHolder;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 public class InsetPreferenceCategory extends PreferenceCategory {
     private int mHeight = 0;

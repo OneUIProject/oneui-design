@@ -23,7 +23,7 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.lang.reflect.Field;
 
-import dev.oneuiproject.oneui.R;
+import dev.oneuiproject.oneui.design.R;
 
 public class MarginsTabLayout extends TabLayout {
     private static final String TAG = "MarginsTabLayout";
