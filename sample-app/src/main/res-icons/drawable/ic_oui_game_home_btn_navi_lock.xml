@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="24dp" android:viewportHeight="85.04" android:viewportWidth="85.04" android:width="24dp">
-	<path android:fillColor="@color/oui_primary_icon_color" android:pathData="M60.803,8.713H24.143c-5.617,0 -10.17,4.346 -10.17,9.706v47.589c0,5.359 4.553,9.705 10.17,9.705h36.661c5.617,0 10.17,-4.346 10.17,-9.705V18.419C70.973,13.059 66.42,8.713 60.803,8.713zM29.473,34.609c0,-2.2 1.8,-4 4,-4h0.632v-3.717c0,-4.694 3.754,-8.513 8.367,-8.513c4.615,0 8.369,3.818 8.369,8.513v3.717h0.633c2.199,0 4,1.8 4,4v9.786c0,2.199 -1.801,4 -4,4h-18c-2.2,0 -4,-1.801 -4,-4V34.609zM62.973,67.436h-41V55.565h41V67.436z"/>
-	<path android:fillColor="@color/oui_primary_icon_color" android:pathData="M45.84,26.893c0,-1.937 -1.512,-3.513 -3.369,-3.513c-1.856,0 -3.367,1.576 -3.367,3.513v3.717h6.736V26.893z"/>
-	<path android:fillColor="@color/oui_primary_icon_color" android:pathData="M28.383,61.5m-2.5,0a2.5,2.5 0,1 1,5 0a2.5,2.5 0,1 1,-5 0"/>
-	<group>
-		<clip-path android:pathData="M43.034,54.723c-6.813,0 -12.337,-5.523 -12.337,-12.338c0,-6.813 5.523,-12.337 12.337,-12.337c6.814,0 12.337,5.523 12.337,12.337C55.372,49.2 49.848,54.723 43.034,54.723z"/>
-	</group>
-</vector>
