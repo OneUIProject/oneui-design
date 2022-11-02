@@ -30,6 +30,8 @@ dependencies {
     implementation("io.github.oneuiproject.sesl:picker-color:$sesl_picker_color_version")
     implementation("io.github.oneuiproject.sesl:preference:$sesl_preference_version")
     implementation("io.github.oneuiproject.sesl:material:$sesl_material_version")
+
+    implementation("com.google.zxing:core:3.4.1")
 }
 
 ext {
