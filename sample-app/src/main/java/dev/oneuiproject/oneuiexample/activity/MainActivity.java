@@ -100,7 +100,6 @@ public class MainActivity extends AppCompatActivity
             final Resources res = getResources();
             res.getConfiguration().setTo(DarkModeUtils.createDarkModeConfig(this, newConfig));
         }
-        mBinding.drawerLayout.setDrawerOpen(false, false);
     }
 
     @Override

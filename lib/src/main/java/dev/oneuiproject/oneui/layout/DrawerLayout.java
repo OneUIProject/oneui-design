@@ -67,8 +67,10 @@ public class DrawerLayout extends ToolbarLayout {
             this.setEnabled(true);
         }
     };
+    private final DrawerListener mDrawerListener = new DrawerListener();
 
     private boolean mIsRtl;
+    private boolean mIsDrawerOpened = false;
 
     private androidx.drawerlayout.widget.DrawerLayout mDrawer;
     private LinearLayout mToolbarContent;
@@ -135,25 +137,7 @@ public class DrawerLayout extends ToolbarLayout {
         setNavigationButtonOnClickListener(v -> mDrawer.openDrawer(mDrawerContent));
 
         if (!isInEditMode()) {
-            View translationView = findViewById(R.id.drawer_custom_translation);
-            Window window = mActivity.getWindow();
-            mDrawer.addDrawerListener(new ActionBarDrawerToggle(mActivity, mDrawer, 0, 0) {
-                @Override
-                public void onDrawerSlide(View drawerView, float slideOffset) {
-                    super.onDrawerSlide(drawerView, slideOffset);
-
-                    float slideX = drawerView.getWidth() * slideOffset;
-                    if (mIsRtl) slideX *= -1;
-                    if (translationView != null) translationView.setTranslationX(slideX);
-                    else mToolbarContent.setTranslationX(slideX);
-
-                    float[] hsv = new float[3];
-                    Color.colorToHSV(mContext.getColor(R.color.oui_round_and_bgcolor), hsv);
-                    hsv[2] *= 1f - (slideOffset * 0.2f);
-                    window.setStatusBarColor(Color.HSVToColor(hsv));
-                    window.setNavigationBarColor(Color.HSVToColor(hsv));
-                }
-            });
+            mDrawer.addDrawerListener(mDrawerListener);
         }
     }
 
@@ -185,7 +169,10 @@ public class DrawerLayout extends ToolbarLayout {
         super.onConfigurationChanged(newConfig);
         mIsRtl = newConfig.getLayoutDirection() == View.LAYOUT_DIRECTION_RTL;
         setDrawerWidth();
-        setDrawerOpen(false, false);
+        if (mIsDrawerOpened) {
+            mDrawer.post(() -> mDrawerListener.onDrawerSlide(
+                    mDrawerContent, 1.f));
+        }
     }
 
     private void lockDrawerIfAvailable(boolean lock) {
@@ -409,6 +396,40 @@ public class DrawerLayout extends ToolbarLayout {
                             ? view.getWidth() + mCornerRadius
                             : view.getWidth(), view.getHeight(),
                     mCornerRadius);
+        }
+    }
+
+    private class DrawerListener
+            extends androidx.drawerlayout.widget.DrawerLayout.SimpleDrawerListener {
+        @Override
+        public void onDrawerSlide(View drawerView, float slideOffset) {
+            super.onDrawerSlide(drawerView, slideOffset);
+
+            View translationView = findViewById(R.id.drawer_custom_translation);
+            Window window = mActivity.getWindow();
+
+            float slideX = drawerView.getWidth() * slideOffset;
+            if (mIsRtl) slideX *= -1;
+            if (translationView != null) translationView.setTranslationX(slideX);
+            else mToolbarContent.setTranslationX(slideX);
+
+            float[] hsv = new float[3];
+            Color.colorToHSV(mContext.getColor(R.color.oui_round_and_bgcolor), hsv);
+            hsv[2] *= 1f - (slideOffset * 0.2f);
+            window.setStatusBarColor(Color.HSVToColor(hsv));
+            window.setNavigationBarColor(Color.HSVToColor(hsv));
+        }
+
+        @Override
+        public void onDrawerOpened(View drawerView) {
+            super.onDrawerOpened(drawerView);
+            mIsDrawerOpened = true;
+        }
+
+        @Override
+        public void onDrawerClosed(View drawerView) {
+            super.onDrawerClosed(drawerView);
+            mIsDrawerOpened = false;
         }
     }
 }
