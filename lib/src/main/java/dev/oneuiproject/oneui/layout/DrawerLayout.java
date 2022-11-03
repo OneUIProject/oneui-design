@@ -70,7 +70,7 @@ public class DrawerLayout extends ToolbarLayout {
     private final DrawerListener mDrawerListener = new DrawerListener();
 
     private boolean mIsRtl;
-    private boolean mIsDrawerOpened = false;
+    private static boolean sIsDrawerOpened = false;
 
     private androidx.drawerlayout.widget.DrawerLayout mDrawer;
     private LinearLayout mToolbarContent;
@@ -138,6 +138,10 @@ public class DrawerLayout extends ToolbarLayout {
 
         if (!isInEditMode()) {
             mDrawer.addDrawerListener(mDrawerListener);
+            if (sIsDrawerOpened) {
+                mDrawer.post(() -> mDrawerListener.onDrawerSlide(
+                        mDrawerContent, 1.f));
+            }
         }
     }
 
@@ -169,7 +173,7 @@ public class DrawerLayout extends ToolbarLayout {
         super.onConfigurationChanged(newConfig);
         mIsRtl = newConfig.getLayoutDirection() == View.LAYOUT_DIRECTION_RTL;
         setDrawerWidth();
-        if (mIsDrawerOpened) {
+        if (sIsDrawerOpened) {
             mDrawer.post(() -> mDrawerListener.onDrawerSlide(
                     mDrawerContent, 1.f));
         }
@@ -423,13 +427,13 @@ public class DrawerLayout extends ToolbarLayout {
         @Override
         public void onDrawerOpened(View drawerView) {
             super.onDrawerOpened(drawerView);
-            mIsDrawerOpened = true;
+            sIsDrawerOpened = true;
         }
 
         @Override
         public void onDrawerClosed(View drawerView) {
             super.onDrawerClosed(drawerView);
-            mIsDrawerOpened = false;
+            sIsDrawerOpened = false;
         }
     }
 }
