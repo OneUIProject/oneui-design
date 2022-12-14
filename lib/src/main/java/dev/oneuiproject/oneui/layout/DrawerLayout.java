@@ -282,8 +282,8 @@ public class DrawerLayout extends ToolbarLayout {
     public void setDrawerButtonIcon(@Nullable Drawable icon) {
         if (mHeaderButton != null) {
             mHeaderButton.setImageDrawable(icon);
-            mHeaderButton.setImageTintList(ColorStateList.valueOf(
-                    mContext.getColor(R.color.oui_drawerlayout_header_icon_color)));
+        /*    mHeaderButton.setImageTintList(ColorStateList.valueOf(
+                    mContext.getColor(R.color.oui_drawerlayout_header_icon_color)));*/
             mHeaderView.setVisibility(icon != null ? View.VISIBLE : View.GONE);
         } else {
             Log.e(TAG, "setDrawerButtonIcon: this method can be used " +
