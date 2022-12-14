@@ -32,7 +32,6 @@ public class HorizontalRadioPreference extends Preference {
     private final int UNSELECTED_COLOR;
 
     protected int mType;
-    private boolean mIsEnabled = true;
     private boolean mIsDividerEnabled = false;
     private boolean mIsColorFilterEnabled = false;
     private boolean mIsTouchEffectEnabled = true;
@@ -246,7 +245,6 @@ public class HorizontalRadioPreference extends Preference {
     @Override
     public void setEnabled(boolean enabled) {
         super.setEnabled(enabled);
-        mIsEnabled = enabled;
         invalidate();
     }
 
@@ -360,7 +358,7 @@ public class HorizontalRadioPreference extends Preference {
                 var6.setColorFilter(var11);
             }
 
-            if (this.mIsItemEnabledMap.get(var8) == Boolean.FALSE || !mIsEnabled) {
+            if (this.mIsItemEnabledMap.get(var8) == Boolean.FALSE || !isEnabled()) {
                 var12 = false;
             }
 
