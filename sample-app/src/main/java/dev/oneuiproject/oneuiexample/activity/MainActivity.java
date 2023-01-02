@@ -23,6 +23,7 @@ import com.sec.sesl.tester.databinding.ActivityMainBinding;
 import java.util.ArrayList;
 import java.util.List;
 
+import dev.oneuiproject.oneui.utils.ActivityUtils;
 import dev.oneuiproject.oneuiexample.base.FragmentInfo;
 import dev.oneuiproject.oneuiexample.fragment.AppPickerFragment;
 import dev.oneuiproject.oneuiexample.fragment.IconsFragment;
@@ -123,8 +124,11 @@ public class MainActivity extends AppCompatActivity
     private void initDrawer() {
         mBinding.drawerLayout.setDrawerButtonIcon(getDrawable(R.drawable.ic_oui_ab_app_info));
         mBinding.drawerLayout.setDrawerButtonTooltip("About page");
-        mBinding.drawerLayout.setDrawerButtonOnClickListener(view
-                -> startActivity(new Intent(MainActivity.this, SampleAboutActivity.class)));
+        mBinding.drawerLayout.setDrawerButtonOnClickListener(v ->
+                ActivityUtils.startPopOverActivity(this,
+                        new Intent(MainActivity.this, SampleAboutActivity.class),
+                        null,
+                        ActivityUtils.POP_OVER_POSITION_TOP | ActivityUtils.POP_OVER_POSITION_CENTER_HORIZONTAL));
 
         mBinding.drawerListView.setLayoutManager(new LinearLayoutManager(this));
         mBinding.drawerListView.setAdapter(new DrawerListAdapter(this, fragments, this));
