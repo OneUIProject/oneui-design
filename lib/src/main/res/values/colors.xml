@@ -12,6 +12,10 @@
     <color name="oui_functional_orange_color">@color/sesl_functional_orange_light</color>
     <color name="oui_functional_red_color">@color/sesl_functional_red_light</color>
 
+    <!-- Buttons -->
+    <color name="oui_btn_border_color">#66252525</color>
+    <color name="oui_btn_text_color">#666666</color>
+
     <!-- RelatedCard -->
     <color name="oui_relative_link_title_text_color">#ff252525</color>
 
