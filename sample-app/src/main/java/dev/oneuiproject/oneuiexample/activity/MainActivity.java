@@ -30,6 +30,7 @@ import dev.oneuiproject.oneuiexample.fragment.IndexScrollFragment;
 import dev.oneuiproject.oneuiexample.fragment.PickersFragment;
 import dev.oneuiproject.oneuiexample.fragment.PreferencesFragment;
 import dev.oneuiproject.oneuiexample.fragment.ProgressBarFragment;
+import dev.oneuiproject.oneuiexample.fragment.QRCodeFragment;
 import dev.oneuiproject.oneuiexample.fragment.SeekBarFragment;
 import dev.oneuiproject.oneuiexample.fragment.SwipeRefreshFragment;
 import dev.oneuiproject.oneuiexample.fragment.TabsFragment;
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity
         fragments.add(new IndexScrollFragment());
         fragments.add(new PickersFragment());
         fragments.add(null);
+        fragments.add(new QRCodeFragment());
         fragments.add(new IconsFragment());
     }
 
