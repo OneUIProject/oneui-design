@@ -14,6 +14,7 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -51,6 +52,10 @@ import dev.oneuiproject.oneui.view.internal.NavigationBadgeIcon;
  */
 public class ToolbarLayout extends LinearLayout {
     private static final String TAG = "ToolbarLayout";
+
+    public static final int AMT_GROUP_MENU_ID = 9999;
+    private int mAMTMenuShowAlwaysMax = 2;
+    private int mSelectedItemsCount = 0;
 
     private static final int MAIN_CONTENT = 0;
     private static final int APPBAR_HEADER = 1;
@@ -261,6 +266,7 @@ public class ToolbarLayout extends LinearLayout {
         super.onConfigurationChanged(newConfig);
         refreshLayout(newConfig);
         resetAppBar();
+        updateActionModeMenuVisibility(newConfig);
     }
 
     @Nullable
@@ -730,6 +736,11 @@ public class ToolbarLayout extends LinearLayout {
         }
     }
 
+    public void setActionModeToolbarShowAlwaysMax(int max){
+        mAMTMenuShowAlwaysMax = max;
+    }
+
+
     //
     // Action Mode methods
     //
@@ -758,7 +769,44 @@ public class ToolbarLayout extends LinearLayout {
         mAppBarLayout.addOnOffsetChangedListener(mActionModeTitleFadeListener);
         mCollapsingToolbarLayout.seslSetSubtitle(null);
         mMainToolbar.setSubtitle(null);
+
+        Menu AMToolbarMenu =  mActionModeToolbar.getMenu();
+        AMToolbarMenu.removeGroup(AMT_GROUP_MENU_ID);
+        Menu AMBottomMenu = mBottomActionModeBar.getMenu();
+        int size = AMBottomMenu.size();
+        int menuItemsAdded = 0;
+        for (int a=0; a<size; a++){
+            MenuItem ambMenuItem = AMBottomMenu.getItem(a);
+            if (ambMenuItem.isVisible()){
+                menuItemsAdded++;
+                MenuItem amtMenuItem = AMToolbarMenu.add(AMT_GROUP_MENU_ID, ambMenuItem.getItemId(), Menu.NONE, ambMenuItem.getTitle());
+                if (menuItemsAdded <= mAMTMenuShowAlwaysMax){
+                    amtMenuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+                }
+            }
+        }
+        updateActionModeMenuVisibility(mContext.getResources().getConfiguration());
     }
+
+
+    private void updateActionModeMenuVisibility(Configuration config) {
+        if (isActionMode()) {
+            if (mSelectedItemsCount > 0) {
+                if (config.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                    mBottomActionModeBar.setVisibility(GONE);
+                    mActionModeToolbar.getMenu().setGroupVisible(AMT_GROUP_MENU_ID, true);
+                } else {
+                    mBottomActionModeBar.setVisibility(VISIBLE);
+                    mActionModeToolbar.getMenu().setGroupVisible(AMT_GROUP_MENU_ID, false);
+                }
+            }else{
+                mBottomActionModeBar.setVisibility(GONE);
+                mActionModeToolbar.getMenu().setGroupVisible(AMT_GROUP_MENU_ID, false);
+            }
+        }
+    }
+
+
 
     /**
      * Dismiss the ActionMode.
@@ -772,7 +820,7 @@ public class ToolbarLayout extends LinearLayout {
         animatedVisibility(mMainToolbar, VISIBLE);
         mFooterContainer.setVisibility(VISIBLE);
         mBottomActionModeBar.setVisibility(GONE);
-
+        mActionModeToolbar.getMenu().removeGroup(AMT_GROUP_MENU_ID);
         setTitle(mTitleExpanded, mTitleCollapsed);
         mAppBarLayout.removeOnOffsetChangedListener(mActionModeTitleFadeListener);
         mCollapsingToolbarLayout.seslSetSubtitle(mSubtitleExpanded);
@@ -808,6 +856,14 @@ public class ToolbarLayout extends LinearLayout {
     }
 
     /**
+     * Returns the {@link Menu} of the ActionMode's {@link Toolbar}.
+     *
+     */
+    public Menu getActionModeToolbarMenu() {
+        return mActionModeToolbar.getMenu();
+    }
+
+    /**
      * Set the ActionMode's count. This will change the count in the Toolbar's title
      * and if count = total, the 'All' Checkbox will be checked.
      *
@@ -815,14 +871,14 @@ public class ToolbarLayout extends LinearLayout {
      * @param total number of total items in the list
      */
     public void setActionModeCount(int count, int total) {
+        mSelectedItemsCount = count;
         String title = count > 0
                 ? getResources().getString(R.string.oui_action_mode_n_selected, count)
                 : getResources().getString(R.string.oui_action_mode_select_items);
 
         mCollapsingToolbarLayout.setTitle(title);
         mActionModeTitleTextView.setText(title);
-        mBottomActionModeBar.setVisibility(count > 0 ? VISIBLE : GONE);
-
+        updateActionModeMenuVisibility(mContext.getResources().getConfiguration());
         mActionModeCheckBox.setChecked(count == total);
     }
 
