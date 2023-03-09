@@ -14,6 +14,7 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -52,6 +53,7 @@ import dev.oneuiproject.oneui.view.internal.NavigationBadgeIcon;
 public class ToolbarLayout extends LinearLayout {
     private static final String TAG = "ToolbarLayout";
 
+    public static final int AMT_GROUP_MENU_ID = 9999;
     private static final int MAIN_CONTENT = 0;
     private static final int APPBAR_HEADER = 1;
     private static final int FOOTER = 2;
@@ -261,6 +263,7 @@ public class ToolbarLayout extends LinearLayout {
         super.onConfigurationChanged(newConfig);
         refreshLayout(newConfig);
         resetAppBar();
+        updateMenuVisibility(newConfig);
     }
 
     @Nullable
@@ -758,7 +761,34 @@ public class ToolbarLayout extends LinearLayout {
         mAppBarLayout.addOnOffsetChangedListener(mActionModeTitleFadeListener);
         mCollapsingToolbarLayout.seslSetSubtitle(null);
         mMainToolbar.setSubtitle(null);
+
+        Menu AMToolbarMenu = mActionModeToolbar.getMenu();
+        AMToolbarMenu.removeGroup(AMT_GROUP_MENU_ID);
+        Menu AMBottomMenu = mBottomActionModeBar.getMenu();
+        int size = AMBottomMenu.size();
+        for (int a=0; a<size; a++){
+            MenuItem AMBMenuItem = AMBottomMenu.getItem(a);
+            if (AMBMenuItem.isVisible()){
+                MenuItem AMTMenuItem =  AMToolbarMenu.add(AMT_GROUP_MENU_ID, Menu.NONE, Menu.NONE, AMBMenuItem.getTitle());
+                AMTMenuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+            }
+        }
+        updateMenuVisibility(mContext.getResources().getConfiguration());
     }
+
+
+    private void updateMenuVisibility(Configuration config) {
+        if (isActionMode()) {
+            if (config.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                mBottomActionModeBar.setVisibility(GONE);
+                mActionModeToolbar.getMenu().setGroupVisible(AMT_GROUP_MENU_ID,true);
+            } else {
+                mBottomActionModeBar.setVisibility(VISIBLE);
+                mActionModeToolbar.getMenu().setGroupVisible(AMT_GROUP_MENU_ID,false);
+            }
+        }
+    }
+
 
     /**
      * Dismiss the ActionMode.
