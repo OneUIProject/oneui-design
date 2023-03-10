@@ -836,6 +836,8 @@ public class ToolbarLayout extends LinearLayout {
 
     /**
      * Set the menu resource for the ActionMode's {@link BottomNavigationView}.
+     * On landscape orientation where ActionMode's {@link BottomNavigationView} will be hidden,
+     * the visible items from this menu resource we be shown to ActionMode's {@link Toolbar} {@link Menu}
      */
     public void setActionModeBottomMenu(@MenuRes int menuRes) {
         mBottomActionModeBar.inflateMenu(menuRes);
@@ -850,9 +852,14 @@ public class ToolbarLayout extends LinearLayout {
 
     /**
      * Set the listener for the ActionMode's {@link BottomNavigationView}.
+     * On landscape orientation, the same listener will be invoke for ActionMode's {@link Toolbar} {@link MenuItem}s
+     * which are copied from ActionMode's {@link BottomNavigationView}
      */
     public void setActionModeBottomMenuListener(NavigationBarView.OnItemSelectedListener listener) {
         mBottomActionModeBar.setOnItemSelectedListener(listener);
+        mActionModeToolbar.setOnMenuItemClickListener(item ->
+                listener.onNavigationItemSelected(mActionModeToolbar.getMenu().findItem(item.getItemId()))
+        );
     }
 
     /**
