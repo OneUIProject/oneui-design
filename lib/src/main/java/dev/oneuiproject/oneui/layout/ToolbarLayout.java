@@ -55,6 +55,7 @@ public class ToolbarLayout extends LinearLayout {
 
     public static final int AMT_GROUP_MENU_ID = 9999;
     private int mAMTMenuShowAlwaysMax = 2;
+    private boolean switchActionModeMenu = false;
     private int mSelectedItemsCount = 0;
 
     private static final int MAIN_CONTENT = 0;
@@ -753,8 +754,10 @@ public class ToolbarLayout extends LinearLayout {
      *
      * @see #setActionModeCount(int, int)
      * @see #setActionModeCheckboxListener(CompoundButton.OnCheckedChangeListener)
-     * @see #setActionModeBottomMenu(int)
-     * @see #setActionModeBottomMenuListener(NavigationBarView.OnItemSelectedListener)
+     * @see #setActionModeMenu(int)
+     * @see #setActionModeMenuListener(NavigationBarView.OnItemSelectedListener)
+     * @see #setActionModeToolbarMenu(int)
+     * @see #setActionModeToolbarMenuListener(Toolbar.OnMenuItemClickListener) (int)
      */
     public void showActionMode() {
         mIsActionMode = true;
@@ -770,21 +773,6 @@ public class ToolbarLayout extends LinearLayout {
         mCollapsingToolbarLayout.seslSetSubtitle(null);
         mMainToolbar.setSubtitle(null);
 
-        Menu AMToolbarMenu =  mActionModeToolbar.getMenu();
-        AMToolbarMenu.removeGroup(AMT_GROUP_MENU_ID);
-        Menu AMBottomMenu = mBottomActionModeBar.getMenu();
-        int size = AMBottomMenu.size();
-        int menuItemsAdded = 0;
-        for (int a=0; a<size; a++){
-            MenuItem ambMenuItem = AMBottomMenu.getItem(a);
-            if (ambMenuItem.isVisible()){
-                menuItemsAdded++;
-                MenuItem amtMenuItem = AMToolbarMenu.add(AMT_GROUP_MENU_ID, ambMenuItem.getItemId(), Menu.NONE, ambMenuItem.getTitle());
-                if (menuItemsAdded <= mAMTMenuShowAlwaysMax){
-                    amtMenuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-                }
-            }
-        }
         updateActionModeMenuVisibility(mContext.getResources().getConfiguration());
     }
 
@@ -792,7 +780,7 @@ public class ToolbarLayout extends LinearLayout {
     private void updateActionModeMenuVisibility(Configuration config) {
         if (isActionMode()) {
             if (mSelectedItemsCount > 0) {
-                if (config.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                if (switchActionModeMenu && config.orientation == Configuration.ORIENTATION_LANDSCAPE) {
                     mBottomActionModeBar.setVisibility(GONE);
                     mActionModeToolbar.getMenu().setGroupVisible(AMT_GROUP_MENU_ID, true);
                 } else {
@@ -820,7 +808,6 @@ public class ToolbarLayout extends LinearLayout {
         animatedVisibility(mMainToolbar, VISIBLE);
         mFooterContainer.setVisibility(VISIBLE);
         mBottomActionModeBar.setVisibility(GONE);
-        mActionModeToolbar.getMenu().removeGroup(AMT_GROUP_MENU_ID);
         setTitle(mTitleExpanded, mTitleCollapsed);
         mAppBarLayout.removeOnOffsetChangedListener(mActionModeTitleFadeListener);
         mCollapsingToolbarLayout.seslSetSubtitle(mSubtitleExpanded);
@@ -835,12 +822,40 @@ public class ToolbarLayout extends LinearLayout {
     }
 
     /**
+     * Set the menu resource for the ActionMode's {@link BottomNavigationView}
+     * @deprecated Use {@link #setActionModeMenu(int)}
+     */
+    @Deprecated
+    public void setActionModeBottomMenu(@MenuRes int menuRes) {
+        mBottomActionModeBar.inflateMenu(menuRes);
+    }
+
+
+    /**
      * Set the menu resource for the ActionMode's {@link BottomNavigationView}.
      * On landscape orientation where ActionMode's {@link BottomNavigationView} will be hidden,
      * the visible items from this menu resource we be shown to ActionMode's {@link Toolbar} {@link Menu}
      */
-    public void setActionModeBottomMenu(@MenuRes int menuRes) {
+    public void setActionModeMenu(@MenuRes int menuRes){
+        getActionModeBottomMenu().clear();
+        getActionModeToolbarMenu().removeGroup(AMT_GROUP_MENU_ID);
         mBottomActionModeBar.inflateMenu(menuRes);
+        Menu AMToolbarMenu =  mActionModeToolbar.getMenu();
+        AMToolbarMenu.removeGroup(AMT_GROUP_MENU_ID);
+        Menu AMBottomMenu = mBottomActionModeBar.getMenu();
+        int size = AMBottomMenu.size();
+        int menuItemsAdded = 0;
+        for (int a=0; a<size; a++){
+            MenuItem ambMenuItem = AMBottomMenu.getItem(a);
+            if (ambMenuItem.isVisible()){
+                menuItemsAdded++;
+                MenuItem amtMenuItem = AMToolbarMenu.add(AMT_GROUP_MENU_ID, ambMenuItem.getItemId(), Menu.NONE, ambMenuItem.getTitle());
+                if (menuItemsAdded <= mAMTMenuShowAlwaysMax){
+                    amtMenuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+                }
+            }
+        }
+        switchActionModeMenu = true;
     }
 
     /**
@@ -852,15 +867,42 @@ public class ToolbarLayout extends LinearLayout {
 
     /**
      * Set the listener for the ActionMode's {@link BottomNavigationView}.
+     * @deprecated See {@link #setActionModeMenuListener(NavigationBarView.OnItemSelectedListener)}
+     */
+    public void setActionModeBottomMenuListener(NavigationBarView.OnItemSelectedListener listener) {
+        mBottomActionModeBar.setOnItemSelectedListener(listener);
+    }
+
+
+    /**
+     * Set the listener for the ActionMode's {@link BottomNavigationView}.
      * On landscape orientation, the same listener will be invoke for ActionMode's {@link Toolbar} {@link MenuItem}s
      * which are copied from ActionMode's {@link BottomNavigationView}
      */
-    public void setActionModeBottomMenuListener(NavigationBarView.OnItemSelectedListener listener) {
+    public void setActionModeMenuListener(NavigationBarView.OnItemSelectedListener listener) {
         mBottomActionModeBar.setOnItemSelectedListener(listener);
         mActionModeToolbar.setOnMenuItemClickListener(item ->
                 listener.onNavigationItemSelected(mActionModeToolbar.getMenu().findItem(item.getItemId()))
         );
     }
+
+
+    /**
+     * Set the menu resource for the ActionMode's {@link Toolbar}.
+     */
+    public void setActionModeToolbarMenu(@MenuRes int menuRes) {
+        mActionModeToolbar.inflateMenu(menuRes);
+    }
+
+
+
+    /**
+     * Set the listener for the ActionMode's {@link Toolbar}.
+     */
+    public void setActionModeToolbarMenuListener(Toolbar.OnMenuItemClickListener listener) {
+        mActionModeToolbar.setOnMenuItemClickListener(listener);
+    }
+
 
     /**
      * Returns the {@link Menu} of the ActionMode's {@link Toolbar}.
