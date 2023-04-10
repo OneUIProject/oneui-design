@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">Չեղարկել</string>
+    <string name="oui_common_edit">Խմբագրել</string>
     <string name="oui_new_badge_text">Ն</string>
     <string name="new_version_is_available">Նոր վարկած է մատչելի:</string>
+    <string name="oui_common_apply">Կիրառել</string>
     <string name="oui_action_mode_select_items">Ընտրել տարրեր</string>
+    <string name="oui_time_dialog_end">Վերջ</string>
     <string name="oui_relative_description">Էլի ինչ-որ բա՞ն եք փնտրում:</string>
     <string name="oui_navigation_drawer">Նավարկման դարակ</string>
     <string name="update">Թարմացնել</string>
+    <string name="oui_common_done">Կատարված է</string>
     <string name="version_info">Վարկած %s</string>
     <string name="oui_action_mode_n_selected">%d ընտրված</string>
+    <string name="oui_common_disable">Կասեցնել</string>
     <string name="cant_check_for_updates_phone">Հնարավոր չէ ստուգել թարմացումների առկայությունը: Ձեր հեռախոսի ցանցային միացումը կայուն չէ:</string>
+    <string name="oui_common_add">Ավելացնել</string>
     <string name="latest_version">Ամենավերջին վարկածն արդեն տեղադրված է:</string>
     <string name="cant_check_for_updates_tablet">Հնարավոր չէ ստուգել թարմացումների առկայությունը: Ձեր պլանշետի ցանցային միացումը կայուն չէ:</string>
+    <string name="oui_time_dialog_start">Մեկնրկ</string>
     <string name="app_info">Ծրագրի տեղեկություններ</string>
+    <string name="oui_common_continue">Շարունակել</string>
+    <string name="oui_common_button_yes">Այո</string>
     <string name="oui_action_mode_all_checkbox">Բոլոր</string>
     <string name="retry">Նորից փորձել</string>
 </resources>

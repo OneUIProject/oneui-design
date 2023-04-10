@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">ବାତିଲ୍</string>
+    <string name="oui_common_edit">ସମ୍ପାଦନ</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">ଏକ ନୂତନ ସଂସ୍କରଣ ଉପଲବ୍ଧ ଅଛି।</string>
+    <string name="oui_common_apply">ପ୍ରୟୋଗ</string>
     <string name="oui_action_mode_select_items">ଆଇଟମଗୁଡିକ ଚୟନ</string>
+    <string name="oui_time_dialog_end">ଶେଷ</string>
     <string name="oui_relative_description">ଅନ୍ୟ କିଛି ଖୋଜୁଛନ୍ତି କି?</string>
     <string name="oui_navigation_drawer">ନେଭିଗେସନ୍ ଡ୍ରୟର୍</string>
     <string name="update">ଅପଡେଟ୍</string>
+    <string name="oui_common_done">ସମାପ୍ତ</string>
     <string name="version_info">ସଂସ୍କରଣ %s</string>
     <string name="oui_action_mode_n_selected">%dଟି ଚୟନିତ</string>
+    <string name="oui_common_disable">ଅକ୍ଷମ</string>
     <string name="cant_check_for_updates_phone">ଅପଡେଟସ୍ ଯାଞ୍ଚ କରିପାରିବେ ନାହିଁ। ଆପଣଙ୍କ ଫୋନର ନେଟୱାର୍କ୍ ସଂଯୋଜନା ସ୍ଥିର ନୁହେଁ।</string>
+    <string name="oui_common_add">ଯୋଡନ୍ତୁ</string>
     <string name="latest_version">ନବୀନତ୍ତମ ସଂସ୍କରଣ ପୂର୍ବରୁ ସଂସ୍ଥାପିତ ହୋଇଛି।</string>
     <string name="cant_check_for_updates_tablet">ଅପଡେଟସ୍ ଯାଞ୍ଚ କରିପାରିବେ ନାହିଁ। ଆପଣଙ୍କ ଟ୍ୟାବଲେଟର ନେଟୱାର୍କ୍ ସଂଯୋଜନା ସ୍ଥିର ନୁହେଁ।</string>
+    <string name="oui_time_dialog_start">ଆରମ୍ଭ</string>
     <string name="app_info">ଆପ୍ଲିକେସନ୍‌ ସୂଚନା</string>
+    <string name="oui_common_continue">ଜାରି</string>
+    <string name="oui_common_button_yes">ହଁ</string>
     <string name="oui_action_mode_all_checkbox">ସମସ୍ତ</string>
     <string name="retry">ପୁନଃଚେଷ୍ଟା</string>
 </resources>

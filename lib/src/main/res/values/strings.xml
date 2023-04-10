@@ -24,5 +24,18 @@
     <string name="cant_check_for_updates_phone">"Can't check for updates. Your phone's network connection isn't stable."</string>
     <string name="cant_check_for_updates_tablet">"Can't check for updates. Your tablet's network connection isn't stable."</string>
 
+    <!-- StartEndTimePicker -->
+    <string name="oui_time_dialog_end">End</string>
+    <string name="oui_time_dialog_start">Start</string>
+
+    <!-- Common -->
+    <string name="oui_common_add">Add</string>
+    <string name="oui_common_apply">Apply</string>
+    <string name="oui_common_button_yes">Yes</string>
+    <string name="oui_common_cancel">Cancel</string>
+    <string name="oui_common_continue">Continue</string>
+    <string name="oui_common_disable">Disable</string>
+    <string name="oui_common_done">Done</string>
+    <string name="oui_common_edit">Edit</string>
 
 </resources>

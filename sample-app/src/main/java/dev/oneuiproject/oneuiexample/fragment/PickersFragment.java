@@ -25,12 +25,13 @@ import androidx.picker3.app.SeslColorPickerDialog;
 
 import com.sec.sesl.tester.R;
 
-import dev.oneuiproject.oneui.widget.Toast;
-import dev.oneuiproject.oneuiexample.base.BaseFragment;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
+import dev.oneuiproject.oneui.dialog.StartEndTimePickerDialog;
+import dev.oneuiproject.oneui.widget.Toast;
+import dev.oneuiproject.oneuiexample.base.BaseFragment;
 
 public class PickersFragment extends BaseFragment
         implements AdapterView.OnItemSelectedListener, SeslColorPickerDialog.OnColorSetListener {
@@ -106,7 +107,8 @@ public class PickersFragment extends BaseFragment
     }
 
     @Override
-    public void onNothingSelected(AdapterView<?> parent) { }
+    public void onNothingSelected(AdapterView<?> parent) {
+    }
 
     private void initNumberPicker(@NonNull View view) {
         mNumberPickers = view.findViewById(R.id.pickers_number);
@@ -200,6 +202,8 @@ public class PickersFragment extends BaseFragment
         dateBtn.setOnClickListener(v -> openDatePickerDialog());
         AppCompatButton timeBtn = view.findViewById(R.id.pickers_dialog_time);
         timeBtn.setOnClickListener(v -> openTimePickerDialog());
+        AppCompatButton startEndTimeBtn = view.findViewById(R.id.pickers_dialog_start_end_time);
+        startEndTimeBtn.setOnClickListener(v -> openStartEndTimePickerDialog());
         AppCompatButton colorBtn = view.findViewById(R.id.pickers_dialog_color);
         colorBtn.setOnClickListener(v -> openColorPickerDialog());
     }
@@ -227,6 +231,14 @@ public class PickersFragment extends BaseFragment
                 calendar.get(Calendar.HOUR_OF_DAY),
                 calendar.get(Calendar.MINUTE),
                 DateFormat.is24HourFormat(mContext));
+        dialog.show();
+    }
+
+    private void openStartEndTimePickerDialog() {
+        StartEndTimePickerDialog dialog = new StartEndTimePickerDialog(mContext,
+                0, 600,
+                DateFormat.is24HourFormat(mContext),
+                (startTime, endTime) -> android.widget.Toast.makeText(mContext, "Start: H:" + startTime / 60 + " M:" + startTime % 60 + "\nEnd: H:" + endTime / 60 + " M:" + endTime % 60, Toast.LENGTH_SHORT).show());
         dialog.show();
     }
 

@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">ரத்து</string>
+    <string name="oui_common_edit">திருத்துக</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">புதிய பதிப்பு கிடைக்கிறது.</string>
+    <string name="oui_common_apply">செயல்படுத்துக</string>
     <string name="oui_action_mode_select_items">உருப்படிகளை தேர்வுசெய்க</string>
+    <string name="oui_time_dialog_end">முடிவு</string>
     <string name="oui_relative_description">வேறு ஏதோவொன்றைத் தேடுகிறீர்களா?</string>
     <string name="oui_navigation_drawer">நகர்தல் ட்ராயர்</string>
     <string name="update">புதுப்பி</string>
+    <string name="oui_common_done">முடிந்தது</string>
     <string name="version_info">பதிப்பு %s</string>
     <string name="oui_action_mode_n_selected">%d தேர்வு</string>
+    <string name="oui_common_disable">செயல்நீக்கு</string>
     <string name="cant_check_for_updates_phone">புதுப்பிப்புகளைச் சரிபார்க்க இயலாது. உங்கள் ஃபோனின் நெட்வொர்க் இணைப்பு நிலையற்றதாக உள்ளது.</string>
+    <string name="oui_common_add">சேர்.</string>
     <string name="latest_version">சமீபத்திய பதிப்பு ஏற்கனவே நிறுவப்பட்டது.</string>
     <string name="cant_check_for_updates_tablet">புதுப்பிப்புகளைச் சரிபார்க்க இயலாது. உங்கள் டேப்லேட்டின் நெட்வொர்க் இணைப்பு நிலையற்றதாக உள்ளது.</string>
+    <string name="oui_time_dialog_start">துவங்குக</string>
     <string name="app_info">பயன்பாட்டு விவரம்</string>
+    <string name="oui_common_continue">தொடர்க</string>
+    <string name="oui_common_button_yes">ஆம்</string>
     <string name="oui_action_mode_all_checkbox">எல்லாம்</string>
     <string name="retry">மீ. முயலவும்</string>
 </resources>

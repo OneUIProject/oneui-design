@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">Скасаваць</string>
+    <string name="oui_common_edit">Рэдагаваць</string>
     <string name="oui_new_badge_text">Н</string>
     <string name="new_version_is_available">Ёсць новая версія.</string>
+    <string name="oui_common_apply">Прымяніць</string>
     <string name="oui_action_mode_select_items">Выберыце элементы</string>
+    <string name="oui_time_dialog_end">Канец</string>
     <string name="oui_relative_description">Шукаеце кагосьці іншага?</string>
     <string name="oui_navigation_drawer">Высоўнае меню навігацыі</string>
     <string name="update">Абнавіць</string>
+    <string name="oui_common_done">Гатова</string>
     <string name="version_info">Версія %s</string>
     <string name="oui_action_mode_n_selected">Выбрана: %d</string>
+    <string name="oui_common_disable">Адключыць</string>
     <string name="cant_check_for_updates_phone">Немагчыма праверыць наяўнасць абнаўленняў. Сеткавае падлучэнне тэлефона нестабільнае.</string>
+    <string name="oui_common_add">Дадаць</string>
     <string name="latest_version">Апошняя версія ўжо ўсталявана.</string>
     <string name="cant_check_for_updates_tablet">Немагчыма праверыць наяўнасць абнаўленняў. Сеткавае падлучэнне планшэта нестабільнае.</string>
+    <string name="oui_time_dialog_start">Пачат.</string>
     <string name="app_info">Інфармацыя аб праграме</string>
+    <string name="oui_common_continue">Працягнуць</string>
+    <string name="oui_common_button_yes">Так</string>
     <string name="oui_action_mode_all_checkbox">Усе</string>
     <string name="retry">Паўтарыць</string>
 </resources>

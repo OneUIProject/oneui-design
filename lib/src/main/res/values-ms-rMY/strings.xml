@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">Batal</string>
+    <string name="oui_common_edit">Sunting</string>
     <string name="oui_new_badge_text">B</string>
     <string name="new_version_is_available">Versi baru tersedia.</string>
+    <string name="oui_common_apply">Guna</string>
     <string name="oui_action_mode_select_items">Pilih item</string>
+    <string name="oui_time_dialog_end">Tamat</string>
     <string name="oui_relative_description">Mencari sesuatu yang lain?</string>
     <string name="oui_navigation_drawer">Laci pemanduan arah</string>
     <string name="update">Kemas kini</string>
+    <string name="oui_common_done">Selesai</string>
     <string name="version_info">Versi %s</string>
     <string name="oui_action_mode_n_selected">%d dipilih</string>
+    <string name="oui_common_disable">Nyahaktif</string>
     <string name="cant_check_for_updates_phone">Tidak dapat menyemak kemas kini. Sambungan rangkaian telefon anda tidak stabil.</string>
+    <string name="oui_common_add">Tambah</string>
     <string name="latest_version">Versi terkini telah dipasang.</string>
     <string name="cant_check_for_updates_tablet">Tidak dapat menyemak kemas kini.Sambungan rangkaian tablet anda tidak stabil.</string>
+    <string name="oui_time_dialog_start">Mula</string>
     <string name="app_info">Maklumat aplikasi</string>
+    <string name="oui_common_continue">Teruskan</string>
+    <string name="oui_common_button_yes">Ya</string>
     <string name="oui_action_mode_all_checkbox">Semua</string>
     <string name="retry">Cuba lagi</string>
 </resources>

@@ -17,9 +17,9 @@
         <dev.oneuiproject.oneui.widget.RoundFrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/oui_background_color"
             android:paddingHorizontal="16dp"
-            android:paddingVertical="4dp"
-            android:background="@color/oui_background_color">
+            android:paddingVertical="4dp">
 
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/pickers_spinner"
@@ -35,8 +35,8 @@
         <dev.oneuiproject.oneui.widget.RoundFrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingVertical="24dp"
-            android:background="@color/oui_background_color">
+            android:background="@color/oui_background_color"
+            android:paddingVertical="24dp">
 
             <LinearLayout
                 android:id="@+id/pickers_number"
@@ -84,8 +84,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:theme="@style/DatePickerTheme"
-                app:pickerLayoutMode="defaultMode"
-                android:visibility="gone" />
+                android:visibility="gone"
+                app:pickerLayoutMode="defaultMode" />
 
         </dev.oneuiproject.oneui.widget.RoundFrameLayout>
 
@@ -97,33 +97,37 @@
         <dev.oneuiproject.oneui.widget.RoundLinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="24dp"
-            android:orientation="horizontal"
+            android:background="@color/oui_background_color"
             android:gravity="center"
-            android:background="@color/oui_background_color">
+            android:orientation="vertical"
+            android:padding="24dp">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/pickers_dialog_date"
-                android:layout_width="0dp"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
                 android:text="Date" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/pickers_dialog_time"
-                android:layout_width="0dp"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
                 android:text="Time" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/pickers_dialog_color"
-                android:layout_width="0dp"
+                android:id="@+id/pickers_dialog_start_end_time"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
+                android:text="Start End Time" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pickers_dialog_color"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
                 android:text="Color" />
 
         </dev.oneuiproject.oneui.widget.RoundLinearLayout>

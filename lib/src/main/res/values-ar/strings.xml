@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">إلغاء</string>
+    <string name="oui_common_edit">تعديل</string>
     <string name="oui_new_badge_text">ج</string>
     <string name="new_version_is_available">يتوفر إصدار جديد.</string>
+    <string name="oui_common_apply">تطبيق</string>
     <string name="oui_action_mode_select_items">تحديد عناصر</string>
+    <string name="oui_time_dialog_end">إنهاء</string>
     <string name="oui_relative_description">هل تبحث عن شيء آخر؟</string>
     <string name="oui_navigation_drawer">درج التنقل</string>
     <string name="update">تحديث</string>
+    <string name="oui_common_done">تمت</string>
     <string name="version_info">إصدار %s</string>
     <string name="oui_action_mode_n_selected">تم تحديد %d</string>
+    <string name="oui_common_disable">تعطيل</string>
     <string name="cant_check_for_updates_phone">يتعذر التحقق من توفر تحديثات. إن اتصال شبكة هاتفك غير ثابت.</string>
+    <string name="oui_common_add">إضافة</string>
     <string name="latest_version">تم مسبقاً تثبيت أحدث إصدار.</string>
     <string name="cant_check_for_updates_tablet">يتعذر التحقق من توفر تحديثات. إن اتصال شبكة جهازك اللوحي غير ثابت.</string>
+    <string name="oui_time_dialog_start">بدء</string>
     <string name="app_info">معلومات التطبيق</string>
+    <string name="oui_common_continue">متابعة</string>
+    <string name="oui_common_button_yes">نعم</string>
     <string name="oui_action_mode_all_checkbox">الكل</string>
     <string name="retry">إعادة المحاولة</string>
 </resources>

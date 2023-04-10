@@ -41,6 +41,8 @@ public class SwitchBarPreference extends TwoStatePreference {
             }
             setChecked(isChecked);
         });
+        holder.setDividerAllowedAbove(false);
+        holder.setDividerAllowedBelow(false);
     }
 
 }

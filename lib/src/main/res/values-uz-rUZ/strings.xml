@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">Bekor qilish</string>
+    <string name="oui_common_edit">Tahrirlash</string>
     <string name="oui_new_badge_text">Y</string>
     <string name="new_version_is_available">Yangi versiya mavjud.</string>
+    <string name="oui_common_apply">Qo‘llash</string>
     <string name="oui_action_mode_select_items">Elementlar tanlash</string>
+    <string name="oui_time_dialog_end">Tugat</string>
     <string name="oui_relative_description">Yana boshqa narsa qidiryapsizmi?</string>
     <string name="oui_navigation_drawer">Navigatsiya chizish vositasi</string>
     <string name="update">Yangilash</string>
+    <string name="oui_common_done">Bajarildi</string>
     <string name="version_info">%s versiyasi</string>
     <string name="oui_action_mode_n_selected">%d tanlandi</string>
+    <string name="oui_common_disable">O‘chirish</string>
     <string name="cant_check_for_updates_phone">Yangilanishlar mavjudligini tekshirib bo‘lmaydi. Telefoningizning tarmoq ulanishi yaxshi emas.</string>
+    <string name="oui_common_add">Qo‘shish</string>
     <string name="latest_version">So‘nggi versiya oldinroq o‘rnatilgan.</string>
     <string name="cant_check_for_updates_tablet">Yangilanishlar mavjudligini tekshirib bo‘lmaydi. Planshetingizning tarmoq ulanishi yaxshi emas.</string>
+    <string name="oui_time_dialog_start">Boshla</string>
     <string name="app_info">Ilova ma’lumoti</string>
+    <string name="oui_common_continue">Davom ettirish</string>
+    <string name="oui_common_button_yes">Ha</string>
     <string name="oui_action_mode_all_checkbox">Barchasi</string>
     <string name="retry">Qayta urin</string>
 </resources>

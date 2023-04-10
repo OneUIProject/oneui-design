@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">Cancel·lar</string>
+    <string name="oui_common_edit">Editar</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">Hi ha una nova versió disponible</string>
+    <string name="oui_common_apply">Aplicar</string>
     <string name="oui_action_mode_select_items">Seleccionar elements</string>
+    <string name="oui_time_dialog_end">Fi</string>
     <string name="oui_relative_description">Està buscant alguna cosa més?</string>
     <string name="oui_navigation_drawer">Calaix de navegació</string>
     <string name="update">Actualitzar</string>
+    <string name="oui_common_done">Finalitzat</string>
     <string name="version_info">Versió %s</string>
     <string name="oui_action_mode_n_selected">%d seleccionats</string>
+    <string name="oui_common_disable">Desactiv</string>
     <string name="cant_check_for_updates_phone">No es poden comprovar les actualitzacions. La connexió de xarxa del telèfon no és estable.</string>
+    <string name="oui_common_add">Afegir</string>
     <string name="latest_version">"Ja s'ha instal·lat l'última versió."</string>
     <string name="cant_check_for_updates_tablet">No es poden comprovar les actualitzacions. La connexió de xarxa de la tablet no és estable.</string>
+    <string name="oui_time_dialog_start">Inici</string>
     <string name="app_info">"Informació de l'aplicació"</string>
+    <string name="oui_common_continue">Continuar</string>
+    <string name="oui_common_button_yes">Sí</string>
     <string name="oui_action_mode_all_checkbox">Tot</string>
     <string name="retry">Reintentar</string>
 </resources>
