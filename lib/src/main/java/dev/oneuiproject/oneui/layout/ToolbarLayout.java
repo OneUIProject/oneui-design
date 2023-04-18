@@ -523,12 +523,13 @@ public class ToolbarLayout extends LinearLayout {
     }
 
     private void setMenuItemBadgeText(ViewGroup mBadgeBackground, TextView mBadgeText, String text) {
+        mBadgeText.setText(text);
+        mBadgeBackground.setVisibility(text == null || text.isEmpty() ? GONE : VISIBLE);
+        if (text == null) return;
         ViewGroup.MarginLayoutParams lp = (MarginLayoutParams) mBadgeBackground.getLayoutParams();
         lp.setMarginEnd(0);
         lp.width = (int) (getResources().getDimension(androidx.appcompat.R.dimen.sesl_badge_default_width) + (text.length() * getResources().getDimension(androidx.appcompat.R.dimen.sesl_badge_additional_width)));
         mBadgeBackground.setLayoutParams(lp);
-        mBadgeBackground.setVisibility(text.isEmpty() ? GONE : VISIBLE);
-        mBadgeText.setText(text);
     }
 
 
