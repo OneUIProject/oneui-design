@@ -52,6 +52,12 @@ import dev.oneuiproject.oneui.view.internal.NavigationBadgeIcon;
 public class ToolbarLayout extends LinearLayout {
     private static final String TAG = "ToolbarLayout";
 
+    public interface ActionModeCallback {
+        void onShow(ToolbarLayout toolbarLayout);
+        void onDismiss(ToolbarLayout toolbarLayout);
+    }
+
+    private ActionModeCallback mActionModeCallback;
     private static final int MAIN_CONTENT = 0;
     private static final int APPBAR_HEADER = 1;
     private static final int FOOTER = 2;
@@ -731,6 +737,10 @@ public class ToolbarLayout extends LinearLayout {
         }
     }
 
+    public void setOnActionModeListener (ActionModeCallback callback) {
+        mActionModeCallback  = callback;
+    }
+
     //
     // Action Mode methods
     //
@@ -759,6 +769,9 @@ public class ToolbarLayout extends LinearLayout {
         mAppBarLayout.addOnOffsetChangedListener(mActionModeTitleFadeListener);
         mCollapsingToolbarLayout.seslSetSubtitle(null);
         mMainToolbar.setSubtitle(null);
+        if ( mActionModeCallback != null) {
+            mActionModeCallback.onShow(this);
+        }
     }
 
     /**
@@ -778,6 +791,9 @@ public class ToolbarLayout extends LinearLayout {
         mAppBarLayout.removeOnOffsetChangedListener(mActionModeTitleFadeListener);
         mCollapsingToolbarLayout.seslSetSubtitle(mSubtitleExpanded);
         mMainToolbar.setSubtitle(mSubtitleCollapsed);
+        if (mActionModeCallback != null) {
+            mActionModeCallback.onDismiss(this);
+        }
     }
 
     /**
