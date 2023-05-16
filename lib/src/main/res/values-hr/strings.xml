@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">Prekid</string>
+    <string name="oui_common_edit">Uredi</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">Dostupna je nova verzija.</string>
+    <string name="oui_common_apply">Primijeni</string>
     <string name="oui_action_mode_select_items">Odaberite stavke</string>
+    <string name="oui_time_dialog_end">Kraj</string>
     <string name="oui_relative_description">Tražite nešto drugo?</string>
     <string name="oui_navigation_drawer">Ladica za navigaciju</string>
     <string name="update">Aktualiziraj</string>
+    <string name="oui_common_done">OK</string>
     <string name="version_info">Verzija %s</string>
     <string name="oui_action_mode_n_selected">%d odabrano</string>
+    <string name="oui_common_disable">Isključi</string>
     <string name="cant_check_for_updates_phone">Nije moguće tražiti aktualizacije. Nestabilna je mrežna veza telefona.</string>
+    <string name="oui_common_add">Dodaj</string>
     <string name="latest_version">Već je instalirana najnovija verzija.</string>
     <string name="cant_check_for_updates_tablet">Nije moguće tražiti aktualizacije. Nestabilna je mrežna veza tableta.</string>
+    <string name="oui_time_dialog_start">Start</string>
     <string name="app_info">Podaci o aplikaciji</string>
+    <string name="oui_common_continue">Nastavak</string>
+    <string name="oui_common_button_yes">Da</string>
     <string name="oui_action_mode_all_checkbox">Sve</string>
     <string name="retry">Ponovi</string>
 </resources>

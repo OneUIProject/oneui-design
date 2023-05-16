@@ -7,6 +7,10 @@
         android:title="TipsCardPreference"
         android:summary="This is a test summary."/>
 
+    <PreferenceCategory />
+
+    <dev.oneuiproject.oneui.preference.SwitchBarPreference />
+
     <PreferenceCategory>
 
         <dev.oneuiproject.oneui.preference.HorizontalRadioPreference

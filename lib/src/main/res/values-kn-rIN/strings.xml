@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">ರದ್ದು</string>
+    <string name="oui_common_edit">ತಿದ್ದಿ </string>
     <string name="oui_new_badge_text">ಹೊ</string>
     <string name="new_version_is_available">ಒಂದು ಹೊಸ ಆವೃತ್ತಿಯು ಲಭ್ಯವಿರುತ್ತದೆ.</string>
+    <string name="oui_common_apply">ಅನ್ವಯಿಸಿ</string>
     <string name="oui_action_mode_select_items">ಅಂಶಗಳನ್ನು ಆರಿಸಿ</string>
+    <string name="oui_time_dialog_end">ಮುಕ್ತಾಯ</string>
     <string name="oui_relative_description">ಬೇರೆ ಸಂಗತಿಗಳಿಗಾಗಿ ಹುಡುಕುತ್ತಿರುವಿರೇ?</string>
     <string name="oui_navigation_drawer">ನ್ಯಾವಿಗೇಶನ್ ಡ್ರಾಯರ್</string>
     <string name="update">ನವೀಕರಿಸಿ</string>
+    <string name="oui_common_done">ಮಾಡಲಾಗಿದೆ</string>
     <string name="version_info">ಆವೃತ್ತಿ %s</string>
     <string name="oui_action_mode_n_selected">%d ಆಯ್ಕೆಮಾಡಿದೆ</string>
+    <string name="oui_common_disable">ನಿಶಕ್ತ</string>
     <string name="cant_check_for_updates_phone">ನವೀಕರಣಗಳಿಗಾಗಿ ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ನಿಮ್ಮ ಫೋನಿನ ನೆಟ್‍ವರ್ಕ್ ಸಂಪರ್ಕ ಅಸ್ಥಿರವಾಗಿದೆ.</string>
+    <string name="oui_common_add">ಸೇರಿಸಿ</string>
     <string name="latest_version">ಈಗಾಗಲೇ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಯನ್ನು ಸ್ಥಾಪಿಸಲಾಗಿದೆ.</string>
     <string name="cant_check_for_updates_tablet">ನವೀಕರಣಗಳಿಗಾಗಿ ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ನಿಮ್ಮ ಟ್ಯಾಬ್ಲೆಟಿನ ನೆಟ್‍ವರ್ಕ್ ಸಂಪರ್ಕ ಅಸ್ಥಿರವಾಗಿದೆ.</string>
+    <string name="oui_time_dialog_start">ಆರಂಭ</string>
     <string name="app_info">ಅನ್ವಯಿಸುವಿಕೆ ಮಾಹಿತಿ</string>
+    <string name="oui_common_continue">ಮುಂದುವರಿಸು</string>
+    <string name="oui_common_button_yes">ಹೌದು</string>
     <string name="oui_action_mode_all_checkbox">ಎಲ್ಲ</string>
     <string name="retry">ಮರುಪ್ರಯತ್ನಿಸಿ</string>
 </resources>

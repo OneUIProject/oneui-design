@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">Ýatyr</string>
+    <string name="oui_common_edit">Düzet</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">Täze wersiýa elýeterli</string>
+    <string name="oui_common_apply">Ulanmak</string>
     <string name="oui_action_mode_select_items">Elementleri saýla</string>
+    <string name="oui_time_dialog_end">Gutar</string>
     <string name="oui_relative_description">Başga bir zat gözleýäňizmi?</string>
     <string name="oui_navigation_drawer">Nawigasiýa çekeri</string>
     <string name="update">Täzele</string>
+    <string name="oui_common_done">Tamam</string>
     <string name="version_info">Wersiýa %s</string>
     <string name="oui_action_mode_n_selected">%d saýlandy</string>
+    <string name="oui_common_disable">Öçür</string>
     <string name="cant_check_for_updates_phone">Täzelemeleri barlap bolmaýar. Telefonyňyzyň tor birikmesi durnukly däl.</string>
+    <string name="oui_common_add">Goş</string>
     <string name="latest_version">Iň täze wersiýa eýýäm gurnalan.</string>
     <string name="cant_check_for_updates_tablet">Täzelemeleri barlap bolmaýar. Planşetiňiziň tor birikmesi durnukly däl.</string>
+    <string name="oui_time_dialog_start">Başla</string>
     <string name="app_info">Programma maglumaty</string>
+    <string name="oui_common_continue">Dowam</string>
+    <string name="oui_common_button_yes">Hawa</string>
     <string name="oui_action_mode_all_checkbox">Ähli</string>
     <string name="retry">Täz synan</string>
 </resources>

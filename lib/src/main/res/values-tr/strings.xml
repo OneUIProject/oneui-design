@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">İptal</string>
+    <string name="oui_common_edit">Düzenle</string>
     <string name="oui_new_badge_text">Y</string>
     <string name="new_version_is_available">Yeni bir sürüm mevcut.</string>
+    <string name="oui_common_apply">Uygula</string>
     <string name="oui_action_mode_select_items">Ögeleri seç</string>
+    <string name="oui_time_dialog_end">Bitiş</string>
     <string name="oui_relative_description">Başka bir şey mi arıyorsunuz?</string>
     <string name="oui_navigation_drawer">Navigasyon çekmecesi</string>
     <string name="update">Güncelle</string>
+    <string name="oui_common_done">Tamamlandı</string>
     <string name="version_info">%s Sürümü</string>
     <string name="oui_action_mode_n_selected">%d seçildi</string>
+    <string name="oui_common_disable">Devre dışı</string>
     <string name="cant_check_for_updates_phone">Güncellemeler denetlenemiyor. Telefonunuzun ağ bağlantısı sabit değil.</string>
+    <string name="oui_common_add">Ekle</string>
     <string name="latest_version">En son sürüm zaten yüklü.</string>
     <string name="cant_check_for_updates_tablet">Güncellemeler denetlenemiyor. Tabletinizin ağ bağlantısı sabit değil.</string>
+    <string name="oui_time_dialog_start">Başlangıç</string>
     <string name="app_info">Uygulama bilgileri</string>
+    <string name="oui_common_continue">Devam</string>
+    <string name="oui_common_button_yes">Evet</string>
     <string name="oui_action_mode_all_checkbox">Tümü</string>
     <string name="retry">Tekrar dene</string>
 </resources>

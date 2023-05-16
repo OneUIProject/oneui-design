@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">გაუქმება</string>
+    <string name="oui_common_edit">შეცვლა</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">გამოვიდა ახალი ვერსია.</string>
+    <string name="oui_common_apply">გამოყენება</string>
     <string name="oui_action_mode_select_items">ელემენტების არჩევა</string>
+    <string name="oui_time_dialog_end">ბოლო</string>
     <string name="oui_relative_description">კიდევ სხვა რამეს ეძებთ?</string>
     <string name="oui_navigation_drawer">ნავიგაციის მხაზავი</string>
     <string name="update">განახლება</string>
+    <string name="oui_common_done">შესრულებულია</string>
     <string name="version_info">ვერსია %s</string>
     <string name="oui_action_mode_n_selected">%d არჩეულია</string>
+    <string name="oui_common_disable">გამორთვა</string>
     <string name="cant_check_for_updates_phone">განახლების შემოწმება შეუძლებელია. ტელეფონის კავშირი ქსელთან არასტაბილურია.</string>
+    <string name="oui_common_add">დამატება</string>
     <string name="latest_version">უახლესი ვერსია უკვე დაინსტალირებულია.</string>
     <string name="cant_check_for_updates_tablet">განახლების შემოწმება შეუძლებელია. პლანშეტის კავშირი ქსელთან არასტაბილურია.</string>
+    <string name="oui_time_dialog_start">დასაწ.</string>
     <string name="app_info">აპლიკაციის ინფორმაცია</string>
+    <string name="oui_common_continue">გაგრძელება</string>
+    <string name="oui_common_button_yes">დიახ</string>
     <string name="oui_action_mode_all_checkbox">ყველა</string>
     <string name="retry">ისევ ცდა</string>
 </resources>

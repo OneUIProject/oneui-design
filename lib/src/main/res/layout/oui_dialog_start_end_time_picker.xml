@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+
+        <dev.oneuiproject.oneui.dialog.internal.StartEndTabLayout
+            android:id="@+id/sec_dark_mode_time_picker_tab"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginHorizontal="24dp">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/oui_time_dialog_start"
+                android:text="@string/oui_time_dialog_start" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/oui_time_dialog_end"
+                android:text="@string/oui_time_dialog_end" />
+        </dev.oneuiproject.oneui.dialog.internal.StartEndTabLayout>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.picker.widget.SeslTimePicker
+                android:id="@+id/sec_dark_mode_time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="16dp"
+                android:theme="@style/Theme.AppCompat.DayNight" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

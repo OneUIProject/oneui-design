@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">Kanselahin</string>
+    <string name="oui_common_edit">I-edit</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">May available na bagong bersiyon.</string>
+    <string name="oui_common_apply">Ilapat</string>
     <string name="oui_action_mode_select_items">Pumili ng mga item</string>
+    <string name="oui_time_dialog_end">Tapos</string>
     <string name="oui_relative_description">May hinahanap kang iba?</string>
     <string name="oui_navigation_drawer">Navigation drawer</string>
     <string name="update">I-update</string>
+    <string name="oui_common_done">Tapos na</string>
     <string name="version_info">Bersiyon %s</string>
     <string name="oui_action_mode_n_selected">%d ang napili</string>
+    <string name="oui_common_disable">Huwag paganahin</string>
     <string name="cant_check_for_updates_phone">Hindi matingnan kung may mga update. Hindi matatag ang koneksiyon ng telepono mo sa network.</string>
+    <string name="oui_common_add">Magdagdag</string>
     <string name="latest_version">Naka-install na ang pinakabagong bersiyon.</string>
     <string name="cant_check_for_updates_tablet">Hindi matingnan kung may mga update. Hindi matatag ang koneksiyon ng tablet mo sa network.</string>
+    <string name="oui_time_dialog_start">Simula</string>
     <string name="app_info">Info ng app</string>
+    <string name="oui_common_continue">Magpatuloy</string>
+    <string name="oui_common_button_yes">Oo</string>
     <string name="oui_action_mode_all_checkbox">Lahat</string>
     <string name="retry">Subukang muli</string>
 </resources>

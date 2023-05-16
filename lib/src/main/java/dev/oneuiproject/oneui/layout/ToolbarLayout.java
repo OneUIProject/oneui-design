@@ -53,10 +53,18 @@ import dev.oneuiproject.oneui.view.internal.NavigationBadgeIcon;
 public class ToolbarLayout extends LinearLayout {
     private static final String TAG = "ToolbarLayout";
 
+
     public static final int AMT_GROUP_MENU_ID = 9999;
     private int mAMTMenuShowAlwaysMax = 2;
     private boolean switchActionModeMenu = false;
     private int mSelectedItemsCount = 0;
+
+    public interface ActionModeCallback {
+        void onShow(ToolbarLayout toolbarLayout);
+        void onDismiss(ToolbarLayout toolbarLayout);
+    }
+
+    private ActionModeCallback mActionModeCallback;
 
     private static final int MAIN_CONTENT = 0;
     private static final int APPBAR_HEADER = 1;
@@ -530,12 +538,13 @@ public class ToolbarLayout extends LinearLayout {
     }
 
     private void setMenuItemBadgeText(ViewGroup mBadgeBackground, TextView mBadgeText, String text) {
+        mBadgeText.setText(text);
+        mBadgeBackground.setVisibility(text == null || text.isEmpty() ? GONE : VISIBLE);
+        if (text == null) return;
         ViewGroup.MarginLayoutParams lp = (MarginLayoutParams) mBadgeBackground.getLayoutParams();
         lp.setMarginEnd(0);
         lp.width = (int) (getResources().getDimension(androidx.appcompat.R.dimen.sesl_badge_default_width) + (text.length() * getResources().getDimension(androidx.appcompat.R.dimen.sesl_badge_additional_width)));
         mBadgeBackground.setLayoutParams(lp);
-        mBadgeBackground.setVisibility(text.isEmpty() ? GONE : VISIBLE);
-        mBadgeText.setText(text);
     }
 
 
@@ -737,8 +746,14 @@ public class ToolbarLayout extends LinearLayout {
         }
     }
 
+  
     public void setActionModeToolbarShowAlwaysMax(int max){
         mAMTMenuShowAlwaysMax = max;
+    }
+
+
+    public void setOnActionModeListener (ActionModeCallback callback) {
+        mActionModeCallback  = callback;
     }
 
 
@@ -758,6 +773,8 @@ public class ToolbarLayout extends LinearLayout {
      * @see #setActionModeMenuListener(NavigationBarView.OnItemSelectedListener)
      * @see #setActionModeToolbarMenu(int)
      * @see #setActionModeToolbarMenuListener(Toolbar.OnMenuItemClickListener) (int)
+     * @see #setActionModeBottomMenu(int)
+     * @see #setActionModeBottomMenuListener(NavigationBarView.OnItemSelectedListener)
      */
     public void showActionMode() {
         mIsActionMode = true;
@@ -774,6 +791,10 @@ public class ToolbarLayout extends LinearLayout {
         mMainToolbar.setSubtitle(null);
 
         updateActionModeMenuVisibility(mContext.getResources().getConfiguration());
+
+        if ( mActionModeCallback != null) {
+            mActionModeCallback.onShow(this);
+        }
     }
 
 
@@ -812,6 +833,9 @@ public class ToolbarLayout extends LinearLayout {
         mAppBarLayout.removeOnOffsetChangedListener(mActionModeTitleFadeListener);
         mCollapsingToolbarLayout.seslSetSubtitle(mSubtitleExpanded);
         mMainToolbar.setSubtitle(mSubtitleCollapsed);
+        if (mActionModeCallback != null) {
+            mActionModeCallback.onDismiss(this);
+        }
     }
 
     /**
@@ -891,9 +915,6 @@ public class ToolbarLayout extends LinearLayout {
      * Set the menu resource for the ActionMode's {@link Toolbar}.
      */
     public void setActionModeToolbarMenu(@MenuRes int menuRes) {
-        mActionModeToolbar.inflateMenu(menuRes);
-    }
-
 
 
     /**
@@ -911,6 +932,7 @@ public class ToolbarLayout extends LinearLayout {
     public Menu getActionModeToolbarMenu() {
         return mActionModeToolbar.getMenu();
     }
+
 
     /**
      * Set the ActionMode's count. This will change the count in the Toolbar's title

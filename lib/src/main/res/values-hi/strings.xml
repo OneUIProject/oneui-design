@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">रद्द करें</string>
+    <string name="oui_common_edit">संपादित करें</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">नया संस्करण उपलब्ध है।</string>
+    <string name="oui_common_apply">लागू करें</string>
     <string name="oui_action_mode_select_items">मदें चुनें</string>
+    <string name="oui_time_dialog_end">समाप्त</string>
     <string name="oui_relative_description">कुछ और ढूँढ रहे हैं?</string>
     <string name="oui_navigation_drawer">नेविगेशन ड्रॉअर</string>
     <string name="update">अपडेट करें</string>
+    <string name="oui_common_done">पूर्ण</string>
     <string name="version_info">संस्करण %s</string>
     <string name="oui_action_mode_n_selected">%d चयनित</string>
+    <string name="oui_common_disable">अक्षम करें</string>
     <string name="cant_check_for_updates_phone">अपडेट्स नहीं जांच सकते हैं। आपके फोन का नेटवर्क कनेक्शन स्थिर नहीं है।</string>
+    <string name="oui_common_add">जोड़ें</string>
     <string name="latest_version">नवीनतम संस्करण पहले से स्थापित है।</string>
     <string name="cant_check_for_updates_tablet">अपडेट्स नहीं जांच सकते हैं। आपके टैबलेट का नेटवर्क कनेक्शन स्थिर नहीं है।</string>
+    <string name="oui_time_dialog_start">प्रारंभ</string>
     <string name="app_info">एप जानकारी</string>
+    <string name="oui_common_continue">जारी रखें</string>
+    <string name="oui_common_button_yes">हाँ</string>
     <string name="oui_action_mode_all_checkbox">सभी</string>
     <string name="retry">पुनः प्रयास</string>
 </resources>

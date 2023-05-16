@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">キャンセル</string>
+    <string name="oui_common_edit">編集</string>
     <string name="oui_new_badge_text">新</string>
     <string name="new_version_is_available">新しいバージョンが利用可能です。</string>
+    <string name="oui_common_apply">適用</string>
     <string name="oui_action_mode_select_items">アイテムを選択</string>
+    <string name="oui_time_dialog_end">終了</string>
     <string name="oui_relative_description">他の機能をお探しですか？</string>
     <string name="oui_navigation_drawer">ナビゲーションドロワー</string>
     <string name="update">更新</string>
+    <string name="oui_common_done">完了</string>
     <string name="version_info">バージョン%s</string>
     <string name="oui_action_mode_n_selected">%d件選択</string>
+    <string name="oui_common_disable">無効</string>
     <string name="cant_check_for_updates_phone">更新を確認できません。端末のネットワーク接続が不安定です。</string>
+    <string name="oui_common_add">追加</string>
     <string name="latest_version">最新バージョンは既にインストールされています。</string>
     <string name="cant_check_for_updates_tablet">更新を確認できません。タブレットのネットワーク接続が不安定です。</string>
+    <string name="oui_time_dialog_start">開始</string>
     <string name="app_info">アプリ情報</string>
+    <string name="oui_common_continue">続行</string>
+    <string name="oui_common_button_yes">はい</string>
     <string name="oui_action_mode_all_checkbox">全て</string>
     <string name="retry">再試行</string>
 </resources>

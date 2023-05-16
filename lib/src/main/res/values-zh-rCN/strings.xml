@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">取消</string>
+    <string name="oui_common_edit">编辑</string>
     <string name="oui_new_badge_text">新</string>
     <string name="new_version_is_available">新版本可用。</string>
+    <string name="oui_common_apply">应用</string>
     <string name="oui_action_mode_select_items">选择项目</string>
+    <string name="oui_time_dialog_end">结束</string>
     <string name="oui_relative_description">在查找其他功能吗？</string>
     <string name="oui_navigation_drawer">抽屉导航</string>
     <string name="update">更新</string>
+    <string name="oui_common_done">完成</string>
     <string name="version_info">版本%1$s</string>
     <string name="oui_action_mode_n_selected">已选中 %d 个</string>
+    <string name="oui_common_disable">禁用</string>
     <string name="cant_check_for_updates_phone">您手机的网络连接不稳定，无法检查更新。</string>
+    <string name="oui_common_add">添加</string>
     <string name="latest_version">已安装最新版本。</string>
     <string name="cant_check_for_updates_tablet">您平板电脑的网络连接不稳定，无法检查更新。</string>
+    <string name="oui_time_dialog_start">开始</string>
     <string name="app_info">应用程序信息</string>
+    <string name="oui_common_continue">继续</string>
+    <string name="oui_common_button_yes">是</string>
     <string name="oui_action_mode_all_checkbox">全部</string>
     <string name="retry">重试</string>
 </resources>

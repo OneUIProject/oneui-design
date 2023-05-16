@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="oui_common_cancel">বাতিল</string>
+    <string name="oui_common_edit">সম্পাদনা কৰক</string>
     <string name="oui_new_badge_text">ন</string>
     <string name="new_version_is_available">এটা নতুন সংস্কৰণ উপলভ্য৷</string>
+    <string name="oui_common_apply">প্ৰয়োগ কৰক</string>
     <string name="oui_action_mode_select_items">আইটেমসমূহ চয়ন কৰক</string>
+    <string name="oui_time_dialog_end">সমাপ্ত</string>
     <string name="oui_relative_description">অন্য কিবা চাই আছে নেকি?</string>
     <string name="oui_navigation_drawer">নেভিগেশ্বন ড্ৰৱাৰ</string>
     <string name="update">আপডেট</string>
+    <string name="oui_common_done">সম্পন্ন</string>
     <string name="version_info">সংস্কৰণ %s</string>
     <string name="oui_action_mode_n_selected">%d টা চয়নিত</string>
+    <string name="oui_common_disable">অক্ষম</string>
     <string name="cant_check_for_updates_phone">আপডেটসমূহৰ বাবে পৰীক্ষা কৰিব নোৱাৰে। আপোনাৰ ফোনৰ নেটৱৰ্ক সংযোগ স্থিৰ নহয়।</string>
+    <string name="oui_common_add">যোগ কৰক</string>
     <string name="latest_version">শেহতীয়া সংস্কৰণ ইতিমধ্যে ইনষ্টল হৈছে৷</string>
     <string name="cant_check_for_updates_tablet">আপডেটসমূহৰ বাবে পৰীক্ষা কৰিব নোৱাৰে। আপোনাৰ টেবলেটৰ নেটৱৰ্ক সংযোগ স্থিৰ নহয়।</string>
+    <string name="oui_time_dialog_start">আৰম্ভ</string>
     <string name="app_info">এপ্প্‌ তথ্য</string>
+    <string name="oui_common_continue">জাৰী ৰাখক</string>
+    <string name="oui_common_button_yes">হয়</string>
     <string name="oui_action_mode_all_checkbox">সকলো</string>
     <string name="retry">পুনঃচেষ্টা</string>
 </resources>
