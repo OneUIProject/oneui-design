@@ -755,6 +755,8 @@ public class ToolbarLayout extends LinearLayout {
      * @see #setActionModeCheckboxListener(CompoundButton.OnCheckedChangeListener)
      * @see #setActionModeBottomMenu(int)
      * @see #setActionModeBottomMenuListener(NavigationBarView.OnItemSelectedListener)
+     * @see #setActionModeMenu(int)
+     * @see #setActionModeMenuListener(Toolbar.OnMenuItemClickListener) (int)
      */
     public void showActionMode() {
         mIsActionMode = true;
@@ -824,6 +826,24 @@ public class ToolbarLayout extends LinearLayout {
         mBottomActionModeBar.setOnItemSelectedListener(listener);
     }
 
+
+
+    /**
+     * Set the menu resource for the ActionMode's {@link Toolbar}.
+     */
+    public void setActionModeMenu(@MenuRes int menuRes) {
+        mActionModeToolbar.inflateMenu(menuRes);
+    }
+
+
+    /**
+     * Set the listener for the ActionMode's {@link Toolbar}.
+     */
+    public void setActionModeMenuListener(Toolbar.OnMenuItemClickListener listener) {
+        mActionModeToolbar.setOnMenuItemClickListener(listener);
+    }
+    
+    
     /**
      * Set the ActionMode's count. This will change the count in the Toolbar's title
      * and if count = total, the 'All' Checkbox will be checked.
