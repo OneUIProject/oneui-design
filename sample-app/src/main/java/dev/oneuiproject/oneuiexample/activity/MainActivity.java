@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void initDrawer() {
-        mBinding.drawerLayout.setDrawerButtonIcon(getDrawable(R.drawable.ic_oui_ab_app_info));
+        mBinding.drawerLayout.setDrawerButtonIcon(getDrawable(R.drawable.ic_oui_info_outline));
         mBinding.drawerLayout.setDrawerButtonTooltip("About page");
         mBinding.drawerLayout.setDrawerButtonOnClickListener(v ->
                 ActivityUtils.startPopOverActivity(this,

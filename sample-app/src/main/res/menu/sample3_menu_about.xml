@@ -6,7 +6,7 @@
 
     <item
         android:id="@+id/menu_app_info"
-        android:icon="@drawable/ic_oui_ab_app_info"
+        android:icon="@drawable/ic_oui_info_outline"
         android:title="@string/app_info"
         app:showAsAction="always" />
 
