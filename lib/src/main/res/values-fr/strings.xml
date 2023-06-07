@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Annuler</string>
-    <string name="oui_common_edit">Modifier</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">Une nouvelle version est disponible.</string>
-    <string name="oui_common_apply">Appliquer</string>
     <string name="oui_action_mode_select_items">Sélectionner éléments</string>
-    <string name="oui_time_dialog_end">Fin</string>
     <string name="oui_relative_description">Vous recherchez autre chose ?</string>
-    <string name="oui_navigation_drawer">Tiroir de navigation</string>
     <string name="update">Mettre à jour</string>
-    <string name="oui_common_done">Effectué</string>
-    <string name="version_info">Version %s</string>
-    <string name="oui_action_mode_n_selected">Sélection : %d</string>
-    <string name="oui_common_disable">Désactiver</string>
+    <string name="oui_common_edit">Modifier</string>
+    <string name="oui_common_apply">Appliquer</string>
+    <string name="oui_common_close">Fermer</string>
     <string name="cant_check_for_updates_phone">"Impossible de rechercher les mises à jour. La connexion réseau de votre téléphone n'est pas stable."</string>
-    <string name="oui_common_add">Ajouter</string>
     <string name="latest_version">La dernière version est déjà installée.</string>
     <string name="cant_check_for_updates_tablet">"Impossible de rechercher les mises à jour. La connexion réseau de votre tablette n'est pas stable."</string>
     <string name="oui_time_dialog_start">Début</string>
     <string name="app_info">"Informations sur l'application"</string>
-    <string name="oui_common_continue">Continuer</string>
-    <string name="oui_common_button_yes">Oui</string>
-    <string name="oui_action_mode_all_checkbox">Tout</string>
     <string name="retry">Réessayer</string>
+    <string name="oui_common_cancel">Annuler</string>
+    <string name="oui_common_continue">Continuer</string>
+    <string name="oui_time_dialog_end">Fin</string>
+    <string name="oui_navigation_drawer">Tiroir de navigation</string>
+    <string name="version_info">Version %s</string>
+    <string name="oui_action_mode_n_selected">Sélection : %d</string>
+    <string name="oui_common_add">Ajouter</string>
+    <string name="oui_common_done">Effectué</string>
+    <string name="oui_common_button_yes">Oui</string>
+    <string name="oui_common_disable">Désactiver</string>
+    <string name="sem_tip_popup_hint_string">Appuyez deux fois sur cette touche pour en savoir plus.</string>
+    <string name="oui_action_mode_all_checkbox">Tout</string>
 </resources>

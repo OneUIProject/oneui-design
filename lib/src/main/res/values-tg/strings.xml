@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Бекор кардан</string>
-    <string name="oui_common_edit">Таҳрир</string>
     <string name="oui_new_badge_text">Н</string>
     <string name="new_version_is_available">Версияи нав дастрас аст</string>
-    <string name="oui_common_apply">Татбиқ кардан</string>
     <string name="oui_action_mode_select_items">Интихоби ҷузъҳо</string>
-    <string name="oui_time_dialog_end">Охир</string>
     <string name="oui_relative_description">Чизи дигар меҷӯед?</string>
-    <string name="oui_navigation_drawer">Панели паймоиш</string>
     <string name="update">Навсозӣ</string>
-    <string name="oui_common_done">Иҷро шуд</string>
-    <string name="version_info">Версияи %s</string>
-    <string name="oui_action_mode_n_selected">%d интихоб шудаанд</string>
-    <string name="oui_common_disable">Ғайрифаъол</string>
+    <string name="oui_common_edit">Таҳрир</string>
+    <string name="oui_common_apply">Татбиқ кардан</string>
+    <string name="oui_common_close">Пӯшидан</string>
     <string name="cant_check_for_updates_phone">Тафтиши навсозиҳо ғайриимкон аст. Пайвасти шабакавии телефони шумо ноустувор аст.</string>
-    <string name="oui_common_add">Илова кардан</string>
     <string name="latest_version">Версияи охирин аллакай насб шудааст.</string>
     <string name="cant_check_for_updates_tablet">Тафтиши навсозиҳо ғайриимкон аст. Пайвасти шабакавии планшети шумо ноустувор аст.</string>
     <string name="oui_time_dialog_start">Оғоз</string>
     <string name="app_info">Маълумот оиди барнома</string>
-    <string name="oui_common_continue">Давом додан</string>
-    <string name="oui_common_button_yes">Ҳа</string>
-    <string name="oui_action_mode_all_checkbox">Ҳама</string>
     <string name="retry">Кӯшиши дуб-а</string>
+    <string name="oui_common_cancel">Бекор кардан</string>
+    <string name="oui_common_continue">Давом додан</string>
+    <string name="oui_time_dialog_end">Охир</string>
+    <string name="oui_navigation_drawer">Панели паймоиш</string>
+    <string name="version_info">Версияи %s</string>
+    <string name="oui_action_mode_n_selected">%d интихоб шудаанд</string>
+    <string name="oui_common_add">Илова кардан</string>
+    <string name="oui_common_done">Иҷро шуд</string>
+    <string name="oui_common_button_yes">Ҳа</string>
+    <string name="oui_common_disable">Ғайрифаъол</string>
+    <string name="sem_tip_popup_hint_string">Барои маълумоти бештар гирифтан, ин тугмаро ду бор зарба занед.</string>
+    <string name="oui_action_mode_all_checkbox">Ҳама</string>
 </resources>

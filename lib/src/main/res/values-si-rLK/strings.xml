@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">අවලංගු කරන්න</string>
-    <string name="oui_common_edit">සංස්කරණය කරන්න</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">නව අනුවාදයක් තිබේ.</string>
-    <string name="oui_common_apply">යොදන්න</string>
     <string name="oui_action_mode_select_items">අයිතම තෝරන්න</string>
-    <string name="oui_time_dialog_end">අවසානය</string>
     <string name="oui_relative_description">වෙන දෙයක් සඳහා සොයන්නේ ද?</string>
-    <string name="oui_navigation_drawer">සංචාලන ලාච්චුව</string>
     <string name="update">යාවත්කාලය</string>
-    <string name="oui_common_done">නිමයි</string>
-    <string name="version_info">%s අනුවාදය</string>
-    <string name="oui_action_mode_n_selected">%d ක් තෝරා ඇත</string>
-    <string name="oui_common_disable">අබල කරන්න</string>
+    <string name="oui_common_edit">සංස්කරණය කරන්න</string>
+    <string name="oui_common_apply">යොදන්න</string>
+    <string name="oui_common_close">වසන්න</string>
     <string name="cant_check_for_updates_phone">යාවත්කාල සඳහා පිරික්සිය නොහැක. ඔබේ දුරකථනයේ ජාල සබැඳුම ස්ථාවර නොවේ.</string>
-    <string name="oui_common_add">එක් කරන්න</string>
     <string name="latest_version">නවතම අනුවාදය දැනටමත් ස්ථාපිතයි.</string>
     <string name="cant_check_for_updates_tablet">යාවත්කාල සඳහා පිරික්සිය නොහැක. ඔබේ ටැබ්ලටයේ ජාල සබැඳුම ස්ථාවර නොවේ.</string>
     <string name="oui_time_dialog_start">ආරම්භය</string>
     <string name="app_info">යෙදුම් තතු</string>
-    <string name="oui_common_continue">පවත්වාගෙන යන්න</string>
-    <string name="oui_common_button_yes">ඔව්</string>
-    <string name="oui_action_mode_all_checkbox">සියල්ල</string>
     <string name="retry">යළි උත්. ක.</string>
+    <string name="oui_common_cancel">අවලංගු කරන්න</string>
+    <string name="oui_common_continue">පවත්වාගෙන යන්න</string>
+    <string name="oui_time_dialog_end">අවසානය</string>
+    <string name="oui_navigation_drawer">සංචාලන ලාච්චුව</string>
+    <string name="version_info">%s අනුවාදය</string>
+    <string name="oui_action_mode_n_selected">%d ක් තෝරා ඇත</string>
+    <string name="oui_common_add">එක් කරන්න</string>
+    <string name="oui_common_done">නිමයි</string>
+    <string name="oui_common_button_yes">ඔව්</string>
+    <string name="oui_common_disable">අබල කරන්න</string>
+    <string name="sem_tip_popup_hint_string">වැඩිදුර දැන ගැනීමට මෙම බොත්තම දෙවරක් තට්ටු කරන්න.</string>
+    <string name="oui_action_mode_all_checkbox">සියල්ල</string>
 </resources>

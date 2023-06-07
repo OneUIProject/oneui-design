@@ -107,4 +107,27 @@
         <item name="android:singleLine">true</item>
     </style>
 
+    <!-- TipPopup -->
+    <style name="OneUI.TipPopupButtonStyle" parent="@android:style/Widget">
+        <item name="android:textAppearance">@style/OneUI.TipPopupButtonTextStyle</item>
+        <item name="android:background">@drawable/sem_tip_popup_btn_borderless</item>
+        <item name="android:minWidth">@dimen/sem_tip_popup_balloon_button_minwidth</item>
+        <item name="android:minHeight">@dimen/sem_tip_popup_balloon_button_minheight</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="OneUI.TipPopupButtonTextStyle" parent="@android:style/Widget">
+        <item name="android:textSize">@dimen/sem_tip_popup_balloon_action_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/sem_tip_popup_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sec-medium</item>
+    </style>
+
+    <style name="OneUI.TipPopupTextStyle" parent="@android:style/Widget">
+        <item name="android:textSize">@dimen/sem_tip_popup_balloon_message_text_size</item>
+        <item name="android:textColor">@color/sem_tip_popup_text_color</item>
+        <item name="android:fontFamily">sec</item>
+    </style>
+
 </resources>

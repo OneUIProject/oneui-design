@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">रद्द गर्नुहोस्</string>
-    <string name="oui_common_edit">सम्‍पादन</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">नयाँ संस्करण उपलब्ध छ।</string>
-    <string name="oui_common_apply">लागू गर्नुहोस्</string>
     <string name="oui_action_mode_select_items">वस्तुहरू चयन गर्नु</string>
-    <string name="oui_time_dialog_end">समाप्त</string>
     <string name="oui_relative_description">अरू केही खोज्दै हुनुहुन्छ?</string>
-    <string name="oui_navigation_drawer">नेभिगेशन ड्रअर</string>
     <string name="update">अपडेट गर्नुहोस्</string>
-    <string name="oui_common_done">भयो</string>
-    <string name="version_info">संस्करण %s</string>
-    <string name="oui_action_mode_n_selected">%d चयन गरिएको छ</string>
-    <string name="oui_common_disable">असक्षम छ</string>
+    <string name="oui_common_edit">सम्‍पादन</string>
+    <string name="oui_common_apply">लागू गर्नुहोस्</string>
+    <string name="oui_common_close">बन्द गर्नुहोस्</string>
     <string name="cant_check_for_updates_phone">अपडेटहरूको जाँच गर्न सकिँदैन। तपाईको फोनको नेटवर्क जडान स्थिर छैन।</string>
-    <string name="oui_common_add">जोड्नुहोस्</string>
     <string name="latest_version">सबैभन्दा नयाँ संस्करण पहिले नै स्थापित छ।</string>
     <string name="cant_check_for_updates_tablet">अपडेटहरूको जाँच गर्न सकिँदैन। तपाईको ट्याबलेटको नेटवर्क जडान स्थिर छैन।</string>
     <string name="oui_time_dialog_start">सुरू</string>
     <string name="app_info">एप बारे जानकारी</string>
-    <string name="oui_common_continue">जारी राख्नु</string>
-    <string name="oui_common_button_yes">हो</string>
-    <string name="oui_action_mode_all_checkbox">सबै</string>
     <string name="retry">पुनः प्रयास</string>
+    <string name="oui_common_cancel">रद्द गर्नुहोस्</string>
+    <string name="oui_common_continue">जारी राख्नु</string>
+    <string name="oui_time_dialog_end">समाप्त</string>
+    <string name="oui_navigation_drawer">नेभिगेशन ड्रअर</string>
+    <string name="version_info">संस्करण %s</string>
+    <string name="oui_action_mode_n_selected">%d चयन गरिएको छ</string>
+    <string name="oui_common_add">जोड्नुहोस्</string>
+    <string name="oui_common_done">भयो</string>
+    <string name="oui_common_button_yes">हो</string>
+    <string name="oui_common_disable">असक्षम छ</string>
+    <string name="sem_tip_popup_hint_string">थप जान्न यस बटनमा दुई पटक ट्याप गर्नुहोस्।</string>
+    <string name="oui_action_mode_all_checkbox">सबै</string>
 </resources>

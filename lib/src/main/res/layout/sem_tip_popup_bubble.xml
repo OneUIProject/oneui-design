@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/sem_tip_popup_bubble_bg"
+        android:layout_width="@dimen/sem_tip_popup_bubble_width"
+        android:layout_height="@dimen/sem_tip_popup_bubble_height"
+        android:layout_gravity="start|top"
+        android:src="@drawable/sem_tip_popup_hint_background_01"
+        android:tint="@color/sem_tip_popup_background_color" />
+
+    <ImageView
+        android:id="@+id/sem_tip_popup_bubble_icon"
+        android:layout_width="@dimen/sem_tip_popup_bubble_width"
+        android:layout_height="@dimen/sem_tip_popup_bubble_height"
+        android:layout_gravity="start|top"
+        android:contentDescription="@string/sem_tip_popup_hint_string"
+        android:src="@drawable/sem_tip_popup_hint_icon"
+        android:tint="@color/sem_tip_popup_text_color" />
+</FrameLayout>

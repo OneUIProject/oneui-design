@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Anulare</string>
-    <string name="oui_common_edit">Editare</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">Este disponibilă o versiune nouă.</string>
-    <string name="oui_common_apply">Aplicare</string>
     <string name="oui_action_mode_select_items">Selectare elemente</string>
-    <string name="oui_time_dialog_end">Final</string>
     <string name="oui_relative_description">Căutați altceva?</string>
-    <string name="oui_navigation_drawer">Panou de navigare</string>
     <string name="update">Actualizare</string>
-    <string name="oui_common_done">Efectuat</string>
-    <string name="version_info">Versiunea %s</string>
-    <string name="oui_action_mode_n_selected">%d selectate</string>
-    <string name="oui_common_disable">Dezactiv.</string>
+    <string name="oui_common_edit">Editare</string>
+    <string name="oui_common_apply">Aplicare</string>
+    <string name="oui_common_close">Închidere</string>
     <string name="cant_check_for_updates_phone">Nu se pot căuta actualizări. Conexiunea la rețea a telefonului dvs. nu este stabilă.</string>
-    <string name="oui_common_add">Adăugare</string>
     <string name="latest_version">Cea mai recentă versiune este deja instalată.</string>
     <string name="cant_check_for_updates_tablet">Nu se pot căuta actualizări. Conexiunea la rețea a tabletei dvs. nu este stabilă.</string>
     <string name="oui_time_dialog_start">Începe</string>
     <string name="app_info">Informații despre aplicație</string>
-    <string name="oui_common_continue">Continuare</string>
-    <string name="oui_common_button_yes">Da</string>
-    <string name="oui_action_mode_all_checkbox">Toate</string>
     <string name="retry">Reîncercare</string>
+    <string name="oui_common_cancel">Anulare</string>
+    <string name="oui_common_continue">Continuare</string>
+    <string name="oui_time_dialog_end">Final</string>
+    <string name="oui_navigation_drawer">Panou de navigare</string>
+    <string name="version_info">Versiunea %s</string>
+    <string name="oui_action_mode_n_selected">%d selectate</string>
+    <string name="oui_common_add">Adăugare</string>
+    <string name="oui_common_done">Efectuat</string>
+    <string name="oui_common_button_yes">Da</string>
+    <string name="oui_common_disable">Dezactiv.</string>
+    <string name="sem_tip_popup_hint_string">Atingeți de două ori acest buton pentru a afla mai multe.</string>
+    <string name="oui_action_mode_all_checkbox">Toate</string>
 </resources>

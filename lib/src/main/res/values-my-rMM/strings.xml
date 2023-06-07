@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">ပယ်ဖျက်ပါ</string>
-    <string name="oui_common_edit">တည်းဖြတ်</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">ဗားရှင်း အသစ်တစ်ခု ရနိုင်သည်။</string>
-    <string name="oui_common_apply">သုံးပါ</string>
     <string name="oui_action_mode_select_items">အရာများကို ရွေးချယ်ပါ</string>
-    <string name="oui_time_dialog_end">ပြီးဆုံး</string>
     <string name="oui_relative_description">အလိုရှိသည်ကို ရှာဖွေနေပါသလား?</string>
-    <string name="oui_navigation_drawer">ရှာဖွေကြည့်ရှုသည့် အံဆွဲ</string>
     <string name="update">အပ်ဒိတ်</string>
-    <string name="oui_common_done">ပြီးပါပြီ</string>
-    <string name="version_info">ပုံစံ %s</string>
-    <string name="oui_action_mode_n_selected">%d ကို ရွေးထားပါသည်</string>
-    <string name="oui_common_disable">ပိတ်ထားပါ</string>
+    <string name="oui_common_edit">တည်းဖြတ်</string>
+    <string name="oui_common_apply">သုံးပါ</string>
+    <string name="oui_common_close">ပိတ်ပါ</string>
     <string name="cant_check_for_updates_phone">အပ်ဒိတ်များကို စစ်ဆေး၍မရပါ။ သင့်ဖုန်း၏ ကွန်ရက်ချိတ်ဆက်မှုက မတည်ငြိမ်ပါ။</string>
-    <string name="oui_common_add">ထည့်ပါ</string>
     <string name="latest_version">နောက်ဆုံးပေါ်ဗားရှင်းကို ထည့်သွင်းထားပြီးဖြစ်သည်။</string>
     <string name="cant_check_for_updates_tablet">အပ်ဒိတ်များကို စစ်ဆေး၍မရပါ။ သင့်တက်ဘလက်၏ ကွန်ရက်ချိတ်ဆက်မှုက မတည်ငြိမ်ပါ။</string>
     <string name="oui_time_dialog_start">စတင်</string>
     <string name="app_info">အက်ပ် အချက်အလက်</string>
-    <string name="oui_common_continue">ဆက်လုပ်ပါ</string>
-    <string name="oui_common_button_yes">ဟုတ်ကဲ့</string>
-    <string name="oui_action_mode_all_checkbox">အားလုံး</string>
     <string name="retry">ပြန်ကြိုးစားပါ</string>
+    <string name="oui_common_cancel">ပယ်ဖျက်ပါ</string>
+    <string name="oui_common_continue">ဆက်လုပ်ပါ</string>
+    <string name="oui_time_dialog_end">ပြီးဆုံး</string>
+    <string name="oui_navigation_drawer">ရှာဖွေကြည့်ရှုသည့် အံဆွဲ</string>
+    <string name="version_info">ပုံစံ %s</string>
+    <string name="oui_action_mode_n_selected">%d ကို ရွေးထားပါသည်</string>
+    <string name="oui_common_add">ထည့်ပါ</string>
+    <string name="oui_common_done">ပြီးပါပြီ</string>
+    <string name="oui_common_button_yes">ဟုတ်ကဲ့</string>
+    <string name="oui_common_disable">ပိတ်ထားပါ</string>
+    <string name="sem_tip_popup_hint_string">နောက်ထပ်လေ့လာရန် ဤခလုတ်ကို နှစ်ချက်နှိပ်ပါ။</string>
+    <string name="oui_action_mode_all_checkbox">အားလုံး</string>
 </resources>

@@ -61,4 +61,9 @@
     <!-- HorizontalRadioPreference -->
     <color name="oui_horizontalradiopref_text_unselected_color">#ff858585</color>
 
+    <!-- TipPopup -->
+    <color name="sem_tip_popup_background_color">#ff474747</color>
+    <color name="sem_tip_popup_text_color">#fffafafa</color>
+    <color name="sem_tip_popup_text_color_translucent">#fffafafa</color>
+
 </resources>

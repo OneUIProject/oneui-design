@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Pociep</string>
-    <string name="oui_common_edit">Poprŏw</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">Nowŏ wersyjŏ je dostympnŏ.</string>
-    <string name="oui_common_apply">Użij</string>
     <string name="oui_action_mode_select_items">Ôbier elymynty</string>
-    <string name="oui_time_dialog_end">Kōniec</string>
     <string name="oui_relative_description">Sznupiesz cosik inkszego?</string>
-    <string name="oui_navigation_drawer">Sfijane menu nawigacyji</string>
     <string name="update">Aktualizuj</string>
-    <string name="oui_common_done">Fertich</string>
-    <string name="version_info">Wersyjŏ %s</string>
-    <string name="oui_action_mode_n_selected">%d ôbrane</string>
-    <string name="oui_common_disable">Wyłōncz</string>
+    <string name="oui_common_edit">Poprŏw</string>
+    <string name="oui_common_apply">Użij</string>
+    <string name="oui_common_close">Zawrzij</string>
     <string name="cant_check_for_updates_phone">Niy idzie wybadać uaktualniynio. Zepniyńcie bez nec mobilniŏka niyma sztabilne.</string>
-    <string name="oui_common_add">Przidej</string>
     <string name="latest_version">Nojnowszo wersyjo je już zainsztalowano.</string>
     <string name="cant_check_for_updates_tablet">Niy idzie wybadać uaktualniynio. Zepniyńcie bez nec tabletu niyma sztabilne.</string>
     <string name="oui_time_dialog_start">Pocz.</string>
     <string name="app_info">Informacyje ô aplikacyji</string>
-    <string name="oui_common_continue">Kōntynuuj</string>
-    <string name="oui_common_button_yes">Ja</string>
-    <string name="oui_action_mode_all_checkbox">Wszyjske</string>
     <string name="retry">Dej zajś</string>
+    <string name="oui_common_cancel">Pociep</string>
+    <string name="oui_common_continue">Kōntynuuj</string>
+    <string name="oui_time_dialog_end">Kōniec</string>
+    <string name="oui_navigation_drawer">Sfijane menu nawigacyji</string>
+    <string name="version_info">Wersyjŏ %s</string>
+    <string name="oui_action_mode_n_selected">%d ôbrane</string>
+    <string name="oui_common_add">Przidej</string>
+    <string name="oui_common_done">Fertich</string>
+    <string name="oui_common_button_yes">Ja</string>
+    <string name="oui_common_disable">Wyłōncz</string>
+    <string name="sem_tip_popup_hint_string">Tyknij dwa razy tyn knefel, coby wywiedzieć sie wiyncyj.</string>
+    <string name="oui_action_mode_all_checkbox">Wszyjske</string>
 </resources>

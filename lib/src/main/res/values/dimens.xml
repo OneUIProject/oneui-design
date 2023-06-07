@@ -44,4 +44,25 @@
     <dimen name="oui_horizontalradiopref_padding_top">18.0dip</dimen>
     <dimen name="oui_horizontalradiopref_padding_bottom">14.0dip</dimen>
 
+    <!-- TipPopup -->
+    <dimen name="sem_tip_popup_balloon_action_text_size">15sp</dimen>
+    <dimen name="sem_tip_popup_balloon_arrow_height">12dp</dimen>
+    <dimen name="sem_tip_popup_balloon_arrow_width">16dp</dimen>
+    <dimen name="sem_tip_popup_balloon_background_minwidth">24dp</dimen>
+    <dimen name="sem_tip_popup_balloon_button_minheight">36dp</dimen>
+    <dimen name="sem_tip_popup_balloon_button_minwidth">0dp</dimen>
+    <dimen name="sem_tip_popup_balloon_message_margin_horizontal">18dp</dimen>
+    <dimen name="sem_tip_popup_balloon_message_margin_vertical">16dp</dimen>
+    <dimen name="sem_tip_popup_balloon_message_text_size">15sp</dimen>
+    <dimen name="sem_tip_popup_bubble_height">31dp</dimen>
+    <dimen name="sem_tip_popup_bubble_height_translucent">31dp</dimen>
+    <dimen name="sem_tip_popup_bubble_width">31dp</dimen>
+    <dimen name="sem_tip_popup_bubble_width_translucent">31dp</dimen>
+    <dimen name="sem_tip_popup_button_inset_horizontal">0dp</dimen>
+    <dimen name="sem_tip_popup_button_inset_vertical">0dp</dimen>
+    <dimen name="sem_tip_popup_button_padding_horizontal">9dp</dimen>
+    <dimen name="sem_tip_popup_button_padding_vertical">8dp</dimen>
+    <dimen name="sem_tip_popup_scale_margin">10dp</dimen>
+    <dimen name="sem_tip_popup_side_margin">10dp</dimen>
+
 </resources>

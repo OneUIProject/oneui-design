@@ -37,5 +37,9 @@
     <string name="oui_common_disable">Disable</string>
     <string name="oui_common_done">Done</string>
     <string name="oui_common_edit">Edit</string>
+    <string name="oui_common_close">Close</string>
+
+    <!-- TipPopup -->
+    <string name="sem_tip_popup_hint_string">Double tap this button to learn more.</string>
 
 </resources>

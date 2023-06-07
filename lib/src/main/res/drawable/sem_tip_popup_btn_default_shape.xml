@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="@dimen/sem_tip_popup_button_inset_horizontal"
+    android:insetTop="@dimen/sem_tip_popup_button_inset_vertical"
+    android:insetRight="@dimen/sem_tip_popup_button_inset_horizontal"
+    android:insetBottom="@dimen/sem_tip_popup_button_inset_vertical">
+    <shape
+        android:shape="rectangle"
+        android:tint="?colorButtonNormal">
+        <corners android:radius="@dimen/sesl_button_corner_radius" />
+        <solid android:color="@android:color/white" />
+        <padding
+            android:bottom="@dimen/sem_tip_popup_button_padding_vertical"
+            android:left="@dimen/sem_tip_popup_button_padding_horizontal"
+            android:right="@dimen/sem_tip_popup_button_padding_horizontal"
+            android:top="@dimen/sem_tip_popup_button_padding_vertical" />
+    </shape>
+</inset>

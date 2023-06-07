@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Thoát</string>
-    <string name="oui_common_edit">Sửa</string>
     <string name="oui_new_badge_text">M</string>
     <string name="new_version_is_available">Đã có phiên bản mới.</string>
-    <string name="oui_common_apply">Áp dụng</string>
     <string name="oui_action_mode_select_items">Chọn mục</string>
-    <string name="oui_time_dialog_end">K.thúc</string>
     <string name="oui_relative_description">Bạn đang tìm kiếm điều gì khác?</string>
-    <string name="oui_navigation_drawer">Ngăn kéo điều hướng</string>
     <string name="update">Cập nhật</string>
-    <string name="oui_common_done">Hoàn tất</string>
-    <string name="version_info">Phiên bản %s</string>
-    <string name="oui_action_mode_n_selected">Đã chọn %d</string>
-    <string name="oui_common_disable">Tắt</string>
+    <string name="oui_common_edit">Sửa</string>
+    <string name="oui_common_apply">Áp dụng</string>
+    <string name="oui_common_close">Đóng</string>
     <string name="cant_check_for_updates_phone">Không thể kiểm tra các bản cập nhật. Kết nối mạng trên điện thoại của bạn không ổn định.</string>
-    <string name="oui_common_add">Thêm</string>
     <string name="latest_version">Phiên bản mới nhất đã được cài đặt.</string>
     <string name="cant_check_for_updates_tablet">Không thể kiểm tra các bản cập nhật. Kết nối mạng trên máy tính bảng của bạn không ổn định.</string>
     <string name="oui_time_dialog_start">B.đầu</string>
     <string name="app_info">Thông tin ứng dụng</string>
-    <string name="oui_common_continue">Tiếp tục</string>
-    <string name="oui_common_button_yes">OK</string>
-    <string name="oui_action_mode_all_checkbox">Tất cả</string>
     <string name="retry">Thử lại</string>
+    <string name="oui_common_cancel">Thoát</string>
+    <string name="oui_common_continue">Tiếp tục</string>
+    <string name="oui_time_dialog_end">K.thúc</string>
+    <string name="oui_navigation_drawer">Ngăn kéo điều hướng</string>
+    <string name="version_info">Phiên bản %s</string>
+    <string name="oui_action_mode_n_selected">Đã chọn %d</string>
+    <string name="oui_common_add">Thêm</string>
+    <string name="oui_common_done">Hoàn tất</string>
+    <string name="oui_common_button_yes">OK</string>
+    <string name="oui_common_disable">Tắt</string>
+    <string name="sem_tip_popup_hint_string">Chạm hai lần phím này để tìm hiểu thêm.</string>
+    <string name="oui_action_mode_all_checkbox">Tất cả</string>
 </resources>

@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">ביטול</string>
-    <string name="oui_common_edit">ערוך</string>
     <string name="oui_new_badge_text">ח</string>
     <string name="new_version_is_available">גרסה חדשה זמינה.</string>
-    <string name="oui_common_apply">החל</string>
     <string name="oui_action_mode_select_items">בחר פריטים</string>
-    <string name="oui_time_dialog_end">סיום</string>
     <string name="oui_relative_description">מחפש משהו אחר?</string>
-    <string name="oui_navigation_drawer">מגירת הניווט</string>
     <string name="update">עדכן</string>
-    <string name="oui_common_done">בצע</string>
-    <string name="version_info">גרסה %s</string>
-    <string name="oui_action_mode_n_selected">%d נבחרו</string>
-    <string name="oui_common_disable">השבת</string>
+    <string name="oui_common_edit">ערוך</string>
+    <string name="oui_common_apply">החל</string>
+    <string name="oui_common_close">סגור</string>
     <string name="cant_check_for_updates_phone">לא ניתן לבדוק זמינות עדכונים. החיבור של הטלפון לרשת אינו יציב.</string>
-    <string name="oui_common_add">הוספה</string>
     <string name="latest_version">הגרסה העדכנית ביותר כבר מותקנת.</string>
     <string name="cant_check_for_updates_tablet">לא ניתן לבדוק זמינות עדכונים.​ החיבור של הטאבלט לרשת אינו יציב.</string>
     <string name="oui_time_dialog_start">התחלה</string>
     <string name="app_info">פרטי יישום</string>
-    <string name="oui_common_continue">המשך</string>
-    <string name="oui_common_button_yes">כן</string>
-    <string name="oui_action_mode_all_checkbox">הכל</string>
     <string name="retry">נסה שוב</string>
+    <string name="oui_common_cancel">ביטול</string>
+    <string name="oui_common_continue">המשך</string>
+    <string name="oui_time_dialog_end">סיום</string>
+    <string name="oui_navigation_drawer">מגירת הניווט</string>
+    <string name="version_info">גרסה %s</string>
+    <string name="oui_action_mode_n_selected">%d נבחרו</string>
+    <string name="oui_common_add">הוספה</string>
+    <string name="oui_common_done">בצע</string>
+    <string name="oui_common_button_yes">כן</string>
+    <string name="oui_common_disable">השבת</string>
+    <string name="sem_tip_popup_hint_string">הקש הקשה כפולה על לחצן זה כדי לברר פרטים נוספים.</string>
+    <string name="oui_action_mode_all_checkbox">הכל</string>
 </resources>

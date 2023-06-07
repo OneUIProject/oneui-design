@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">ยกเลิก</string>
-    <string name="oui_common_edit">แก้ไข</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">เวอร์ชั่นใหม่พร้อมใช้งาน</string>
-    <string name="oui_common_apply">ใช้</string>
     <string name="oui_action_mode_select_items">เลือกรายการ</string>
-    <string name="oui_time_dialog_end">สิ้นสุด</string>
     <string name="oui_relative_description">กำลังมองหารายการอื่นอยู่หรือไม่?</string>
-    <string name="oui_navigation_drawer">ลิ้นชักการนำทาง</string>
     <string name="update">อัพ​เด​ท</string>
-    <string name="oui_common_done">เรียบร้อย</string>
-    <string name="version_info">เวอร์ชั่น %s</string>
-    <string name="oui_action_mode_n_selected">%d ถูกเลือกแล้ว</string>
-    <string name="oui_common_disable">ปิด​ใช้​งาน</string>
+    <string name="oui_common_edit">แก้ไข</string>
+    <string name="oui_common_apply">ใช้</string>
+    <string name="oui_common_close">ปิด</string>
     <string name="cant_check_for_updates_phone">ไม่สามารถตรวจหาอัพเดท การเชื่อมต่อเครือข่ายของโทรศัพท์ของคุณไม่เสถียร</string>
-    <string name="oui_common_add">เพิ่ม</string>
     <string name="latest_version">ติดตั้งเวอร์ชั่นล่าสุดอยู่แล้ว</string>
     <string name="cant_check_for_updates_tablet">ไม่สามารถตรวจหาอัพเดท การเชื่อมต่อเครือข่ายของแท็บเล็ตของคุณไม่เสถียร</string>
     <string name="oui_time_dialog_start">เริ่ม</string>
     <string name="app_info">ข้อมูลแอพ</string>
-    <string name="oui_common_continue">ดำเนิน​การ</string>
-    <string name="oui_common_button_yes">ใช่</string>
-    <string name="oui_action_mode_all_checkbox">ทั้งหมด</string>
     <string name="retry">ลอง​ใหม่</string>
+    <string name="oui_common_cancel">ยกเลิก</string>
+    <string name="oui_common_continue">ดำเนิน​การ</string>
+    <string name="oui_time_dialog_end">สิ้นสุด</string>
+    <string name="oui_navigation_drawer">ลิ้นชักการนำทาง</string>
+    <string name="version_info">เวอร์ชั่น %s</string>
+    <string name="oui_action_mode_n_selected">%d ถูกเลือกแล้ว</string>
+    <string name="oui_common_add">เพิ่ม</string>
+    <string name="oui_common_done">เรียบร้อย</string>
+    <string name="oui_common_button_yes">ใช่</string>
+    <string name="oui_common_disable">ปิด​ใช้​งาน</string>
+    <string name="sem_tip_popup_hint_string">แตะสองครั้งที่ปุ่มนี้เพื่อเรียนรู้เพิ่มเติม</string>
+    <string name="oui_action_mode_all_checkbox">ทั้งหมด</string>
 </resources>

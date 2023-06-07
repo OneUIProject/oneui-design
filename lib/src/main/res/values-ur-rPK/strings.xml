@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">منسوخ</string>
-    <string name="oui_common_edit">تدوین</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">نیا ورژن دستیاب ہے</string>
-    <string name="oui_common_apply">منطبق کریں</string>
     <string name="oui_action_mode_select_items">اشیاء منتخب کریں</string>
-    <string name="oui_time_dialog_end">اختتام</string>
     <string name="oui_relative_description">مزید کچھ تلاش کریں؟</string>
-    <string name="oui_navigation_drawer">نیویگیشن ڈراور</string>
     <string name="update">اپ ڈیٹ</string>
-    <string name="oui_common_done">مکمل</string>
-    <string name="version_info">ورژن %s</string>
-    <string name="oui_action_mode_n_selected">%d منتخب</string>
-    <string name="oui_common_disable">نااہل کریں</string>
+    <string name="oui_common_edit">تدوین</string>
+    <string name="oui_common_apply">منطبق کریں</string>
+    <string name="oui_common_close">بند کریں</string>
     <string name="cant_check_for_updates_phone">اپ ڈیٹس چیک نہیں کرسکتے ہیں۔ آپ کے فون کا نیٹ ورک کنیکشن مستحکم نہیں ہے۔</string>
-    <string name="oui_common_add">اضافہ</string>
     <string name="latest_version">تازہ ترین ورژن پہلے سے انسٹال ہے۔</string>
     <string name="cant_check_for_updates_tablet">اپ ڈیٹس چیک نہیں کرسکتے ہیں۔ آپ کے ٹیبلیٹ کا نیٹ ورک کنیکشن مستحکم نہیں ہے۔</string>
     <string name="oui_time_dialog_start">شروع</string>
     <string name="app_info">ایپلیکیشن کی معلومات</string>
-    <string name="oui_common_continue">جاری</string>
-    <string name="oui_common_button_yes">ہاں</string>
-    <string name="oui_action_mode_all_checkbox">تمام</string>
     <string name="retry">دوبارہ کوشش کریں</string>
+    <string name="oui_common_cancel">منسوخ</string>
+    <string name="oui_common_continue">جاری</string>
+    <string name="oui_time_dialog_end">اختتام</string>
+    <string name="oui_navigation_drawer">نیویگیشن ڈراور</string>
+    <string name="version_info">ورژن %s</string>
+    <string name="oui_action_mode_n_selected">%d منتخب</string>
+    <string name="oui_common_add">اضافہ</string>
+    <string name="oui_common_done">مکمل</string>
+    <string name="oui_common_button_yes">ہاں</string>
+    <string name="oui_common_disable">نااہل کریں</string>
+    <string name="sem_tip_popup_hint_string">مزید سیکھنے کے لیے اس بٹن کو دوہری تھپکی دیں۔</string>
+    <string name="oui_action_mode_all_checkbox">تمام</string>
 </resources>

@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Anulo</string>
-    <string name="oui_common_edit">Ndrysho</string>
     <string name="oui_new_badge_text">R</string>
     <string name="new_version_is_available">Ka një version të ri në dispozicion.</string>
-    <string name="oui_common_apply">Zbato</string>
     <string name="oui_action_mode_select_items">Përzgjidh artikuj</string>
-    <string name="oui_time_dialog_end">Mbaron</string>
     <string name="oui_relative_description">Po kërkon për ndonjë gjë tjetër?</string>
-    <string name="oui_navigation_drawer">Sirtari i navigimit</string>
     <string name="update">Përditëso</string>
-    <string name="oui_common_done">Kryer</string>
-    <string name="version_info">Versioni %s</string>
-    <string name="oui_action_mode_n_selected">%d përzgjedhur</string>
-    <string name="oui_common_disable">Çaktivizo</string>
+    <string name="oui_common_edit">Ndrysho</string>
+    <string name="oui_common_apply">Zbato</string>
+    <string name="oui_common_close">Mbyll</string>
     <string name="cant_check_for_updates_phone">S’mund të kontrolloj për përditësime. Lidhja e telefonit tënd me rrjetin nuk është e qëndrueshme.</string>
-    <string name="oui_common_add">Shtese</string>
     <string name="latest_version">Versioni më i fundit është instaluar tashmë.</string>
     <string name="cant_check_for_updates_tablet">S’mund të kontrolloj për përditësime. Lidhja e tabletës sate me rrjetin nuk është e qëndrueshme.</string>
     <string name="oui_time_dialog_start">Fillo</string>
     <string name="app_info">Info për app-et</string>
-    <string name="oui_common_continue">Vazhdo</string>
-    <string name="oui_common_button_yes">Po</string>
-    <string name="oui_action_mode_all_checkbox">Të gjitha</string>
     <string name="retry">Riprovo</string>
+    <string name="oui_common_cancel">Anulo</string>
+    <string name="oui_common_continue">Vazhdo</string>
+    <string name="oui_time_dialog_end">Mbaron</string>
+    <string name="oui_navigation_drawer">Sirtari i navigimit</string>
+    <string name="version_info">Versioni %s</string>
+    <string name="oui_action_mode_n_selected">%d përzgjedhur</string>
+    <string name="oui_common_add">Shtese</string>
+    <string name="oui_common_done">Kryer</string>
+    <string name="oui_common_button_yes">Po</string>
+    <string name="oui_common_disable">Çaktivizo</string>
+    <string name="sem_tip_popup_hint_string">Dy-trokit mbi këtë buton për të mësuar më shumë.</string>
+    <string name="oui_action_mode_all_checkbox">Të gjitha</string>
 </resources>

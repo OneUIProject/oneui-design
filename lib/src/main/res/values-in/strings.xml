@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Batalkan</string>
-    <string name="oui_common_edit">Ubah</string>
     <string name="oui_new_badge_text">B</string>
     <string name="new_version_is_available">Versi baru tersedia.</string>
-    <string name="oui_common_apply">Terapkan</string>
     <string name="oui_action_mode_select_items">Pilih item</string>
-    <string name="oui_time_dialog_end">Akhir</string>
     <string name="oui_relative_description">Mencari sesuatu yang lain?</string>
-    <string name="oui_navigation_drawer">Laci navigasi</string>
     <string name="update">Pembaruan</string>
-    <string name="oui_common_done">Selesai</string>
-    <string name="version_info">Versi %s</string>
-    <string name="oui_action_mode_n_selected">%d dipilih</string>
-    <string name="oui_common_disable">Tdk aktif</string>
+    <string name="oui_common_edit">Ubah</string>
+    <string name="oui_common_apply">Terapkan</string>
+    <string name="oui_common_close">Tutup</string>
     <string name="cant_check_for_updates_phone">Tidak dapat memeriksa pembaruan. Koneksi jaringan ponsel Anda tidak stabil.</string>
-    <string name="oui_common_add">Tambah</string>
     <string name="latest_version">Versi terbaru telah terinstal.</string>
     <string name="cant_check_for_updates_tablet">Tidak dapat memeriksa pembaruan. Koneksi jaringan tablet Anda tidak stabil.</string>
     <string name="oui_time_dialog_start">Mulai</string>
     <string name="app_info">Info aplikasi</string>
-    <string name="oui_common_continue">Lanjutkan</string>
-    <string name="oui_common_button_yes">Ya</string>
-    <string name="oui_action_mode_all_checkbox">Semua</string>
     <string name="retry">Coba lagi</string>
+    <string name="oui_common_cancel">Batalkan</string>
+    <string name="oui_common_continue">Lanjutkan</string>
+    <string name="oui_time_dialog_end">Akhir</string>
+    <string name="oui_navigation_drawer">Laci navigasi</string>
+    <string name="version_info">Versi %s</string>
+    <string name="oui_action_mode_n_selected">%d dipilih</string>
+    <string name="oui_common_add">Tambah</string>
+    <string name="oui_common_done">Selesai</string>
+    <string name="oui_common_button_yes">Ya</string>
+    <string name="oui_common_disable">Tdk aktif</string>
+    <string name="sem_tip_popup_hint_string">Ketuk ganda tombol ini untuk mempelajari lebih lanjut.</string>
+    <string name="oui_action_mode_all_checkbox">Semua</string>
 </resources>

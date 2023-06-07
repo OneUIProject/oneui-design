@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Отмена</string>
-    <string name="oui_common_edit">Изменить</string>
     <string name="oui_new_badge_text">Н</string>
     <string name="new_version_is_available">Доступна новая версия.</string>
-    <string name="oui_common_apply">Применить</string>
     <string name="oui_action_mode_select_items">Выберите элементы</string>
-    <string name="oui_time_dialog_end">Конец</string>
     <string name="oui_relative_description">Ищете что-то другое?</string>
-    <string name="oui_navigation_drawer">Панель навигации</string>
     <string name="update">Обновить</string>
-    <string name="oui_common_done">Готово</string>
-    <string name="version_info">Версия %s</string>
-    <string name="oui_action_mode_n_selected">Выбрано: %d</string>
-    <string name="oui_common_disable">Выключить</string>
+    <string name="oui_common_edit">Изменить</string>
+    <string name="oui_common_apply">Применить</string>
+    <string name="oui_common_close">Закрыть</string>
     <string name="cant_check_for_updates_phone">Невозможно проверить наличие обновлений. Подключение телефона к сети нестабильно.</string>
-    <string name="oui_common_add">Добавить</string>
     <string name="latest_version">Последняя версия уже установлена.</string>
     <string name="cant_check_for_updates_tablet">Невозможно проверить наличие обновлений. Подключение планшета к сети нестабильно.</string>
     <string name="oui_time_dialog_start">Начало</string>
     <string name="app_info">Информация о приложении</string>
-    <string name="oui_common_continue">Продолжить</string>
-    <string name="oui_common_button_yes">Да</string>
-    <string name="oui_action_mode_all_checkbox">Все</string>
     <string name="retry">Повторить</string>
+    <string name="oui_common_cancel">Отмена</string>
+    <string name="oui_common_continue">Продолжить</string>
+    <string name="oui_time_dialog_end">Конец</string>
+    <string name="oui_navigation_drawer">Панель навигации</string>
+    <string name="version_info">Версия %s</string>
+    <string name="oui_action_mode_n_selected">Выбрано: %d</string>
+    <string name="oui_common_add">Добавить</string>
+    <string name="oui_common_done">Готово</string>
+    <string name="oui_common_button_yes">Да</string>
+    <string name="oui_common_disable">Выключить</string>
+    <string name="sem_tip_popup_hint_string">Для получения дополнительных сведений дважды коснитесь этой кнопки.</string>
+    <string name="oui_action_mode_all_checkbox">Все</string>
 </resources>

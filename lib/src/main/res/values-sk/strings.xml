@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Zrušiť</string>
-    <string name="oui_common_edit">Upraviť</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">K dispozícii je nová verzia.</string>
-    <string name="oui_common_apply">Použiť</string>
     <string name="oui_action_mode_select_items">Vybrať položky</string>
-    <string name="oui_time_dialog_end">Koniec</string>
     <string name="oui_relative_description">Hľadáte niečo iné?</string>
-    <string name="oui_navigation_drawer">Navigačný vysúvací panel</string>
     <string name="update">Aktualizovať</string>
-    <string name="oui_common_done">Hotovo</string>
-    <string name="version_info">Verzia %s</string>
-    <string name="oui_action_mode_n_selected">Vybraté: %d</string>
-    <string name="oui_common_disable">Vypnúť</string>
+    <string name="oui_common_edit">Upraviť</string>
+    <string name="oui_common_apply">Použiť</string>
+    <string name="oui_common_close">Zavrieť</string>
     <string name="cant_check_for_updates_phone">Nedajú sa vyhľadať aktualizácie. Sieťové pripojenie telefónu je nestabilné.</string>
-    <string name="oui_common_add">Pridať</string>
     <string name="latest_version">Najnovšia verzia je už nainštalovaná.</string>
     <string name="cant_check_for_updates_tablet">Nedajú sa vyhľadať aktualizácie. Sieťové pripojenie tabletu je nestabilné.</string>
     <string name="oui_time_dialog_start">Začiatok</string>
     <string name="app_info">Informácie o aplikáciách</string>
-    <string name="oui_common_continue">Pokračovať</string>
-    <string name="oui_common_button_yes">Áno</string>
-    <string name="oui_action_mode_all_checkbox">Všetky</string>
     <string name="retry">Znova</string>
+    <string name="oui_common_cancel">Zrušiť</string>
+    <string name="oui_common_continue">Pokračovať</string>
+    <string name="oui_time_dialog_end">Koniec</string>
+    <string name="oui_navigation_drawer">Navigačný vysúvací panel</string>
+    <string name="version_info">Verzia %s</string>
+    <string name="oui_action_mode_n_selected">Vybraté: %d</string>
+    <string name="oui_common_add">Pridať</string>
+    <string name="oui_common_done">Hotovo</string>
+    <string name="oui_common_button_yes">Áno</string>
+    <string name="oui_common_disable">Vypnúť</string>
+    <string name="sem_tip_popup_hint_string">Dvojitým ťuknutím na toto tlačidlo zobrazíte ďalšie informácie.</string>
+    <string name="oui_action_mode_all_checkbox">Všetky</string>
 </resources>

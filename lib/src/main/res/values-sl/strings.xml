@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Prekliči</string>
-    <string name="oui_common_edit">Uredi</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">Na voljo je nova različica.</string>
-    <string name="oui_common_apply">Uporabi</string>
     <string name="oui_action_mode_select_items">Izberite elemente</string>
-    <string name="oui_time_dialog_end">Konec</string>
     <string name="oui_relative_description">Iščete nekaj drugega?</string>
-    <string name="oui_navigation_drawer">Navigacijski predal</string>
     <string name="update">Posodobi</string>
-    <string name="oui_common_done">Končano</string>
-    <string name="version_info">Različica %s</string>
-    <string name="oui_action_mode_n_selected">Št. izbranih: %d</string>
-    <string name="oui_common_disable">Onemogoči</string>
+    <string name="oui_common_edit">Uredi</string>
+    <string name="oui_common_apply">Uporabi</string>
+    <string name="oui_common_close">Zapri</string>
     <string name="cant_check_for_updates_phone">Posodobitev ni mogoče preveriti. Omrežna povezava telefona ni stabilna.</string>
-    <string name="oui_common_add">Dodaj</string>
     <string name="latest_version">Najnovejša različica je že nameščena.</string>
     <string name="cant_check_for_updates_tablet">Posodobitev ni mogoče preveriti. Omrežna povezava tabličnega računalnika ni stabilna.</string>
     <string name="oui_time_dialog_start">Začet.</string>
     <string name="app_info">Podatki o aplikaciji</string>
-    <string name="oui_common_continue">Nadaljuj</string>
-    <string name="oui_common_button_yes">Da</string>
-    <string name="oui_action_mode_all_checkbox">Vse</string>
     <string name="retry">Posk. znova</string>
+    <string name="oui_common_cancel">Prekliči</string>
+    <string name="oui_common_continue">Nadaljuj</string>
+    <string name="oui_time_dialog_end">Konec</string>
+    <string name="oui_navigation_drawer">Navigacijski predal</string>
+    <string name="version_info">Različica %s</string>
+    <string name="oui_action_mode_n_selected">Št. izbranih: %d</string>
+    <string name="oui_common_add">Dodaj</string>
+    <string name="oui_common_done">Končano</string>
+    <string name="oui_common_button_yes">Da</string>
+    <string name="oui_common_disable">Onemogoči</string>
+    <string name="sem_tip_popup_hint_string">Dvakrat pritisnite ta gumb, če želite izvedeti več.</string>
+    <string name="oui_action_mode_all_checkbox">Vse</string>
 </resources>

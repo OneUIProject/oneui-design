@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Avbryt</string>
-    <string name="oui_common_edit">Redigera</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">En ny version är tillgänglig.</string>
-    <string name="oui_common_apply">Använd</string>
     <string name="oui_action_mode_select_items">Välj objekt</string>
-    <string name="oui_time_dialog_end">Slut</string>
     <string name="oui_relative_description">Letar du efter något annat?</string>
-    <string name="oui_navigation_drawer">Navigeringslåda</string>
     <string name="update">Uppdatera</string>
-    <string name="oui_common_done">Klar</string>
-    <string name="version_info">Version %s</string>
-    <string name="oui_action_mode_n_selected">%d valda</string>
-    <string name="oui_common_disable">Inaktivera</string>
+    <string name="oui_common_edit">Redigera</string>
+    <string name="oui_common_apply">Använd</string>
+    <string name="oui_common_close">Stäng</string>
     <string name="cant_check_for_updates_phone">Det går inte att söka efter uppdateringar. Telefonens nätverksanslutning är inte stabil.</string>
-    <string name="oui_common_add">Lägg till</string>
     <string name="latest_version">Den senaste versionen är redan installerad.</string>
     <string name="cant_check_for_updates_tablet">Det går inte att söka efter uppdateringar. Surfplattans nätverksanslutning är inte stabil.</string>
     <string name="oui_time_dialog_start">Start</string>
     <string name="app_info">Appinfo</string>
-    <string name="oui_common_continue">Fortsätt</string>
-    <string name="oui_common_button_yes">Ja</string>
-    <string name="oui_action_mode_all_checkbox">Allt</string>
     <string name="retry">Försök igen</string>
+    <string name="oui_common_cancel">Avbryt</string>
+    <string name="oui_common_continue">Fortsätt</string>
+    <string name="oui_time_dialog_end">Slut</string>
+    <string name="oui_navigation_drawer">Navigeringslåda</string>
+    <string name="version_info">Version %s</string>
+    <string name="oui_action_mode_n_selected">%d valda</string>
+    <string name="oui_common_add">Lägg till</string>
+    <string name="oui_common_done">Klar</string>
+    <string name="oui_common_button_yes">Ja</string>
+    <string name="oui_common_disable">Inaktivera</string>
+    <string name="sem_tip_popup_hint_string">Dubbeltryck på den här knappen om du vill veta mer.</string>
+    <string name="oui_action_mode_all_checkbox">Allt</string>
 </resources>

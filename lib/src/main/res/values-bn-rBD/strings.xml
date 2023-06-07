@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">বাতিল</string>
-    <string name="oui_common_edit">সম্পাদনা করুন</string>
     <string name="oui_new_badge_text">ন</string>
     <string name="new_version_is_available">একটি নতুন সংস্করণ পাওয়া যাচ্ছে।</string>
-    <string name="oui_common_apply">প্রয়োগ করুন</string>
     <string name="oui_action_mode_select_items">আইটেমগুলো নির্বাচন করুন</string>
-    <string name="oui_time_dialog_end">সমাপ্ত</string>
     <string name="oui_relative_description">অন্য কিছু খুঁজছেন?</string>
-    <string name="oui_navigation_drawer">নেভিগেশন ড্রয়ার</string>
     <string name="update">আপডেট</string>
-    <string name="oui_common_done">সম্পন্ন</string>
-    <string name="version_info">সংস্করণ %s</string>
-    <string name="oui_action_mode_n_selected">%dটি নির্বাচিত</string>
-    <string name="oui_common_disable">অক্ষম</string>
+    <string name="oui_common_edit">সম্পাদনা করুন</string>
+    <string name="oui_common_apply">প্রয়োগ করুন</string>
+    <string name="oui_common_close">বন্ধ</string>
     <string name="cant_check_for_updates_phone">আপডেট চেক করা যাবে না৷ আপনার ফোনের নেটওয়ার্ক সংযোগ অস্থিতিশীল৷</string>
-    <string name="oui_common_add">যোগ করুন</string>
     <string name="latest_version">সর্বশেষ সংস্করণ ইতিমধ্যে ইনস্টল করা হয়েছে৷</string>
     <string name="cant_check_for_updates_tablet">আপডেট চেক করা যাবে না৷ আপনার ট্যাবলেটের নেটওয়ার্ক সংযোগ অস্থিতিশীল৷</string>
     <string name="oui_time_dialog_start">শুরু</string>
     <string name="app_info">অ্যাপের তথ্য</string>
-    <string name="oui_common_continue">অবিরত রাখুন</string>
-    <string name="oui_common_button_yes">হ্যাঁ</string>
-    <string name="oui_action_mode_all_checkbox">সব</string>
     <string name="retry">পুনঃচেষ্টা</string>
+    <string name="oui_common_cancel">বাতিল</string>
+    <string name="oui_common_continue">অবিরত রাখুন</string>
+    <string name="oui_time_dialog_end">সমাপ্ত</string>
+    <string name="oui_navigation_drawer">নেভিগেশন ড্রয়ার</string>
+    <string name="version_info">সংস্করণ %s</string>
+    <string name="oui_action_mode_n_selected">%dটি নির্বাচিত</string>
+    <string name="oui_common_add">যোগ করুন</string>
+    <string name="oui_common_done">সম্পন্ন</string>
+    <string name="oui_common_button_yes">হ্যাঁ</string>
+    <string name="oui_common_disable">অক্ষম</string>
+    <string name="sem_tip_popup_hint_string">আরো জানতে এই বাটনে দু’বার ট্যাপ করুন।</string>
+    <string name="oui_action_mode_all_checkbox">সব</string>
 </resources>

@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Cuir ar ceal</string>
-    <string name="oui_common_edit">Cuir in eagar</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">Tá leagan nua ar fáil</string>
-    <string name="oui_common_apply">Cuir i bhfeidhm</string>
     <string name="oui_action_mode_select_items">Roghnaigh míreanna</string>
-    <string name="oui_time_dialog_end">Críoch</string>
     <string name="oui_relative_description">Sa tóir ar rud éigin eile?</string>
-    <string name="oui_navigation_drawer">Tarraiceán nascleanúna</string>
     <string name="update">Nuashonraigh</string>
-    <string name="oui_common_done">Déanta</string>
-    <string name="version_info">Leagan %s</string>
-    <string name="oui_action_mode_n_selected">%d roghnaithe</string>
-    <string name="oui_common_disable">Díchumasú</string>
+    <string name="oui_common_edit">Cuir in eagar</string>
+    <string name="oui_common_apply">Cuir i bhfeidhm</string>
+    <string name="oui_common_close">Dún</string>
     <string name="cant_check_for_updates_phone">"Seiceáil le haghaidh nuashonruithe dodhéanta. Níl nasc líonra d'fhóin cobhsaí."</string>
-    <string name="oui_common_add">Cuir leis</string>
     <string name="latest_version">Tá an leagan is déanaí suiteáilte cheana féin.</string>
     <string name="cant_check_for_updates_tablet">Seiceáil le haghaidh nuashonruithe dodhéanta. Níl nasc líonra do tháibléid cobhsaí.</string>
     <string name="oui_time_dialog_start">Tosú</string>
     <string name="app_info">Faisnéis feidhmchláir</string>
-    <string name="oui_common_continue">Ar aghaidh</string>
-    <string name="oui_common_button_yes">Déan é</string>
-    <string name="oui_action_mode_all_checkbox">Gach</string>
     <string name="retry">Atriail</string>
+    <string name="oui_common_cancel">Cuir ar ceal</string>
+    <string name="oui_common_continue">Ar aghaidh</string>
+    <string name="oui_time_dialog_end">Críoch</string>
+    <string name="oui_navigation_drawer">Tarraiceán nascleanúna</string>
+    <string name="version_info">Leagan %s</string>
+    <string name="oui_action_mode_n_selected">%d roghnaithe</string>
+    <string name="oui_common_add">Cuir leis</string>
+    <string name="oui_common_done">Déanta</string>
+    <string name="oui_common_button_yes">Déan é</string>
+    <string name="oui_common_disable">Díchumasú</string>
+    <string name="sem_tip_popup_hint_string">Déthapáil an cnaipe seo le tuilleadh faisnéise a fháil.</string>
+    <string name="oui_action_mode_all_checkbox">Gach</string>
 </resources>

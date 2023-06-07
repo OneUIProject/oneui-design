@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Скасувати</string>
-    <string name="oui_common_edit">Редагувати</string>
     <string name="oui_new_badge_text">Н</string>
     <string name="new_version_is_available">Доступна нова версія.</string>
-    <string name="oui_common_apply">Застосувати</string>
     <string name="oui_action_mode_select_items">Вибір об’єктів</string>
-    <string name="oui_time_dialog_end">Кінець</string>
     <string name="oui_relative_description">Шукаєте щось інше?</string>
-    <string name="oui_navigation_drawer">Бокове меню навігації</string>
     <string name="update">Оновити</string>
-    <string name="oui_common_done">Готово</string>
-    <string name="version_info">Версія %s</string>
-    <string name="oui_action_mode_n_selected">Вибрано: %d</string>
-    <string name="oui_common_disable">Вимкнути</string>
+    <string name="oui_common_edit">Редагувати</string>
+    <string name="oui_common_apply">Застосувати</string>
+    <string name="oui_common_close">Закрити</string>
     <string name="cant_check_for_updates_phone">Неможливо перевірити наявність оновлень. Підключення телефону до мережі нестабільне.</string>
-    <string name="oui_common_add">Додати</string>
     <string name="latest_version">Останню версію вже встановлено.</string>
     <string name="cant_check_for_updates_tablet">Неможливо перевірити наявність оновлень. Підключення планшета до мережі нестабільне.</string>
     <string name="oui_time_dialog_start">Початок</string>
     <string name="app_info">Інформація про програму</string>
-    <string name="oui_common_continue">Продовжити</string>
-    <string name="oui_common_button_yes">Так</string>
-    <string name="oui_action_mode_all_checkbox">Усі</string>
     <string name="retry">Повторити</string>
+    <string name="oui_common_cancel">Скасувати</string>
+    <string name="oui_common_continue">Продовжити</string>
+    <string name="oui_time_dialog_end">Кінець</string>
+    <string name="oui_navigation_drawer">Бокове меню навігації</string>
+    <string name="version_info">Версія %s</string>
+    <string name="oui_action_mode_n_selected">Вибрано: %d</string>
+    <string name="oui_common_add">Додати</string>
+    <string name="oui_common_done">Готово</string>
+    <string name="oui_common_button_yes">Так</string>
+    <string name="oui_common_disable">Вимкнути</string>
+    <string name="sem_tip_popup_hint_string">Двічі натисніть цю кнопку, щоб отримати додаткові відомості.</string>
+    <string name="oui_action_mode_all_checkbox">Усі</string>
 </resources>

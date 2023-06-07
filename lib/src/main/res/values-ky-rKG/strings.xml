@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Жокко чыгаруу</string>
-    <string name="oui_common_edit">Түзөтүү</string>
     <string name="oui_new_badge_text">Ж</string>
     <string name="new_version_is_available">Жаңы версия байкалат</string>
-    <string name="oui_common_apply">Колдонуу</string>
     <string name="oui_action_mode_select_items">Нерсени тандоо</string>
-    <string name="oui_time_dialog_end">Аяктоо</string>
     <string name="oui_relative_description">Башка бир нерсени издеп жатасызбы?</string>
-    <string name="oui_navigation_drawer">Навигация тарткычы</string>
     <string name="update">Жаңыртуу</string>
-    <string name="oui_common_done">Даяр</string>
-    <string name="version_info">Версия %s</string>
-    <string name="oui_action_mode_n_selected">%d тандалды</string>
-    <string name="oui_common_disable">Ишт. чыгар</string>
+    <string name="oui_common_edit">Түзөтүү</string>
+    <string name="oui_common_apply">Колдонуу</string>
+    <string name="oui_common_close">Жабуу</string>
     <string name="cant_check_for_updates_phone">Жаңыртууларды текшерүүгө болбойт. Телефонуңуздун тармактык туташуусу туруктуу эмес.</string>
-    <string name="oui_common_add">Кошуу</string>
     <string name="latest_version">Акыркы нускасы эчак орнотулган.</string>
     <string name="cant_check_for_updates_tablet">Жаңыртууларды текшерүүгө болбойт. Планшетиңиздин тармактык туташуусу туруктуу эмес.</string>
     <string name="oui_time_dialog_start">Баштоо</string>
     <string name="app_info">Колдонмо маалыматы</string>
-    <string name="oui_common_continue">Улантуу</string>
-    <string name="oui_common_button_yes">Ооба</string>
-    <string name="oui_action_mode_all_checkbox">Баары</string>
     <string name="retry">Дагы арак. кыл</string>
+    <string name="oui_common_cancel">Жокко чыгаруу</string>
+    <string name="oui_common_continue">Улантуу</string>
+    <string name="oui_time_dialog_end">Аяктоо</string>
+    <string name="oui_navigation_drawer">Навигация тарткычы</string>
+    <string name="version_info">Версия %s</string>
+    <string name="oui_action_mode_n_selected">%d тандалды</string>
+    <string name="oui_common_add">Кошуу</string>
+    <string name="oui_common_done">Даяр</string>
+    <string name="oui_common_button_yes">Ооба</string>
+    <string name="oui_common_disable">Ишт. чыгар</string>
+    <string name="sem_tip_popup_hint_string">Дагы көбүрөөк билүү үчүн бул баскычты эки эселенте басыңыз.</string>
+    <string name="oui_action_mode_all_checkbox">Баары</string>
 </resources>

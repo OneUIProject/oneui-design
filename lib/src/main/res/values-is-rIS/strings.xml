@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Hætta við</string>
-    <string name="oui_common_edit">Breyta</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">Ný útgáfa er í boði.</string>
-    <string name="oui_common_apply">Nota</string>
     <string name="oui_action_mode_select_items">Velja hluti</string>
-    <string name="oui_time_dialog_end">Lok</string>
     <string name="oui_relative_description">Ertu að leita að einhverju öðru?</string>
-    <string name="oui_navigation_drawer">Yfirlitsskúffa</string>
     <string name="update">Uppfærsla</string>
-    <string name="oui_common_done">Lokið</string>
-    <string name="version_info">Útgáfa %s</string>
-    <string name="oui_action_mode_n_selected">%d valin</string>
-    <string name="oui_common_disable">Slökkva</string>
+    <string name="oui_common_edit">Breyta</string>
+    <string name="oui_common_apply">Nota</string>
+    <string name="oui_common_close">Loka</string>
     <string name="cant_check_for_updates_phone">Ekki er hægt að leita að uppfærslum. Nettenging símans er ekki stöðug.</string>
-    <string name="oui_common_add">Bæta við</string>
     <string name="latest_version">Nýjasta útgáfan hefur þegar verið sett upp.</string>
     <string name="cant_check_for_updates_tablet">Ekki er hægt að leita að uppfærslum. Nettenging spjaldtölvunnar er ekki stöðug.</string>
     <string name="oui_time_dialog_start">Upphaf</string>
     <string name="app_info">Upplýsingar um forrit</string>
-    <string name="oui_common_continue">Halda áfram</string>
-    <string name="oui_common_button_yes">Já</string>
-    <string name="oui_action_mode_all_checkbox">Allt</string>
     <string name="retry">Reyna aftur</string>
+    <string name="oui_common_cancel">Hætta við</string>
+    <string name="oui_common_continue">Halda áfram</string>
+    <string name="oui_time_dialog_end">Lok</string>
+    <string name="oui_navigation_drawer">Yfirlitsskúffa</string>
+    <string name="version_info">Útgáfa %s</string>
+    <string name="oui_action_mode_n_selected">%d valin</string>
+    <string name="oui_common_add">Bæta við</string>
+    <string name="oui_common_done">Lokið</string>
+    <string name="oui_common_button_yes">Já</string>
+    <string name="oui_common_disable">Slökkva</string>
+    <string name="sem_tip_popup_hint_string">Pikkaðu tvisvar á þennan hnapp til að fá frekari upplýsingar.</string>
+    <string name="oui_action_mode_all_checkbox">Allt</string>
 </resources>

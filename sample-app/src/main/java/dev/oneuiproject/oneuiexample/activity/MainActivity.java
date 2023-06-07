@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dev.oneuiproject.oneui.utils.ActivityUtils;
+import dev.oneuiproject.oneui.widget.TipPopup;
 import dev.oneuiproject.oneuiexample.base.FragmentInfo;
 import dev.oneuiproject.oneuiexample.fragment.AppPickerFragment;
 import dev.oneuiproject.oneuiexample.fragment.IconsFragment;
@@ -54,6 +55,15 @@ public class MainActivity extends AppCompatActivity
         initFragmentList();
         initDrawer();
         initFragments();
+
+        mBinding.drawerLayout.post(() -> {
+            TipPopup tipPopup = new TipPopup(mBinding.drawerLayout.getToolbar().getChildAt(0), TipPopup.MODE_TRANSLUCENT);
+            tipPopup.setMessage("I'm Mr. Mee6, look at me!");
+            tipPopup.setAction("Close", view -> {
+            });
+            //tipPopup.setExpanded(true);
+            tipPopup.show(TipPopup.DIRECTION_BOTTOM_RIGHT);
+        });
     }
 
     @Override

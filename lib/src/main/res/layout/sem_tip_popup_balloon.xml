@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/sem_tip_popup_balloon_bubble"
+        android:layout_width="@dimen/sem_tip_popup_bubble_width"
+        android:layout_height="@dimen/sem_tip_popup_bubble_height">
+
+        <ImageView
+            android:id="@+id/sem_tip_popup_balloon_bubble_hint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/sem_tip_popup_hint_background_02"
+            android:tint="@color/sem_tip_popup_background_color" />
+
+        <ImageView
+            android:id="@+id/sem_tip_popup_balloon_bubble_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/sem_tip_popup_hint_background_02"
+            android:tint="@color/sem_tip_popup_text_color" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/sem_tip_popup_balloon_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/sem_tip_popup_balloon_bg_01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sem_tip_popup_balloon_background_left"
+            android:backgroundTint="@color/sem_tip_popup_background_color" />
+
+        <ImageView
+            android:id="@+id/sem_tip_popup_balloon_bg_02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sem_tip_popup_balloon_background_right"
+            android:backgroundTint="@color/sem_tip_popup_background_color" />
+
+        <FrameLayout
+            android:id="@+id/sem_tip_popup_balloon_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sem_tip_popup_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|top"
+                android:layout_marginStart="@dimen/sem_tip_popup_button_padding_horizontal"
+                android:layout_marginEnd="@dimen/sem_tip_popup_button_padding_horizontal"
+                android:textAppearance="@style/OneUI.TipPopupTextStyle" />
+
+            <Button
+                android:id="@+id/sem_tip_popup_action"
+                style="@style/OneUI.TipPopupButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:ellipsize="end"
+                android:maxLines="1" />
+        </FrameLayout>
+    </FrameLayout>
+</FrameLayout>

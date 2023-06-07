@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">ຍົກເລີກ</string>
-    <string name="oui_common_edit">​ແກ້​ໄຂ</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">ມີເວີເຊິນໃໝ່ໃຫ້ຢູ່.</string>
-    <string name="oui_common_apply">ນຳໃຊ້</string>
     <string name="oui_action_mode_select_items">ເລືອກລາຍການ</string>
-    <string name="oui_time_dialog_end">ສິ້ນສຸດ</string>
     <string name="oui_relative_description">ກຳລັງຊອກຫາບາງສິ່ງບາງຢ່າງອື່ນອີກບໍ?</string>
-    <string name="oui_navigation_drawer">ລີ້ນຊັກການກຳນົດທິດທາງ</string>
     <string name="update">ອັບເດດ</string>
-    <string name="oui_common_done">ສຳ​ເລັດ</string>
-    <string name="version_info">ຊຸດ %s</string>
-    <string name="oui_action_mode_n_selected">ເລືອກ %d ແລ້ວ</string>
-    <string name="oui_common_disable">ປິດໃຊ້ງານ</string>
+    <string name="oui_common_edit">​ແກ້​ໄຂ</string>
+    <string name="oui_common_apply">ນຳໃຊ້</string>
+    <string name="oui_common_close">ປິດ</string>
     <string name="cant_check_for_updates_phone">ບໍ່ສາມາດກວດຫາອັບເດດໄດ້. ການເຊື່ອມຕໍ່ເຄືອຂ່າຍໂທລະສັບຂອງທ່ານບໍ່ສະຖຽນ.</string>
-    <string name="oui_common_add">ເພີ່ມ</string>
     <string name="latest_version">ຕິດຕັ້ງລຸ້ນຫຼ້າສຸດຮຽບຮ້ອຍແລ້ວ.</string>
     <string name="cant_check_for_updates_tablet">ບໍ່ສາມາດກວດຫາອັບເດດໄດ້. ການເຊື່ອມຕໍ່ເຄືອຂ່າຍແທັບເລັດຂອງທ່ານບໍ່ສະຖຽນ.</string>
     <string name="oui_time_dialog_start">ເລີ່ມຕົ້ນ</string>
     <string name="app_info">ຂໍ້ມູນແອັບ</string>
-    <string name="oui_common_continue">ສືບຕໍ່</string>
-    <string name="oui_common_button_yes">ແມ່ນ</string>
-    <string name="oui_action_mode_all_checkbox">ທັງໝົດ</string>
     <string name="retry">ລອງ​ໃໝ່ອີກ</string>
+    <string name="oui_common_cancel">ຍົກເລີກ</string>
+    <string name="oui_common_continue">ສືບຕໍ່</string>
+    <string name="oui_time_dialog_end">ສິ້ນສຸດ</string>
+    <string name="oui_navigation_drawer">ລີ້ນຊັກການກຳນົດທິດທາງ</string>
+    <string name="version_info">ຊຸດ %s</string>
+    <string name="oui_action_mode_n_selected">ເລືອກ %d ແລ້ວ</string>
+    <string name="oui_common_add">ເພີ່ມ</string>
+    <string name="oui_common_done">ສຳ​ເລັດ</string>
+    <string name="oui_common_button_yes">ແມ່ນ</string>
+    <string name="oui_common_disable">ປິດໃຊ້ງານ</string>
+    <string name="sem_tip_popup_hint_string">ແຕະປຸ່ມນີ້ສອງຄັ້ງເພື່ອຮຽນຮູ້ເພີ່ມເຕີມ.</string>
+    <string name="oui_action_mode_all_checkbox">ທັງໝົດ</string>
 </resources>

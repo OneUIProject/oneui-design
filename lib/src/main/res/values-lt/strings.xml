@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Atšaukti</string>
-    <string name="oui_common_edit">Redaguoti</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">Yra nauja versija.</string>
-    <string name="oui_common_apply">Taikyti</string>
     <string name="oui_action_mode_select_items">Rinktis elementus</string>
-    <string name="oui_time_dialog_end">Baigti</string>
     <string name="oui_relative_description">Ieškote dar ko nors?</string>
-    <string name="oui_navigation_drawer">Naršymo stalčius</string>
     <string name="update">Naujinti</string>
-    <string name="oui_common_done">Atlikta</string>
-    <string name="version_info">Versija %s</string>
-    <string name="oui_action_mode_n_selected">Pasirinkta: %d</string>
-    <string name="oui_common_disable">Išjungti</string>
+    <string name="oui_common_edit">Redaguoti</string>
+    <string name="oui_common_apply">Taikyti</string>
+    <string name="oui_common_close">Uždaryti</string>
     <string name="cant_check_for_updates_phone">Negalima ieškoti naujinių. Nestabilus jūsų telefono tinklo ryšys.</string>
-    <string name="oui_common_add">Pridėti</string>
     <string name="latest_version">Naujausia versija jau įdiegta.</string>
     <string name="cant_check_for_updates_tablet">Negalima ieškoti naujinių. Nestabilus jūsų planšetinio kompiuterio tinklo ryšys.</string>
     <string name="oui_time_dialog_start">Pradž.</string>
     <string name="app_info">Programos informacija</string>
-    <string name="oui_common_continue">Tęsti</string>
-    <string name="oui_common_button_yes">Taip</string>
-    <string name="oui_action_mode_all_checkbox">Visi</string>
     <string name="retry">Kartoti</string>
+    <string name="oui_common_cancel">Atšaukti</string>
+    <string name="oui_common_continue">Tęsti</string>
+    <string name="oui_time_dialog_end">Baigti</string>
+    <string name="oui_navigation_drawer">Naršymo stalčius</string>
+    <string name="version_info">Versija %s</string>
+    <string name="oui_action_mode_n_selected">Pasirinkta: %d</string>
+    <string name="oui_common_add">Pridėti</string>
+    <string name="oui_common_done">Atlikta</string>
+    <string name="oui_common_button_yes">Taip</string>
+    <string name="oui_common_disable">Išjungti</string>
+    <string name="sem_tip_popup_hint_string">Bakstelėkite dukart šį mygtuką ir sužinokite daugiau.</string>
+    <string name="oui_action_mode_all_checkbox">Visi</string>
 </resources>

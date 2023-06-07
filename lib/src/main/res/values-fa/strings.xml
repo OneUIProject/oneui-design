@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">لغو</string>
-    <string name="oui_common_edit">ویرایش</string>
     <string name="oui_new_badge_text">ج</string>
     <string name="new_version_is_available">یک نسخه جدید موجود است.</string>
-    <string name="oui_common_apply">اعمال</string>
     <string name="oui_action_mode_select_items">انتخاب موارد</string>
-    <string name="oui_time_dialog_end">پایان</string>
     <string name="oui_relative_description">به دنبال چیز دیگری هستید؟</string>
-    <string name="oui_navigation_drawer">کشوی پیمایش</string>
     <string name="update">به‌روزرسانی</string>
-    <string name="oui_common_done">انجام شد</string>
-    <string name="version_info">نسخه %s</string>
-    <string name="oui_action_mode_n_selected">‎%d انتخاب شد</string>
-    <string name="oui_common_disable">غیر فعال</string>
+    <string name="oui_common_edit">ویرایش</string>
+    <string name="oui_common_apply">اعمال</string>
+    <string name="oui_common_close">بستن</string>
     <string name="cant_check_for_updates_phone">بررسی برای به‌روزرسانی‌ها ممکن نیست. اتصال شبکه تلفن پایدار نیست.</string>
-    <string name="oui_common_add">افزودن</string>
     <string name="latest_version">جدیدترین نسخه از قبل نصب شده است.</string>
     <string name="cant_check_for_updates_tablet">بررسی برای به‌روزرسانی‌ها ممکن نیست. اتصال شبکه تبلت پایدار نیست.</string>
     <string name="oui_time_dialog_start">شروع</string>
     <string name="app_info">اطلاعات برنامه</string>
-    <string name="oui_common_continue">ادامه</string>
-    <string name="oui_common_button_yes">بلی</string>
-    <string name="oui_action_mode_all_checkbox">همه</string>
     <string name="retry">سعی مجدد</string>
+    <string name="oui_common_cancel">لغو</string>
+    <string name="oui_common_continue">ادامه</string>
+    <string name="oui_time_dialog_end">پایان</string>
+    <string name="oui_navigation_drawer">کشوی پیمایش</string>
+    <string name="version_info">نسخه %s</string>
+    <string name="oui_action_mode_n_selected">‎%d انتخاب شد</string>
+    <string name="oui_common_add">افزودن</string>
+    <string name="oui_common_done">انجام شد</string>
+    <string name="oui_common_button_yes">بلی</string>
+    <string name="oui_common_disable">غیر فعال</string>
+    <string name="sem_tip_popup_hint_string">برای اطلاعات بیشتر دوبار روی این دکمه ضربه بزنید.</string>
+    <string name="oui_action_mode_all_checkbox">همه</string>
 </resources>

@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">Utzi</string>
-    <string name="oui_common_edit">Editatu</string>
     <string name="oui_new_badge_text">B</string>
     <string name="new_version_is_available">Bertsio berria dago erabilgarri</string>
-    <string name="oui_common_apply">Aplikatu</string>
     <string name="oui_action_mode_select_items">Hautatu elementuak</string>
-    <string name="oui_time_dialog_end">Amaitu</string>
     <string name="oui_relative_description">Beste zerbaiten bila al zabiltza?</string>
-    <string name="oui_navigation_drawer">Nabigazio menu lerrakorra</string>
     <string name="update">Eguneratu</string>
-    <string name="oui_common_done">Amaituta</string>
-    <string name="version_info">%s bertsioa</string>
-    <string name="oui_action_mode_n_selected">%d hautatuta</string>
-    <string name="oui_common_disable">Ezgaitu</string>
+    <string name="oui_common_edit">Editatu</string>
+    <string name="oui_common_apply">Aplikatu</string>
+    <string name="oui_common_close">Itxi</string>
     <string name="cant_check_for_updates_phone">Ezin da bilatu eguneraketarik. Telefonoaren sare konexioa ez da egonkorra.</string>
-    <string name="oui_common_add">Gehitu</string>
     <string name="latest_version">Azken bertsioa jada instalatu da.</string>
     <string name="cant_check_for_updates_tablet">Ezin da bilatu eguneraketarik. Tabletaren sare konexioa ez da egonkorra.</string>
     <string name="oui_time_dialog_start">Hasi</string>
     <string name="app_info">Aplikazioaren informazioa</string>
-    <string name="oui_common_continue">Jarraitu</string>
-    <string name="oui_common_button_yes">Bai</string>
-    <string name="oui_action_mode_all_checkbox">Guztiak</string>
     <string name="retry">Saiatu berriz</string>
+    <string name="oui_common_cancel">Utzi</string>
+    <string name="oui_common_continue">Jarraitu</string>
+    <string name="oui_time_dialog_end">Amaitu</string>
+    <string name="oui_navigation_drawer">Nabigazio menu lerrakorra</string>
+    <string name="version_info">%s bertsioa</string>
+    <string name="oui_action_mode_n_selected">%d hautatuta</string>
+    <string name="oui_common_add">Gehitu</string>
+    <string name="oui_common_done">Amaituta</string>
+    <string name="oui_common_button_yes">Bai</string>
+    <string name="oui_common_disable">Ezgaitu</string>
+    <string name="sem_tip_popup_hint_string">Informazio gehiago lortzeko, ukitu bi aldiz botoi hau.</string>
+    <string name="oui_action_mode_all_checkbox">Guztiak</string>
 </resources>

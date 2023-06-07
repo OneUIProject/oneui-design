@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="oui_common_cancel">റദ്ദാക്കുക</string>
-    <string name="oui_common_edit">എഡിറ്റ് ചെയ്യുക</string>
     <string name="oui_new_badge_text">N</string>
     <string name="new_version_is_available">ഒരു പുതിയ പതിപ്പ് ലഭ്യമാണ്.</string>
-    <string name="oui_common_apply">പ്രയോഗിക്കുക</string>
     <string name="oui_action_mode_select_items">ഇനങ്ങള്‍ തിരഞ്ഞെടുക്കുക</string>
-    <string name="oui_time_dialog_end">അവസാനം</string>
     <string name="oui_relative_description">എന്തെങ്കിലും തിരയുകയാണോ?</string>
-    <string name="oui_navigation_drawer">നാവിഗേഷൻ ഡ്രോയർ</string>
     <string name="update">അപ്‌ഡേറ്റ് ചെയ്യുക</string>
-    <string name="oui_common_done">ചെയ്‌തു</string>
-    <string name="version_info">പതിപ്പ് %s</string>
-    <string name="oui_action_mode_n_selected">%d തിരഞ്ഞെടുത്തു</string>
-    <string name="oui_common_disable">നിഷ്ക്രിയമാക്കുക</string>
+    <string name="oui_common_edit">എഡിറ്റ് ചെയ്യുക</string>
+    <string name="oui_common_apply">പ്രയോഗിക്കുക</string>
+    <string name="oui_common_close">അടയ്ക്കുക</string>
     <string name="cant_check_for_updates_phone">‌അപ്ഡേറ്റുകൾക്കായി പരിശോധിക്കാനാവില്ല. നിങ്ങളുടെ ഫോണിന്‍റെ നെറ്റ്‌വർക്ക് കണക്ഷൻ സുസ്ഥിരമല്ല.</string>
-    <string name="oui_common_add">ചേര്‍ക്കുക</string>
     <string name="latest_version">ഏറ്റവും പുതിയ പതിപ്പ് നേരത്തേതന്നെ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുണ്ട്.</string>
     <string name="cant_check_for_updates_tablet">‌അപ്ഡേറ്റുകൾക്കായി പരിശോധിക്കാനാവില്ല. നിങ്ങളുടെ ടാബ്‌ലറ്റിന്‍റെ നെറ്റ്‌വർക്ക് കണക്ഷൻ സുസ്ഥിരമല്ല.</string>
     <string name="oui_time_dialog_start">ആരംഭം</string>
     <string name="app_info">ആപ്ലിക്കേഷൻ വിവരം</string>
-    <string name="oui_common_continue">തുടരുക</string>
-    <string name="oui_common_button_yes">അതെ</string>
-    <string name="oui_action_mode_all_checkbox">എല്ലാം</string>
     <string name="retry">വീണ്ടും ശ്രമിക്കുക</string>
+    <string name="oui_common_cancel">റദ്ദാക്കുക</string>
+    <string name="oui_common_continue">തുടരുക</string>
+    <string name="oui_time_dialog_end">അവസാനം</string>
+    <string name="oui_navigation_drawer">നാവിഗേഷൻ ഡ്രോയർ</string>
+    <string name="version_info">പതിപ്പ് %s</string>
+    <string name="oui_action_mode_n_selected">%d തിരഞ്ഞെടുത്തു</string>
+    <string name="oui_common_add">ചേര്‍ക്കുക</string>
+    <string name="oui_common_done">ചെയ്‌തു</string>
+    <string name="oui_common_button_yes">അതെ</string>
+    <string name="oui_common_disable">നിഷ്ക്രിയമാക്കുക</string>
+    <string name="sem_tip_popup_hint_string">കൂടുതലറിയുന്നതിന് ഈ ബട്ടണിൽ രണ്ടുതവണ സ്പർശിക്കുക.</string>
+    <string name="oui_action_mode_all_checkbox">എല്ലാം</string>
 </resources>
