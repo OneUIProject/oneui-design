@@ -915,6 +915,8 @@ public class ToolbarLayout extends LinearLayout {
      * Set the menu resource for the ActionMode's {@link Toolbar}.
      */
     public void setActionModeToolbarMenu(@MenuRes int menuRes) {
+        mActionModeToolbar.inflateMenu(menuRes);
+    }
 
 
     /**
