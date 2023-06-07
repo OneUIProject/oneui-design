@@ -9,8 +9,8 @@
 <h1></h1>
 
 In this repository you'll find:
-- Source code of the [oneui-design library](#oneui-design-module);
-- Source code of our [One UI Sample app](#oneui-sample-app);
+- Source code of the [oneui-design library](#oneui-design-module)
+- Source code of our [One UI Sample app](#oneui-sample-app) (see [Kotlin version](https://github.com/Lemkinator/OneUI-Sample-App)
 
 Any form of contribution, suggestions, bug report or feature request will be welcome.
 
