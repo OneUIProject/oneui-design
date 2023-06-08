@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.widget.FrameLayout;
 
 import androidx.annotation.ColorInt;
@@ -45,6 +46,12 @@ public class RoundFrameLayout extends FrameLayout {
         a.recycle();
 
         mRoundedCorner = new SeslRoundedCorner(mContext);
+        TypedValue typedValue = new TypedValue();
+        context.getTheme().resolveAttribute(R.attr.roundedCornerColor, typedValue, true);
+        if (typedValue.resourceId > 0) {
+            int roundColor = context.getResources().getColor(typedValue.resourceId, context.getTheme());
+            mRoundedCorner.setRoundedCornerColor(roundedCorners, roundColor);
+        }
         mRoundedCorner.setRoundedCorners(roundedCorners);
     }
 
