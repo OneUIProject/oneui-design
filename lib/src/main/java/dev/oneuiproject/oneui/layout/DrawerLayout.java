@@ -79,6 +79,7 @@ public class DrawerLayout extends ToolbarLayout {
     private AppCompatImageButton mHeaderButton;
     private TextView mHeaderBadge;
     private FrameLayout mDrawerContainer;
+    private float scrimAlpha;
 
     public DrawerLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -130,7 +131,9 @@ public class DrawerLayout extends ToolbarLayout {
 
         mDrawerContainer = mDrawerContent.findViewById(R.id.drawerlayout_drawer_container);
 
-        mDrawer.setScrimColor(mContext.getColor(R.color.oui_drawerlayout_drawer_dim_color));
+        int scrimColor = mContext.getColor(R.color.oui_drawerlayout_drawer_dim_color);
+        mDrawer.setScrimColor(scrimColor);
+        scrimAlpha = ((scrimColor >> 24) & 0xFF)/255f;
         mDrawer.setDrawerElevation(0);
         setDrawerWidth();
         setDrawerCornerRadius(DEFAULT_DRAWER_RADIUS);
@@ -419,7 +422,7 @@ public class DrawerLayout extends ToolbarLayout {
 
             float[] hsv = new float[3];
             Color.colorToHSV(mContext.getColor(R.color.oui_round_and_bgcolor), hsv);
-            hsv[2] *= 1f - (slideOffset * 0.2f);
+            hsv[2] *= 1f - (slideOffset * scrimAlpha);
             window.setStatusBarColor(Color.HSVToColor(hsv));
             window.setNavigationBarColor(Color.HSVToColor(hsv));
         }
