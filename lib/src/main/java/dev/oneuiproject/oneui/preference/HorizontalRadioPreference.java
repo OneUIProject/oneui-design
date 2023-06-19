@@ -145,7 +145,7 @@ public class HorizontalRadioPreference extends Preference {
                         if (!mIsTouchEffectEnabled) {
                             v.setAlpha(0.6f);
                         }
-                        return false;
+                        return true;
                     case MotionEvent.ACTION_UP:
                         if (!mIsTouchEffectEnabled) {
                             v.setAlpha(1.0f);
