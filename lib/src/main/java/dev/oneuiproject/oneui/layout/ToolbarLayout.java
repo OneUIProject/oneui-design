@@ -746,7 +746,7 @@ public class ToolbarLayout extends LinearLayout {
         }
     }
 
-  
+
     public void setActionModeToolbarShowAlwaysMax(int max){
         mAMTMenuShowAlwaysMax = max;
     }
@@ -785,7 +785,7 @@ public class ToolbarLayout extends LinearLayout {
         mFooterContainer.setVisibility(GONE);
         mBottomActionModeBar.setVisibility(VISIBLE);
 
-        setActionModeCount(0, -1);
+        // setActionModeCount(0, -1);
         mAppBarLayout.addOnOffsetChangedListener(mActionModeTitleFadeListener);
         mCollapsingToolbarLayout.seslSetSubtitle(null);
         mMainToolbar.setSubtitle(null);
@@ -833,6 +833,7 @@ public class ToolbarLayout extends LinearLayout {
         mAppBarLayout.removeOnOffsetChangedListener(mActionModeTitleFadeListener);
         mCollapsingToolbarLayout.seslSetSubtitle(mSubtitleExpanded);
         mMainToolbar.setSubtitle(mSubtitleCollapsed);
+        setActionModeAllSelector(0,  true,  false);
         if (mActionModeCallback != null) {
             mActionModeCallback.onDismiss(this);
         }
@@ -937,12 +938,52 @@ public class ToolbarLayout extends LinearLayout {
 
 
     /**
+     * Set the ActionMode's count and  checkbox enabled state.
+     * Check state will stay.
+     *
+     * @param count number of selected items in the list
+     * @param enabled enabled click
+     */
+    public void  setActionModeAllSelector(int count,  Boolean enabled) {
+        setActionModeAllSelector(count, enabled, null);
+    }
+
+
+    /**
+     * Set the ActionMode's count and Select all checkBox's enabled state and check state
+     *
+     * @param count number of selected items in the list
+     * @param enabled enable or disable click
+     * @param checked
+     */
+    public void  setActionModeAllSelector(int count,  Boolean enabled,  @Nullable Boolean checked) {
+        if (mSelectedItemsCount != count) {
+            mSelectedItemsCount = count;
+            String title = count > 0
+                    ? getResources().getString(R.string.oui_action_mode_n_selected, count)
+                    : getResources().getString(R.string.oui_action_mode_select_items);
+            mCollapsingToolbarLayout.setTitle(title);
+            mActionModeTitleTextView.setText(title);
+            updateActionModeMenuVisibility(mContext.getResources().getConfiguration());
+        }
+        if (checked != null && checked != mActionModeCheckBox.isChecked()) {
+            mActionModeCheckBox.setChecked(checked);
+        }
+        if (enabled != mActionModeSelectAll.isEnabled()) {
+            mActionModeSelectAll.setEnabled(enabled);
+        }
+    }
+
+
+    /**
      * Set the ActionMode's count. This will change the count in the Toolbar's title
      * and if count = total, the 'All' Checkbox will be checked.
      *
      * @param count number of selected items in the list
      * @param total number of total items in the list
+     * @deprecated use {@link #setActionModeAllSelector(int, Boolean, Boolean)}
      */
+    @Deprecated
     public void setActionModeCount(int count, int total) {
         mSelectedItemsCount = count;
         String title = count > 0
