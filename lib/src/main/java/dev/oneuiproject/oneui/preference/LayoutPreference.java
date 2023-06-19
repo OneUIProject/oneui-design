@@ -74,6 +74,7 @@ public class LayoutPreference extends Preference {
         if (layoutResource == 0) {
             throw new IllegalArgumentException("LayoutPreference requires a layout to be defined");
         }
+        a.recycle();
         // Need to create view now so that findViewById can be called immediately.
         final View view = LayoutInflater.from(getContext())
                 .inflate(layoutResource, null, false);
