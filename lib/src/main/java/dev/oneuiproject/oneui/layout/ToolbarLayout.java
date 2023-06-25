@@ -138,14 +138,15 @@ public class ToolbarLayout extends LinearLayout {
 
         setOrientation(VERTICAL);
 
-        TypedValue bgColor = new TypedValue();
+        //App windowBackground is enough
+        /*TypedValue bgColor = new TypedValue();
         context.getTheme()
                 .resolveAttribute(android.R.attr.windowBackground, bgColor, true);
         if (bgColor.resourceId > 0) {
             setBackgroundColor(mContext.getColor(bgColor.resourceId));
         } else {
             setBackgroundColor(bgColor.data);
-        }
+        }*/
 
         initLayoutAttrs(attrs);
         inflateChildren();

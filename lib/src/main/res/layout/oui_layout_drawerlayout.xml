@@ -3,7 +3,7 @@
     android:id="@+id/drawerlayout_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/windowBackground">
+    android:background="@null">
 
     <LinearLayout
         android:id="@+id/drawerlayout_toolbar_content"
