@@ -88,8 +88,9 @@ public class AppInfoLayout extends ToolbarLayout {
     public AppInfoLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         setNavigationButtonAsBack();
-        mActivity.setSupportActionBar(null);
-
+        if (!isInEditMode()) {
+            mActivity.setSupportActionBar(null);
+        }
         LayoutInflater.from(mContext)
                 .inflate(R.layout.oui_layout_app_info, mMainContainer, true);
         mAILContainer = findViewById(R.id.app_info_lower_layout);
