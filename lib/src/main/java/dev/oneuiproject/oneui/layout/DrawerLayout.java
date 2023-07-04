@@ -80,6 +80,7 @@ public class DrawerLayout extends ToolbarLayout {
     private TextView mHeaderBadge;
     private FrameLayout mDrawerContainer;
     private float scrimAlpha;
+    private int systemBarsColor;
 
     public DrawerLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -130,10 +131,17 @@ public class DrawerLayout extends ToolbarLayout {
         mHeaderBadge = mHeaderView.findViewById(R.id.drawerlayout_header_badge);
 
         mDrawerContainer = mDrawerContent.findViewById(R.id.drawerlayout_drawer_container);
-
         int scrimColor = mContext.getColor(R.color.oui_drawerlayout_drawer_dim_color);
         mDrawer.setScrimColor(scrimColor);
         scrimAlpha = ((scrimColor >> 24) & 0xFF)/255f;
+
+        TypedValue sbTypedValue = new TypedValue();
+        if (mContext.getTheme().resolveAttribute(R.attr.roundedCornerColor, sbTypedValue, true)) {
+            systemBarsColor = sbTypedValue.data;
+        } else {
+            systemBarsColor = ContextCompat.getColor(mContext, R.color.oui_round_and_bgcolor);
+        }
+
         mDrawer.setDrawerElevation(0);
         setDrawerWidth();
         setDrawerCornerRadius(DEFAULT_DRAWER_RADIUS);
@@ -421,7 +429,7 @@ public class DrawerLayout extends ToolbarLayout {
             else mToolbarContent.setTranslationX(slideX);
 
             float[] hsv = new float[3];
-            Color.colorToHSV(mContext.getColor(R.color.oui_round_and_bgcolor), hsv);
+            Color.colorToHSV(systemBarsColor, hsv);
             hsv[2] *= 1f - (slideOffset * scrimAlpha);
             window.setStatusBarColor(Color.HSVToColor(hsv));
             window.setNavigationBarColor(Color.HSVToColor(hsv));
