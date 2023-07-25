@@ -43,7 +43,6 @@ android {
 }
 
 dependencies {
-    //implementation fileTree(include: ['*.aar'], dir: 'libs')
 
     implementation("io.github.oneuiproject.sesl:appcompat:$sesl_appcompat_version")
     implementation("io.github.oneuiproject.sesl:apppickerview:$sesl_apppickerview_version")
@@ -61,4 +60,5 @@ dependencies {
     implementation 'io.github.oneuiproject:icons:1.1.0'
 
     implementation project(path: ':lib')
+    //implementation("io.github.oneuiproject:design:$lib_version")
 }
