@@ -3,17 +3,24 @@ package dev.oneuiproject.oneui.utils;
 import static androidx.annotation.RestrictTo.Scope.LIBRARY;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import androidx.appcompat.util.SeslRoundedCorner;
+import androidx.appcompat.util.SeslSubheaderRoundedCorner;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.lang.reflect.Field;
+
+import dev.oneuiproject.oneui.design.R;
 import dev.oneuiproject.oneui.preference.InsetPreferenceCategory;
 import dev.oneuiproject.oneui.preference.LayoutPreference;
 import dev.oneuiproject.oneui.preference.internal.PreferenceRelatedCard;
@@ -65,4 +72,36 @@ public class PreferenceUtils {
         }
     }
 
+    public void applyThemeRoundCornerColor(@NonNull PreferenceFragmentCompat preferenceFragment){
+
+        TypedValue typedValue = new TypedValue();
+        if (preferenceFragment.getContext().getTheme().resolveAttribute(R.attr.roundedCornerColor, typedValue, true)) {
+            int roundColor = typedValue.data;
+            setPreferenceRoundCornerColor(preferenceFragment, roundColor);
+        }
+    }
+
+    public void  setPreferenceRoundCornerColor(@NonNull PreferenceFragmentCompat preferenceFragment, @ColorInt int color){
+        try {
+            Field[] fieldList = PreferenceFragmentCompat.class.getDeclaredFields();
+            for (Field f : fieldList) {
+                Class<?> fieldType = f.getType();
+                if (fieldType.getSimpleName().equals(SeslRoundedCorner.class.getSimpleName())) {
+                    f.setAccessible(true);
+                    SeslRoundedCorner roundedCorner = (SeslRoundedCorner) f.get(preferenceFragment);
+                    if (roundedCorner != null) {
+                        roundedCorner.setRoundedCornerColor(SeslRoundedCorner.ROUNDED_CORNER_ALL, color);
+                    }
+                } else if (fieldType.getSimpleName().equals(SeslSubheaderRoundedCorner.class.getSimpleName())) {
+                    f.setAccessible(true);
+                    SeslSubheaderRoundedCorner subheaderRoundedCorner = (SeslSubheaderRoundedCorner) f.get(preferenceFragment);
+                    if (subheaderRoundedCorner != null) {
+                        subheaderRoundedCorner.setRoundedCornerColor(SeslSubheaderRoundedCorner.ROUNDED_CORNER_ALL, color);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            Log.e(TAG, Log.getStackTraceString(e));
+        }
+    }
 }

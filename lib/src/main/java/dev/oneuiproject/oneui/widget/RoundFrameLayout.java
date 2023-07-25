@@ -1,9 +1,12 @@
 package dev.oneuiproject.oneui.widget;
 
+import static androidx.appcompat.util.SeslRoundedCorner.ROUNDED_CORNER_NONE;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.widget.FrameLayout;
 
 import androidx.annotation.ColorInt;
@@ -19,6 +22,7 @@ import dev.oneuiproject.oneui.design.R;
 public class RoundFrameLayout extends FrameLayout {
     private Context mContext;
     private SeslRoundedCorner mRoundedCorner;
+    private int mRoundedCornerColor = -1;
 
     public RoundFrameLayout(@NonNull Context context) {
         this(context, null);
@@ -45,6 +49,15 @@ public class RoundFrameLayout extends FrameLayout {
         a.recycle();
 
         mRoundedCorner = new SeslRoundedCorner(mContext);
+        TypedValue typedValue = new TypedValue();
+        context.getTheme().resolveAttribute(R.attr.roundedCornerColor, typedValue, true);
+        if (typedValue.resourceId > 0) {
+            mRoundedCornerColor = context.getResources().getColor(typedValue.resourceId, context.getTheme());
+        }
+
+        if (mRoundedCornerColor != -1 && roundedCorners != SeslRoundedCorner.ROUNDED_CORNER_NONE){
+            mRoundedCorner.setRoundedCornerColor(roundedCorners, mRoundedCornerColor);
+        }
         mRoundedCorner.setRoundedCorners(roundedCorners);
     }
 
@@ -55,6 +68,9 @@ public class RoundFrameLayout extends FrameLayout {
     }
 
     public void setRoundedCorners(int roundedCorners) {
+        if (mRoundedCornerColor != -1 && roundedCorners != SeslRoundedCorner.ROUNDED_CORNER_NONE){
+            mRoundedCorner.setRoundedCornerColor(roundedCorners, mRoundedCornerColor);
+        }
         mRoundedCorner.setRoundedCorners(roundedCorners);
         invalidate();
     }
