@@ -3,7 +3,6 @@ package dev.oneuiproject.oneui.utils;
 import static androidx.annotation.RestrictTo.Scope.LIBRARY;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
@@ -72,16 +71,15 @@ public class PreferenceUtils {
         }
     }
 
-    public void applyThemeRoundCornerColor(@NonNull PreferenceFragmentCompat preferenceFragment){
-
+    public void applyThemeRoundedCornerColor(@NonNull PreferenceFragmentCompat preferenceFragment){
         TypedValue typedValue = new TypedValue();
         if (preferenceFragment.getContext().getTheme().resolveAttribute(R.attr.roundedCornerColor, typedValue, true)) {
             int roundColor = typedValue.data;
-            setPreferenceRoundCornerColor(preferenceFragment, roundColor);
+            setPreferenceRoundedCornerColor(preferenceFragment, roundColor);
         }
     }
 
-    public void  setPreferenceRoundCornerColor(@NonNull PreferenceFragmentCompat preferenceFragment, @ColorInt int color){
+    public void setPreferenceRoundedCornerColor(@NonNull PreferenceFragmentCompat preferenceFragment, @ColorInt int color){
         try {
             Field[] fieldList = PreferenceFragmentCompat.class.getDeclaredFields();
             for (Field f : fieldList) {
