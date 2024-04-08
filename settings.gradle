@@ -1,2 +1,2 @@
-include ':lib'
+include ':lib'//remove or comment this out if implementing the published version of the design lib
 include ':sample-app'

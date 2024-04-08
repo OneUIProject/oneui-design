@@ -62,8 +62,10 @@ dependencies {
     implementation("sesl.com.google.android.material:material:1.12.0-rc01+1.0.18-sesl6+rev0")
     implementation("sesl.androidx.viewpager2:viewpager2:1.1.0-beta02+1.0.0-sesl6+rev0")
 
-    //implementation("io.github.oneuiproject:design:1.2.6"
     implementation project(path: ':lib')
+    //Once the updated(upstream) design lib is published, you can comment out above
+    //and replace it with the following:
+    //implementation("io.github.oneuiproject:design:<version>"
 
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
