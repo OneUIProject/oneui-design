@@ -1,9 +1,7 @@
 package dev.oneuiproject.oneui.widget;
 
 import android.content.Context;
-import android.graphics.Canvas;
 import android.util.AttributeSet;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +10,8 @@ import androidx.annotation.Nullable;
 import dev.oneuiproject.oneui.design.R;
 
 public class Separator extends TextView {
+    private int minHeight;
+
     public Separator(@NonNull Context context) {
         this(context, null);
     }
@@ -28,16 +28,16 @@ public class Separator extends TextView {
     public Separator(@NonNull Context context, @Nullable AttributeSet attrs,
                        int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+
+        minHeight = getResources().getDimensionPixelSize(androidx.appcompat.R.dimen.sesl_list_subheader_min_height);
     }
 
     @Override
-    public void dispatchDraw(Canvas c) {
-        super.dispatchDraw(c);
-
-        LayoutParams lp = getLayoutParams();
-        lp.height = getText().length() != 0 ?
-                LayoutParams.WRAP_CONTENT
-                : getResources().getDimensionPixelSize(R.dimen.sesl_list_subheader_min_height);
-        setLayoutParams(lp);
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        final CharSequence text = getText();
+        final int heightSpecOverride = (text != null && !text.toString().isEmpty())
+                ? heightMeasureSpec
+                : MeasureSpec.makeMeasureSpec(minHeight, MeasureSpec.EXACTLY);
+        super.onMeasure(widthMeasureSpec, heightSpecOverride);
     }
 }
