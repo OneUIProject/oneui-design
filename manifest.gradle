@@ -1,7 +1,7 @@
 // Environment variables.
 ext {
     // Library version.
-    lib_version = "1.2.6"
+    lib_version = "1.2.7-beta1"
 
     // Sample App version.
     sample_version_code = 17
