@@ -1,25 +1,10 @@
 // Environment variables.
 ext {
-    // Target & Compile SDK.
-    target_sdk = 31
-
     // Library version.
     lib_version = "1.2.6"
 
     // Sample App version.
     sample_version_code = 17
     sample_version_name = lib_version
-
-    // Dependencies versions.
-    androidx_annotation_version = "1.4.0"
-    androidx_constraintlayout_version = "2.1.4"
-    sesl_appcompat_version = "1.4.0"
-    sesl_apppickerview_version = "1.0.0"
-    sesl_indexscroll_version = "1.0.3"
-    sesl_material_version = "1.5.0"
-    sesl_picker_basic_version = "1.2.0"
-    sesl_picker_color_version = "1.1.0"
-    sesl_preference_version = "1.1.0"
-    sesl_recyclerview_version = "1.4.0"
-    sesl_swiperefreshlayout_version = "1.0.0"
+    
 }
